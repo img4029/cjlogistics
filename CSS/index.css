@@ -10,6 +10,8 @@ ul {
 a {
     text-decoration: none;
 }
+
+/* 여기부터 header ======================*/
 .header_acide,.header_back,#menuBtn,.menu_list {
     position: fixed;
 }
@@ -148,6 +150,36 @@ a {
     color: white;
     font-size: 13px;
 }
+/* 여기까지 header ======================*/
+
+/* 여기부터 footer ======================*/
+footer {
+    display: flex;
+    justify-content: center;
+}
+.footer_container {
+    width: 95%;
+    max-width: 1300px;
+}
+.footer_container>div>ul {
+    display: flex;
+    gap: 20px;
+    padding: 50px 0;
+}
+.footer_container>div>ul a,.Team_members span { 
+    color: gray;
+}
+.footer_logo {
+    margin-bottom: 30px;
+}
+.Team_members span {
+    margin-right: 30px;
+}
+.Team_members {
+    line-height: 26px;
+    margin-bottom: 50px;
+}
+/* 여기까지 footer ======================*/
 
 @keyframes fadein {
     from {
@@ -167,22 +199,6 @@ a {
         opacity: 0;
     }
 }
-/* @keyframes slidein {
-    from {
-        width: 0px;
-    }
-    to {
-        width: 416px;
-    }
-}
-@keyframes slideout {
-    from {
-        width: 416px;
-    }
-    to {
-        width: 0px;
-    }
-} */
 @keyframes slidein {
     from {
         transform: translateX(-416px);

@@ -1,5 +1,5 @@
 function change() {
-    var menuList = document.querySelector('.menu_list'),
+    let menuList = document.querySelector('.menu_list'),
         menuIcon1 = document.querySelector('.menu_icon1'),
         menuIcon2 = document.querySelector('.menu_icon2'),
         menuIcon3 = document.querySelector('.menu_icon3'),
