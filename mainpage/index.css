@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
+    
+}
+
+.header_video_5 {
+   opacity: 1;
+   
+}
+.best_plus_5{
+    position: relative;
+    left: 84%;
+    
+}
+.best_container_upper_5 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-bottom: 100px;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.main_slider_5{
+    padding-bottom: 30px;
+}
+
+.main_slider_5 h1 {
+    padding-top: 180px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.main_product_photo_5 img{
+    width: 400px;
+    height: 400px;
+}
+
+
+.best_container_lower_5 {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 100px;
+ } 
+
+.pop_player_5 {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.player_section_5 {
+    padding: 0;
+    width: 50%;
+}
+
+.banner_text_5 {
+    display: block;
+    width: 50%;
+    margin-top: 30px;
+    text-align: center;
+    align-self: center;
+}
+.banner_text_5 h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.banner_text_5 h3{
+    font-size: 18px;
+    margin: 20px;
+    font-weight: normal;
+}
+
+.banner_text_5 p{
+    font-size: 16px;
+    margin: 20px;
+    color: #808080;
+}
+
+
+.event_text_5{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #808080;
+}
+
+.event_text_5 h1 {
+    font-weight: 400;
+    padding: 10px;
+    color: black;
+}
+.player_event_container_5{
+    background-color: azure
+}
+.event_container_5{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    padding-bottom: 180px;
+}
+
+.event_plus_5{
+    position: relative;
+    left: 33%; 
+}
+.event_container_5 a img {
+    width: 313px;
+    height: 313px;
+}
+
+.event_photo_5 {
+    padding-top: 10px;
+}
+.lengline_5 {
+    width: 1px;
+    height: 80px;
+    background-color: silver;
+    opacity: .6;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.Truth_holiday_5 {
+
+    text-align: center;
+}
+
+.Truth_holiday_5 h3 {
+    font-size: 18px;
+    padding-top: 26px;
+    font-weight: 400;
+}
+
+.Truth_holiday_5 h1 {
+    font-size: 25px;
+    line-height: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.Truth_holiday_5 p {
+    font-size: 16px;
+    padding: 20px;
+    font-weight: 500;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
+    color: #808080;
+}
+
+.main_arrow_5 {
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+.holiday_gift_bag_5 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul li {
+    margin-bottom: 10px;
+ }
+
+ ul li:nth-child(n+3) a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #808080;
+ }
+
+ .store_info_5 {
+    padding-top: 180px;
+ }
