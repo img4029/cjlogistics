@@ -9,29 +9,38 @@
 }
 
 .header_video_5 {
-   opacity: 1;
-   
+    width: 100vh;
+    height: 100vh;
+    transition: opacity 0.5s ease;
+    position: fixed;
+    z-index: -1;
 }
+
 .best_plus_5{
     position: relative;
     left: 84%;
-    
 }
+.video_padding {
+    padding-top: 100vh;
+}
+
 .best_container_upper_5 {
     width: 100%;
     height: 100%;
     display: flex;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     gap: 10px;
     text-align: center;
     justify-content: center;
-}
-.main_slider_5{
-    padding-bottom: 30px;
+    background-color: white;
+    padding-top: 40px;
 }
 
+.main_slider_5 {
+    background-color: white;
+    padding-top: 150px;
+}
 .main_slider_5 h1 {
-    padding-top: 180px;
     text-align: center;
     font-weight: 400;
     font-size: 30px;
@@ -50,12 +59,12 @@
     gap: 10px;
     text-align: center;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
+    background-color: white;
  } 
 
 .pop_player_5 {
     display: flex;
-    margin-top: 100px;
     margin-bottom: 100px;
     width: 100%;
 }
@@ -105,6 +114,7 @@
 .player_event_container_5{
     background-color: azure
 }
+
 .event_container_5{
     display: flex;
     justify-content: center;
@@ -134,7 +144,6 @@
     margin-top: 80px;
 }
 .Truth_holiday_5 {
-
     text-align: center;
 }
 
@@ -155,7 +164,6 @@
     font-size: 16px;
     padding: 20px;
     font-weight: 500;
-    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
     color: #808080;
 }
 
@@ -169,16 +177,32 @@
     margin: 0 auto;
 }
 
-ul li {
+.best_container_upper_5 ul li {
     margin-bottom: 10px;
  }
 
- ul li:nth-child(n+3) a {
+.best_container_lower_5 ul li {
+    margin-bottom: 10px;
+ }
+
+.best_container_upper_5 ul li:nth-child(n+3) a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #808080;
+ }
+
+.best_container_lower_5 ul li:nth-child(n+3) a {
     font-size: 16px;
     font-weight: 400;
     color: #808080;
  }
 
  .store_info_5 {
+    width: 100%;
     padding-top: 180px;
+}
+
+.store_info_5 img{
+    width: 100%;
+    padding-bottom: 50px;
  }
