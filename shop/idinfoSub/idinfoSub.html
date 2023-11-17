@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 회원 가입/수정</title>
+    <link rel="stylesheet" href="./idinfoSub.css">
+    <link rel="stylesheet" href="../CSS/shopHdFt.css">
+    <script defer src="../../JS/index.js"></script>
+    <script defer src="./idinfoSub.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_acide">
+            <div class="header_back"></div>
+            <input type="checkbox" id="menuBtn" value="A">
+            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+                <div class="menu_icon1"></div>
+                <div class="menu_icon2"></div>
+                <div class="menu_icon3"></div>
+            </label>
+            <div class="menu_list">
+                <div class="menu_list_main">
+                    <ul>
+                        <li><a href="">Perfume</a></li>
+                        <li><a href="">Diffuser</a></li>
+                        <li><a href="">Candle</a></li>
+                        <li><a href="">Hand Care</a></li>
+                        <li><a href="">Home Care</a></li>
+                        <li><a href="">Gift</a></li>
+                    </ul>
+                </div>
+                <div class="menu_list_sub">
+                    <ul>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">마이페이지</a></li>
+                        <li><a href="">고객색터</a></li>
+                        <li><a href="">주문조회</a></li>
+                        <li><a href="">스토어</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">브랜드스토리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="" class="logo_link">
+                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                        alt="LOGO">
+                </a>
+            </div>
+            <div class="hearder_icon">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
+                            <span>0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_top">
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="">11월의 증정품</a>
+        </div>
+    </header>
+    <main>
+        <div class="idinfoSubContainer">
+            <div>
+                <h3>회원정보 입력</h3>
+                <div class="idinfo_grid">
+                    <div><span>*</span>이름</div>
+                    <div>
+                        <input type="text" name="hname" id="hname" size="15" maxlength="30">
+                    </div>
+
+                    <div><span>*</span>아이디</div>
+                    <div>
+                        <input type="text" name="hid" id="hid" size="15" maxlength="30">
+                        <div>중복확인</div>
+                    </div>
+
+                    <div><span>*</span>비밀번호</div>
+                    <div>
+                        <input type="text" name="hpw" id="hpw" size="15" maxlength="30">
+                        <span>* 영문 대소문자/숫자/특수문자를 혼용하여 2종류 10~16자 또는 3종류 8~16자</span>
+                    </div>
+
+                    <div><span>*</span>비밀번호 확인</div>
+                    <div>
+                        <input type="text" name="hppw" id="hppw" size="15" maxlength="30">
+                    </div>
+
+                    <div><span>*</span>생년월일</div>
+                    <div>
+                        <select class="birthDateY" name="email_domain" style="width: 70px;">
+                            <option value="선택">선택</option>   
+                        </select>
+                        <span>년</span>
+                        <select class="birthDateM" name="email_domain" style="width: 50px;">
+                            <option value="선택">선택</option>
+                        </select>
+                        <span>월</span>
+                        <select class="birthDateD" name="email_domain" style="width: 50px;">
+                            <option value="선택">선택</option>
+                        </select>
+                        <span>일</span>
+                    </div>
+
+                    <div><span>*</span>성별</div>
+                    <div>
+                        <input type="radio" name="sxnone" id="sxnone" checked >
+                        <label for="sxnone">선택안함</label>
+                        <input type="radio" name="sxman" id="sxman">
+                        <label for="sxman">남</label>
+                        <input type="radio" name="sxwomen" id="sxwomen">
+                        <label for="sxwomen">여</label>
+                    </div>
+
+                    <div><span>*</span>우편번호</div>
+                    <div>
+                        <input type="text" name="hid" id="hid" size="15" maxlength="30">
+                        <div>우편번호검색</div>
+                    </div>
+
+                    <div><span>*</span>집주소</div>
+                    <div>
+                        
+                    </div>
+
+                    <div><span>*</span>상세주소</div>
+                    <div></div>
+
+                    <div><span>*</span>연락처</div>
+                    <div>
+                        <input type="text" name="hpn" id="hpn" size="15" maxlength="30">
+                    </div>
+
+                    <div><span>*</span>이메일</div>
+                    <div>
+                        <input type="text" name="hem" id="hem" size="15" maxlength="30">
+                    </div>
+
+                    <div>회사전화</div>
+                    <div></div>
+
+                    <div>회사주소</div>
+                    <div></div>
+
+                    <div>휴대폰</div>
+                    <div><input type="text" name="hsp" id="hsp" size="15" maxlength="30"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div>
+                <ul>
+                    <li><a href="">홈</a></li>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">서비스</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보 처리방침</a></li>
+                    <li><a href="">기업 구매 안내</a></li>
+                    <li><a href="">교환/환불 정책</a></li>
+                </ul>
+            </div>
+            <!-- 로고 -->
+            <div class="footer_logo">
+                <a href="">
+                    <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/f_logo.png" alt="">
+                </a>
+            </div>
+            <!-- 팀원 이름 정보 -->
+            <div class="Team_members">
+                <p><span>주용현</span><span>작업 페이지: </span></p>
+                <p><span>이혜나</span><span>작업 페이지: </span></p>
+                <p><span>김수빈</span><span>작업 페이지: </span></p>
+                <p><span>김수옥</span><span>작업 페이지: </span></p>
+                <p><span>임명건</span><span>작업 페이지: </span></p>
+                <p><span>장근정</span><span>작업 페이지: </span></p>
+            </div>
+
+            <!-- <hr style="margin: 50px 0;">
+            <div>
+
+            </div> -->
+        </div>
+    </footer>
+</body>
+
+</html>

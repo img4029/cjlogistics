@@ -1,0 +1,139 @@
+/* nav 높이 72 */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.textFont {
+    font-family: 'Libre Baskerville', serif;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 여기부터 main ======================*/
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.idinfoSubContainer {
+    margin: auto;
+    padding-top: 200px;
+}
+.idinfoSubContainer>div>h3{
+    border-bottom: 1px solid black;
+    line-height: 45px;
+    font-size: 18px;
+}
+
+/* 여기까지 idinfo.html */
+.idinfo_grid {
+    display: grid;
+    grid-template: repeat(14, 60px) / repeat(1, 155px) repeat(1, 945px);
+}
+.idinfo_grid>div {
+    display: flex;
+    border-top: 1px solid rgba(128, 128, 128, 0.4);
+}
+.idinfo_grid>div:nth-child(2n+1){
+    padding-top: 18px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgb(245, 245, 245);
+}
+.idinfo_grid>div:nth-child(2n) {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.idinfo_grid>div:nth-child(2n)>input {
+    width: 290px;
+    height: 33px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    padding-left: 10px;
+}
+.idinfo_grid>div:nth-child(2n)>input:focus{
+    outline: none;
+}
+.idinfo_grid>div:nth-child(4)>div {
+    margin-left: 10px;
+    height: 33px;
+    width: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: white;
+    transition-property: background-color;
+        /*변형 완료 1초*/
+    transition-duration: 0.3s;
+        /*빠른 시작 서서히 감속*/
+    transition-timing-function: ease-out;
+    cursor: pointer;
+}
+.idinfo_grid>div:nth-child(4)>div:hover {
+    background-color: black;
+    color: white;
+    transition: background 0.3s ease-out;
+}
+.idinfo_grid>div:nth-child(6)>span {
+    color: grey;
+    font-size: 11px;
+    padding-left: 10px;
+}
+.idinfo_grid>div:nth-child(10)>span {
+    color: black;
+    font-size: 14px;
+    padding-left: 2px;
+    padding-right: 10px;
+}
+.idinfo_grid>div:nth-child(10) select {
+    height: 33px;
+}
+.idinfo_grid>div:nth-child(12)>input {
+    width: 14px;
+    height: 14px;
+    margin-left: 25px;
+}
+.idinfo_grid>div:nth-child(12)>label {
+    margin-left: 5px;
+    font-size: 14px;
+}
+.idinfo_grid>div:nth-child(14)>input {
+    width: 100px;
+}
+.idinfo_grid>div:nth-child(14)>div {
+    margin-left: 10px;
+    height: 33px;
+    width: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: white;
+    transition-property: background-color;
+    /*변형 완료 1초*/
+    transition-duration: 0.3s;
+    /*빠른 시작 서서히 감속*/
+    transition-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.idinfo_grid>div:nth-child(14)>div:hover {
+    background-color: black;
+    color: white;
+    transition: background 0.3s ease-out;
+}
+.idinfo_grid>div>span {
+    color: red;
+    padding-right: 2px;
+}
