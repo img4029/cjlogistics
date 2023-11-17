@@ -114,9 +114,7 @@
     display: flex;
 }
 
-.profile_privacy {
-    border-right: 1px dashed rgba(128, 128, 128, 0.268);
-}
+
 
 .profile_privacy_img {
     display: flex;
