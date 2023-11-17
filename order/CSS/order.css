@@ -38,8 +38,9 @@
 
 .mypagelist4 {
     width: 1250px;
+    height: 200px;
     margin: auto;
-    border-bottom: 1px solid black;
+    border: 1px solid rgb(128, 128, 128);
 }
 
 .mypagelist4>div {
@@ -112,19 +113,23 @@
     color: black;
 }
 
-
+.info4,
+.question4 {
+    border-right: #46464638 1px solid ;
+    margin-top: 15px;
+}
 
 /* 바디 */
 .order4 {
     display: block;
-    margin-top: 300px;
+    margin-top: 50px;
     margin-right: 15px;
 }
 
 caption {
     float: top;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 1px;
+    padding-bottom: 15px;
     font-size: 2em;
 }
 
@@ -137,8 +142,17 @@ caption>span {
     width: 1240px;
     margin: auto;
     text-align: center;
-    border: 1px solid black;
+    border-bottom: 1px solid rgba(146, 146, 146, 0.466);
 }
+
+thead>tr>th {
+    border-bottom: 1.5px solid rgba(146, 146, 146, 0.466);
+}
+
+table {
+    width: 100%;
+    height: 100px;
+  }
 
 caption {
     text-align: left;
