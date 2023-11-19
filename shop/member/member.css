@@ -3,11 +3,14 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
 }
 .textFont {
     font-family: 'Libre Baskerville', serif;
 }
-
+button {
+    font-family: sans-serif;
+}
 ul {
     padding: 0;
 }
