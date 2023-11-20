@@ -10,6 +10,8 @@
     <script defer src="../../JS/index.js"></script>
     <script defer src="./idinfoSub.js"></script>
 
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -107,13 +109,13 @@
 
                     <div class="grid_head"><span>*</span>비밀번호</div>
                     <div>
-                        <input value="비밀번호" type="password" name="hpw" id="hpw" size="15" minlength="8" maxlength="16">
+                        <input value="a8651485" type="password" name="hpw" id="hpw" size="15" minlength="8" maxlength="16">
                         <span>* 영문 대소문자/숫자/특수문자를 혼용하여 8~16자</span>
                     </div>
 
                     <div class="grid_head"><span>*</span>비밀번호 확인</div>
                     <div>
-                        <input value="비밀번호확인" type="password" name="hppw" id="hppw" size="15" minlength="8" maxlength="16">
+                        <input value="a8651485" type="password" name="hppw" id="hppw" size="15" minlength="8" maxlength="16">
                     </div>
 
                     <div class="grid_head"><span>*</span>생년월일</div>
@@ -144,18 +146,18 @@
 
                     <div class="grid_head"><span>*</span>우편번호</div>
                     <div>
-                        <input value="우편번호" type="text" name="hid" id="hid" size="15" maxlength="30">
-                        <div>우편번호검색</div>
+                        <input type="text" name="zip" id="zip" size="15" maxlength="30" readonly>
+                        <div onclick="execDaumPostcode()">우편번호검색</div>
                     </div>
 
                     <div class="grid_head"><span>*</span>집주소</div>
                     <div>
-                        <input value="집주소"type="text" name="har" id="har" size="15" maxlength="30">
+                        <input type="text" name="har" id="har" size="15" maxlength="30" readonly>
                     </div>
 
                     <div class="grid_head"><span>*</span>상세주소</div>
                     <div>
-                        <input value="상세주소"type="text" name="dar" id="dar" size="15" maxlength="30">
+                        <input type="text" name="dar" id="dar" size="15" maxlength="30">
                         <div>
                             <input type="checkbox" name="darCb" id="darCb">
                             <label for="darCb">기본배송지로 저장</label>
