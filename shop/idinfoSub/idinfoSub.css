@@ -182,6 +182,16 @@ main {
     gap: 200px;
     padding: 15px 20px;
 }
+.fullUnder1 a{
+    display: block;
+    width: 60px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    margin-left: 5px;
+}
 .fullUnder2 span {
     padding: 0 3px
 }

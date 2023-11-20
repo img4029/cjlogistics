@@ -1,3 +1,4 @@
+'use strict';
 let memberBtn = document.querySelector('.member_btn'),
     findIdPwBtn = document.querySelector('.findIdPw_btn');
 
