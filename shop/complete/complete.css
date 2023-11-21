@@ -4,7 +4,17 @@
     list-style: none;
     font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
 }
+a {
+    text-decoration: none;
+}
 
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
 .textFont {
     font-family: 'Libre Baskerville', serif;
 }
@@ -27,7 +37,7 @@
     color: gray;
     font-size: 14px;
 }
-.complete_box>div {
+.complete_box>a {
     margin: auto;
     margin-top: 50px;
     width: 228px;
@@ -45,7 +55,7 @@
     transition-timing-function: ease-out;
     cursor: pointer;
 }
-.complete_box>div:hover{
+.complete_box>a:hover{
     background-color: black;
     color: white;
     transition: background 0.3s ease-out;

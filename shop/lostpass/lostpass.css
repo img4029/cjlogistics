@@ -62,16 +62,22 @@ main {
     display: flex;
     align-items: center;
 }
-#email+label,#phoneNumber+label,#idVerification+label {
+#findId_email+label,
+#findId_phoneNumber+label,
+#findPw_email+label,
+#findPw_phoneNumber+label,
+#idVerification+label {
     font-size: 11px;
     padding-left: 5PX;
 }
 
-#phoneNumber,#idVerification {
+#findId_phoneNumber,#findPw_phoneNumber,#idVerification {
     margin-left: 20px;
 }
-#idInput,
-#pwInput {
+#idInput1,
+#pwInput1,
+#idInput2,
+#pwInput2 {
     width: 100%;
     height: 50px;
     border: 1px solid rgba(128, 128, 128, 0.3);
@@ -79,13 +85,17 @@ main {
     margin: 3px 0;
 }
 
-#idInput:focus,
-#pwInput:focus {
+#idInput1:focus,
+#pwInput1:focus,
+#idInput2:focus,
+#pwInput2:focus {
     outline: none;
 }
 
-#idInput::placeholder,
-#pwInput::placeholder {
+#idInput1::placeholder,
+#pwInput1::placeholder,
+#idInput2::placeholder,
+#pwInput2::placeholder {
     color: rgba(128, 128, 128, 0.5);
 }
 

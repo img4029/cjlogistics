@@ -7,8 +7,6 @@ let birthDateY = document.querySelector(".birthDateY"),
     AgreementSub = document.querySelectorAll(".Agreement_sub"),
     Marketing = document.querySelectorAll(".Marketing"),
     registrationComplete = document.querySelector(".registrationComplete"),
-    idDoubleCheck = document.querySelector(".idDoubleCheck"),
-    grid_head = document.querySelectorAll(".grid_head"),
     idinfo_grid = document.querySelector(".idinfo_grid"),
     idinfoGridValue = idinfo_grid.getElementsByTagName('input'),
     sxBox = document.querySelector(".sx_box"),
@@ -34,9 +32,6 @@ let profile = {
     hsp: '' //휴대폰
 }
 
-export const exportName = {
-    exname:''
-}
 for (let i = 1920; i < 2024; i++) {
     birthDateY.innerHTML += `<option value="${i}">${i}</option>`
 }
@@ -49,14 +44,7 @@ for (let i = 1; i < 32; i++) {
     birthDateD.innerHTML += `<option value="${i}">${i}</option>`
 }
 // ==========================================
-// function openPass() {
-//     window.open('', 'popupChk',
-//         'width=500, height=550, top=100, left=100, fullscreen=no, menubar=no, ' +
-//         'status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
-//     document.form_chk.action = "https://nice.checkplus.co.kr/CheckPlusSafeModel/checkplus.cb";
-//     document.form_chk.target = "popupChk";
-//     document.form_chk.submit();
-// }
+
 //우편번호랑 주소 불러오는 함수
 function execDaumPostcode() {
     new daum.Postcode({
@@ -207,7 +195,6 @@ function informationCheck() {
                     break outer;
                 }
                 profile.hname = myName;
-                exportName.exname = myName;
                 break;
             case 2:
                 if (idCount == 0) {
@@ -303,8 +290,9 @@ function informationCheck() {
                 profile.darCb = idinfoGridValue[10].checked;
                 break;
             case 12:
-                postClientData();
+                // postClientData();
                 alert("등록되었습니다.\n회원 가입시 쿠폰이 발급되었습니다.\n(신규가입쿠폰)");
+                location.href = "../complete/complete.html"
                 break;
         }
     }
@@ -315,8 +303,4 @@ mainExecution(Marketing, mainCheckBox);
 subExecution(Agreement, subCheckBoxAll);
 subExecution(Marketing, subCheckBoxAll);
 
-registrationComplete.childNodes[1].addEventListener('click', (e) => {
-    e.preventDefault();
-});
-exportName.exname = "임명건";
-export { exportName };
+// registrationComplete.childNodes[1].addEventListener('click', informationCheck);
