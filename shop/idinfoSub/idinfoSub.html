@@ -10,6 +10,8 @@
     <script defer src="../../JS/index.js"></script>
     <script defer src="./idinfoSub.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,42 +95,43 @@
     </header>
     <main>
         <div class="idinfoSubContainer">
+            <!-- <button onclick="openPass()">본인인증 열기</button> -->
             <div>
                 <h3>회원정보 입력</h3>
                 <div class="idinfo_grid">
                     <div class="grid_head"><span>*</span>이름</div>
                     <div>
-                        <input value="이름" onkeyup='printName("0")' type="text" name="hname" id="hname" size="15" maxlength="30">
+                        <input value="" type="text" name="hname" id="hname" size="15" maxlength="30">
                     </div>
 
                     <div class="grid_head"><span>*</span>아이디</div>
                     <div>
-                        <input value="  아이디" type="text" name="hid" id="hid" size="15" maxlength="30">
-                        <div class="doubleCheck">중복확인</div>
+                        <input value="" type="text" name="hid" id="hid" size="15" maxlength="30">
+                        <div onclick="idDoubleCheckfc()" class="idDoubleCheck">중복확인</div>
                     </div>
 
                     <div class="grid_head"><span>*</span>비밀번호</div>
                     <div>
-                        <input value="a8651485" type="password" name="hpw" id="hpw" size="15" minlength="8" maxlength="16">
+                        <input value="" type="password" name="hpw" id="hpw" size="15" minlength="8" maxlength="16">
                         <span>* 영문 대소문자/숫자/특수문자를 혼용하여 8~16자</span>
                     </div>
 
                     <div class="grid_head"><span>*</span>비밀번호 확인</div>
                     <div>
-                        <input value="a8651485" type="password" name="hppw" id="hppw" size="15" minlength="8" maxlength="16">
+                        <input value="" type="password" name="hppw" id="hppw" size="15" minlength="8" maxlength="16">
                     </div>
 
                     <div class="grid_head"><span>*</span>생년월일</div>
                     <div>
-                        <select class="birthDateY" name="email_domain" style="width: 70px;">
+                        <select class="birthDateY" name="birthDate" style="width: 70px;">
                             <option value="선택">선택</option>
                         </select>
                         <span>년</span>
-                        <select class="birthDateM" name="email_domain" style="width: 50px;">
+                        <select class="birthDateM" name="birthDate" style="width: 50px;">
                             <option value="선택">선택</option>
                         </select>
                         <span>월</span>
-                        <select class="birthDateD" name="email_domain" style="width: 50px;">
+                        <select class="birthDateD" name="birthDate" style="width: 50px;">
                             <option value="선택">선택</option>
                         </select>
                         <span>일</span>
@@ -166,32 +169,34 @@
 
                     <div class="grid_head"><span>*</span>연락처</div>
                     <div>
-                        <input value="연락처"type="text" name="hpn" id="hpn" size="15" maxlength="30">
+                        <input value=""type="text" name="hpn" id="hpn" size="15" maxlength="30">
                     </div>
 
                     <div class="grid_head"><span>*</span>이메일</div>
                     <div>
-                        <input value="이메일" type="text" name="hem" id="hem" size="15" maxlength="30">
+                        <!-- <input value="이메일" type="text" name="hem" id="hem" size="15" maxlength="30"> -->
+                        <input value="" type="text" name="hem" id="hem" size="15" maxlength="30">
+                        <div onclick="emailDoubleCheckfc()">이메일 중복확인</div>
                     </div>
 
                     <div class="grid_head">회사전화</div>
                     <div>
-                        <input value="회사전화" type="text" name="cpn" id="cpn" size="15" maxlength="30">
+                        <input value="" type="text" name="cpn" id="cpn" size="15" maxlength="30">
                     </div>
 
                     <div class="grid_head">회사주소</div>
                     <div>
                         <div>
-                            <input value="회사주소" type="text" name="car" id="car" size="15" maxlength="30">
-                            <div>우편번호검색</div>
+                            <input value="" type="text" name="car" id="car" size="15" maxlength="30" readonly>
+                            <div onclick="execDaumPostcode1()">우편번호검색</div>
                         </div>
-                        <input value="회사주소상세" type="text" name="cdar" id="cdar" size="15" maxlength="30">
+                        <input value="" type="text" name="cdar" id="cdar" size="15" maxlength="30">
 
                     </div>
 
                     <div class="grid_head">휴대폰</div>
                     <div>
-                        <input value="휴대폰" type="text" name="hsp" id="hsp" size="15" maxlength="30">
+                        <input value="" type="text" name="hsp" id="hsp" size="15" maxlength="30">
                     </div>
                 </div>
             </div>
@@ -204,13 +209,13 @@
                 <div class="fullUnder_box">
                     <div class="fullUnder1">
                         <div>
-                            <input type="checkbox" id="termsUse" name="termsUse" class="Agreement">
+                            <input type="checkbox" id="termsUse" name="termsUse" class="Agreement Agreement_sub">
                             <label for="termsUse">이용약관</label>
                             <a href="#이용약관">내용보기</a>
                         </div>
 
                         <div>
-                            <input type="checkbox" id="collectionUse" name="collectionUse" class="Agreement">
+                            <input type="checkbox" id="collectionUse" name="collectionUse" class="Agreement Agreement_sub">
                             <label for="collectionUse">개인정보 수집 및 이용 안내</label>
                             <a href="#개인정보">내용보기</a>
                         </div>
