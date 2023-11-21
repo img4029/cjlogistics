@@ -7,23 +7,93 @@
     <title>event page</title>
 
     <link rel="stylesheet" href="./css/event.css">
+    <script defer src="./JS/event.js"></script>
 
 </head>
 
 <body>
-    <div class="header4">
-        <header>
-            <div class="headermenu4"></div>
-            <div class="headerevent4"></div>
-        </header>
-    </div>
-
-    <div class="Event">
-        <h3>EVENT</h3>
-        <h3>이벤트</h3>
-    </div>
 
     <header>
+
+        <div class="header_acide">
+            <div class="header_back"></div>
+            <input type="checkbox" id="menuBtn" value="A">
+            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+                <div class="menu_icon1"></div>
+                <div class="menu_icon2"></div>
+                <div class="menu_icon3"></div>
+            </label>
+            <div class="menu_list">
+                <div class="menu_list_main">
+                    <ul>
+                        <li><a href="">Perfume</a></li>
+                        <li><a href="">Diffuser</a></li>
+                        <li><a href="">Candle</a></li>
+                        <li><a href="">Hand Care</a></li>
+                        <li><a href="">Home Care</a></li>
+                        <li><a href="">Gift</a></li>
+                    </ul>
+                </div>
+                <div class="menu_list_sub">
+                    <ul>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">마이페이지</a></li>
+                        <li><a href="">고객색터</a></li>
+                        <li><a href="">주문조회</a></li>
+                        <li><a href="">스토어</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">브랜드스토리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="" class="logo_link">
+                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                        alt="LOGO">
+                </a>
+            </div>
+            <div class="hearder_icon">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
+                            <span>0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_top">
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="">11월의 증정품</a>
+        </div>
+
+        <div>
+                <div class="headermenu4"></div>
+                <div class="headerevent4"></div>
+        </div>
+
+        <div class="Event">
+            <h3>EVENT</h3>
+            <h3>이벤트</h3>
+        </div>
 
 
         <div class="event_search">
@@ -45,51 +115,51 @@
         <div class="event_container">
 
             <div id="box1">
-                <div><img src="./eventIMG/썸네1.jpg" alt=""></div>
-                <div><span>Daniel's Truth Holiday 2023</span></div>
-                <div><span>[11.15-12.31]</span></div>
+                <div><a href="#"><img src="./eventIMG/썸네1.jpg" alt=""></a></div>
+                <div><a href="#">Daniel's Truth Holiday 2023</a></div>
+                <div>[11.15-12.31]</div>
             </div>
 
             <div id="box2">
-                <div><img src="./eventIMG/이벤트2.jpg" alt=""></div>
-                <div><span>NEW 오일퍼퓸 20ml</span></div>
-                <div><span>NEW</span></div>
+                <div><a href="#"><img src="./eventIMG/이벤트2.jpg" alt=""></a></div>
+                <div><a href="#">NEW 오일퍼퓸 20ml</a></div>
+                <div>NEW</div>
             </div>
 
             <div id="box3">
-                <div><img src="./eventIMG/PO3.jpg" alt=""></div>
-                <div><span>11월 포토리뷰 이벤트</span></div>
-                <div><span>[11.01-11.30]</span></div>
+                <div><a href="#"><img src="./eventIMG/PO3.jpg" alt=""></a></div>
+                <div><a href="#">11월 포토리뷰 이벤트</a></div>
+                <div>[11.01-11.30]</div>
             </div>
 
             <div id="box4">
-                <div><img src="./eventIMG/no114.jpg" alt=""></div>
-                <div><span>11월 증정품</span></div>
-                <div><span>[11.01-11.30]</span></div>
+                <div><a href="#"><img src="./eventIMG/no114.jpg" alt=""></a></div>
+                <div><a href="#">11월 증정품</a></div>
+                <div>[11.01-11.30]</div>
             </div>
 
             <div id="box5">
-                <div><img src="./eventIMG/110115.jpg" alt=""></div>
-                <div><span>기획 상품 10-25% OFF</span></div>
-                <div><span>[11.01-11.30]</span></div>
+                <div><a href="#"><img src="./eventIMG/110115.jpg" alt=""></a></div>
+                <div><a href="#">기획 상품 10-25% OFF</a></div>
+                <div>[11.01-11.30]</div>
             </div>
 
             <div id="box6">
-                <div><img src="./eventIMG/1020event6.jpg" alt=""></div>
-                <div><span>NEW 호아킨 & 솔리드 디퓨저</span></div>
-                <div><span>[11.01-11.30]</span></div>
+                <div><a href="#"><img src="./eventIMG/1020event6.jpg" alt=""></a></div>
+                <div><a href="#">NEW 호아킨 & 솔리드 디퓨저</a></div>
+                <div>[11.01-11.30]</div>
             </div>
 
             <div id="box7">
-                <div><img src="./eventIMG/43.jpg" alt=""></div>
-                <div><span>10월 포토리뷰 이벤트 당첨자 발표</span></div>
+                <div><a href="#"><img src="./eventIMG/43.jpg" alt=""></a></div>
+                <div><a href="#">10월 포토리뷰 이벤트 당첨자 발표</a></div>
                 <div></div>
             </div>
 
             <div id="box8">
-                <div><img src="./eventIMG/11013.jpg" alt=""></div>
-                <div><span>신규가입 쿠폰</span></div>
-                <div><span>[11.01-11.30]</span></div>
+                <div><a href="#"><img src="./eventIMG/11013.jpg" alt=""></a></div>
+                <div><a href="#">신규가입 쿠폰</a></div>
+                <div>[11.01-11.30]</div>
             </div>
     </main>
 

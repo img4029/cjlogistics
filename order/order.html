@@ -9,96 +9,168 @@
 
     <script defer src="./javascript/index.js"></script>
     <link rel="stylesheet" href="./CSS/order.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="header4">
-        <header>
-            <div class="headermenu4"></div>
-            <div class="headerevent4">상단 메뉴</div>
-        </header>
-    </div>
 
-    <div>
-        <main class="main1_4">
-            <div>
-                <h3 class="mypage4">My Page</h3>
-                <div class="mypagelist4">
-                    <div class="info4">shopping info
-                        <div>
-                            <div><a href="#">주문내역</a></div>
-                            <div><a href="#">쿠폰내역</a></div>
-                            <div><a href="#">적립금내역</a></div>
-                            <div><a href="#">오늘본상품</a></div>
-                            <div><a href="#">상품 보관함</a></div>
-                            <div><a href="#">주소록 관리</a></div>
-                            <div><a href="#"></a></div>
-                        </div>
-                    </div>
-                    
-                    <div class="question4">shopping question
-                        <div>
-                            <div><a href="#">내 게시글 보기</a></div>
-                            <div><a href="#">E-mail 문의</a></div>
-                            <div><a href="#">1:1 게시판</a></div>
-                        </div>
-                    </div>
-                    
-                    <div class="customer4">customer info
-                        <div>
-                            <div><a href="#">회원정보변경</a></div>
-                            <div><a href="#">회원정보탈퇴신청</a></div>
-                        </div>
-                    </div>
-                    
+    <header>
+        <div class="header_acide">
+            <div class="header_back"></div>
+            <input type="checkbox" id="menuBtn" value="A">
+            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+                <div class="menu_icon1"></div>
+                <div class="menu_icon2"></div>
+                <div class="menu_icon3"></div>
+            </label>
+            <div class="menu_list">
+                <div class="menu_list_main">
+                    <ul>
+                        <li><a href="">Perfume</a></li>
+                        <li><a href="">Diffuser</a></li>
+                        <li><a href="">Candle</a></li>
+                        <li><a href="">Hand Care</a></li>
+                        <li><a href="">Home Care</a></li>
+                        <li><a href="">Gift</a></li>
+                    </ul>
+                </div>
+                <div class="menu_list_sub">
+                    <ul>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">마이페이지</a></li>
+                        <li><a href="">고객색터</a></li>
+                        <li><a href="">주문조회</a></li>
+                        <li><a href="">스토어</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">브랜드스토리</a></li>
+                    </ul>
                 </div>
             </div>
-        </main>
-
-        <main class="main2_4">
+            <div class="logo_box">
+                <a href="" class="logo_link">
+                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                        alt="LOGO">
+                </a>
+            </div>
+            <div class="hearder_icon">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
+                            <span>0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_top">
             <div>
-                <div class="order4">
-                    <table summary="번호, 주문일자, 상품명, 결제금액, 주문상세, 배송현황">
-                        <!-- <span>[***] 주문 내역 입니다.</span> -->
-                        <caption>주문 내역</caption>
-                        <colgroup class="tcol">
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                        </colgroup>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="">11월의 증정품</a>
+        </div>
 
-                        <thead>
-                            <tr>
-                                <th>번호</th>
-                                <th>주문일</th>
-                                <th>상품명</th>
-                                <th>결제금액</th>
-                                <th>주문상세</th>
-                                <th>배송현황</th>
-                            </tr>
-                        </thead>
+    </header>
 
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2023.11.16</td>
-                                <td>여기는 자스로 구현</td>
-                                <td>90,000원</td>
-                                <td>
-                                    <div>view</div>
-                                </td>
-                                <td>
-                                    <div>view</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+    <main class="orderMain">
+
+        <div class="myPage">
+            <h3>My Page</h3>
+        </div>
+
+        <div class="mainContainer">
+            <div class="myPagelist">
+                <!-- 여기수정중 23.11.21 -->
+                <div class="firstList">
+                    <div class="SHOPPING_INFO">shopping info</div>
+                    <div>
+                        <ul class="SHOPPING_INFO_LIST">
+                            <li><a href="#">주문내역</a></li>
+                            <li><a href="#">쿠폰내역</a></li>
+                            <li><a href="#">적립금내역</a></li>
+                            <li><a href="#">오늘본상품</a></li>
+                            <li><a href="#">상품 보관함</a></li>
+                            <li><a href="#">주소록 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="secondList">
+                    <div class="SHOPPING_QUESTION">shopping question</div>
+                    <div>
+                        <ul class="SHOPPING_QUESTION_LIST">
+                            <li><a href="#">내 게시글 보기</a></li>
+                            <li><a href="#">E-mail 문의</a></li>
+                            <li><a href="#">1:1 게시판</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="thirdList">
+                    <div class="CUSTOMER_INFO">customer info</div>
+                    <div>
+                        <ul class="CUSTOMER_INFO_LIST">
+                            <li><a href="#">회원정보변경</a></li>
+                            <li><a href="#">회원정보탈퇴신청</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-    </div>
+        </div>
+    </main>
+
+    <main class="main2_4">
+        <div>
+            <div class="order4">
+                <table summary="번호, 주문일자, 상품명, 결제금액, 주문상세, 배송현황">
+                    <!-- <span>[***] 주문 내역 입니다.</span> -->
+                    <caption>주문 내역</caption>
+                    <!-- <colgroup class="tcol">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup> -->
+
+                    <thead class="orderMenu4">
+                        <tr>
+                            <th>번호</th>
+                            <th>주문일</th>
+                            <th>상품명</th>
+                            <th>결제금액</th>
+                            <th>주문상세</th>
+                            <th>배송현황</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
     </main>
 
