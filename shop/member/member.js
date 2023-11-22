@@ -39,7 +39,7 @@ async function ClientData() {
             if ((clientData[i].hid == idInput.value) && (clientData[i].hpw == pwInput.value)) {
                 console.log('asd');
                 const responsepost = await axios.put('http://localhost:3000/loginComplete/1', clientData[i]);
-                location.href = "../test.html";
+                location.href = "../../test.html";
                 count++;
             }
         }
