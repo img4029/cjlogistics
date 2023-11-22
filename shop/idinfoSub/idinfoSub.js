@@ -6,7 +6,6 @@ let birthDateY = document.querySelector(".birthDateY"),
     Agreement = document.querySelectorAll(".Agreement"),
     AgreementSub = document.querySelectorAll(".Agreement_sub"),
     Marketing = document.querySelectorAll(".Marketing"),
-    registrationComplete = document.querySelector(".registrationComplete"),
     idinfo_grid = document.querySelector(".idinfo_grid"),
     idinfoGridValue = idinfo_grid.getElementsByTagName('input'),
     sxBox = document.querySelector(".sx_box"),
@@ -117,9 +116,36 @@ function birthDateOutput(array) {
     }
     
 }
-// 아이디 중복체크
-function idDoubleCheckfc() {
+// 아이디 이메일 서버에서 중복체크
+async function idEmailCheck(idinfoGridValue , n) {
+    try {
+        const response = await axios.get('http://localhost:3000/profile', profile);
+        
+        for (let i = 0; i < response.data.length; i++) {
+            switch (n) {
+                case 1:
+                    if (response.data[i].hid == idinfoGridValue.value) return 1;
+                    break;
+                case 2:
+                    if (response.data[i].hem == idinfoGridValue.value) return 1;
+                    break;
+            }
+        }
+        console.log('응답 데이터:', response.data);       // 서버에서 반환한 데이터
+        console.log('상태 코드:', response.status);       // HTTP 상태 코드
+        console.log('상태 텍스트:', response.statusText); // HTTP 상태 코드 설명
+        console.log('응답 헤더:', response.headers);      // 응답 헤더 정보
+    } catch (err) {
+        console.log(err);
+    }
+}
+// 아이디 중복체크 호출 및 잘못된 문자 검열
+async function idDoubleCheckfc() {
     let count = idinfoGridValue[1].value.split('');
+    if (idEmailCheck(idinfoGridValue[1].value , 1) == 1) {
+        alert("중복된 아이디입니다.");
+        return;
+    }
     for (let n = 0; n < count.length; n++) {
         if ((count[n] == " ") || (count[n] == "&") || (count[n] == "?") || (count[n] == "%") || (count[n] === "#")) {
             alert("『&』,『?』,『%』『#』 또는 공백 문자를 사용하실 수 없습니다.");
@@ -134,9 +160,13 @@ function idDoubleCheckfc() {
     }
 }
 console.log(idinfoGridValue[11].value);
-// 이메일 중복체크
+// 이메일 중복체크 호출 및 잘못된 문자 검열
 function emailDoubleCheckfc() {
     let count = idinfoGridValue[12].value.split('');
+    if (idEmailCheck(idinfoGridValue[12].value, 2) == 1) {
+        alert("중복된 이메일입니다.");
+        return;
+    }
     for (let n = 0, i, j; n < count.length; n++) {
         if (count[n] == "@") i = n;
         if (count[n] == ".") j = n;
@@ -296,5 +326,3 @@ mainExecution(Agreement, mainCheckBox);
 mainExecution(Marketing, mainCheckBox);
 subExecution(Agreement, subCheckBoxAll);
 subExecution(Marketing, subCheckBoxAll);
-
-// registrationComplete.childNodes[1].addEventListener('click', informationCheck);
