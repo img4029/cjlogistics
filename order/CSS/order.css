@@ -1,7 +1,7 @@
 * {
     margin: 0;
-    font-family:'Libre Baskerville', 'Noto Sans KR',
-    'Nunito Sans', 'sans-serif';
+    font-family: 'Libre Baskerville', 'Noto Sans KR',
+        'Nunito Sans', 'sans-serif';
 
 }
 
@@ -11,37 +11,46 @@
     box-sizing: border-box;
     list-style: none;
 }
+
 ul {
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
 
-.header_acide,.header_back,#menuBtn,.menu_list {
+.header_acide,
+.header_back,
+#menuBtn,
+.menu_list {
     position: fixed;
 }
+
 .header_acide {
     height: 100vh;
     width: 100px;
 }
-.header_back{
+
+.header_back {
     z-index: 19;
     height: 100vh;
     width: 100px;
     background-color: rgba(255, 255, 255, 0);
 
     transition-property: background-color;
-        /*변형 완료 1초*/
+    /*변형 완료 1초*/
     transition-duration: 0.5s;
-        /*빠른 시작 서서히 감속*/
+    /*빠른 시작 서서히 감속*/
     transition-timing-function: ease-out;
 }
+
 .header_acide:hover>.header_back {
     background: rgba(255, 255, 255, 1);
-        /* 변형할 것은 배경 1초, 빠른 시작 서서히 감속*/
+    /* 변형할 것은 배경 1초, 빠른 시작 서서히 감속*/
     transition: background 0.5s ease-out;
 }
+
 .menu_icon_box {
     width: 24px;
     height: 20px;
@@ -53,14 +62,19 @@ a {
     margin: auto;
     cursor: pointer;
 }
-.menu_icon1,.menu_icon2,.menu_icon3 {
+
+.menu_icon1,
+.menu_icon2,
+.menu_icon3 {
     height: 2px;
     width: 100%;
     background-color: #333;
 }
+
 .menu_icon2 {
     margin: 7px 0;
 }
+
 .logo_box {
     width: 40px;
     position: absolute;
@@ -68,15 +82,19 @@ a {
     left: 34px;
     z-index: 20;
 }
+
 .logo_link {
     display: block;
 }
+
 .logo {
     width: 100%;
 }
+
 #menuBtn {
     left: -9999px;
 }
+
 .menu_list {
     z-index: 18;
     top: 0;
@@ -86,25 +104,32 @@ a {
     transform: translateX(-416px);
     padding: 110px 0 0 140px;
 }
+
 .menu_list_sub {
     margin-top: 40px;
 }
-.menu_list_main ul{
+
+.menu_list_main ul {
     overflow: hidden;
 }
+
 .menu_list_main li {
     line-height: 52px;
 }
-.menu_list_main a{
+
+.menu_list_main a {
     font-size: 22px;
     color: black;
 }
+
 .menu_list_sub li {
     line-height: 38px;
 }
+
 .menu_list_sub a {
     color: black;
 }
+
 .hearder_icon {
     z-index: 20;
     position: absolute;
@@ -112,20 +137,24 @@ a {
     left: 50%;
     transform: translateX(-50%);
 }
-.hearder_icon li{
+
+.hearder_icon li {
     display: flex;
     justify-content: center;
 }
+
 .hearder_icon img {
     height: 24px;
     margin-top: 30px;
 }
+
 .hearder_icon span {
     position: absolute;
     font-size: 13px;
     top: 18px;
     left: 21px;
 }
+
 .header_top {
     height: 50px;
     width: 100%;
@@ -134,9 +163,11 @@ a {
     color: white;
     align-items: center;
 }
+
 .header_top>div {
     background-color: aqua;
 }
+
 .header_top>div>div {
     position: absolute;
     background-color: white;
@@ -144,13 +175,17 @@ a {
     height: 2px;
     width: 8px;
 }
+
 .header_top>div>div:nth-child(1) {
-    transform: translateY(-3px) rotate(135deg);;
+    transform: translateY(-3px) rotate(135deg);
+    ;
 }
+
 .header_top>div>div:nth-child(2) {
     transform: translateY(3px) rotate(45deg);
     ;
 }
+
 .header_top>a {
     padding-left: 50px;
     color: white;
@@ -167,16 +202,17 @@ a {
     margin: auto;
     padding: 50px;
 }
-.mainContainer{
+
+.mainContainer {
     width: 1100px;
     margin: auto;
 }
 
 .myPagelist {
     display: grid;
-    grid-template: repeat(1 , 1fr) / repeat(3, 2fr);
-    justify-items:center;
-    
+    grid-template: repeat(1, 1fr) / repeat(3, 2fr);
+    justify-items: center;
+
     height: 200px;
     position: relative;
     border: 1px solid black;
@@ -186,14 +222,15 @@ a {
 .secondList,
 .thirdList {
     display: grid;
-    
+
     height: 150px;
     width: 350px;
     margin-top: 30px;
     /* border: 1px solid black; */
 }
 
-.firstList, .secondList {
+.firstList,
+.secondList {
     border-right: 1px solid rgb(161, 159, 159);
 
 }
@@ -204,7 +241,7 @@ a {
     font-size: 14px;
     font-weight: bold;
     padding-left: 12px;
-    
+
 }
 
 .SHOPPING_INFO_LIST,
@@ -216,8 +253,7 @@ a {
 
 .SHOPPING_INFO_LIST,
 .SHOPPING_QUESTION_LIST,
-.CUSTOMER_INFO_LIST
-li {
+.CUSTOMER_INFO_LIST li {
     float: left;
     white-space: wrap;
     padding-left: 10px;
@@ -225,15 +261,13 @@ li {
 }
 
 .SHOPPING_QUESTION_LIST,
-.CUSTOMER_INFO_LIST
-li {
+.CUSTOMER_INFO_LIST li {
     padding-bottom: 30px;
 }
 
 .SHOPPING_INFO_LIST li a,
 .SHOPPING_QUESTION_LIST li a,
-.CUSTOMER_INFO_LIST
-li a {
+.CUSTOMER_INFO_LIST li a {
     color: black;
     font-size: 12px;
 }
@@ -274,7 +308,7 @@ thead>tr>th {
 table {
     width: 100%;
     height: 100px;
-  }
+}
 
 caption {
     text-align: left;
