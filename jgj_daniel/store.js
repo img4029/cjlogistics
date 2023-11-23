@@ -19,8 +19,13 @@ let storelist = [
 
 const store_list = document.querySelector(".store_list");
 
-const storeee = `<div class="storeee" id="storeee">
-<h3 class="title"></h3>
+const storeee = 
+`<div class="storeee" id="storeee">
+<p class="type"></p>
+<p class="location"></p>
+<p class="number"></p>
+<p class="time"></p>
+
 </div>`
 
 
