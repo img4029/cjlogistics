@@ -117,17 +117,25 @@ function birthDateOutput(array) {
     
 }
 // 아이디 이메일 서버에서 중복체크
-async function idEmailCheck(idinfoGridValue , n) {
+async function idEmailCheck(n1 , n2) {
     try {
         const response = await axios.get('http://localhost:3000/profile', profile);
         
         for (let i = 0; i < response.data.length; i++) {
-            switch (n) {
+            switch (n2) {
                 case 1:
-                    if (response.data[i].hid == idinfoGridValue.value) return 1;
+                    console.log(response.data[i].hid);
+                    console.log(idinfoGridValue[n1].value);
+                    if (response.data[i].hid == idinfoGridValue[n1].value) {
+                        alert("중복된 아이디입니다.");  
+                        return false;
+                    }
                     break;
                 case 2:
-                    if (response.data[i].hem == idinfoGridValue.value) return 1;
+                    if (response.data[i].hem == idinfoGridValue[n1].value) {
+                        alert("중복된 이메일입니다.");
+                        return false;
+                    }
                     break;
             }
         }
@@ -135,55 +143,49 @@ async function idEmailCheck(idinfoGridValue , n) {
         console.log('상태 코드:', response.status);       // HTTP 상태 코드
         console.log('상태 텍스트:', response.statusText); // HTTP 상태 코드 설명
         console.log('응답 헤더:', response.headers);      // 응답 헤더 정보
+        return true;
     } catch (err) {
         console.log(err);
     }
 }
 // 아이디 중복체크 호출 및 잘못된 문자 검열
 async function idDoubleCheckfc() {
-    let count = idinfoGridValue[1].value.split('');
-    if (idEmailCheck(idinfoGridValue[1].value , 1) == 1) {
-        alert("중복된 아이디입니다.");
-        return;
-    }
-    for (let n = 0; n < count.length; n++) {
-        if ((count[n] == " ") || (count[n] == "&") || (count[n] == "?") || (count[n] == "%") || (count[n] === "#")) {
-            alert("『&』,『?』,『%』『#』 또는 공백 문자를 사용하실 수 없습니다.");
-            break;
+    if (await idEmailCheck(1, 1)) {
+        const regPass = /^(?=.*[a-zA-Z])(?=.*[0-9]).{5,16}$/;  
+        if (!regPass.test(idinfoGridValue[1].value)) {
+            alert("영어와 숫자로 아이디를 입력해주세요");
+            idinfoGridValue[1].focus();
+            return;
         }
-        if (n == count.length - 1) {
-            alert(`${idinfoGridValue[1].value} 사용할수 있는 아이디입니다.`);
-            idinfoGridValue[1].readOnly = true;
-            idinfoGridValue[1].style.backgroundColor = "rgba(128, 128, 128, 0.2)"
-            idCount = 1;
-        }
+        alert(`${idinfoGridValue[1].value} 사용할수 있는 아이디입니다.`);
+        idinfoGridValue[1].readOnly = true;
+        idinfoGridValue[1].style.backgroundColor = "rgba(128, 128, 128, 0.2)"
+        idCount = 1;
     }
 }
 console.log(idinfoGridValue[11].value);
 // 이메일 중복체크 호출 및 잘못된 문자 검열
-function emailDoubleCheckfc() {
+async function emailDoubleCheckfc() {
     let count = idinfoGridValue[12].value.split('');
-    if (idEmailCheck(idinfoGridValue[12].value, 2) == 1) {
-        alert("중복된 이메일입니다.");
-        return;
-    }
-    for (let n = 0, i, j; n < count.length; n++) {
-        if (count[n] == "@") i = n;
-        if (count[n] == ".") j = n;
-        if (i && j) {
-            if ((j > i) && (i != 0) && (j != (count.length - 1))) {
-                alert(`${idinfoGridValue[12].value} 사용할수 있는 이메일입니다.`);
-                idinfoGridValue[12].readOnly = true;
-                idinfoGridValue[12].style.backgroundColor = "rgba(128, 128, 128, 0.2)"
-                emailCount = 1;
-                break;
+    if (await idEmailCheck(12, 2)) { 
+        for (let n = 0, i, j; n < count.length; n++) {
+            if (count[n] == "@") i = n;
+            if (count[n] == ".") j = n;
+            if (i && j) {
+                if ((j > i) && (i != 0) && (j != (count.length - 1))) {
+                    alert(`${idinfoGridValue[12].value} 사용할수 있는 이메일입니다.`);
+                    idinfoGridValue[12].readOnly = true;
+                    idinfoGridValue[12].style.backgroundColor = "rgba(128, 128, 128, 0.2)"
+                    emailCount = 1;
+                    break;
+                }
             }
         }
+        if (emailCount == 0) {
+            alert("올바른 이메일이 아닙니다.");
+            idinfoGridValue[12].focus();
+        }
     }
-    if (emailCount == 0) {
-        alert("올바른 이메일이 아닙니다.");
-    }
-    
 }
 // 서버와 연동하여 데이터 전달
 async function postClientData() {
@@ -206,9 +208,11 @@ function informationCheck() {
             case 0:
                 if (AgreementSub[0].checked !== true) {
                     alert(`약관을 읽어보시고 동의하셔야 됩니다.`);
+                    AgreementSub[0].focus();
                     break outer;
                 } else if (AgreementSub[1].checked !== true) {
                     alert(`개인정보 수집 및 이용에 동의하셔야 됩니다.`);
+                    AgreementSub[1].focus();
                     break outer;
                 }
                 break;
@@ -216,6 +220,7 @@ function informationCheck() {
                 let myName = idinfoGridValue[0].value.trim();
                 if (myName == "") {
                     alert(`이름을 입력해주세요`);
+                    idinfoGridValue[0].focus();
                     break outer;
                 }
                 profile.hname = myName;
@@ -223,26 +228,29 @@ function informationCheck() {
             case 2:
                 if (idCount == 0) {
                     alert(`아이디 중복확인을 해주세요`);
+                    idinfoGridValue[1].focus();
                     break outer;
                 }
                 profile.hid = idinfoGridValue[1].value;
                 break;
             case 3:
-                // console.log(idinfoGridValue[2].value);
-                let count = idinfoGridValue[2].value.split('');
-                for (let n = 0; n < count.length; n++) {
-                    if (count.length < 8) {
-                        alert(`비밀번호는 영문 대소문자/숫자/특수문자를 혼용하여 8~16자를 입력해주십시오.`);
-                        break outer;
-                    } else if ((count[n] == " ") || (count[n] == `"`) || (count[n] == `'`)) {
-                        alert(`비밀번호에 '(작은따옴표), "(큰따옴표), 공백은 입력 하실 수 없습니다.`);
-                        break outer;
-                    }
+                let regPass = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
+                let regPass2 = /[ "']/;
+                if (!regPass.test(idinfoGridValue[2].value)) {
+                    alert("영문, 숫자, 특수기호 조합으로 8~20자리 입력해주세요")
+                    idinfoGridValue[2].focus();
+                    break outer;
+                }
+                if (regPass2.test(idinfoGridValue[2].value)) {
+                    alert(`비밀번호에 '(작은따옴표), "(큰따옴표), 공백은 입력 하실 수 없습니다.`);
+                    idinfoGridValue[2].focus();
+                    break outer;
                 }
                 break;
             case 4:
                 if (idinfoGridValue[3].value != idinfoGridValue[2].value) {
                     alert("비밀번호가 서로 일치하지 않습니다");
+                    idinfoGridValue[3].focus();
                     break outer;
                 }
                 profile.hpw = idinfoGridValue[2].value;
@@ -257,6 +265,7 @@ function informationCheck() {
                 bdcount += birthDateCheck(birthDateD.children);
                 if (bdcount != 0) {
                     alert('생년월일을 다시 입력해주세요.');
+                    birthDateY.focus();
                     break outer;
                 }
                 profile.birthDate = birthDateOutput(birthDateY.children);
@@ -270,6 +279,7 @@ function informationCheck() {
                 }
                 if (sx == "sxnone") {
                     alert('성별을 선택해주세요.');
+                    sxBoxInput[0].focus();
                     break outer;
                 }
                 profile.sx = sx;
@@ -278,6 +288,7 @@ function informationCheck() {
                 let zipCode = idinfoGridValue[7].value;
                 if (zipCode == "") {
                     alert(`우편번호 검색을 통해 주소와 우편번호를 입력해주세요.`);
+                    idinfoGridValue[7].focus();
                     break outer;
                 }
                 profile.zip = zipCode;
@@ -287,6 +298,7 @@ function informationCheck() {
                 let dar = idinfoGridValue[9].value.trim();
                 if (dar == "") {
                     alert(`상세주소를 입력해주세요.`);
+                    idinfoGridValue[9].focus();
                     break outer;
                 }
                 profile.dar = dar;
@@ -295,6 +307,7 @@ function informationCheck() {
                 let hpn = idinfoGridValue[11].value.trim();
                 if (hpn == "") {
                     alert(`연락처를 입력해주세요.`);
+                    idinfoGridValue[11].focus();
                     break outer;
                 }
                 profile.hpn = hpn;
@@ -302,6 +315,7 @@ function informationCheck() {
             case 10:
                 if (emailCount == 0) {
                     alert(`이메일 중복확인을 해주세요`);
+                    idinfoGridValue[12].focus();
                     break outer;
                 }
                 profile.hem = idinfoGridValue[12].value;
