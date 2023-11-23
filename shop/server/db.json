@@ -39,5 +39,15 @@
       "id": 1
     }
   ],
-  "ShoppingBasketimg4029": []
+  "ShoppingBasketimg4029": [],
+  "Orderimg4029": [
+    {
+      "orderDate":"2023.11.16",
+      "productName":"오일 퍼퓸 밤쉘 20ml 외 1건",
+      "amountPayment":"0원",
+      "orderDetails":"",
+      "deliveryStatus":"",
+      "id": 1
+    }
+  ]
 }
