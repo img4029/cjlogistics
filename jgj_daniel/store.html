@@ -8,6 +8,20 @@
     <!-- <script defer src="./store_1.js"></script> -->
     <link rel="stylesheet" href="../header.css">
     <script defer src="../header.js"></script>
+    <!-- 페이지 새로 만들려면 위 두개 가져가기. 헤더랑 푸터도. -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3a23a93a007b00a0403622a2cf52eaca
+    "></script>
+    <script type="text/javascript">
+	
+	var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+	var options = { //지도를 생성할 때 필요한 기본 옵션
+		center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+		level: 3 //지도의 레벨(확대, 축소 정도)
+	};
+
+	var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+	
+</script>
 </head>
 <body>
 
@@ -113,20 +127,28 @@
                 </div>
             </div>
         </div>
-        <div class="store_list">
-            <!-- 자바스크립트로 해야됨. 
-            아아~~~~~~~~~~~
+        <div class="mainbox">
+            <div class="store_list">
+                <!-- list -->
+    
+            </div>
+            <div id="map"  style="width: 500px; height: 600px;">
+                <!-- map -->
+                <script type="text/javascript">
+	
+	var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+	var options = { //지도를 생성할 때 필요한 기본 옵션
+		center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+		level: 3 //지도의 레벨(확대, 축소 정도)
+	};
 
-            자바스크립트 배열로 테이블 만들기
-            or 
-            db연결 -->
+	var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+	
+</script>
+    
+            </div>
 
         </div>
-        <!-- list -->
-        <div class="map">
-
-        </div>
-        <!-- map -->
         
     </main>
     <footer>
@@ -164,129 +186,9 @@
     
 </body>
 <script src="./store.js"></script>
+
 </html>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <table>
-    <thead>
-        <tr>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="store_type">
-                <span>POP_UP</span>
-                <span><img src="./image/popup-icon.png" alt="popup icon"></span>
-            </td>
-            <td class="store_place">
-                <span>대전광역시 유성구 엑스포로 1</span>
-            </td>
-            <td class="store_num">
-                <span>신세계 대전점 Art&Science 1층</span>
-            </td>
-            <td class="store_time">
-                <span>행사 기간 : 23.05.15(월) - 23.12.31(일)</span>
-            </td>
-            <td class="store_icon">
-                <img src="./image/camera_icon.png" alt="">
-            </td>
-        </tr>
-        <tr>
-            <td class="store_type">
-                <span>POP_UP</span>
-                <span><img src="./image/popup-icon.png" alt="popup icon"></span>
-            </td>
-            <td class="store_place">
-                <span>경기도 구리시 인창동 경춘로 261</span>
-            </td>
-            <td class="store_num">
-                <span>롯데 구리점</span>
-            </td>
-            <td class="store_time">
-                행사 기간 : 23.10.27(금) - 23.11.02(목)
-            </td>
-            <td class="store_icon">
-                <img src="./image/camera_icon.png" alt="">
-            </td>
-        </tr>
-        <tr>
-            <td class="store_type">
-                <span>POP_UP</span>
-                <span><img src="./image/popup-icon.png" alt="popup icon"></span>
-            </td>
-            <td class="store_place">
-                <span>경기도 의정부시 의정부동 평화로 525</span>
-            </td>
-            <td class="store_num">
-                <span>신세계 의정부점</span>
-            </td>
-            <td class="store_time">
-                <span>행사 기간 : 23.11.13(월) - 23.11.23(목)</span>
-            </td>
-            <td class="store_icon">
-                <img src="./image/camera_icon.png" alt="">
-            </td>
-        </tr>
-        <tr>
-            <td class="store_type">
-                <span>POP_UP</span>
-                <span><img src="./image/popup-icon.png" alt="popup icon"></span>
-            </td>
-            <td class="store_place">
-                <span>서울 중구 소공로 63</span>
-            </td>
-            <td class="store_num">
-                <span>신세계 본점</span>
-            </td>
-            <td class="store_time">
-                <span>행사 기간 : 23.11.24(금) - 23.11.30(목)</span>
-            </td>
-            <td class="store_icon">
-                <img src="./image/camera_icon.png" alt="">
-            </td>
-        </tr>
-        <tr>
-            <td class="store_type">
-                <span> 스타필드 고양점 1F</span>
-            </td>
-            <td class="store_place">
-                <span>경기도 고양시 덕양구 고양대로 1955
-                </span>
-            </td>
-            <td class="store_num"></td>
-            <td class="store_time"></td>
-            <td class="store_icon"></td>
-        </tr>
-        <tr>
-            <td class="store_type"></td>
-            <td class="store_place"></td>
-            <td class="store_num"></td>
-            <td class="store_time"></td>
-            <td class="store_icon"></td>
-        </tr>
-    </tbody>
-
-</table> -->
-</html>

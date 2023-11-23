@@ -70,24 +70,86 @@ main{
     /* display: flex; */
     margin: 0 100px;
 }
-/* =====메인===== */
-
-.store_list{
-    background-color: lightgreen;
-    width: 70%;
-    height: 500px;
+.mainbox {
     display: flex;
+    margin-bottom: 50px;
+}
+/* =====메인===== */
+.store_list{
+    /* background-color: lightgreen; */
+    width: 1100px;
+    height: auto;
     
 }
-.store_list td{
+.storeee{
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* white-space: nowrap; */
+
+}
+.storeee:nth-child(1){
+    border-top: 1px solid gray;
+}
+.storeee p{
+    /* display: inline-block; */
+    /* height: 70px; */
+    line-height: 70px;
+    vertical-align: middle;
+    font-size: small;
+    vertical-align: middle;
+    white-space: nowrap;
+
+} 
+.storeee p img{
+    padding-left: 5px;
+    vertical-align: middle;
+}
+.dot{
+    width: 12px;
+    height: 12px;
     border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 5px;
+    
+}
+.storeee:hover .dot{
+    background-color: gray;
+
+}
+.type{
+    width: 20%;
+    padding-left: 5px;
+    
+}
+.location{
+    width: 25%;
+    padding-left: 15px;
+
+}
+.number{
+    width: 15%;
+    text-align: center;
+}
+.time{
+    width: 30%;
+    text-align: center;
+
+}
+.camera{
+    background-image: url(./image/camera_icon.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 30px;
+    height: 20px;
 }
 
-
 /* =====오른쪽===== */
-.map{
+#map{
     background-color: lightseagreen;
-    width: 300px;
-    height: 500px;
+    /* width: 500px;
+    height: 600px; */
 
 }

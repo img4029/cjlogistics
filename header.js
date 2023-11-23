@@ -114,7 +114,7 @@ function loginCheck() {
     }
 };
 
-getClientData();
+// getClientData();
 
 jyh.innerText += ":";
 lhn.innerText += ":";
