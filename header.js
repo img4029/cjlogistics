@@ -33,7 +33,6 @@ function change() {
         menuIcon2 = document.querySelector('.menu_icon2'),
         menuIcon3 = document.querySelector('.menu_icon3'),
         menu_icon_box = document.querySelector('.menu_icon_box');
-    console.log(menu_icon_box.id);
     if (menu_icon_box.id == "menuBtn1") {
 
         menuList.style.animation = "slidein 0.7s";
@@ -66,7 +65,6 @@ async function getClientData() {
         const response = await axios.get('http://localhost:3000/loginComplete/1');
 
         clientData = response.data;
-        console.log(clientData);
         loginCheck();
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
@@ -78,7 +76,6 @@ async function getShoppingBasketData(id) {
         const response = await axios.get(`http://localhost:3000/ShoppingBasket${id}`);
 
         ShoppingBasketData = response.data;
-        console.log(ShoppingBasketData);
         shopping_basket.innerText = ShoppingBasketData.length;
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
@@ -87,8 +84,6 @@ async function getShoppingBasketData(id) {
 };
 
 function loginCheck() {
-    console.log(clientData);
-    console.log(clientData.hname);
     if (clientData.hname != '') {
         console.log(clientData.hname);
         testing[0].addEventListener('click', () => {

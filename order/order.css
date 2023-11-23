@@ -19,6 +19,7 @@ main>div{
     margin: auto;
     width: 1100px;
     text-align: center;
+    min-height: 916px;
 }
 main>div>h2{
     text-align: center;
@@ -27,6 +28,7 @@ main>div>h2{
 main>div>p {
     text-align: left;
     margin-top: 100px;
+    margin-bottom: 50px;
     font-size: 13px;
     color: gray;
 }
@@ -117,7 +119,10 @@ main>div>p {
     font-size: 14px;
     font-weight: bold;
 }
-
+.order_gridbox>div:nth-child(n+7) {
+    font-size: 13px;
+    /* font-weight: bold; */
+}
 .jsSpan {
     color: blue;
     font-size: 13px;

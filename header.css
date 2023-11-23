@@ -6,7 +6,6 @@
 .header_acide,
 .header_back,
 .header_top,
-/* #menuBtn, */
 .menu_list {
     position: fixed;
 }
@@ -185,6 +184,7 @@
 footer {
     display: flex;
     justify-content: center;
+    background-color: rgb(230, 230, 230);
 }
 
 .footer_container {

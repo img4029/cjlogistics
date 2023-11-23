@@ -26,77 +26,75 @@
 </head>
 
 <body>
-    <header>
-        <div class="header_acide">
-            <div class="header_back"></div>
+<header>
+    <div class="header_acide">
+        <div class="header_back"></div>
 
-            <div id="menuBtn1" class="menu_icon_box" onclick="change()">
-                <div class="menu_icon1"></div>
-                <div class="menu_icon2"></div>
-                <div class="menu_icon3"></div>
-            </div>
-            <div class="menu_list">
-                <div class="menu_list_main">
-                    <ul>
-                        <li><a href="">Perfume</a></li>
-                        <li><a href="">Diffuser</a></li>
-                        <li><a href="">Candle</a></li>
-                        <li><a href="">Hand Care</a></li>
-                        <li><a href="">Home Care</a></li>
-                        <li><a href="">Gift</a></li>
-                    </ul>
-                </div>
-                <div class="menu_list_sub">
-                    <ul>
-                        <li><a href="">로그인</a></li>
-                        <li><a href="">회원가입</a></li>
-                        <li><a href="">마이페이지</a></li>
-                        <li><a href="">고객센터</a></li>
-                        <li><a href="">주문조회</a></li>
-                        <li><a href="">스토어</a></li>
-                        <li><a href="">이벤트</a></li>
-                        <li><a href="">브랜드스토리</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="logo_box">
-                <a href="" class="logo_link">
-                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
-                        alt="LOGO">
-                </a>
-            </div>
-            <div class="hearder_icon">
+        <div id="menuBtn1" class="menu_icon_box" onclick="change()">
+            <div class="menu_icon1"></div>
+            <div class="menu_icon2"></div>
+            <div class="menu_icon3"></div>
+        </div>
+        <div class="menu_list">
+            <div class="menu_list_main">
                 <ul>
-                    <li>
-                        <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
-                                alt="장바구니">
-                            <span>0</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
-                                alt="마이페이지">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
-                                alt="검색">
-                        </a>
-                    </li>
+                    <li><a href="">Perfume</a></li>
+                    <li><a href="">Diffuser</a></li>
+                    <li><a href="">Candle</a></li>
+                    <li><a href="">Hand Care</a></li>
+                    <li><a href="">Home Care</a></li>
+                    <li><a href="">Gift</a></li>
+                </ul>
+            </div>
+            <div class="menu_list_sub">
+                <ul>
+                    <li><a class="testing" href="">로그인</a></li>
+                    <li><a class="testing" href="">회원가입</a></li>
+                    <li><a class="testing" href="">마이페이지</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a class="testing" href="">주문조회</a></li>
+                    <li><a href="">스토어</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">브랜드스토리</a></li>
                 </ul>
             </div>
         </div>
-        <div class="header_top">
-            <div>
-                <div></div>
-                <div></div>
-            </div>
-            <a href="">11월의 증정품</a>
+        <div class="logo_box">
+            <a href="../index.html" class="logo_link">
+                <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                    alt="LOGO">
+            </a>
         </div>
-    </header>
+        <div class="hearder_icon">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
+                        <span class="shopping_basket"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="testing_logo" href="">
+                        <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                            alt="마이페이지">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_top">
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        <a href="../index.html">Daniel's Truth</a>
+    </div>
+</header>
     <main>
         <div class="idinfoSubContainer">
             <!-- <button onclick="openPass()">본인인증 열기</button> -->
@@ -253,10 +251,10 @@
             <hr>
             <div class="idinfoSubPage">
                 <div>
-                    <a name="이용약관"></a>
+                    <a id="이용약관"></a>
                     <h3>이용약관</h3>
 
-                    <textarea cols="80" wrap="off" rows="10" readonly="">
+                    <textarea cols="80" rows="10" readonly>
 인터넷 쇼핑몰 『주식회사 디엠코스메틱스 코리아 사이버 몰』회원 약관
                     
 제1조(목적)
@@ -473,7 +471,7 @@
                     </textarea>
                 </div>
                 <div>
-                    <a name="개인정보"></a>
+                    <a id="개인정보"></a>
                     <h3>개인정보 수집·이용 (필수)</h3>
                     <div class="essentialGrid">
                         <div>구분</div>
