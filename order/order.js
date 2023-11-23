@@ -3,7 +3,7 @@
 let order_gridbox = document.querySelector('.order_gridbox'),
     order_name = document.querySelector('.order_name'),
     createDiv = new Array(6),
-    clientData, clientData2;
+    clientData1, clientData2;
 
 order_gridbox.children[6].style.gridArea = '2/1/3/7';
 order_gridbox.children[6].style.fontSize = '12px';
@@ -14,11 +14,12 @@ async function getClientData() {
         const response = await axios.get('http://localhost:3000/loginComplete/1');
         const response2 = await axios.get('http://localhost:3000/Orderimg4029');
 
-        clientData = response.data;
+        clientData1 = response.data;
         clientData2 = response2.data;
         console.log(clientData.hname);
-        order_name.innerText = clientData.hname;
-        console.log(clientData);
+        order_name.innerText = '['+clientData.hname+']';
+        order_name.className = "jsSpan";
+        console.log(clientData1);
         for (let i = 0; i < clientData2.length; i++) {
             createDivfc(clientData2[0]);
         }
@@ -31,7 +32,6 @@ async function getClientData() {
 
 function createDivfc() {
     for (let i = 0; i < createDiv.length; i++) {
-        console.log("asfasf");
         createDiv[i] = document.createElement('div')
         order_gridbox.appendChild(createDiv[i]);
     }

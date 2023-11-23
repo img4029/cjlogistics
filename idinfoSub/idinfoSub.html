@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>개인 회원 가입/수정</title>
     <link rel="stylesheet" href="./idinfoSub.css">
-    <link rel="stylesheet" href="../CSS/shopHdFt.css">
-
-    <script defer src="../../JS/index.js"></script>
     <script defer src="./idinfoSub.js"></script>
+
+    <link rel="stylesheet" href="../header.css">
+    <script defer src="../header.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -17,20 +18,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="header_acide">
             <div class="header_back"></div>
-            <input type="checkbox" id="menuBtn" value="A">
-            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+
+            <div id="menuBtn1" class="menu_icon_box" onclick="change()">
                 <div class="menu_icon1"></div>
                 <div class="menu_icon2"></div>
                 <div class="menu_icon3"></div>
-            </label>
+            </div>
             <div class="menu_list">
                 <div class="menu_list_main">
                     <ul>
@@ -47,7 +51,7 @@
                         <li><a href="">로그인</a></li>
                         <li><a href="">회원가입</a></li>
                         <li><a href="">마이페이지</a></li>
-                        <li><a href="">고객색터</a></li>
+                        <li><a href="">고객센터</a></li>
                         <li><a href="">주문조회</a></li>
                         <li><a href="">스토어</a></li>
                         <li><a href="">이벤트</a></li>
@@ -169,7 +173,7 @@
 
                     <div class="grid_head"><span>*</span>연락처</div>
                     <div>
-                        <input value=""type="text" name="hpn" id="hpn" size="15" maxlength="30">
+                        <input value="" type="text" name="hpn" id="hpn" size="15" maxlength="30">
                     </div>
 
                     <div class="grid_head"><span>*</span>이메일</div>
@@ -215,7 +219,8 @@
                         </div>
 
                         <div>
-                            <input type="checkbox" id="collectionUse" name="collectionUse" class="Agreement Agreement_sub">
+                            <input type="checkbox" id="collectionUse" name="collectionUse"
+                                class="Agreement Agreement_sub">
                             <label for="collectionUse">개인정보 수집 및 이용 안내</label>
                             <a href="#개인정보">내용보기</a>
                         </div>
@@ -223,7 +228,8 @@
                     <hr>
                     <div class="fullUnder2">
                         <div>
-                            <input type="checkbox" id="receiveMarketing" name="receiveMarketing" class="Agreement Marketing">
+                            <input type="checkbox" id="receiveMarketing" name="receiveMarketing"
+                                class="Agreement Marketing">
                             <label for="receiveMarketing">마케팅 수신동의</label>
                             <span>&#10088;</span>
                             <input type="checkbox" id="email" name="email" class="Agreement Marketing">
@@ -249,7 +255,7 @@
                 <div>
                     <a name="이용약관"></a>
                     <h3>이용약관</h3>
-                    
+
                     <textarea cols="80" wrap="off" rows="10" readonly="">
 인터넷 쇼핑몰 『주식회사 디엠코스메틱스 코리아 사이버 몰』회원 약관
                     
@@ -522,18 +528,13 @@
             </div>
             <!-- 팀원 이름 정보 -->
             <div class="Team_members">
-                <p><span>주용현</span><span>작업 페이지: </span></p>
-                <p><span>이혜나</span><span>작업 페이지: </span></p>
-                <p><span>김수빈</span><span>작업 페이지: </span></p>
-                <p><span>김수옥</span><span>작업 페이지: </span></p>
-                <p><span>임명건</span><span>작업 페이지: </span></p>
-                <p><span>장근정</span><span>작업 페이지: </span></p>
+                <p><span>주용현</span><span class="jyh"></span></p>
+                <p><span>이혜나</span><span class="lhn"></span></p>
+                <p><span>김수빈</span><span class="ksb"></span></p>
+                <p><span>김수옥</span><span class="kso"></span></p>
+                <p><span>장근정</span><span class="jgj"></span></p>
+                <p><span>임명건</span><span class="img"></span></p>
             </div>
-
-            <!-- <hr style="margin: 50px 0;">
-            <div>
-
-            </div> -->
         </div>
     </footer>
 </body>

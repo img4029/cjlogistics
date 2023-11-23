@@ -5,7 +5,7 @@ let memberBtn = document.querySelector('.member_btn'),
     idInput = document.querySelector('#idInput'),
     pwInput = document.querySelector('#pwInput'),
     login_btn = document.querySelector('.login_btn'),
-    clientData,
+    clientData1,
     count=0;
 // Input 태그 클릭시 글씨 사라지고 다시 나타나기 기본
 function InputDefault(Input, Input2) {
@@ -30,15 +30,15 @@ async function ClientData() {
     try {
         // let count = 0;
         const response = await axios.get('http://localhost:3000/profile/');
-        clientData = response.data;
-        for (let i = 0; i < clientData.length; i++) {
-            console.log(clientData[i].hid);
+        clientData1 = response.data;
+        for (let i = 0; i < clientData1.length; i++) {
+            console.log(clientData1[i].hid);
             console.log(idInput.value);
-            console.log(clientData[i].hpw);
+            console.log(clientData1[i].hpw);
             console.log(pwInput.value);
-            if ((clientData[i].hid == idInput.value) && (clientData[i].hpw == pwInput.value)) {
+            if ((clientData1[i].hid == idInput.value) && (clientData1[i].hpw == pwInput.value)) {
                 console.log('asd');
-                const responsepost = await axios.put('http://localhost:3000/loginComplete/1', clientData[i]);
+                const responsepost = await axios.put('http://localhost:3000/loginComplete/1', clientData1[i]);
                 location.href = "../../test.html";
                 count++;
             }
