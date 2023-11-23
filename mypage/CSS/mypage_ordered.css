@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+.mypage_outer_3 {
+    width: 70rem;
+    height: 70rem;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mypage_top_3 {
+    font-size: 0.8rem;
+}
+
+.mypage_top_3>h1 {
+    text-align: center;
+    padding: 60px;
+}
+
+
+
+.mypage_top_3>h1>a {
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+}
+
+/* ======================== */
+
+/* =======  INFO =============== */
+
+.mypage_info_outer_3 {
+    border: 1px solid rgba(128, 128, 128, 0.312);
+    display: flex;
+    justify-content: space-around;
+    word-break: keep-all;
+    text-transform: uppercase;
+}
+
+.mypage_shop_info_3 {
+    border-right: 1px dashed rgba(128, 128, 128, 0.297);
+    padding: 2rem;
+    width: 30%;
+}
+
+.mypage_shop_3 {
+    font-size: 0.8rem;
+}
+
+.mypage_shop_info_3>h2 {
+    margin-bottom: 1rem;
+}
+
+.mypage_shop_3>span>a {
+    color: gray;
+    margin-right: 5px;
+}
+
+/* ------------------ */
+
+.mypage_QnA_info_3 {
+    border-right: 1px dashed rgba(128, 128, 128, 0.353);
+    padding: 2rem;
+    width: 30%;
+}
+
+.mypage_QnA_info_3>h2 {
+    margin-bottom: 1rem;
+}
+
+.mypage_QnA_3 {
+    font-size: 0.8rem;
+}
+
+.mypage_QnA_3>span>a {
+    color: gray;
+    margin-right: 5px;
+}
+
+/* ------------------ */
+
+.mypage_customer_info_3 {
+    padding: 2rem;
+    width: 30%;
+}
+
+.mypage_customer_3 {
+    font-size: 0.8rem;
+}
+
+.mypage_customer_info_3>h2 {
+    margin-bottom: 1rem;
+}
+
+.mypage_customer_3>span>a {
+    color: gray;
+    margin-right: 5px;
+}
