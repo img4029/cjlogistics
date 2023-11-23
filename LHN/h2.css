@@ -121,8 +121,7 @@ main {
 }
 
 .oilpage_3 {
-    margin-left: 22%;
-    padding-left: 50px;
+    padding-left: 100px;
     margin: 50px auto;
 }
 
@@ -131,13 +130,13 @@ main {
 }
 
 .ulbox2_3 a {
-   /*  border: solid 1px silver; */
+   
     display: inline-block;
     width: 30px;
     height: 25px;
     text-align: center;
     color: black;
-    margin-bottom: 2%;
+   
 }
 
 .ulbox2_3 {
