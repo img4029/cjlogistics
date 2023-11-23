@@ -5,6 +5,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 a {

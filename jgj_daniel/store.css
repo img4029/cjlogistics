@@ -4,9 +4,10 @@
     list-style-type: none;
     color: black;
     text-decoration: none;
+    box-sizing: border-box;
 }
 /* =====헤더===== */
-header{
+main>div:nth-child(1){
     /* background-color: lightcoral; */
     height: 400px;
     min-width: 1700px;

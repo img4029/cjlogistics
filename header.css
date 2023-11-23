@@ -1,18 +1,7 @@
 /* nav 높이 72 */
-* {
-    margin: 0;
+*{
     box-sizing: border-box;
-    list-style: none;
 }
-
-ul {
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
 /* 여기부터 header ======================*/
 .header_acide,
 .header_back,

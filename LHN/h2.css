@@ -3,10 +3,20 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: Libre Baskerville;
+    list-style: none;
+}
+ul {
+    padding: 0;
 }
 
-header {
-    margin-top: 30px;
+a {
+    text-decoration: none;
+}
+main {
+    height: 3600px;
+}
+.bigproduct {
+    padding-top: 100px;
 }
 
 .oilmenu {

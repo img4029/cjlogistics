@@ -12,186 +12,292 @@
 
     <link rel="stylesheet" href="./CSS/mypage_edit.css">
 
+    <link rel="stylesheet" href="../header.css">
+    <script defer src="../header.js"></script>
+
     <link rel="stylesheet" href="./javascript/mypage_edit.js">
 
 
 </head>
 
 <body>
-    <div class="mypage_edit_outer">
-        <div class="mypage_edit_head">
-            <h1>회원정보 입력</h1>
-        </div>
-
-        <fieldset>
-            <form class="mypage_edit_body" action="">
-                <dl>
-                    <dt><sup>*</sup>이름</dt>
-                    <dd>
-                        <div>
-                            <input type="text" readonly>
-                        </div>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><sup>*</sup>아이디</dt>
-                    <dd></dd>
-                </dl>
-                <dl class="edit_body_pw">
-                    <dt><sup>*</sup>비밀번호</dt>
-                    <dd>
-                        <div>
-                            <input type="password">
-                            * 영문 대소문자/숫자/특수문자를 혼용하여 2종류 10~16자 또는 3종류 8~16자
-                        </div>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>
-                        <sup>*</sup>비밀번호 확인
-                    </dt>
-                    <dd>
-                        <input type="password">
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><sup>*</sup>생년월일</dt>
-                    <dd>
-                        <select name="birth" id="birth">
-                            <option value="">
-                                1994
-                            </option>
-                        </select>
-                        년
-                        <select name="birth" id="birth">
-                            <option value="">
-                                10
-                            </option>
-                        </select>
-                        월
-                        <select name="birth" id="birth">
-                            <option value="">
-                                13
-                            </option>
-                        </select>
-                        일
-                    </dd>
-                </dl>
-
-                <dl>
-                    <dt><sup>*</sup>성별</dt>
-                    <dd>
-                        &nbsp;
-                        <label for="gender">
-                            <input type="radio" name="gender" id="none">
-                            선택안함
-                        </label>
-                        &nbsp;&nbsp;
-                        <label for="gender">
-                            <input type="radio" name="gender" id="male">
-                            남
-                        </label>
-                        &nbsp;&nbsp;
-                        <label for="gender">
-                            <input type="radio" name="gender" id="female">
-                            여
-                        </label>
-                    </dd>
-                </dl>
-
-                <dl class="edit_body_zipcode">
-                    <dt><sup>*</sup>우편번호</dt>
-                    <dd>
-                        <input type="text">
-                        <a href="">
-                            우편번호검색
-                        </a>
-                    </dd>
-                </dl>
-                <dl class="edit_body_address">
-                    <dt><sup>*</sup>집주소</dt>
-                    <dd>
-                        <input type="text" class="body_address_input">
-                    </dd>
-                </dl>
-                <dl class="edit_body_address_detail">
-                    <dt><sup>*</sup>상세주소</dt>
-                    <dd>
-                        <input type="text" class="body_address_input">
-                        <input type="checkbox">
-                        기본배송지로 저장
-                    </dd>
-                </dl>
-                <dl class="edit_body_email">
-                    <dt><sup>*</sup>이메일</dt>
-                    <dd>
-                        <input type="text" readonly>
-                        <a href="">이메일 중복확인</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><sup>*</sup>휴대폰</dt>
-                    <dd>
-                        <input type="text" readonly>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><sup>*</sup>뉴스메일</dt>
-                    <dd>
-                        &nbsp;
-                        <label for="">
-                            <input type="radio" name="receive_mail">
-                            받습니다.
-                        </label>
-                        &nbsp;
-                        <label for="">
-                            <input type="radio" name="receive_mail">
-                            받지 않습니다.
-                        </label>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><sup>*</sup>SMS안내</dt>
-                    <dd>
-                        &nbsp;
-                        <label for="">
-                            <input type="radio" name="receive_mail">
-                            받습니다.
-                        </label>
-                        &nbsp;
-                        <label for="">
-                            <input type="radio" name="receive_mail">
-                            받지 않습니다.
-                        </label>
-                    </dd>
-                </dl>
-
-                <div class="mypage_edit_sns">
-                    <dl>
-                        <dt>
-                            &nbsp;&nbsp;
-                            <div class="sns_bgimg1"></div>
-                            &nbsp;&nbsp;네이버
-                        </dt>
-                        <dd>
-                            <a href="">연결하기</a>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>
-                            &nbsp;&nbsp;
-                            <div class="sns_bgimg2">
-                            </div>
-                            &nbsp;&nbsp;카카오
-                        </dt>
-                        <dd>
-                            <a href="">연결하기</a>
-                        </dd>
-                    </dl>
+    <header>
+        <div class="header_acide">
+            <div class="header_back"></div>
+            <input type="checkbox" id="menuBtn" value="A">
+            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+                <div class="menu_icon1"></div>
+                <div class="menu_icon2"></div>
+                <div class="menu_icon3"></div>
+            </label>
+            <div class="menu_list">
+                <div class="menu_list_main">
+                    <ul>
+                        <li><a href="">Perfume</a></li>
+                        <li><a href="">Diffuser</a></li>
+                        <li><a href="">Candle</a></li>
+                        <li><a href="">Hand Care</a></li>
+                        <li><a href="">Home Care</a></li>
+                        <li><a href="">Gift</a></li>
+                    </ul>
                 </div>
-            </form>
-        </fieldset>
-    </div>
+                <div class="menu_list_sub">
+                    <ul>
+                        <li><a class="testing" href="">로그인</a></li>
+                        <li><a class="testing" href="">회원가입</a></li>
+                        <li><a class="testing" href="">마이페이지</a></li>
+                        <li><a href="">고객색터</a></li>
+                        <li><a class="testing" href="">주문조회</a></li>
+                        <li><a href="">스토어</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">브랜드스토리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="./test.html" class="logo_link">
+                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                        alt="LOGO">
+                </a>
+            </div>
+            <div class="hearder_icon">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
+                            <span class="shopping_basket"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="testing_logo" href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_top">
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="test.html">Daniel's Truth</a>
+        </div>
+    </header>
+    <main>
+        <div class="mypage_edit_outer">
+            <div class="mypage_edit_head">
+                <h1>회원정보 입력</h1>
+            </div>
+
+            <fieldset>
+                <form class="mypage_edit_body" action="">
+                    <dl>
+                        <dt><sup>*</sup>이름</dt>
+                        <dd>
+                            <div>
+                                <input type="text" readonly>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><sup>*</sup>아이디</dt>
+                        <dd></dd>
+                    </dl>
+                    <dl class="edit_body_pw">
+                        <dt><sup>*</sup>비밀번호</dt>
+                        <dd>
+                            <div>
+                                <input type="password">
+                                * 영문 대소문자/숫자/특수문자를 혼용하여 2종류 10~16자 또는 3종류 8~16자
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <sup>*</sup>비밀번호 확인
+                        </dt>
+                        <dd>
+                            <input type="password">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><sup>*</sup>생년월일</dt>
+                        <dd>
+                            <select name="birth" id="birth">
+                                <option value="">
+                                    1994
+                                </option>
+                            </select>
+                            년
+                            <select name="birth" id="birth">
+                                <option value="">
+                                    10
+                                </option>
+                            </select>
+                            월
+                            <select name="birth" id="birth">
+                                <option value="">
+                                    13
+                                </option>
+                            </select>
+                            일
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><sup>*</sup>성별</dt>
+                        <dd>
+                            &nbsp;
+                            <label for="gender">
+                                <input type="radio" name="gender" id="none">
+                                선택안함
+                            </label>
+                            &nbsp;&nbsp;
+                            <label for="gender">
+                                <input type="radio" name="gender" id="male">
+                                남
+                            </label>
+                            &nbsp;&nbsp;
+                            <label for="gender">
+                                <input type="radio" name="gender" id="female">
+                                여
+                            </label>
+                        </dd>
+                    </dl>
+
+                    <dl class="edit_body_zipcode">
+                        <dt><sup>*</sup>우편번호</dt>
+                        <dd>
+                            <input type="text">
+                            <a href="">
+                                우편번호검색
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="edit_body_address">
+                        <dt><sup>*</sup>집주소</dt>
+                        <dd>
+                            <input type="text" class="body_address_input">
+                        </dd>
+                    </dl>
+                    <dl class="edit_body_address_detail">
+                        <dt><sup>*</sup>상세주소</dt>
+                        <dd>
+                            <input type="text" class="body_address_input">
+                            <input type="checkbox">
+                            기본배송지로 저장
+                        </dd>
+                    </dl>
+                    <dl class="edit_body_email">
+                        <dt><sup>*</sup>이메일</dt>
+                        <dd>
+                            <input type="text" readonly>
+                            <a href="">이메일 중복확인</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><sup>*</sup>휴대폰</dt>
+                        <dd>
+                            <input type="text" readonly>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><sup>*</sup>뉴스메일</dt>
+                        <dd>
+                            &nbsp;
+                            <label for="">
+                                <input type="radio" name="receive_mail">
+                                받습니다.
+                            </label>
+                            &nbsp;
+                            <label for="">
+                                <input type="radio" name="receive_mail">
+                                받지 않습니다.
+                            </label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><sup>*</sup>SMS안내</dt>
+                        <dd>
+                            &nbsp;
+                            <label for="">
+                                <input type="radio" name="receive_mail">
+                                받습니다.
+                            </label>
+                            &nbsp;
+                            <label for="">
+                                <input type="radio" name="receive_mail">
+                                받지 않습니다.
+                            </label>
+                        </dd>
+                    </dl>
+
+                    <div class="mypage_edit_sns">
+                        <dl>
+                            <dt>
+                                &nbsp;&nbsp;
+                                <div class="sns_bgimg1"></div>
+                                &nbsp;&nbsp;네이버
+                            </dt>
+                            <dd>
+                                <a href="">연결하기</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                &nbsp;&nbsp;
+                                <div class="sns_bgimg2">
+                                </div>
+                                &nbsp;&nbsp;카카오
+                            </dt>
+                            <dd>
+                                <a href="">연결하기</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div>
+                <ul>
+                    <li><a href="">홈</a></li>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">서비스</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보 처리방침</a></li>
+                    <li><a href="">기업 구매 안내</a></li>
+                    <li><a href="">교환/환불 정책</a></li>
+                </ul>
+            </div>
+            <!-- 로고 -->
+            <div class="footer_logo">
+                <a href="">
+                    <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/f_logo.png" alt="">
+                </a>
+            </div>
+            <!-- 팀원 이름 정보 -->
+            <div class="Team_members">
+                <p><span>주용현</span><span class="jyh"></span></p>
+                <p><span>이혜나</span><span class="lhn"></span></p>
+                <p><span>김수빈</span><span class="ksb"></span></p>
+                <p><span>김수옥</span><span class="kso"></span></p>
+                <p><span>장근정</span><span class="jgj"></span></p>
+                <p><span>임명건</span><span class="img"></span></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

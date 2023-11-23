@@ -6,42 +6,113 @@
     <title>store_notice</title>
     <link rel="stylesheet" href="./store.css">
     <!-- <script defer src="./store_1.js"></script> -->
+    <link rel="stylesheet" href="../header.css">
+    <script defer src="../header.js"></script>
 </head>
 <body>
 
     <header>
-        <div class="subject">
-            <h1>매장안내</h1>
-            <p>
-                지역 또는 매장명을 검색하면 가까운 위치의 매장들을 보실 수 있습니다. 
-            </p>
+        <div class="header_acide">
+            <div class="header_back"></div>
+            <input type="checkbox" id="menuBtn" value="A">
+            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+                <div class="menu_icon1"></div>
+                <div class="menu_icon2"></div>
+                <div class="menu_icon3"></div>
+            </label>
+            <div class="menu_list">
+                <div class="menu_list_main">
+                    <ul>
+                        <li><a href="">Perfume</a></li>
+                        <li><a href="">Diffuser</a></li>
+                        <li><a href="">Candle</a></li>
+                        <li><a href="">Hand Care</a></li>
+                        <li><a href="">Home Care</a></li>
+                        <li><a href="">Gift</a></li>
+                    </ul>
+                </div>
+                <div class="menu_list_sub">
+                    <ul>
+                        <li><a class="testing" href="">로그인</a></li>
+                        <li><a class="testing" href="">회원가입</a></li>
+                        <li><a class="testing" href="">마이페이지</a></li>
+                        <li><a href="">고객색터</a></li>
+                        <li><a class="testing" href="">주문조회</a></li>
+                        <li><a href="">스토어</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">브랜드스토리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="./test.html" class="logo_link">
+                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                        alt="LOGO">
+                </a>
+            </div>
+            <div class="hearder_icon">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
+                            <span class="shopping_basket"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="testing_logo" href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="top_search">
-            <div class="search_city">
-                <span>지역</span>
-                <select name="selectcity" id="selectcity" class="selectcity">
-                    <option value="default">지역선택</option>
-                    <option value="seoul">서울</option>
-                    <option value="gyeonggi">경기도</option>
-                    <option value="incheon">인천</option>
-                    <option value="cheonan">천안</option>
-                    <option value="daejeon">대전</option>
-                    <option value="busan">부산</option>
-                    <option value="gimhae">김해</option>
-                </select>
+        <div class="header_top">
+            <div>
+                <div></div>
+                <div></div>
             </div>
-            <div class="search_store">
-                <span>매장명</span>
-                <input type="text" placeholder="매장명 입력" class="storename">
-            </div>
-            <div class="search_button">
-                <span>
-                    <a href="#">검색</a>
-                </span>
-            </div>
+            <a href="test.html">Daniel's Truth</a>
         </div>
     </header>
     <main>
+        <div>
+            <div class="subject">
+                <h1>매장안내</h1>
+                <p>
+                    지역 또는 매장명을 검색하면 가까운 위치의 매장들을 보실 수 있습니다.
+                </p>
+            </div>
+            <div class="top_search">
+                <div class="search_city">
+                    <span>지역</span>
+                    <select name="selectcity" id="selectcity" class="selectcity">
+                        <option value="default">지역선택</option>
+                        <option value="seoul">서울</option>
+                        <option value="gyeonggi">경기도</option>
+                        <option value="incheon">인천</option>
+                        <option value="cheonan">천안</option>
+                        <option value="daejeon">대전</option>
+                        <option value="busan">부산</option>
+                        <option value="gimhae">김해</option>
+                    </select>
+                </div>
+                <div class="search_store">
+                    <span>매장명</span>
+                    <input type="text" placeholder="매장명 입력" class="storename">
+                </div>
+                <div class="search_button">
+                    <span>
+                        <a href="#">검색</a>
+                    </span>
+                </div>
+            </div>
+        </div>
         <div class="store_list">
             <!-- 자바스크립트로 해야됨. 
             아아~~~~~~~~~~~
@@ -58,7 +129,36 @@
         <!-- map -->
         
     </main>
-    
+    <footer>
+        <div class="footer_container">
+            <div>
+                <ul>
+                    <li><a href="">홈</a></li>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">서비스</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보 처리방침</a></li>
+                    <li><a href="">기업 구매 안내</a></li>
+                    <li><a href="">교환/환불 정책</a></li>
+                </ul>
+            </div>
+            <!-- 로고 -->
+            <div class="footer_logo">
+                <a href="">
+                    <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/f_logo.png" alt="">
+                </a>
+            </div>
+            <!-- 팀원 이름 정보 -->
+            <div class="Team_members">
+                <p><span>주용현</span><span class="jyh"></span></p>
+                <p><span>이혜나</span><span class="lhn"></span></p>
+                <p><span>김수빈</span><span class="ksb"></span></p>
+                <p><span>김수옥</span><span class="kso"></span></p>
+                <p><span>장근정</span><span class="jgj"></span></p>
+                <p><span>임명건</span><span class="img"></span></p>
+            </div>
+        </div>
+    </footer>
     
     
     
