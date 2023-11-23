@@ -5,6 +5,11 @@
     list-style: none;
 }
 
+/* body {
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Single Day', cursive;
+} */
 ul {
     padding: 0;
 }
@@ -188,8 +193,138 @@ a {
 
 /* 여기까지 header ======================*/
 
+/* 여기부터 main ======================*/
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.main_container {
+    margin-top: 150px;
+    width: 1100px;
+}
+
+.main_container>h3 {
+    border-bottom: 1px solid black;
+    height: 26px;
+}
+
+.login_container {
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    display: flex;
+}
+
+.login_container>div {
+    padding: 80px 81px 0 81px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_container>div:nth-child(1) {
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.login_container p {
+    padding: 15px 0;
+    font-size: 10px;
+    line-height: 18px;
+    color: rgba(128, 128, 128, 0.8);
+
+}
+
+.find_box {
+    padding: 10px 0;
+}
+
+.find_box {
+    display: flex;
+    align-items: center;
+}
+
+#email+label,
+#phoneNumber+label {
+    font-size: 11px;
+}
+
+#idInput,
+#pwInput {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    padding: 10px;
+    margin: 3px 0;
+}
+
+#idInput:focus,
+#pwInput:focus {
+    outline: none;
+}
+
+#idInput::placeholder,
+#pwInput::placeholder {
+    color: rgba(128, 128, 128, 0.5);
+}
+
+.login_btn {
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+
+.member_btn,
+.findIdPw_btn {
+    background-color: white;
+    color: black;
+}
+
+.member_btn,
+.findIdPw_btn,
+.login_btn {
+    width: 100%;
+    height: 60px;
+    border: 1px solid black;
+    font-size: 18px;
+    transition-property: background-color;
+    /*변형 완료 1초*/
+    transition-duration: 0.3s;
+    /*빠른 시작 서서히 감속*/
+    transition-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.login_btn:hover {
+    background-color: white;
+    color: black;
+    transition: background 0.3s ease-out;
+}
+
+.member_btn:hover,
+.findIdPw_btn:hover {
+    background-color: black;
+    color: white;
+    transition: background 0.3s ease-out;
+}
+
+.member_img img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.reference_login {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 5px;
+}
+
+/* 여기까지 main ======================*/
+
+
 /* 여기부터 footer ======================*/
 footer {
+    margin-top: 50px;
+    background-color: rgb(235, 235, 235);
     display: flex;
     justify-content: center;
 }

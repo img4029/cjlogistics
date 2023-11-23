@@ -16,6 +16,7 @@ a {
 /* 여기부터 header ======================*/
 .header_acide,
 .header_back,
+.header_top,
 #menuBtn,
 .menu_list {
     position: fixed;
@@ -24,6 +25,7 @@ a {
 .header_acide {
     height: 100vh;
     width: 100px;
+    z-index: 18;
 }
 
 .header_back {
@@ -156,6 +158,7 @@ a {
     display: flex;
     color: white;
     align-items: center;
+    z-index: 17;
 }
 
 .header_top>div {
@@ -215,7 +218,7 @@ footer {
 }
 
 .Team_members span {
-    margin-right: 30px;
+    margin-right: 5px;
 }
 
 .Team_members {
