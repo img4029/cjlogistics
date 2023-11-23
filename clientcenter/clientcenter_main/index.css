@@ -29,10 +29,6 @@
     font-size: 18px;
 }
 
-a {
-    color: black;
-}
-
 .client_search fieldset {
     padding-top: 30px;
     padding-bottom: 50px;
@@ -47,10 +43,6 @@ a {
     font-size: 14px;
     border: 1px solid silver;
     color: silver;
-}
-
-.client_search input {
-    border: 1px solid silver;
 }
 
 .client_search fieldset button {
@@ -73,16 +65,16 @@ a {
 
 .client_search fieldset input {
     width: 483px;
-    height: 28px;
+    height: 33px;
     font-size: 14px;
     padding-left: 28px;
+    border: 1px solid silver;
 }
-
 
 .faq_category_5 {
     padding-left: 0px;
     display: flex;
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 10px;
     font-size: 13px;
 }
@@ -91,12 +83,14 @@ a {
 }
 
 .faq_category_5 a {
-    padding-left: 20px;
     padding-right: 20px;
+    color: black;
 }
+
 
 .faq_category_5 a:nth-child(n+2) {
     border-left: 1px solid silver;
+    padding-left: 20px;
 }
 
 .client_paging a {
@@ -127,7 +121,7 @@ td{
 }
 
 
-tr:nth-child(1) {
+thead{
     border-top: 1px solid;
     border-bottom: 1px solid rgb(150, 150, 150, 0.3);
     font-size: 13px;
@@ -146,28 +140,26 @@ tr td:nth-child(2) {
 }
 tr td:nth-child(3) {
     width: 920px;
-    
 }
 
-tr:nth-child(n+2) {
+tr:nth-child(n) {
     border-bottom: 1px solid rgb(150, 150, 150, 0.3);
 }
 
-tr:nth-child(3n), tr:nth-child(3n+4) {
-
+tr:nth-child(3n-1), tr:nth-child(3n+3) {
     background-color: #fafafa ;
     text-align: left;
 }
 
-tr:nth-child(3n) {
+tr:nth-child(3n-1) {
     border-bottom: 1px dashed silver;
 }
 
-tr:nth-child(3n) td:nth-child(1) {
+tr:nth-child(3n-1) td:nth-child(1) {
     font-size: 18px;
     font-weight: bold;
 }
-tr:nth-child(3n+4) td:nth-child(1) {
+tr:nth-child(3n+3) td:nth-child(1) {
     font-size: 18px;
     font-weight: bold;
     color: #b17efe;
@@ -181,3 +173,10 @@ tr:nth-child(3n) td:nth-child(2) {
     color: gray;
 }
 
+tr td:nth-child(3n+2) {
+    text-align: left;
+}
+
+tr:nth-child(3n+1) td:nth-child(2n) {
+    text-align: center;
+}

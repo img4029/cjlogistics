@@ -8,6 +8,25 @@ table.appendChild(thead);
 table.appendChild(tbody);
 document.getElementById('faq_table').appendChild(table);
 
+function tableth(column1, column2, column3) {
+    let row = document.createElement('tr');
+
+    let heading1 = document.createElement('td');
+    heading1.innerHTML = column1;
+
+    let heading2 = document.createElement('td');
+    heading2.innerHTML = column2;
+
+    let heading3 = document.createElement('td');
+    heading3.innerHTML = column3;
+
+    row.appendChild(heading1);
+    row.appendChild(heading2);
+    row.appendChild(heading3);
+
+    thead.appendChild(row);
+}
+
 function tablecell(column1, column2, column3) {   //tablecell함수 = 1~14 게시물 리스트
     let row = document.createElement('tr');
 
@@ -26,15 +45,22 @@ function tablecell(column1, column2, column3) {   //tablecell함수 = 1~14 게�
 
     tbody.appendChild(row);
 
+    //여기부터 FAQ 클릭이벤트
+
     row.addEventListener('click', function () {
-        let faq_clicker;
+        let faq_clicker =EventTarget;
         faq_clicker = row.nextElementSibling;   //faq_clicker는 각 tablecell들 다음에 오는 Q
+
         while (faq_clicker.classList.contains('faq_cell')) {  //faq_cell에 faq_clicker가 포함될시 true
-            faq_clicker.style.display = faq_clicker.style.display == 'table-row' ? 'none' : 'table-row';
-            //클릭했을때 faq_clicker가 보이면 display:none, 반대로 none일때도 누르면 보이게 변경
+            if (faq_clicker.style.display == 'table-row') {
+                faq_clicker.style.display = 'none';
+            } else {
+                faq_clicker.style.display = 'table-row';
+            }
             faq_clicker = faq_clicker.nextElementSibling;
-        }        //faq_clicker는 다음에 오는 faq_clicker( Q 다음에 오는 A)
-    });
+        }
+    }); 
+    //여기까지 FAQ 클릭이벤트
 }
 
 function faqcell(column4, column5) { //faqcell은 tablecell 다음에 오는 Q,A 리스트
@@ -55,7 +81,9 @@ function faqcell(column4, column5) { //faqcell은 tablecell 다음에 오는 Q,A
     row_2.style.display = 'none'; //faqcell(Q,A)는 기본적으로 display: none 상태
 }
 
-tablecell('번호', '분류', '제목');
+//여기까지 테이블 구조
+
+tableth('번호', '분류', '제목');
 tablecell(14, '결제/배송', '택배박스 안에서 향이 나는데 제품이 샌건가요?');
 faqcell('Q', '택배박스 안에서 향이 나는데 제품이 샌건가요?');
 faqcell('A', '배송 시 제품을 감싼 습자지에 올리브 릿지 향을 연출하여 보내드리고 있습니다.');
@@ -112,32 +140,4 @@ tablecell(1, '마일리지 적립', '마일리지 적립금은 어떻게 사용�
 faqcell('Q', '마일리지 적립금은 어떻게 사용하나요?');
 faqcell('A', '마일리지 적립금 100점은 현금 100원과 같습니다. 사용 시 1,000원 이상 되어야 사용하실 수 있으며, 5,000원 이 넘는 금액의 적립금은 사용하실 수가 없습니다. 구매 시 구매 금액 합계가 40,000원 이상인 경우 결제 시 사용 가능 합니다.');
 
-// function search() {
-//     let category = document.querySelector('#category').value.toLowerCase();
-//     let keyword = document.querySelector('#search_box').value.toLowerCase();
-
-//     // tbody 요소에 접근하여 자식 요소들을 가져옵니다.
-//     let search_row = document.querySelectorAll('#faq_table tbody tr');
-
-//     // 모든 행을 순회하면서 필터링합니다.
-//     for (let row of search_row) {
-//         // 행이 faq_cell 클래스를 가지고 있으면서 style.display가 'none'이면 넘어갑니다.
-//         if (row.classList.contains('faq_cell') && row.style.display === 'none') {
-//             continue;
-//         }
-
-//         let categoryCell = row.children[1].innerHTML.toLowerCase().trim(); // 카테고리 열
-//         let titleCell = row.children[2].innerHTML.toLowerCase().trim(); // 제목 열
-
-//         // 선택한 카테고리가 "전체검색"이거나 현재 행의 카테고리와 일치하는 경우
-//         // 그리고 키워드가 제목에 완전히 포함되어 있는 경우에만 해당 행을 보여줍니다.
-//         if ((category === '' || categoryCell.includes(category)) &&
-//             (titleCell.includes(keyword))) {
-//             row.style.display = 'table-row';
-//         } else {
-//             row.style.display = 'none';
-//         }
-//     }
-// }
-
-
+//테이블 내용

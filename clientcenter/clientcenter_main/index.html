@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://danielstruth.com/shopimages/dmcosmetic/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FAQ 화면</title>
 
     <link rel="stylesheet" href="../../header.css">
     <script defer src="../../header.js"></script>
@@ -19,7 +20,7 @@
 
 </head>
 
-<body id="body">
+<body>
     <header>
         <div class="header_acide">
             <div class="header_back"></div>
@@ -45,7 +46,7 @@
                         <li><a class="testing" href="">로그인</a></li>
                         <li><a class="testing" href="">회원가입</a></li>
                         <li><a class="testing" href="">마이페이지</a></li>
-                        <li><a href="">고객색터</a></li>
+                        <li><a href="">고객센터</a></li>
                         <li><a class="testing" href="">주문조회</a></li>
                         <li><a href="">스토어</a></li>
                         <li><a href="">이벤트</a></li>
@@ -54,7 +55,7 @@
                 </div>
             </div>
             <div class="logo_box">
-                <a href="./test.html" class="logo_link">
+                <a href="../../main/index.html" class="logo_link">
                     <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
                         alt="LOGO">
                 </a>
@@ -63,7 +64,8 @@
                 <ul>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
                             <span class="shopping_basket"></span>
                         </a>
                     </li>
@@ -75,7 +77,8 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
                         </a>
                     </li>
                 </ul>
@@ -99,6 +102,14 @@
 
             <div class="client_search">
                 <fieldset>
+                    <!-- <select id="category" onchange="if(this.value) location.href=(this.value);">
+                        <option value="../clientcenter_main/index.html">전체검색</option>
+                        <option value="../clientcenter_info/index.html">회원가입/정보</option>
+                        <option value="../clientcenter_delivery/index.html">결제/배송</option>
+                        <option value="../clientcenter_exchange/index.html">교환/반품/환불</option>
+                        <option value="../clientcenter_mileage/index.html">마일리지 적립</option>
+                        <option value="../clientcenter_etc/index.html">기타</option>
+                    </select> -->
                     <select id="category">
                         <option value="">전체검색</option>
                         <option value="1">회원가입/정보</option>
@@ -107,8 +118,8 @@
                         <option value="4">마일리지 적립</option>
                         <option value="5">기타</option>
                     </select>
-                    <input type="text" id="search_box">
-                    <button onclick="search()">SEARCH</button>
+                    <input type="text" id="search_box" minlength="2">
+                    <button onclick="search()" id="search_button">SEARCH</button>
                     <h4>BEST 검색어:</h4>
                 </fieldset>
             </div>
