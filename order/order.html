@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 이벤트</title>
+
+    <link rel="stylesheet" href="./CSS/order.css">
+    <script defer src="./JS/order.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header_acide">
+            <div class="header_back"></div>
+            <input type="checkbox" id="menuBtn" value="A">
+            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+                <div class="menu_icon1"></div>
+                <div class="menu_icon2"></div>
+                <div class="menu_icon3"></div>
+            </label>
+            <div class="menu_list">
+                <div class="menu_list_main">
+                    <ul>
+                        <li><a href="">Perfume</a></li>
+                        <li><a href="">Diffuser</a></li>
+                        <li><a href="">Candle</a></li>
+                        <li><a href="">Hand Care</a></li>
+                        <li><a href="">Home Care</a></li>
+                        <li><a href="">Gift</a></li>
+                    </ul>
+                </div>
+                <div class="menu_list_sub">
+                    <ul>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">마이페이지</a></li>
+                        <li><a href="">고객색터</a></li>
+                        <li><a href="">주문조회</a></li>
+                        <li><a href="">스토어</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">브랜드스토리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="" class="logo_link">
+                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                        alt="LOGO">
+                </a>
+            </div>
+            <div class="hearder_icon">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
+                            <span>0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_top">
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="">11월의 증정품</a>
+        </div>
+
+    </header>
+
+
+    <main class="orderMain">
+
+        <div class="myPage">
+            <h3>My Page</h3>
+        </div>
+
+        <div class="mainContainer">
+            <div class="myPagelist">
+                <!-- 여기수정중 23.11.21 -->
+                <div class="firstList">
+                    <div class="SHOPPING_INFO">shopping info</div>
+                    <div>
+                        <ul class="SHOPPING_INFO_LIST">
+                            <li><a href="#">주문내역</a></li>
+                            <li><a href="#">쿠폰내역</a></li>
+                            <li><a href="#">적립금내역</a></li>
+                            <li><a href="#">오늘본상품</a></li>
+                            <li><a href="#">상품 보관함</a></li>
+                            <li><a href="#">주소록 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="secondList">
+                    <div class="SHOPPING_QUESTION">shopping question</div>
+                    <div>
+                        <ul class="SHOPPING_QUESTION_LIST">
+                            <li><a href="#">내 게시글 보기</a></li>
+                            <li><a href="#">E-mail 문의</a></li>
+                            <li><a href="#">1:1 게시판</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="thirdList">
+                    <div class="CUSTOMER_INFO">customer info</div>
+                    <div>
+                        <ul class="CUSTOMER_INFO_LIST">
+                            <li><a href="#">회원정보변경</a></li>
+                            <li><a href="#">회원정보탈퇴신청</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main class="main2_4">
+        <div>
+            <div class="order4">
+                <table summary="번호, 주문일자, 상품명, 결제금액, 주문상세, 배송현황">
+                    <caption>주문 내역</caption>
+
+                    <thead class="orderMenu4">
+                        <tr>
+                            <th>번호</th>
+                            <th>주문일</th>
+                            <th>상품명</th>
+                            <th>결제금액</th>
+                            <th>주문상세</th>
+                            <th>배송현황</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- <tr>
+                            <td>번호~!</td>
+                        </tr> -->
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="undertext">
+        <div>- 상품명 또는 주문상세의 조회 버튼을 클릭하시면, 주문상세 내역을 확인하실 수 있습니다.</div>
+        <div>- 배송현황의 조회 버튼을 클릭하시면, 해당 주문의 배송 현황을 한눈에 확인하실 수 있습니다.</div>
+    </div>
+
+    <div class="scrollTop"><span>&and;</span></div>
+    <div class="scrollBottom"><span>&or;</span></div>
+
+    <footer>
+        <div class="footer_container">
+            <div>
+                <div>홈</div>
+                <div>회사소개</div>
+                <div>서비스</div>
+                <div>이용약관</div>
+                <div>개인정보 처리방침</div>
+                <div>기업 구매 안내</div>
+                <div>교환 환불 정책</div>
+            </div>
+
+            <div class="footer_logo"><img src="./orderIMG/f_logo.png" alt=""></div>
+
+            <div class="footer_undertext">
+                <span>경기도 성남시 분당구 돌마로 46 5층 그린컴퓨터아카데미 성남분당점</span>
+                <span>| 대표 : 김상곤</span>
+                <span></span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
