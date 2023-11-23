@@ -6,7 +6,7 @@
 .header_acide,
 .header_back,
 .header_top,
-#menuBtn,
+/* #menuBtn, */
 .menu_list {
     position: fixed;
 }
@@ -46,6 +46,7 @@
     z-index: 20;
     margin: auto;
     cursor: pointer;
+    user-select: none;
 }
 
 .menu_icon1,
@@ -76,9 +77,9 @@
     width: 100%;
 }
 
-#menuBtn {
-    left: -9999px;
-}
+/* #menuBtn {
+    user-select: none;
+} */
 
 .menu_list {
     z-index: 18;
