@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+}
+/* =====헤더===== */
+header{
+    /* background-color: lightcoral; */
+    height: 400px;
+    min-width: 1700px;
+}
+.subject {
+    text-align: center;
+    height: 60%;
+    padding: 10px;
+    vertical-align: middle;
+    position: relative;
+}
+.subject h1{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.subject p{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gray;
+}
+.top_search{
+    display: block;
+    text-align: center;
+}
+.top_search>div{
+    display: inline-block;
+    position: relative;
+    align-items: center;
+}
+.search_city{
+    margin-right: 100px;
+
+}
+.selectcity, 
+.storename {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+    color: gray;
+}
+.search_button a{
+    display: inline-block;
+    width: 250px;
+    line-height: 60px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    text-align: center ;
+    margin-left: 200px;
+}
+
+/* =====메인===== */
+main{
+    /* display: flex; */
+    margin: 0 100px;
+}
+/* =====메인===== */
+
+.store_list{
+    background-color: lightgreen;
+    width: 70%;
+    height: 500px;
+    display: flex;
+    
+}
+.store_list td{
+    border: 1px solid black;
+}
+
+
+/* =====오른쪽===== */
+.map{
+    background-color: lightseagreen;
+    width: 300px;
+    height: 500px;
+
+}
