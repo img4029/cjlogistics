@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PAGE</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./CSS/practice.css">
+
+    <script src="https://kit.fontawesome.com/647f0863a7.js" crossorigin="anonymous"></script>
+    <script defer src="./javascript/mypage.js"></script>
+</head>
+
+<body>
+    <div class="mypage_outer_3">
+        <div class="mypage_top_3">
+            <h1>
+                <a href="mypage.html">my page</a>
+            </h1>
+            <!-- 새로운 info 대비 우측하단 -->
+            <!-- 이모지 -->
+            <div class="mypage_info_outer_3">
+                <div class="mypage_shop_info_3">
+                    <h2><i class="fa-solid fa-circle-info"></i> shopping info</h2>
+                    <div class="mypage_shop_3">
+                        <span><a href="">주문내역</a></span>
+                        <span><a href="mypage_coupon.html">쿠폰내역</a></span>
+                        <span><a href="">적립금내역</a></span>
+                        <span><a href="">오늘본상품</a></span>
+                        <span><a href="">보관함</a></span>
+                        <span><a href="">주소록관리</a></span>
+                        <span><a href="">선물함</a></span>
+                    </div>
+                </div>
+                <div class="mypage_QnA_info_3">
+                    <h2><i class="fa-solid fa-circle-question"></i> shopping question</h2>
+                    <div class="mypage_QnA_3">
+                        <span><a href="">내 게시물 보기</a></span>
+                        <span><a href="">e-mail문의</a>
+                        </span>
+                        <span><a href="">1:1게시판</a></span>
+                    </div>
+                </div>
+
+                <div class="mypage_customer_info_3">
+                    <h2><i class="fa-solid fa-person-circle-question"></i> customer info</h2>
+                    <div class="mypage_customer_3">
+                        <span><a href="mypage_edit.html">회원정보변경</a></span>
+                        <span><a href="">회원정보탈퇴신청</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 개인정보 저장공간 -->
+        <div class="mypage_profile_outer">
+            <div class="mypage_profile_inner">
+                <div class=""><img src="./image/starbucks_logo.jpg" alt="" class="profile_image"></div>
+                <div>
+                    <p>
+                        김철수[ka@6552bad] <a href="./mypage_edit.html">EDIT</a>
+                    </p>
+                    <table summaty="전 화, 이메일, 주 소" class="profile_privacy_table">
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>전 화</th>
+                            <td>010-0000-0000</td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td>gjsfjd@naver.com</td>
+                        </tr>
+                        <tr>
+                            <th>주 소</th>
+                            <td>경기도 광주시 쌍령동</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>개인정보 주문금액</div>
+            </div>
+        </div>
+
+
+        <!-- ================ mypage_bottom================== -->
+
+
+        <div class="mypage_bottom">
+            <div>
+                <caption>최근 주문정보</caption>
+                <a href="">+ MORE</a>
+
+                <div>
+                    <table class="lastest_order bottomTb" summary="DATA,PRODUCT,COST,DETAIL">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="50%">
+                            <col width="20%">
+                            <col width="15%">
+                        </colgroup>
+                        <tr>
+                            <th>DATE</th>
+                            <th>PRODUCT</th>
+                            <th>COST</th>
+                            <th>DETAIL</th>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+
+
+
+            <div>
+                <caption>최근 등록 게시글</caption>
+                <a href="">+ MORE</a>
+
+                <div>
+                    <table class="lastest_post bottomTb" summary="DATA,SUBJECT,BOARD">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="50%">
+                            <col width="30%">
+                        </colgroup>
+                        <tr>
+                            <th>DATE</th>
+                            <th>SUBJECT</th>
+                            <th>BOARD</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <caption>관심 상품 정보</caption>
+                <a href="">+ MORE</a>
+
+                <div>
+                    <table class="interest_item bottomTb">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
