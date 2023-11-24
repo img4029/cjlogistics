@@ -4,12 +4,12 @@
 
 // ================== 프로필 개인정보 ==================
 
-let clinetData = [
+let profileData = [
     {
         img: "./image/bg1.jpg",
         name: '김수빈 [임의 생성 이메일]',
         phone: '010-2345-3321',
-        email: 'agsee2@naver.com',
+        email: 'gjnsdx123@naver.com',
         address: '경기도~~~~~~~~~~~~~~',
         totalCost: '1,000,000 원',
         reserves: '3,123,345 원',
@@ -20,7 +20,7 @@ let clinetData = [
         img: "./image/bg1.jpg",
         name: '이해나 [임의 생성 이메일]',
         phone: '010-2345-3321',
-        email: 'agsee2@naver.com',
+        email: 'gjnsdx123@naver.com',
         address: '서울특별시~~~~~~~~~~~~~~',
         totalCost: '1,000,000 원',
         reserves: '3,123,345 원',
@@ -31,7 +31,7 @@ let clinetData = [
         img: "./image/bg1.jpg",
         name: '주용현 [임의 생성 이메일]',
         phone: '010-2345-3321',
-        email: 'agsee2@naver.com',
+        email: 'gjnsdx123@naver.com',
         address: '경기도~~~~~~~~~~~~~~',
         totalCost: '1,000,000 원',
         reserves: '3,123,345 원',
@@ -42,7 +42,7 @@ let clinetData = [
         img: "./image/bg1.jpg",
         name: '장근정 [임의 생성 이메일]',
         phone: '010-2345-3321',
-        email: 'agsee2@naver.com',
+        email: 'gjnsdx123@naver.com',
         address: '서울특별시 ~~~~~~~~~~~~~~',
         totalCost: '1,000,000 원',
         reserves: '3,123,345 원',
@@ -53,7 +53,7 @@ let clinetData = [
         img: "./image/bg1.jpg",
         name: '임명건 [임의 생성 이메일]',
         phone: '010-2345-3321',
-        email: 'agsee2@naver.com',
+        email: 'gjnsdx123@naver.com',
         address: '경기도~~~~~~~~~~~~~~',
         totalCost: '1,000,000 원',
         reserves: '3,123,345 원',
@@ -64,7 +64,7 @@ let clinetData = [
         img: "./image/bg1.jpg",
         name: '김수옥 [임의 생성 이메일]',
         phone: '010-2345-3321',
-        email: 'agsee2@naver.com',
+        email: 'gjnsdx123@naver.com',
         address: '서울특별시~~~~~~~~~~~~~~',
         totalCost: '1,000,000 원',
         reserves: '3,123,345 원',
@@ -74,47 +74,62 @@ let clinetData = [
 ];
 
 
-
 let profile = document.querySelector('.mypage_profile_inner'),
     privacy = profile.querySelector('.profile_inner_private'),
-    reserves = profile.querySelector('.profile_inner_ordered');
-
-console.log(profile);
-console.log(privacy);
-console.log(reserves);
+    reserves = profile.querySelector('.profile_inner_ordered'),
+    profileImg = profile.querySelector('.profile_image');
 
 
+let ProfileFrame_1 = '<div>전 화</div><div></div><div>이메일</div><div></div><div>주 소</div><div></div>',
+    reservesFrame_2 = '<div>총 주문 금액 :</div><div></div><div>적 립 금</div><div></div><div>쿠 폰</div><div></div>';
+
+
+function makeProfile() {
+    privacy.innerHTML = ProfileFrame_1;
+    reserves.innerHTML = reservesFrame_2;
+}
+
+makeProfile();
 
 
 
 
+// function checkId() {
+
+//     for (let i = 0; i < profileData.length; i++) {
+//         for (let j = 0; j < Object.values(profileData[i]).length; j++)
+//             if (Object.values(profileData[i])[j] == '5') {
+
+//             }
+//     }
+// }
+// checkId();
 
 
 
 // ====================최근 주문 내역 =========================
 
-
 let table = document.querySelectorAll('.bottomTb');
-// 테이블이 페이지에 2개라서 한번에 가져왔어
+// 테이블이 페이지에 2개라서 한번에 가져왔다.
 
 let OrderData = [
     {
         date: '2023.01.12',
         product: '디퓨저',
         cost: '53,252',
-        detail: '$$$'
+        detail: '<a href="">VIEW</a>'
     },
     {
         date: '2023.05.25',
         product: '향수',
         cost: '102,252',
-        detail: '***'
+        detail: '<a href="">VIEW</a>'
     },
     {
         date: '2023.11.12',
         product: '핸드크림',
         cost: '1,153,252',
-        detail: '%%%'
+        detail: '<a href="">VIEW</a>'
     },
 ]
 
@@ -122,11 +137,17 @@ let OrderData = [
 function latestOrderData() {
     for (let i = 0; i < OrderData.length; i++) {
         let newRow = table[0].insertRow(-1);
-        // 최초 tr>th를 html에 써둬서 행을 추가할때 아래에 추가하기 위해
-        // table[1].insertRow(-1);   -1을 써줬다.
         for (let j = 0; j < Object.values(OrderData[0]).length; j++) {
-            let newCell = newRow.insertCell();
-            newCell.innerText = `${Object.values(OrderData[i])[j]} 원`
+            if (Object.keys(OrderData[i])[j] == 'cost') {
+                let newCell = newRow.insertCell();
+                newCell.innerText = `${Object.values(OrderData[i])[j]} 원`;
+            } else if (Object.keys(OrderData[i])[j] == 'detail') {
+                let newCell = newRow.insertCell();
+                newCell.innerHTML = Object.values(OrderData[i])[j];
+            } else {
+                let newCell = newRow.insertCell();
+                newCell.innerText = Object.values(OrderData[i])[j];
+            }
         }
     }
 }
@@ -163,26 +184,18 @@ let postData = [{
     subject: '찾아가는 방법은 ?',
     board: '<a href="" class="order_detail">1:1게시판</a>',
 }];
-console.log(Object.keys(postData[0])[2] === 'board');
-console.log(Object.values(postData[0]));
-
-
-
-
-
-
-
 
 
 function latestPostData() {
-    for (let i = 0; i < postData.length; i++) {
+    for (let i = 0; i < postData.length; i++) { // 객체배열의 길이만큼 반복시킨다.(행)
         let newRow = table[1].insertRow(-1);
-        // 최초 tr>th를 html에 써둬서 행을 추가할때 아래에 추가하기 위해
-        // table[1].insertRow(-1);   -1을 써줬다.
+        // 헤드 틀을 html에 짜둬서 행을 추가할때 아래에 추가하기 위해
+        // insertRow(-1);   -1을 써줬다.
         for (let j = 0; j < Object.values(postData[0]).length; j++) {
+            //객체의 프로퍼티 갯수만큼 반복시킨다.(행 => 열 추가)
             let newCell = newRow.insertCell();
             if (Object.keys(postData[i])[j] === 'board') {
-                // 데이터의 프로퍼티 중에 게시판 링크가 있어서 키 판별해주기
+                // 데이터의 프로퍼티 중에 게시판 링크(a태그)가 있어서 키 판별해주기
                 newCell.innerHTML = Object.values(postData[i])[j];
             } else {
                 newCell.innerText = Object.values(postData[i])[j];
@@ -244,12 +257,17 @@ let wishData =
         cost: '58,900 원'
     },
     {
+        imgSrc: './image/bg4.jpg',
+        name: '~~ 향수',
+        cost: '58,900 원'
+    },
+    {
         imgSrc: './image/bg5.jpg',
         name: '~~ 핸드 크림',
         cost: '18,900 원'
     }];
 
-function makeFrame() {
+function wishList() {
     for (let i = 0; i < wishData.length; i++) {
 
         let wishContainer = document.createElement("div");
@@ -271,6 +289,6 @@ function makeFrame() {
     }
 }
 
-makeFrame();
+wishList();
 // oooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
