@@ -24,12 +24,12 @@
     <header>
         <div class="header_acide">
             <div class="header_back"></div>
-            <input type="checkbox" id="menuBtn" value="A">
-            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+
+            <div id="menuBtn1" class="menu_icon_box" onclick="change()">
                 <div class="menu_icon1"></div>
                 <div class="menu_icon2"></div>
                 <div class="menu_icon3"></div>
-            </label>
+            </div>
             <div class="menu_list">
                 <div class="menu_list_main">
                     <ul>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="logo_box">
-                <a href="../../main/index.html" class="logo_link">
+                <a href="../index.html" class="logo_link">
                     <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
                         alt="LOGO">
                 </a>
@@ -64,21 +64,18 @@
                 <ul>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
-                                alt="장바구니">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
                             <span class="shopping_basket"></span>
                         </a>
                     </li>
                     <li>
                         <a class="testing_logo" href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
-                                alt="마이페이지">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"alt="마이페이지">
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
-                                alt="검색">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
                         </a>
                     </li>
                 </ul>
@@ -89,74 +86,77 @@
                 <div></div>
                 <div></div>
             </div>
-            <a href="test.html">Daniel's Truth</a>
+            <a href="../index.html">Daniel's Truth</a>
         </div>
     </header>
-
-    <div class="client_container">
-        <div class="client_header_5">
-            <a href="../clientcenter_main/index.html">FAQ</a> <a href="../../main/index.html">HOME ></a>
+    <main>
+        <div class="client_container">
+            <div class="client_header_5">
+                <a href="../clientcenter_main/index.html">FAQ</a> <a href="../../main/index.html">HOME ></a>
+            </div>
+            <div class="client_body">
+                <h3>FAQ</h3>
+                
+                <div class="client_search">
+                    <fieldset>
+                        <label>
+                        <!-- <select id="category" onchange="if(this.value) location.href=(this.value);">
+                            <option value="../clientcenter_main/index.html">전체검색</option>
+                            <option value="../clientcenter_info/index.html">회원가입/정보</option>
+                            <option value="../clientcenter_delivery/index.html">결제/배송</option>
+                            <option value="../clientcenter_exchange/index.html">교환/반품/환불</option>
+                            <option value="../clientcenter_mileage/index.html">마일리지 적립</option>
+                            <option value="../clientcenter_etc/index.html">기타</option>
+                        </select> -->
+                        <select id="category">
+                            <option value="">전체검색</option>
+                            <option value="1">회원가입/정보</option>
+                            <option value="2">결제/배송</option>
+                            <option value="3">교환/반품/환불</option>
+                            <option value="4">마일리지 적립</option>
+                            <option value="5">기타</option>
+                        </select>
+                        <input type="text" id="search_box" minlength="2">
+                        <button onclick="search()" id="search_button">SEARCH</button>
+                        <h4>BEST 검색어:</h4>
+                        </label>
+                    </fieldset>
+                </div>
+    
+                <ul class="faq_category_5">
+                    <a href="../clientcenter_main/index.html">
+                        <li>전체보기 </li>
+                    </a>
+                    <a href="../clientcenter_info/index.html">
+                        <li>회원가입/정보</li>
+                    </a>
+                    <a href="../clientcenter_delivery/index.html">
+                        <li>결제/배송</li>
+                    </a>
+                    <a href="../clientcenter_exchange/index.html">
+                        <li>교환/반품/환불</li>
+                    </a>
+                    <a href="../clientcenter_mileage/index.html">
+                        <li>마일리지 적립</li>
+                    </a>
+                    <a href="../clientcenter_etc/index.html">
+                        <li>기타</li>
+                    </a>
+                </ul>
+    
+                <div id="faq_table">
+                    <script defer src="./index.js"></script>
+                </div>
+    
+                <div class="client_paging">
+                    <a href="" class="page1_5">1</a>
+                    <a href="" class="page2_5">2</a>
+                    <a href="" class="page_next_5">>></a>
+                </div>
+            </div>
+    
         </div>
-        <div class="client_body">
-            <h3>FAQ</h3>
-
-            <div class="client_search">
-                <fieldset>
-                    <!-- <select id="category" onchange="if(this.value) location.href=(this.value);">
-                        <option value="../clientcenter_main/index.html">전체검색</option>
-                        <option value="../clientcenter_info/index.html">회원가입/정보</option>
-                        <option value="../clientcenter_delivery/index.html">결제/배송</option>
-                        <option value="../clientcenter_exchange/index.html">교환/반품/환불</option>
-                        <option value="../clientcenter_mileage/index.html">마일리지 적립</option>
-                        <option value="../clientcenter_etc/index.html">기타</option>
-                    </select> -->
-                    <select id="category">
-                        <option value="">전체검색</option>
-                        <option value="1">회원가입/정보</option>
-                        <option value="2">결제/배송</option>
-                        <option value="3">교환/반품/환불</option>
-                        <option value="4">마일리지 적립</option>
-                        <option value="5">기타</option>
-                    </select>
-                    <input type="text" id="search_box" minlength="2">
-                    <button onclick="search()" id="search_button">SEARCH</button>
-                    <h4>BEST 검색어:</h4>
-                </fieldset>
-            </div>
-
-            <ul class="faq_category_5">
-                <a href="../clientcenter_main/index.html">
-                    <li>전체보기 </li>
-                </a>
-                <a href="../clientcenter_info/index.html">
-                    <li>회원가입/정보</li>
-                </a>
-                <a href="../clientcenter_delivery/index.html">
-                    <li>결제/배송</li>
-                </a>
-                <a href="../clientcenter_exchange/index.html">
-                    <li>교환/반품/환불</li>
-                </a>
-                <a href="../clientcenter_mileage/index.html">
-                    <li>마일리지 적립</li>
-                </a>
-                <a href="../clientcenter_etc/index.html">
-                    <li>기타</li>
-                </a>
-            </ul>
-
-            <div id="faq_table">
-                <script defer src="./index.js"></script>
-            </div>
-
-            <div class="client_paging">
-                <a href="" class="page1_5">1</a>
-                <a href="" class="page2_5">2</a>
-                <a href="" class="page_next_5">>></a>
-            </div>
-        </div>
-
-    </div>
+    </main>
     <footer>
         <div class="footer_container">
             <div>

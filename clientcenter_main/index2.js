@@ -10,7 +10,7 @@ function search() {
 
     for (let row of search_row) {
 
-        if (row.classList.contains('faq_cell') && row.style.display === 'none') {
+        if (row.classList.contains('faqcell') && row.style.display === 'none') {
             continue;
         }
 
@@ -40,3 +40,8 @@ let enterpress = document.getElementById("search_box");
         document.getElementById("search_button").click();
       }
     });
+
+    function changehtml() {
+        let hugefactor = document.getElementsByClassName("client_container");
+        hugefactor.remove();
+    }

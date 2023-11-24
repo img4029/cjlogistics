@@ -48,10 +48,10 @@ function tablecell(column1, column2, column3) {   //tablecell함수 = 1~14 게�
     //여기부터 FAQ 클릭이벤트
 
     row.addEventListener('click', function () {
-        let faq_clicker =EventTarget;
+        let faq_clicker;
         faq_clicker = row.nextElementSibling;   //faq_clicker는 각 tablecell들 다음에 오는 Q
 
-        while (faq_clicker.classList.contains('faq_cell')) {  //faq_cell에 faq_clicker가 포함될시 true
+        while (faq_clicker.classList.contains('faqcell')) {  //faqcell에 faq_clicker가 포함될시 true
             if (faq_clicker.style.display == 'table-row') {
                 faq_clicker.style.display = 'none';
             } else {
@@ -59,13 +59,13 @@ function tablecell(column1, column2, column3) {   //tablecell함수 = 1~14 게�
             }
             faq_clicker = faq_clicker.nextElementSibling;
         }
-    }); 
+    });
     //여기까지 FAQ 클릭이벤트
 }
 
 function faqcell(column4, column5) { //faqcell은 tablecell 다음에 오는 Q,A 리스트
     let row_2 = document.createElement('tr');
-    row_2.classList.add('faq_cell');
+    row_2.classList.add('faqcell');
 
     let factor1 = document.createElement('td');
     factor1.innerHTML = column4;
@@ -141,3 +141,48 @@ faqcell('Q', '마일리지 적립금은 어떻게 사용하나요?');
 faqcell('A', '마일리지 적립금 100점은 현금 100원과 같습니다. 사용 시 1,000원 이상 되어야 사용하실 수 있으며, 5,000원 이 넘는 금액의 적립금은 사용하실 수가 없습니다. 구매 시 구매 금액 합계가 40,000원 이상인 경우 결제 시 사용 가능 합니다.');
 
 //테이블 내용
+
+document.addEventListener("DOMContentLoaded", function () {
+    // 카테고리 링크들을 가져옵니다.
+    let categoryLinks = document.querySelectorAll('.faq_category_5 a:nth-child(2)');
+
+    // 각 카테고리 링크에 클릭 이벤트 리스너를 추가합니다.
+    categoryLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            // 기본 링크 동작을 방지합니다.
+            event.preventDefault();
+
+            // 모든 테이블 행들을 가져옵니다.
+            let rows = document.querySelectorAll('#faq_table tbody td');
+
+            // 모든 행들을 숨깁니다.
+            rows.forEach(function (row) {
+                row.style.display = 'none';
+            });
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // 카테고리 링크들을 가져옵니다.
+    let categoryLinks = document.querySelectorAll('.faq_category_5 a:nth-child(3)');
+
+    // 각 카테고리 링크에 클릭 이벤트 리스너를 추가합니다.
+    categoryLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            // 기본 링크 동작을 방지합니다.
+            event.preventDefault();
+
+            // 클릭된 카테고리를 가져옵니다.
+            let category = link.innerText.trim();
+
+            // 모든 테이블 행들을 가져옵니다.
+            let rows = document.querySelectorAll('#faq_table tbody td');
+
+            // 모든 행들을 숨깁니다.
+            rows.forEach(function (row) {
+                row.style.display = 'none';
+            });
+        });
+    });
+});
