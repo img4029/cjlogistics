@@ -18,6 +18,7 @@ main>div:nth-child(1){
     padding: 10px;
     vertical-align: middle;
     position: relative;
+    /* src: url(./image/main_logo_black.png); */
 }
 .subject h1{
     position: absolute;
@@ -149,7 +150,8 @@ main{
 /* =====오른쪽===== */
 #map{
     background-color: lightseagreen;
-    /* width: 500px;
-    height: 600px; */
+    width: 500px;
+    height: 600px;
+    /* src: url(./image/main_logo_black.png); */
 
 }

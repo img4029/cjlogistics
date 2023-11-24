@@ -32,9 +32,8 @@ function change() {
         menuIcon1 = document.querySelector('.menu_icon1'),
         menuIcon2 = document.querySelector('.menu_icon2'),
         menuIcon3 = document.querySelector('.menu_icon3'),
-        menuBtn = document.querySelector('#menuBtn');
-
-    if (menuBtn.value == "A") {
+        menu_icon_box = document.querySelector('.menu_icon_box');
+    if (menu_icon_box.id == "menuBtn1") {
 
         menuList.style.animation = "slidein 0.7s";
         menuList.style.animationFillMode = "forwards";
@@ -48,7 +47,7 @@ function change() {
         menuIcon3.style.animation = "animate-line-3 1s";
         menuIcon3.style.animationFillMode = "forwards";
 
-        menuBtn.value = "B";
+        menu_icon_box.id = "menuBtn2";
     } else {
         menuList.style.animation = "slideout 0.7s";
 
@@ -58,7 +57,7 @@ function change() {
 
         menuIcon3.style.animation = "animate-line-6 1s";
 
-        menuBtn.value = "A";
+        menu_icon_box.id = "menuBtn1";
     }
 }
 async function getClientData() {
@@ -66,7 +65,6 @@ async function getClientData() {
         const response = await axios.get('http://localhost:3000/loginComplete/1');
 
         clientData = response.data;
-        console.log(clientData);
         loginCheck();
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
@@ -78,7 +76,6 @@ async function getShoppingBasketData(id) {
         const response = await axios.get(`http://localhost:3000/ShoppingBasket${id}`);
 
         ShoppingBasketData = response.data;
-        console.log(ShoppingBasketData);
         shopping_basket.innerText = ShoppingBasketData.length;
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
@@ -87,34 +84,32 @@ async function getShoppingBasketData(id) {
 };
 
 function loginCheck() {
-    console.log(clientData);
-    console.log(clientData.hname);
     if (clientData.hname != '') {
         console.log(clientData.hname);
         testing[0].addEventListener('click', () => {
             const response = axios.put('http://localhost:3000/loginComplete/1', loginComplete);
         });
-        testing[0].href = "./test.html";
+        testing[0].href = "../main/index.html";
         testing[0].innerText = "로그아웃"
         testing[1].href = "";
         testing[1].innerText = "회원정보"
         testing[2].href = "";
-        testing[3].href = "";
+        testing[3].href = "../order/order.html";
         testing_logo.href = "";
         getShoppingBasketData(clientData.hid);
     } else {
-        testing[0].href = "./shop/member/member.html";
+        testing[0].href = "../member/member.html";
         testing[0].innerText = "로그인"
-        testing[1].href = "./shop/idinfo/idinfo.html";
+        testing[1].href = "../idinfo/idinfo.html";
         testing[1].innerText = "회원가입"
-        testing[2].href = "./shop/member/member.html";
-        testing[3].href = "./shop/member/member.html";
-        testing_logo.href = "./shop/member/member.html";
+        testing[2].href = "../member/member.html";
+        testing[3].href = "../member/member.html";
+        testing_logo.href = "../member/member.html";
         shopping_basket.innerText = 0;
     }
 };
 
-// getClientData();
+getClientData();
 
 jyh.innerText += ":";
 lhn.innerText += ":";
