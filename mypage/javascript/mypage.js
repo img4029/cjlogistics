@@ -93,6 +93,45 @@ console.log(reserves);
 
 // ====================최근 주문 내역 =========================
 
+
+let table = document.querySelectorAll('.bottomTb');
+// 테이블이 페이지에 2개라서 한번에 가져왔어
+
+let OrderData = [
+    {
+        date: '2023.01.12',
+        product: '디퓨저',
+        cost: '53,252',
+        detail: '$$$'
+    },
+    {
+        date: '2023.05.25',
+        product: '향수',
+        cost: '102,252',
+        detail: '***'
+    },
+    {
+        date: '2023.11.12',
+        product: '핸드크림',
+        cost: '1,153,252',
+        detail: '%%%'
+    },
+]
+
+
+function latestOrderData() {
+    for (let i = 0; i < OrderData.length; i++) {
+        let newRow = table[0].insertRow(-1);
+        // 최초 tr>th를 html에 써둬서 행을 추가할때 아래에 추가하기 위해
+        // table[1].insertRow(-1);   -1을 써줬다.
+        for (let j = 0; j < Object.values(OrderData[0]).length; j++) {
+            let newCell = newRow.insertCell();
+            newCell.innerText = `${Object.values(OrderData[i])[j]} 원`
+        }
+    }
+}
+
+latestOrderData();
 // ==========================================================
 
 
@@ -101,27 +140,70 @@ console.log(reserves);
 
 let postData = [{
     date: '2023.01.11',
-    subject: '배송 언제쯤?',
-    board: '<a href="" class="order_detail">1:1게시판</a>',
+    subject: '배송 언제 ?',
+    board: '<a href="" class="order_detail">배송 관련</a>',
 },
 {
     date: '2023.03.25',
-    subject: '배송 언제쯤?',
-    board: '<a href="" class="order_detail">1:1게시판</a>',
+    subject: '재입고 는 ?',
+    board: '<a href="" class="order_detail">상품 관련</a>',
+},
+{
+    date: '2023.09.01',
+    subject: '재입고 는 ?',
+    board: '<a href="" class="order_detail">매장</a>',
 },
 {
     date: '2023.05.30',
-    subject: '배송 언제쯤?',
+    subject: '매장 위치는 ?',
     board: '<a href="" class="order_detail">1:1게시판</a>',
 },
 {
     date: '2023.07.02',
-    subject: '물건은?',
+    subject: '찾아가는 방법은 ?',
     board: '<a href="" class="order_detail">1:1게시판</a>',
 }];
+console.log(Object.keys(postData[0])[2] === 'board');
+console.log(Object.values(postData[0]));
 
 
 
+
+
+
+
+
+
+function latestPostData() {
+    for (let i = 0; i < postData.length; i++) {
+        let newRow = table[1].insertRow(-1);
+        // 최초 tr>th를 html에 써둬서 행을 추가할때 아래에 추가하기 위해
+        // table[1].insertRow(-1);   -1을 써줬다.
+        for (let j = 0; j < Object.values(postData[0]).length; j++) {
+            let newCell = newRow.insertCell();
+            if (Object.keys(postData[i])[j] === 'board') {
+                // 데이터의 프로퍼티 중에 게시판 링크가 있어서 키 판별해주기
+                newCell.innerHTML = Object.values(postData[i])[j];
+            } else {
+                newCell.innerText = Object.values(postData[i])[j];
+            }
+        }
+    }
+}
+
+latestPostData();
+
+
+// let active = new Array(2)
+// for문(객체배열 길이만큼) {
+//     let newRow = 테이블요소.insertRow(i);
+
+//     for문(객체 프로퍼티 길이만큼) {
+//         let newCell = newRow.insertCell();
+//         newCell.innerText =
+//             Object.values(data[i])[j]
+//     }
+// }
 
 
 // =====================================================
