@@ -28,7 +28,9 @@ let profile = {
     cpn: '', //회사전화
     car: '', //회사 우편번호
     cdar: '', //회사 주소
-    hsp: '' //휴대폰
+    hsp: '', //휴대폰
+    ShoppingBasket: [], //장바구니
+    Order: [] //주문내역
 }
 
 for (let i = 1920; i < 2024; i++) {
@@ -213,11 +215,11 @@ function informationCheck() {
                 profile.hname = myName;
                 break;
             case 2:
-                if (idCount == 0) {
-                    alert(`아이디 중복확인을 해주세요`);
-                    idinfoGridValue[1].focus();
-                    break outer;
-                }
+                // if (idCount == 0) {
+                //     alert(`아이디 중복확인을 해주세요`);
+                //     idinfoGridValue[1].focus();
+                //     break outer;
+                // }
                 profile.hid = idinfoGridValue[1].value;
                 break;
             case 3:
@@ -300,11 +302,11 @@ function informationCheck() {
                 profile.hpn = hpn;
                 break;
             case 10:
-                if (emailCount == 0) {
-                    alert(`이메일 중복확인을 해주세요`);
-                    idinfoGridValue[12].focus();
-                    break outer;
-                }
+                // if (emailCount == 0) {
+                //     alert(`이메일 중복확인을 해주세요`);
+                //     idinfoGridValue[12].focus();
+                //     break outer;
+                // }
                 profile.hem = idinfoGridValue[12].value;
                 break;
             case 11:

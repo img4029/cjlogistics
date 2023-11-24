@@ -22,7 +22,7 @@ a:visited {
 }
 /* 여기부터 main ======================*/
 .idinfoSubContainer {
-    padding: 0 100px;
+    padding: 100px 100px;
     margin: auto;
     padding-top: 200px;
     min-width: 1100px;

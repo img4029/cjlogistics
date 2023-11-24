@@ -26,6 +26,8 @@ let testing = document.querySelectorAll('.testing'),
         car: "",
         cdar: "",
         hsp: "",
+        ShoppingBasket: "",
+        Order: "",
     };
 function change() {
     let menuList = document.querySelector('.menu_list'),

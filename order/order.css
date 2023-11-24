@@ -29,7 +29,7 @@ main>div>h2{
 main>div>p {
     text-align: left;
     margin-top: 100px;
-    margin-bottom: 50px;
+    padding-bottom: 92px;
     font-size: 13px;
     color: gray;
 }
