@@ -66,6 +66,7 @@ main {
     object-fit: cover;
     margin-top: -100px;
     vertical-align: middle;
+   
 }
 
 .oilpage ul {
@@ -149,6 +150,10 @@ main {
 .ulbox2_3 img {
     width: 12px;
     margin-bottom: 0;
+}
+
+.pagelist_3 img {
+    margin-left: 25px;
 }
 
 
