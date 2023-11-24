@@ -1,7 +1,4 @@
-*{
-    list-style: none;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 .outer {
     width: 1550px;
@@ -18,11 +15,19 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
+}
+main {
+    padding: 0 100px;
+
+    margin: auto;
 }
 
 .outer>.product_topmenu {
     border: 1px solid rgb(200, 200, 200);
     width: 1490px;
+
     margin: auto;
     font-size: 15px;
     display: flex;
@@ -698,8 +703,8 @@ h4 {
 }
     
 .product_rightbox li{
-    font-size: 15px; 
-    margin-left: -70%;
+    font-size: 13px; 
+    margin-left: -40%;
     line-height: 22px;
     color: rgb(92, 91, 91);
 

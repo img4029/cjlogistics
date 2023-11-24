@@ -1,6 +1,7 @@
 'use strict';
 
 
+// 상세페이지 상품 설명서 (클릭이벤트 구역)
 let booktitle= document.querySelector('.booktitle');
 let booktitle2= document.querySelector('.booktitle2');
 let booktitle3= document.querySelector('.booktitle3');
