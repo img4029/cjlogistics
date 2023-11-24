@@ -83,7 +83,6 @@ console.log(profile);
 console.log(privacy);
 console.log(reserves);
 
-let 
 
 
 
@@ -100,28 +99,26 @@ let
 
 // =============최근 등록 게시글 ===================
 
-let PostData = [
-    {
-        date: '2023.01.11',
-        subject: '배송 언제쯤?',
-        board: '<a href="" class="order_detail">1:1게시판</a>'
-    },
-    {
-        date: '2023.03.25',
-        subject: '배송 언제쯤?',
-        board: '<a href="" class="order_detail">1:1게시판</a>'
-    },
-    {
-        date: '2023.05.30',
-        subject: '배송 언제쯤?',
-        board: '<a href="" class="order_detail">1:1게시판</a>'
-    },
-    {
-        date: '2023.07.02',
-        subject: '물건은?',
-        board: '<a href="" class="order_detail">1:1게시판</a>'
-    }
-];
+let postData = [{
+    date: '2023.01.11',
+    subject: '배송 언제쯤?',
+    board: '<a href="" class="order_detail">1:1게시판</a>',
+},
+{
+    date: '2023.03.25',
+    subject: '배송 언제쯤?',
+    board: '<a href="" class="order_detail">1:1게시판</a>',
+},
+{
+    date: '2023.05.30',
+    subject: '배송 언제쯤?',
+    board: '<a href="" class="order_detail">1:1게시판</a>',
+},
+{
+    date: '2023.07.02',
+    subject: '물건은?',
+    board: '<a href="" class="order_detail">1:1게시판</a>',
+}];
 
 
 
