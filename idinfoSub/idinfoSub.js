@@ -43,26 +43,15 @@ for (let i = 1; i < 32; i++) {
     birthDateD.innerHTML += `<option value="${i}">${i}</option>`
 }
 // ==========================================
-
 //우편번호랑 주소 불러오는 함수
-function execDaumPostcode() {
+function execDaumPostcode(id1,id2,id3) {
     new daum.Postcode({
         oncomplete: function (data) {
-            document.getElementById('har').value = data.address;
-            document.getElementById('zip').value = data.zonecode;
+            document.getElementById(id1).value = data.address;
+            document.getElementById(id2).value = data.zonecode;
         }
     }).open();
-    document.getElementById('dar').focus();
-}
-//우편번호랑 주소 불러오는 함수2
-function execDaumPostcode1() {
-    new daum.Postcode({
-        oncomplete: function (data) {
-            document.getElementById('cdar').value = data.address;
-            document.getElementById('car').value = data.zonecode;
-        }
-    }).open();
-    document.getElementById('cdar').focus();
+    document.getElementById(id3).focus();
 }
 //메인 CheckBox가 체크되면 서브가 모두 체크됨
 function mainCheckBox(main) {
@@ -158,8 +147,7 @@ async function idDoubleCheckfc() {
             return;
         }
         alert(`${idinfoGridValue[1].value} 사용할수 있는 아이디입니다.`);
-        idinfoGridValue[1].readOnly = true;
-        idinfoGridValue[1].style.backgroundColor = "rgba(128, 128, 128, 0.2)"
+        idinfoGridValue[1].disabled = true;
         idCount = 1;
     }
 }
@@ -174,8 +162,7 @@ async function emailDoubleCheckfc() {
             if (i && j) {
                 if ((j > i) && (i != 0) && (j != (count.length - 1))) {
                     alert(`${idinfoGridValue[12].value} 사용할수 있는 이메일입니다.`);
-                    idinfoGridValue[12].readOnly = true;
-                    idinfoGridValue[12].style.backgroundColor = "rgba(128, 128, 128, 0.2)"
+                    idinfoGridValue[12].disabled = true;
                     emailCount = 1;
                     break;
                 }

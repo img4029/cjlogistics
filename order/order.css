@@ -15,11 +15,12 @@ a {
 /* 메인 영역 : MY PAGE */
 
 main>div{
+    padding: 0 100px;
+    min-width: 1100px;
+    max-width: 1300px;
     padding-top: 200px;
     margin: auto;
-    width: 1100px;
     text-align: center;
-    min-height: 916px;
 }
 main>div>h2{
     text-align: center;
@@ -127,4 +128,55 @@ main>div>p {
     color: blue;
     font-size: 13px;
     font-weight: bold;
+}
+.createButton {
+    height: 25px;
+    width: 50px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================================================== */
+.orderSub_box {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.1);
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.orderSub_box>div:nth-child(2) {
+    width: 1px;
+    height: 15px;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+.orderSub_box>div>span {
+    padding: 0 15px;
+}
+.orderSub_box>div>span:nth-child(1) {
+    font-weight: bold;
+}
+.orderSub_gridbox {
+    display: grid;
+    grid-template-columns: repeat(1, 1.5fr) repeat(1, 7fr) repeat(1, 3fr) repeat(1, 2fr) repeat(1, 1.5fr);
+}
+.orderSub_gridbox>div {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+.orderSub_gridbox>div:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 6;
+    padding-left: 15px;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+.orderSub_gridbox>div:nth-child(n+2) {
+    height: 100px;
+    justify-content: center;
 }

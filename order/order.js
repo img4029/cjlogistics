@@ -4,16 +4,14 @@ let order_gridbox = document.querySelector('.order_gridbox'),
     order_name = document.querySelector('.order_name'),
     clientData1, clientData2;
 
-
-
 async function getClientData() {
     try {
         const response = await axios.get('http://localhost:3000/loginComplete/1');
-        const response2 = await axios.get('http://localhost:3000/Orderimg4029');
-
         clientData1 = response.data;
+        console.log(clientData1.hname);
+        const response2 = await axios.get(`http://localhost:3000/Order${clientData1.hid}`);
         clientData2 = response2.data;
-        console.log(clientData.hname);
+        
         order_name.innerText = '['+clientData.hname+']';
         order_name.className = "jsSpan";
         console.log(clientData2.length);
@@ -39,8 +37,8 @@ async function getClientData() {
 function createDivfc(clientData2) {
     const createDiv = new Array(6);
     console.log(clientData2);
-    for (let i = 0; i < createDiv.length; i++) {
-        createDiv[i] = document.createElement('div')
+    for (let i = 0,j = 0; i < createDiv.length; i++) {
+        createDiv[i] = document.createElement('div');
         order_gridbox.appendChild(createDiv[i]);
         switch (i) {
             case 0:
@@ -55,14 +53,33 @@ function createDivfc(clientData2) {
             case 3:
                 createDiv[i].innerText = clientData2.amountPayment;
                 break;
-            case 4:
-                createDiv[i].innerText = "버튼 추가 예정";
-                break;
-            case 5:
-                createDiv[i].innerText = "버튼 추가 예정";
+            default:
+                const createButton = document.createElement('button');
+                createDiv[i].appendChild(createButton);
+                createButton.className = "createButton"
+                createButton.innerText = "VIEW"
+                createButton.style.cursor = "pointer"
+                createButton.addEventListener('click',()=> {
+                    putClientData(clientData2.ProductList);
+                });
                 break;
         }
     }
 }
+async function putClientData(putData) {
+    try {
+        console.log(putData.length);
+        for (let i = 0; i < putData.length; i++) {
+            console.log(putData[i]);
+            const putResponse = await axios.post(`http://localhost:3000/ProductList`, putData[i]);
+        }
+        
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
+    }
 
+
+
+}
 getClientData();
