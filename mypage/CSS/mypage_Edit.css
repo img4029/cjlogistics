@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-
+    list-style: none;
 }
 
 .mypage_edit_outer {
@@ -13,14 +13,14 @@
 
 .mypage_edit_outer>fieldset {
     border: none;
+    padding-top: 20px;
 }
 
 /* ======================== */
 .mypage_edit_head {
-    height: 50px;
     border-bottom: 2px solid;
-    margin-top: 150px;
-    margin-bottom: 20px;
+    padding-top: 150px;
+    padding-bottom: 20px;
 }
 
 /* ============= body =============== */
@@ -93,7 +93,7 @@
 .mypage_edit_sns {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 .mypage_edit_sns>dl {
