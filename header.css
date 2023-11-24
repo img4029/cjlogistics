@@ -1,12 +1,12 @@
 /* nav 높이 72 */
-*{
+* {
     box-sizing: border-box;
 }
+
 /* 여기부터 header ======================*/
 .header_acide,
 .header_back,
 .header_top,
-#menuBtn,
 .menu_list {
     position: fixed;
 }
@@ -46,6 +46,7 @@
     z-index: 20;
     margin: auto;
     cursor: pointer;
+    user-select: none;
 }
 
 .menu_icon1,
@@ -76,9 +77,9 @@
     width: 100%;
 }
 
-#menuBtn {
-    left: -9999px;
-}
+/* #menuBtn {
+    user-select: none;
+} */
 
 .menu_list {
     z-index: 18;
@@ -184,6 +185,7 @@
 footer {
     display: flex;
     justify-content: center;
+    background-color: rgb(230, 230, 230);
 }
 
 .footer_container {
