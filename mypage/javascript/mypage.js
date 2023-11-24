@@ -2,281 +2,196 @@
 
 
 
-
-
 // ================== 프로필 개인정보 ==================
 
-let privateData = [['전 화', '이메일', '주 소'], ['010-0000-0000', 'gjjashd@naver.com', '경기도 광주시']];
-
-let priv = document.querySelector('.profile_inner_private');
-
-// for (let i = 0; i < privateData.length; i++) {
-//     for (let j = 0; j < privateData[i].length; j++)
-//         if (i === 0) {
-//             priv.children[2 * j].innerText = privateData[i][j];
-//         } else {
-//             priv.children[2 * j + 1].innerText = privateData[i][j];
-//         }
-// }
-
-
-
-let orderData = [['총 주문금액:', '적 립 금', '쿠 폰'], ['0000 원', '9999원', '3개']];
-
-let ordered = document.querySelector('.profile_inner_ordered')
-
-// for (let i = 0; i < orderData.length; i++) {
-//     for (let j = 0; j < orderData[i].length; j++)
-//         if (i === 0) {
-//             ordered.children[2 * j].innerText = orderData[i][j];
-//         } else {
-//             ordered.children[2 * j + 1].innerText = orderData[i][j];
-//         }
-// }
-
-let data1 =
-{
-    name: '주용현[임의 생성 이메일]',
-    phone: '010-7388-0941',
-    totalCost: '100,000 원',
-    email: 'dydgusc66@naver.com',
-    reserves: '12,345 원',
-    address: '경기도 광주시 ~~~~~~~~~~~~~~',
-    coupon: '3 개',
-    img: "./image/bg1.jpg",
-    id: 1,
-}
-let client1 = Object.values(data1);
-
-
-let privacy = document.querySelector('.profile_privacy'),
-    pri_detail = document.querySelector('.profile_inner_private'),
-    pri_inner = document.querySelector('.profile_inner_private'),
-    pri_ordered = document.querySelector('.profile_inner_ordered'),
-    pri_img = document.querySelector('.profile_image');
-
-privacy.children[0].innerText = client1[0];
-
-pri_inner.children[1].innerHTML = client1[1];
-pri_inner.children[3].innerHTML = client1[3];
-pri_inner.children[5].innerHTML = client1[5];
-
-pri_ordered.children[1].innerHTML = client1[2];
-pri_ordered.children[3].innerHTML = client1[4];
-pri_ordered.children[5].innerHTML = client1[6];
-
-pri_img.src = client1[7];
-
-
-
-
-
-
-
-
-
-
+let clinetData = [
+    {
+        img: "./image/bg1.jpg",
+        name: '김수빈 [임의 생성 이메일]',
+        phone: '010-2345-3321',
+        email: 'agsee2@naver.com',
+        address: '경기도~~~~~~~~~~~~~~',
+        totalCost: '1,000,000 원',
+        reserves: '3,123,345 원',
+        coupon: '3 개',
+        id: 1,
+    },
+    {
+        img: "./image/bg1.jpg",
+        name: '이해나 [임의 생성 이메일]',
+        phone: '010-2345-3321',
+        email: 'agsee2@naver.com',
+        address: '서울특별시~~~~~~~~~~~~~~',
+        totalCost: '1,000,000 원',
+        reserves: '3,123,345 원',
+        coupon: '3 개',
+        id: 2,
+    },
+    {
+        img: "./image/bg1.jpg",
+        name: '주용현 [임의 생성 이메일]',
+        phone: '010-2345-3321',
+        email: 'agsee2@naver.com',
+        address: '경기도~~~~~~~~~~~~~~',
+        totalCost: '1,000,000 원',
+        reserves: '3,123,345 원',
+        coupon: '3 개',
+        id: 3,
+    },
+    {
+        img: "./image/bg1.jpg",
+        name: '장근정 [임의 생성 이메일]',
+        phone: '010-2345-3321',
+        email: 'agsee2@naver.com',
+        address: '서울특별시 ~~~~~~~~~~~~~~',
+        totalCost: '1,000,000 원',
+        reserves: '3,123,345 원',
+        coupon: '3 개',
+        id: 4,
+    },
+    {
+        img: "./image/bg1.jpg",
+        name: '임명건 [임의 생성 이메일]',
+        phone: '010-2345-3321',
+        email: 'agsee2@naver.com',
+        address: '경기도~~~~~~~~~~~~~~',
+        totalCost: '1,000,000 원',
+        reserves: '3,123,345 원',
+        coupon: '3 개',
+        id: 5,
+    },
+    {
+        img: "./image/bg1.jpg",
+        name: '김수옥 [임의 생성 이메일]',
+        phone: '010-2345-3321',
+        email: 'agsee2@naver.com',
+        address: '서울특별시~~~~~~~~~~~~~~',
+        totalCost: '1,000,000 원',
+        reserves: '3,123,345 원',
+        coupon: '3 개',
+        id: 6,
+    }
+];
 
 
 
+let profile = document.querySelector('.mypage_profile_inner'),
+    privacy = profile.querySelector('.profile_inner_private'),
+    reserves = profile.querySelector('.profile_inner_ordered');
 
-// ============================================================
+console.log(profile);
+console.log(privacy);
+console.log(reserves);
+
+let 
+
+
+
+
 
 
 
 
 // ====================최근 주문 내역 =========================
 
-let table = document.getElementsByClassName('bottomTb');
-
-let latestOrder = ['2023.11.22', '솔리드 디퓨저', '22,500 원', '<a href="" class="order_detail">VIEW</a>'];
-
-
-function latestOrderTable() {
-    let newRow = table[0].insertRow();
-
-    for (let i = 0; i < latestOrder.length - 1; i++) {
-        let newCell = newRow.insertCell(i);
-        newCell.innerText = latestOrder[i];
-    }
-
-    let newCell = newRow.insertCell(-1);
-    newCell.innerHTML = latestOrder[3];
-}
-
-latestOrderTable();
-latestOrderTable();
+// ==========================================================
 
 
 
 // =============최근 등록 게시글 ===================
 
-let objData1 = {
-    date: '2023.11.22',
-    subject: '배송 언제쯤?',
-    board: '<a href="" class="order_detail">1:1게시판</a>'
-}
-let objData2 = {
-    date: '2023.07.02',
-    subject: '물건은?',
-    board: '<a href="" class="order_detail">1:1게시판</a>'
-}
-
-function objToArray(data) {
-    let changeToArr = Object.values(data);
-    return changeToArr;
-}
-
-
-function latestPostTable(data) {
-
-    function objToArray(data) {
-        let changeToArr = Object.values(data);
-        return changeToArr;
+let PostData = [
+    {
+        date: '2023.01.11',
+        subject: '배송 언제쯤?',
+        board: '<a href="" class="order_detail">1:1게시판</a>'
+    },
+    {
+        date: '2023.03.25',
+        subject: '배송 언제쯤?',
+        board: '<a href="" class="order_detail">1:1게시판</a>'
+    },
+    {
+        date: '2023.05.30',
+        subject: '배송 언제쯤?',
+        board: '<a href="" class="order_detail">1:1게시판</a>'
+    },
+    {
+        date: '2023.07.02',
+        subject: '물건은?',
+        board: '<a href="" class="order_detail">1:1게시판</a>'
     }
-    let latestPost = objToArray(data);
-
-    let newRow = table[1].insertRow();
-
-    for (let i = 0; i < latestPost.length - 1; i++) {
-        let newCell = newRow.insertCell(i);
-        newCell.innerText = latestPost[i];
-    }
-
-    let newCell = newRow.insertCell(-1);
-    newCell.innerHTML = latestPost[2];
-}
-
-latestPostTable(objData1);
-latestPostTable(objData2);
+];
 
 
-// ===========================================================
-
-let lastestPost = document.querySelectorAll('.lastest_post th');
-console.log(lastestPost.length);
 
 
-for (let i = 0; i < lastestPost.length; i++) {
-    if (i == 1) {
-        lastestPost[i].style.width = '60%';
-    } else {
-        lastestPost[i].style.width = '20%';
-    }
 
-}
-
+// =====================================================
 
 
 
 //  ================== 관심 상품 정보 =============================
-
-let wishData = [{
-    imgSrc: './image/bg1.jpg',
-    name: '~~ 디퓨저',
-    cost: '38,900 원'
-},
-{
-    imgSrc: './image/bg2.jpg',
-    name: '~~ 향수',
-    cost: '58,900 원'
-},
-{
-    imgSrc: './image/bg3.jpg',
-    name: '~~ 핸드 크림',
-    cost: '18,900 원'
-}];
-
-// console.log(Object.values(wishData[0])[0]);
-// console.log(wishData[1]);
-// console.log(wishData[2]);
+// oooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 let tag = ['img', 'p', 'p'];
 
 let ElementName = ["wishImg", "wishItem", "wishCost"];
-// console.log(tag[0]);
 
+let wishData =
+    [{
+        imgSrc: './image/bg1.jpg',
+        name: '~~ 사람',
+        cost: '38,900 원'
+    },
+    {
+        imgSrc: './image/bg2.jpg',
+        name: '~~ 꽃',
+        cost: '78,900 원'
+    },
+    {
+        imgSrc: './image/gimbap.png',
+        name: '~~ 김밥',
+        cost: '78,900 원'
+    },
+    {
+        imgSrc: './image/bg3.jpg',
+        name: '~~ 겨울',
+        cost: '108,900 원'
+    },
+    {
+        imgSrc: './image/bg4.jpg',
+        name: '~~ 향수',
+        cost: '58,900 원'
+    },
+    {
+        imgSrc: './image/bg5.jpg',
+        name: '~~ 핸드 크림',
+        cost: '18,900 원'
+    }];
 
-function wishList() {
-    let wishContainer = document.createElement("div");
-    wishContainer.setAttribute("class", "wishContainer");
-    document.querySelector('#bottom_wish_list').appendChild(wishContainer);
+function makeFrame() {
+    for (let i = 0; i < wishData.length; i++) {
 
-    let wishBox = new Array(3);
-    for (let j = 0; j < wishBox.length; j++) {
-        wishBox[j] = document.createElement(tag[j]);
-        wishContainer.appendChild(wishBox[j]);
-    }
+        let wishContainer = document.createElement("div");
+        wishContainer.setAttribute("class", "wishContainer");
+        document.querySelector('#bottom_wish_list').appendChild(wishContainer);
 
-    for (let i = 0; i < wishBox.length; i++) {
-        if (i == 0) {
-            wishBox[i].setAttribute("class", ElementName[i]);
-            wishBox[i].src = Object.values(wishData[i]);
-        } else {
-            wishBox[i].setAttribute("class", ElementName[i]);
-            wishBox[i].innerText = Object.values(wishData[i]);
+        let wishBox = new Array(3);
+
+        for (let j = 0; j < Object.values(wishData[0]).length; j++) {
+            wishBox[j] = document.createElement(tag[j]);
+            wishContainer.appendChild(wishBox[j]);
+            wishBox[j].setAttribute("class", ElementName[j]);
+            if (j == 0) {
+                wishBox[j].src = Object.values(wishData[i])[j];
+            } else {
+                wishBox[j].innerText = Object.values(wishData[i])[j];
+            }
         }
     }
-
-
-    // for (let i = 0; i < wishBox.length; i++) {
-    //     for (let j = 0; j < wishData.length; j++) {
-    //         if (j == 0) {
-    //             wishBox[i].setAttribute("class", ElementName[i]);
-    //             wishBox[i].src = Object.values(wishData[i])[j];
-    //         } else {
-    //             wishBox[i].setAttribute("class", ElementName[i]);
-    //             wishBox[i].innerText = Object.values(wishData[i])[j];
-    //         }
-    //     }
-    // }
 }
 
-// wishList();
-wishList();
-// wishList();
-// wishList();
-// wishList();
-// wishList();
+makeFrame();
+// oooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-// 하나 만들고 변수명을 다시 만들어줘야 하는 문제
-
-
-
-//  ================== 관심 상품 정보 =============================
-
-
-function wishList() {
-    let wishContainer = document.createElement("div");
-    wishContainer.setAttribute("class", "wishContainer");
-    document.querySelector('#bottom_wish_list').appendChild(wishContainer);
-
-    let wishBox = new Array(3);
-    for (let j = 0; j < wishBox.length; j++) {
-        wishBox[j] = document.createElement(tag[j]);
-        wishContainer.appendChild(wishBox[j]);
-    }
-
-    for (let i = 0; i < wishBox.length; i++) {
-        if (i == 0) {
-            wishBox[i].setAttribute("class", ElementName[i]);
-            wishBox[i].src = Object.values(wishData[i])[i];
-        } else {
-            wishBox[i].setAttribute("class", ElementName[i]);
-            wishBox[i].innerText = Object.values(wishData[i])[i];
-        }
-    }
-
-
-    // for (let i = 0; i < wishBox.length; i++) {
-    //     for (let j = 0; j < wishData.length; j++) {
-    //         if (j == 0) {
-    //             wishBox[i].setAttribute("class", ElementName[i]);
-    //             wishBox[i].src = Object.values(wishData[i])[j];
-    //         } else {
-    //             wishBox[i].setAttribute("class", ElementName[i]);
-    //             wishBox[i].innerText = Object.values(wishData[i])[j];
-    //         }
-    //     }
-    // }
-}
