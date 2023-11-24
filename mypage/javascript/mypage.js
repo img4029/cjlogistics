@@ -153,21 +153,48 @@ latestPostTable(objData2);
 
 // ===========================================================
 
+let lastestPost = document.querySelectorAll('.lastest_post th');
+console.log(lastestPost.length);
+
+
+for (let i = 0; i < lastestPost.length; i++) {
+    if (i == 1) {
+        lastestPost[i].style.width = '60%';
+    } else {
+        lastestPost[i].style.width = '20%';
+    }
+
+}
+
 
 
 
 //  ================== 관심 상품 정보 =============================
 
-let wishData = {
+let wishData = [{
     imgSrc: './image/bg1.jpg',
     name: '~~ 디퓨저',
     cost: '38,900 원'
-};
+},
+{
+    imgSrc: './image/bg2.jpg',
+    name: '~~ 향수',
+    cost: '58,900 원'
+},
+{
+    imgSrc: './image/bg3.jpg',
+    name: '~~ 핸드 크림',
+    cost: '18,900 원'
+}];
+
+// console.log(Object.values(wishData[0])[0]);
+// console.log(wishData[1]);
+// console.log(wishData[2]);
 
 let tag = ['img', 'p', 'p'];
 
 let ElementName = ["wishImg", "wishItem", "wishCost"];
-console.log(tag[0]);
+// console.log(tag[0]);
 
 
 function wishList() {
@@ -178,27 +205,39 @@ function wishList() {
     let wishBox = new Array(3);
     for (let j = 0; j < wishBox.length; j++) {
         wishBox[j] = document.createElement(tag[j]);
-        // document.querySelector('.wishContainer').appendChild(wishBox[j]);
         wishContainer.appendChild(wishBox[j]);
     }
 
     for (let i = 0; i < wishBox.length; i++) {
         if (i == 0) {
             wishBox[i].setAttribute("class", ElementName[i]);
-            wishBox[i].src = Object.values(wishData)[i];
+            wishBox[i].src = Object.values(wishData[i]);
         } else {
             wishBox[i].setAttribute("class", ElementName[i]);
-            wishBox[i].innerText = Object.values(wishData)[i];
+            wishBox[i].innerText = Object.values(wishData[i]);
         }
     }
+
+
+    // for (let i = 0; i < wishBox.length; i++) {
+    //     for (let j = 0; j < wishData.length; j++) {
+    //         if (j == 0) {
+    //             wishBox[i].setAttribute("class", ElementName[i]);
+    //             wishBox[i].src = Object.values(wishData[i])[j];
+    //         } else {
+    //             wishBox[i].setAttribute("class", ElementName[i]);
+    //             wishBox[i].innerText = Object.values(wishData[i])[j];
+    //         }
+    //     }
+    // }
 }
 
+// wishList();
 wishList();
-wishList();
-wishList();
-wishList();
-wishList();
-wishList();
+// wishList();
+// wishList();
+// wishList();
+// wishList();
 
 // 하나 만들고 변수명을 다시 만들어줘야 하는 문제
 
@@ -207,3 +246,37 @@ wishList();
 //  ================== 관심 상품 정보 =============================
 
 
+function wishList() {
+    let wishContainer = document.createElement("div");
+    wishContainer.setAttribute("class", "wishContainer");
+    document.querySelector('#bottom_wish_list').appendChild(wishContainer);
+
+    let wishBox = new Array(3);
+    for (let j = 0; j < wishBox.length; j++) {
+        wishBox[j] = document.createElement(tag[j]);
+        wishContainer.appendChild(wishBox[j]);
+    }
+
+    for (let i = 0; i < wishBox.length; i++) {
+        if (i == 0) {
+            wishBox[i].setAttribute("class", ElementName[i]);
+            wishBox[i].src = Object.values(wishData[i])[i];
+        } else {
+            wishBox[i].setAttribute("class", ElementName[i]);
+            wishBox[i].innerText = Object.values(wishData[i])[i];
+        }
+    }
+
+
+    // for (let i = 0; i < wishBox.length; i++) {
+    //     for (let j = 0; j < wishData.length; j++) {
+    //         if (j == 0) {
+    //             wishBox[i].setAttribute("class", ElementName[i]);
+    //             wishBox[i].src = Object.values(wishData[i])[j];
+    //         } else {
+    //             wishBox[i].setAttribute("class", ElementName[i]);
+    //             wishBox[i].innerText = Object.values(wishData[i])[j];
+    //         }
+    //     }
+    // }
+}
