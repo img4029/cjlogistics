@@ -8,97 +8,83 @@ let profileData = [
     {
         img: "./image/bg1.jpg",
         name: '김수빈 [임의 생성 이메일]',
-        phone: '010-2345-3321',
+        phone: '010-5764-3321',
         email: 'gjnsdx123@naver.com',
         address: '경기도~~~~~~~~~~~~~~',
         totalCost: '1,000,000 원',
-        reserves: '3,123,345 원',
+        reserves: ',345 원',
         coupon: '3 개',
         id: 1,
     },
     {
-        img: "./image/bg1.jpg",
+        img: "./image/bg2.jpg",
         name: '이해나 [임의 생성 이메일]',
-        phone: '010-2345-3321',
-        email: 'gjnsdx123@naver.com',
+        phone: '010-2345-2176',
+        email: 'fhddf2@naver.com',
         address: '서울특별시~~~~~~~~~~~~~~',
-        totalCost: '1,000,000 원',
-        reserves: '3,123,345 원',
+        totalCost: '2,000,000 원',
+        reserves: '3,345 원',
         coupon: '3 개',
         id: 2,
     },
     {
-        img: "./image/bg1.jpg",
+        img: "./image/bg3.jpg",
         name: '주용현 [임의 생성 이메일]',
-        phone: '010-2345-3321',
-        email: 'gjnsdx123@naver.com',
+        phone: '010-8779-8768',
+        email: 'hf665@naver.com',
         address: '경기도~~~~~~~~~~~~~~',
-        totalCost: '1,000,000 원',
-        reserves: '3,123,345 원',
+        totalCost: '3,000,000 원',
+        reserves: '23,345 원',
         coupon: '3 개',
         id: 3,
     },
     {
-        img: "./image/bg1.jpg",
+        img: "./image/bg4.jpg",
         name: '장근정 [임의 생성 이메일]',
-        phone: '010-2345-3321',
-        email: 'gjnsdx123@naver.com',
+        phone: '010-9054-1245',
+        email: 'jhtr34@naver.com',
         address: '서울특별시 ~~~~~~~~~~~~~~',
-        totalCost: '1,000,000 원',
-        reserves: '3,123,345 원',
+        totalCost: '4,000,000 원',
+        reserves: '9,123,345 원',
         coupon: '3 개',
         id: 4,
     },
     {
-        img: "./image/bg1.jpg",
+        img: "./image/bg5.jpg",
         name: '임명건 [임의 생성 이메일]',
-        phone: '010-2345-3321',
-        email: 'gjnsdx123@naver.com',
+        phone: '010-1255-6475',
+        email: 'mjjy4@naver.com',
         address: '경기도~~~~~~~~~~~~~~',
-        totalCost: '1,000,000 원',
-        reserves: '3,123,345 원',
+        totalCost: '5,000,000 원',
+        reserves: '1,123,345 원',
         coupon: '3 개',
         id: 5,
     },
     {
-        img: "./image/bg1.jpg",
+        img: "./image/bg6.jpg",
         // 인덱스 1 ~ 4번까지 privacy innerHTML
         name: '김수옥 [임의 생성 이메일]',
-        phone: '010-2345-3321',
-        email: 'gjnsdx123@naver.com',
+        phone: '010-4666-2135',
+        email: 'rythj2@naver.com',
         address: '서울특별시~~~~~~~~~~~~~~',
         // 인덱스 5 ~ 7까지 reserves innerText
-        totalCost: '1,000,000 원',
-        reserves: '3,123,345 원',
+        totalCost: '6,000,000 원',
+        reserves: '123,345 원',
         coupon: '3 개',
         // 
         id: 6,
     }
 ];
 
-
-
-console.log(Object.keys(profileData[0])[0]);
-console.log(profileData[0]);
-
-// for (let i = 0; i < profileData.length; i++) {
-//     if (profileData[i].id == 5) {
-//         for (let j = 0; j < profileData[0])
-//     }
-// }
-
-
-// Object.entries(profileData[0]).length
-
-
 let profile = document.querySelector('.mypage_profile_inner'),
     privacy = profile.querySelector('.profile_inner_private'),
     reserves = profile.querySelector('.profile_inner_ordered'),
+    identity = profile.querySelector('.profile_identity'),
     profileImg = profile.querySelector('.profile_image');
 
 
 let ProfileFrame_1 = '<div>전 화</div><div></div><div>이메일</div><div></div><div>주 소</div><div></div>',
-    reservesFrame_2 = '<div>총 주문 금액 :</div><div></div><div>적 립 금</div><div></div><div>쿠 폰</div><div></div>';
+    reservesFrame_2 = '<div>총 주문 금액</div><div></div><div>적 립 금</div><div></div><div>쿠 폰</div><div></div>';
 
 
 function makeProfile() {
@@ -107,27 +93,62 @@ function makeProfile() {
 }
 
 makeProfile();
-// console.log(Boolean(reserves.children[0].innerText));
 
-// for (let i = 0; i < reserves.length; i++) {
-//     if (Object.values(profileData[0]). )
-//         for (let j = 0; j < Object.entries(profileData[0]).length)
 
+// id 값 찾아서 데이터넣기
+function insertPriData() {
+    for (let i = 0; i < profileData.length; i++) {
+        if (profileData[i].id === 1) {
+            profileImg.src = profileData[i].img
+            identity.innerText = profileData[i].name
+            for (let j = 0; j < privacy.children.length; j++) {
+                switch (privacy.children[j].innerText) {
+                    case '전 화':
+                        privacy.children[j + 1].innerText = profileData[i].phone
+                        break;
+                    case '이메일':
+                        privacy.children[j + 1].innerText = profileData[i].email
+                        break;
+                    case '주 소':
+                        privacy.children[j + 1].innerText = profileData[i].address
+                        break;
+                }
+                switch (reserves.children[j].innerText) {
+                    case '총 주문 금액':
+                        reserves.children[j + 1].innerText = profileData[i].totalCost
+                        break;
+                    case '적 립 금':
+                        reserves.children[j + 1].innerText = profileData[i].reserves
+                        break;
+                    case '쿠 폰':
+                        reserves.children[j + 1].innerText = profileData[i].coupon
+                        break;
+                }
+            }
+        }
+    }
+}
+
+insertPriData();
+
+// if (privacy.children[j].innerText === '전 화') {
+//     privacy.children[j + 1].innerText = profileData[i].phone;
+// } else if (privacy.children[j].innerText === '이메일') {
+//     privacy.children[j + 1].innerText = profileData[i].email;
+// } else if (privacy.children[j].innerText === '주 소') {
+//     privacy.children[j + 1].innerText = profileData[i].address;
+// }
+
+// if (reserves.children[j].innerText === '총 주문 금액') {
+//     reserves.children[j + 1].innerText = profileData[i].totalCost;
+// } else if (reserves.children[j].innerText === '적 립 금') {
+//     reserves.children[j + 1].innerText = profileData[i].reserves;
+// } else if (reserves.children[j].innerText === '쿠 폰') {
+//     reserves.children[j + 1].innerText = profileData[i].coupon;
 // }
 
 
 
-
-// function checkId() {
-
-//     for (let i = 0; i < profileData.length; i++) {
-//         for (let j = 0; j < Object.values(profileData[i]).length; j++)
-//             if (Object.values(profileData[i])[j] == '5') {
-
-//             }
-//     }
-// }
-// checkId();
 
 
 
@@ -256,12 +277,12 @@ let ElementName = ["wishImg", "wishItem", "wishCost"];
 
 let wishData =
     [{
-        imgSrc: './image/bg1.jpg',
+        img: './image/bg1.jpg',
         name: '~~ 사람',
         cost: '38,900 원'
     },
     {
-        imgSrc: './image/bg2.jpg',
+        img: './image/bg2.jpg',
         name: '~~ 꽃',
         cost: '78,900 원'
     },
@@ -271,25 +292,27 @@ let wishData =
         cost: '78,900 원'
     },
     {
-        imgSrc: './image/bg3.jpg',
+        img: './image/bg3.jpg',
         name: '~~ 겨울',
         cost: '108,900 원'
     },
     {
-        imgSrc: './image/bg4.jpg',
+        img: './image/bg4.jpg',
         name: '~~ 향수',
         cost: '58,900 원'
     },
     {
-        imgSrc: './image/bg4.jpg',
+        img: './image/bg4.jpg',
         name: '~~ 향수',
         cost: '58,900 원'
     },
     {
-        imgSrc: './image/bg5.jpg',
+        img: './image/bg5.jpg',
         name: '~~ 핸드 크림',
         cost: '18,900 원'
     }];
+
+
 
 function wishList() {
     for (let i = 0; i < wishData.length; i++) {
@@ -304,7 +327,7 @@ function wishList() {
             wishBox[j] = document.createElement(tag[j]);
             wishContainer.appendChild(wishBox[j]);
             wishBox[j].setAttribute("class", ElementName[j]);
-            if (j == 0) {
+            if (Object.keys(wishData[i])[j] == 'img') {
                 wishBox[j].src = Object.values(wishData[i])[j];
             } else {
                 wishBox[j].innerText = Object.values(wishData[i])[j];
@@ -322,18 +345,3 @@ wishList();
 // 1번 객체배열 나눈 다음에 id 6인 사람을 찾아서 가져온다.
 // 2번 id 6인 사람의 인덱스 1~4번까지는 
 
-let dat = 
-{
-    img: "./image/bg1.jpg",
-    // 인덱스 1 ~ 4번까지 privacy innerHTML
-    name: '김수옥 [임의 생성 이메일]',
-    phone: '010-2345-3321',
-    email: 'gjnsdx123@naver.com',
-    address: '서울특별시~~~~~~~~~~~~~~',
-    // 인덱스 5 ~ 7까지 reserves innerText
-    totalCost: '1,000,000 원',
-    reserves: '3,123,345 원',
-    coupon: '3 개',
-    // 
-    id: 6,
-}
