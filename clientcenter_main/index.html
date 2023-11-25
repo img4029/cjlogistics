@@ -64,18 +64,21 @@
                 <ul>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
                             <span class="shopping_basket"></span>
                         </a>
                     </li>
                     <li>
                         <a class="testing_logo" href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"alt="마이페이지">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
                         </a>
                     </li>
                 </ul>
@@ -89,6 +92,7 @@
             <a href="../index.html">Daniel's Truth</a>
         </div>
     </header>
+
     <main>
         <div class="client_container">
             <div class="client_header_5">
@@ -96,67 +100,60 @@
             </div>
             <div class="client_body">
                 <h3>FAQ</h3>
-                
+
                 <div class="client_search">
                     <fieldset>
                         <label>
-                        <!-- <select id="category" onchange="if(this.value) location.href=(this.value);">
-                            <option value="../clientcenter_main/index.html">전체검색</option>
-                            <option value="../clientcenter_info/index.html">회원가입/정보</option>
-                            <option value="../clientcenter_delivery/index.html">결제/배송</option>
-                            <option value="../clientcenter_exchange/index.html">교환/반품/환불</option>
-                            <option value="../clientcenter_mileage/index.html">마일리지 적립</option>
-                            <option value="../clientcenter_etc/index.html">기타</option>
-                        </select> -->
-                        <select id="category">
-                            <option value="">전체검색</option>
-                            <option value="1">회원가입/정보</option>
-                            <option value="2">결제/배송</option>
-                            <option value="3">교환/반품/환불</option>
-                            <option value="4">마일리지 적립</option>
-                            <option value="5">기타</option>
-                        </select>
-                        <input type="text" id="search_box" minlength="2">
-                        <button onclick="search()" id="search_button">SEARCH</button>
-                        <h4>BEST 검색어:</h4>
+                            <div class="select_logo"></div>
+                            <select id="category">
+                                <option value="" id="all_seen">전체검색</option>
+                                <option value="1" id="info_seen">회원가입/정보</option>
+                                <option value="2" id="exchange_seen">결제/배송</option>
+                                <option value="3" id="exchange_seen">교환/반품/환불</option>
+                                <option value="4" id="mileage_seen">마일리지 적립</option>
+                                <option value="5" id="etc_seen">기타</option>
+                            </select>
+                            <input type="text" id="search_box" minlength="2">
+                            <button onclick="search()" id="search_button">SEARCH</button>
                         </label>
                     </fieldset>
                 </div>
-    
+
                 <ul class="faq_category_5">
-                    <a href="../clientcenter_main/index.html">
+                    <a href="" id="all_seen">
                         <li>전체보기 </li>
                     </a>
-                    <a href="../clientcenter_info/index.html">
+                    <a href="" id="info_seen">
                         <li>회원가입/정보</li>
                     </a>
-                    <a href="../clientcenter_delivery/index.html">
+                    <a href="" id="delivery_seen">
                         <li>결제/배송</li>
                     </a>
-                    <a href="../clientcenter_exchange/index.html">
+                    <a href="" id="exchange_seen">
                         <li>교환/반품/환불</li>
                     </a>
-                    <a href="../clientcenter_mileage/index.html">
+                    <a href="" id="mileage_seen">
                         <li>마일리지 적립</li>
                     </a>
-                    <a href="../clientcenter_etc/index.html">
+                    <a href="" id="etc_seen">
                         <li>기타</li>
                     </a>
                 </ul>
-    
+
                 <div id="faq_table">
                     <script defer src="./index.js"></script>
                 </div>
-    
-                <div class="client_paging">
-                    <a href="" class="page1_5">1</a>
-                    <a href="" class="page2_5">2</a>
-                    <a href="" class="page_next_5">>></a>
-                </div>
+
             </div>
-    
+                <div id="client_paging">
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">>></a>
+                </div>
         </div>
+
     </main>
+
     <footer>
         <div class="footer_container">
             <div>
