@@ -62,16 +62,33 @@ let profileData = [
     },
     {
         img: "./image/bg1.jpg",
+        // 인덱스 1 ~ 4번까지 privacy innerHTML
         name: '김수옥 [임의 생성 이메일]',
         phone: '010-2345-3321',
         email: 'gjnsdx123@naver.com',
         address: '서울특별시~~~~~~~~~~~~~~',
+        // 인덱스 5 ~ 7까지 reserves innerText
         totalCost: '1,000,000 원',
         reserves: '3,123,345 원',
         coupon: '3 개',
+        // 
         id: 6,
     }
 ];
+
+
+
+console.log(Object.keys(profileData[0])[0]);
+console.log(profileData[0]);
+
+// for (let i = 0; i < profileData.length; i++) {
+//     if (profileData[i].id == 5) {
+//         for (let j = 0; j < profileData[0])
+//     }
+// }
+
+
+// Object.entries(profileData[0]).length
 
 
 let profile = document.querySelector('.mypage_profile_inner'),
@@ -90,6 +107,13 @@ function makeProfile() {
 }
 
 makeProfile();
+// console.log(Boolean(reserves.children[0].innerText));
+
+// for (let i = 0; i < reserves.length; i++) {
+//     if (Object.values(profileData[0]). )
+//         for (let j = 0; j < Object.entries(profileData[0]).length)
+
+// }
 
 
 
@@ -292,3 +316,24 @@ function wishList() {
 wishList();
 // oooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+
+
+
+// 1번 객체배열 나눈 다음에 id 6인 사람을 찾아서 가져온다.
+// 2번 id 6인 사람의 인덱스 1~4번까지는 
+
+let dat = 
+{
+    img: "./image/bg1.jpg",
+    // 인덱스 1 ~ 4번까지 privacy innerHTML
+    name: '김수옥 [임의 생성 이메일]',
+    phone: '010-2345-3321',
+    email: 'gjnsdx123@naver.com',
+    address: '서울특별시~~~~~~~~~~~~~~',
+    // 인덱스 5 ~ 7까지 reserves innerText
+    totalCost: '1,000,000 원',
+    reserves: '3,123,345 원',
+    coupon: '3 개',
+    // 
+    id: 6,
+}

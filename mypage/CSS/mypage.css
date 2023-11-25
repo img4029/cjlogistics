@@ -199,15 +199,17 @@ ul {
 }
 
 
+.lastest_post th:nth-child(1) {
+    width: 20%;
+}
 
-/* .display_none */
+.lastest_post th:nth-child(2) {
+    width: 60%;
+}
 
-
-/* 테이블 너비 지정하자 */
-
-/* .lastest_post th */
-
-
+.lastest_post th:nth-child(3) {
+    width: 20%;
+}
 
 
 
@@ -220,17 +222,14 @@ ul {
     border-top: 2px solid black;
     border-bottom: 1px solid rgba(128, 128, 128, 0.254);
     flex-wrap: wrap;
-}  /* 중앙 정렬 도와주세요... */
+}
 
 .wishImg {
     width: 200px;
     height: 200px;
-    margin: auto;
 }
-/* 이 이미지는 높이 너비 직접 지정해도 돼? */
+
 
 .wishContainer {
-    width: 230px;
-    height: 230px;
-    text-align: center;
+    width: calc(25% - 15px);
 }
