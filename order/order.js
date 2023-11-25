@@ -22,7 +22,7 @@ async function getClientData() {
             order_gridbox.children[6].innerText = '주문내역이 없습니다.';
         }
         for (let i = 0; i < clientData1.Order.length; i++) {
-            createDivfc(clientData1.Order[i],i+1);
+            createDivfc(clientData1.Order[i],i);
         }
         
     } catch (err) {
@@ -38,7 +38,7 @@ function createDivfc(clientData2,count) {
         order_gridbox.appendChild(createDiv[i]);
         switch (i) {
             case 0:
-                createDiv[i].innerText = count;
+                createDiv[i].innerText = count+1;
                 break;
             case 1:
                 createDiv[i].innerText = clientData2.orderDate;
@@ -47,7 +47,7 @@ function createDivfc(clientData2,count) {
                 createDiv[i].innerText = clientData2.productName;
                 break;
             case 3:
-                createDiv[i].innerText = clientData2.amountPayment;
+                createDiv[i].innerText = clientData2.amountPayment.toLocaleString();
                 break;
             case 4:
                 const createButton = document.createElement('button');
@@ -56,7 +56,7 @@ function createDivfc(clientData2,count) {
                 createButton.innerText = "VIEW";
                 createButton.style.cursor = "pointer";
                 createButton.addEventListener('click',()=> {
-                    changeDiv(clientData2.ProductList, clientData2.orderNumber);
+                    changeDiv(clientData2.ProductList, clientData2.orderNumber, clientData2.orderDate, count);
                 });
                 break;
             default:
@@ -68,14 +68,14 @@ function createDivfc(clientData2,count) {
         }
     }
 }
-function changeDiv(ProductList,orderNumber) {
+function changeDiv(ProductList, orderNumber, orderDate, count) {
     console.log(ProductList);
     order_box.innerHTML = `
                 <h3>주문 정보</h3>
                 <div class="orderSub_box">
                     <div>
                         <span>주문일자</span>
-                        <span>2023.11.16</span>
+                        <span class="order_date">2023.11.16</span>
                     </div>
                     <div></div>
                     <div>
@@ -88,13 +88,14 @@ function changeDiv(ProductList,orderNumber) {
                     <div>배송번호</div>
                 </div>`
     const order_number = document.querySelector('.order_number');
-    order_number.innerText = orderNumber
-
+    const order_date = document.querySelector('.order_date');
+    order_number.innerText = orderNumber;
+    order_date.innerText = orderDate;
     for (let i = 0; i < ProductList.length; i++) {
-        createDivfc2(ProductList[i]);
+        createDivfc2(ProductList[i], count);
     }
 }
-function createDivfc2(ProductList) {
+function createDivfc2(ProductList, count) {
     let create1, create2;
     const createDiv = new Array(5),
         orderSub_gridbox = document.querySelector('.orderSub_gridbox');
@@ -134,7 +135,8 @@ function createDivfc2(ProductList) {
                     createDiv[i].appendChild(create1);
                     createDiv[i].appendChild(create2);
                     create1.innerText = '상품 금액:';
-                    create2.innerText = ProductList.amountPayment + ' 원';
+                    console.log(ProductList.amountPayment);
+                    create2.innerText = ProductList.amountPayment.toLocaleString() + ' 원';
                     createDiv[i].style.justifyContent = 'space-between'
                     createDiv[i].style.padding = '0 10px'
                 }
@@ -145,6 +147,9 @@ function createDivfc2(ProductList) {
                 createDiv[i].style.color = 'blue'
                 createDiv[i].style.fontWeight = 'bold'
                 createDiv[i].style.cursor = "pointer"
+                createDiv[i].addEventListener('click', () => {
+                    orderCancel(count);
+                });
                 break;
             case 4:
                 create1 = document.createElement('button');
@@ -160,5 +165,12 @@ function createDivfc2(ProductList) {
                 break;
         }
     }
+}
+
+function orderCancel(count) {
+    console.log(clientData1.Order);
+    clientData1.Order.splice(count, 1)
+    console.log(clientData1.Order);
+    console.log(count);
 }
 getClientData();

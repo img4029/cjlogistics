@@ -29,6 +29,18 @@ let profile = {
     car: '', //회사 우편번호
     cdar: '', //회사 주소
     hsp: '', //휴대폰
+    img: "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif", //프로필이미지
+    totalAmountPayment: "", //총 결제금액
+    reserve: "", //적립금
+    coupon: [
+        {
+            "couponNumber": "H57HESOZ",
+            "couponType": "장바구니쿠폰",
+            "couponName": "신규가입 쿠폰",
+            "discountAmount": "10",
+            "expirationPeriod": "2023.11.21 ~ 2023.12.21"
+        }
+    ], //쿠폰 
     ShoppingBasket: [], //장바구니
     Order: [] //주문내역
 }

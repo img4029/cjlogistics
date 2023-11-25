@@ -27,6 +27,10 @@ let testing = document.querySelectorAll('.testing'),
         car: "",
         cdar: "",
         hsp: "",
+        img: "",
+        totalAmountPayment: "", //총 결제금액
+        reserve: "", //적립금
+        coupon: "", //쿠폰 
         ShoppingBasket: "",
         Order: ""
     };
