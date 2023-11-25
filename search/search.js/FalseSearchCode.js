@@ -1,6 +1,6 @@
 'use strict'
 
-// 왜이럼커밋도햇는데개빡치네
+// 23.11.25
 // 1. 자바스크립트 제품 더미 불러오기
 
 // 제품 데이터별 객체 생성
@@ -90,23 +90,37 @@ const productItem = document.querySelector('.item_container');
 // -2 js 활용 브라우저 내 레이아웃 구성 / 이미지 순서 변경을 위한 변수 추가 선언(let)
 for (let i = 0; i < products.length; i++) {
     let changeImg = products[i].img;
-    let product_list = `<div class="products_list">
-        <img src="${changeImg}" class="itemImg">
-        <a href="#" class="itemName">${products[i].product}</a>
-        <a class="itemChar">${products[i].character}</a>
-        <a class="itemPrice">${products[i].price}</a>
-    </div>`;
+    // console.log(products[i]);
+    let product_list =              // 이미지 변경
+        `<div class="products_list">
+    <img src ="${changeImg}" class="itemImg"></img>
+    <a href="#" class="itemName"></a>
+    <a class="itemChar"></a>
+    <a class="itemPrice"></a>
+    </div>
+    `;
 
     // for문, 배열 활용 products 객체 참조
     productItem.insertAdjacentHTML("beforeend", product_list);
+    let item_Img = document.querySelectorAll(".itemImg");
+    let item_Name = document.querySelectorAll(".itemName");
+    let item_Char = document.querySelectorAll(".itemChar");
+    let item_Price = document.querySelectorAll(".itemPrice");
+
+    item_Img[i].insertAdjacentHTML("beforeend", `${products[i].img}`);
+    item_Name[i].insertAdjacentHTML("beforeend", `${products[i].product}`);
+    item_Char[i].insertAdjacentHTML("beforeend", `${products[i].character}`);
+    item_Price[i].insertAdjacentHTML("beforeend", `${products[i].price}`);
+
 }
 
 // 2. 키워드 검색 후 제품 색인
 
 // 3. 제품 가격별 정렬(오름차순, 내림차순) : 제품 모두 삭제 후 정렬 순서대로 신규 삽입
-// -1 오름차순(낮은)
-const highPriceBtn = document.querySelector('.highPrice');
-const lowPriceBtn = document.querySelector('.lowPrice');
+// -1 오름차순
+let itemSort = document.querySelectorAll('.itemSort')
+const highPriceBtn = document.querySelector('.highPrice')
+const lowPriceBtn = document.querySelector('.lowPrice')
 
 function itemHighSort() {
     while (productItem.hasChildNodes()) {
@@ -118,17 +132,23 @@ function itemHighSort() {
     });
 
     for (let i = 0; i < NewProducts.length; i++) {
-        let product_list = `<div class="products_list">
-            <img src="${NewProducts[i].img}" class="itemImg">
-            <a href="#" class="itemName">${NewProducts[i].product}</a>
-            <a class="itemChar">${NewProducts[i].character}</a>
-            <a class="itemPrice">${NewProducts[i].price}</a>
-        </div>`;
-        productItem.insertAdjacentHTML("beforeend", product_list);
+
+        productItem.insertAdjacentHTML("beforeend", NewProducts);
+        let item_Img = document.querySelectorAll(".itemImg");
+        let item_Name = document.querySelectorAll(".itemName");
+        let item_Char = document.querySelectorAll(".itemChar");
+        let item_Price = document.querySelectorAll(".itemPrice");
+
+        item_Img[i].insertAdjacentHTML("beforeend", `${products[i].img}`);
+        item_Name[i].insertAdjacentHTML("beforeend", `${products[i].product}`);
+        item_Char[i].insertAdjacentHTML("beforeend", `${products[i].character}`);
+        item_Price[i].insertAdjacentHTML("beforeend", `${products[i].price}`);
+
     }
 }
 
-// -2 내림차순(높은가격부터~)
+// -2 내림차순
+
 function itemLowSort() {
     while (productItem.hasChildNodes()) {
         productItem.removeChild(productItem.firstChild);
@@ -139,19 +159,23 @@ function itemLowSort() {
     });
 
     for (let i = 0; i < NewProducts.length; i++) {
-        let product_list = `<div class="products_list">
-            <img src="${NewProducts[i].img}" class="itemImg">
-            <a href="#" class="itemName">${NewProducts[i].product}</a>
-            <a class="itemChar">${NewProducts[i].character}</a>
-            <a class="itemPrice">${NewProducts[i].price}</a>
-        </div>`;
-        productItem.insertAdjacentHTML("beforeend", product_list);
+
+        productItem.insertAdjacentHTML("beforeend", NewProducts);
+        let item_Img = document.querySelectorAll(".itemImg");
+        let item_Name = document.querySelectorAll(".itemName");
+        let item_Char = document.querySelectorAll(".itemChar");
+        let item_Price = document.querySelectorAll(".itemPrice");
+
+        item_Img[i].insertAdjacentHTML("beforeend", `${products[i].img}`);
+        item_Name[i].insertAdjacentHTML("beforeend", `${products[i].product}`);
+        item_Char[i].insertAdjacentHTML("beforeend", `${products[i].character}`);
+        item_Price[i].insertAdjacentHTML("beforeend", `${products[i].price}`);
+
     }
 }
 
-highPriceBtn.addEventListener('click', itemLowSort);
-lowPriceBtn.addEventListener('click', itemHighSort);
-
+highPriceBtn.addEventListener('click', itemHighSort);
+lowPriceBtn.addEventListener('click', itemLowSort);
 
 
 // 4. 제품 가격대 검색받아 제품 색인
