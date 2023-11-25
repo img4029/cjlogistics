@@ -3,14 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>danielstruth 따라하기</title>
+    <title>주문조회</title>
+
+    <link rel="stylesheet" href="./test.css">
+    <script defer src="./test.js"></script>
+
     <link rel="stylesheet" href="./header.css">
+    <script defer src="./header.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-    <!-- <script defer src="./header.js"></script> -->
-    <script defer src="./test.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -58,18 +69,21 @@
                 <ul>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
                             <span class="shopping_basket"></span>
                         </a>
                     </li>
                     <li>
                         <a class="testing_logo" href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"alt="마이페이지">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
                         </a>
                     </li>
                 </ul>
@@ -83,9 +97,91 @@
             <a href="../index.html">Daniel's Truth</a>
         </div>
     </header>
-    <main style="height: 100vh;display: flex; justify-content: center; align-items: center;">
-        <div onclick="postClientData()" style="width: 50px; height: 50px; background-color: black;"></div>
+
+    <main>
+        <div>
+            <h2>MY PAGE</h2>
+            <div class="menu_box">
+                <div>
+                    <h3>SHOPPING INFO</h3>
+                    <a href="">주문내역</a>
+                    <div></div>
+                    <a href="">쿠폰내역</a>
+                    <div></div>
+                    <a href="">적립금내역</a>
+                    <div></div>
+                    <a href="">오늘본상품</a>
+
+                    <a href="">상품 보관함</a>
+                    <div></div>
+                    <a href="">주소록 관리</a>
+                    <div></div>
+                    <a href="">선물함</a>
+                </div>
+                <div>
+                    <h3>SHOPPING QUESTION</h3>
+                    <a href="">내 게시글 보기</a>
+                    <div></div>
+                    <a href="">E-mail 문의</a>
+                    <div></div>
+                    <a href="">1:1게시판</a>
+                </div>
+                <div>
+                    <h3>CUSTOMER INFO</h3>
+                    <a href="">회원정보변경</a>
+                    <div></div>
+                    <a href="">회원정보탈퇴신청</a>
+                </div>
+            </div>
+            <div class="order_box">
+                <h3>주문내역</h3>
+                <p><span class="order_name"></span>님께서 주문하신 내역입니다.</p>
+
+                <div class="order_gridbox">
+                    <div>번호</div>
+                    <div>주문일</div>
+                    <div>상품명</div>
+                    <div>결제금액</div>
+                    <div>주문상세</div>
+                    <div>배송현황</div>
+                </div>
+            </div>
+            <p>- 상품명 또는 주문상세의 조회 버튼을 클릭하시면, 주문상세 내역을 확인하실 수 있습니다. <br>
+                - 배송현황의 조회 버튼을 클릭하시면, 해당 주문의 배송 현황을 한눈에 확인하실 수 있습니다.
+            </p>
+        </div>
     </main>
+
+    <footer>
+        <div class="footer_container">
+            <div>
+                <ul>
+                    <li><a href="">홈</a></li>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">서비스</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보 처리방침</a></li>
+                    <li><a href="">기업 구매 안내</a></li>
+                    <li><a href="">교환/환불 정책</a></li>
+                </ul>
+            </div>
+            <!-- 로고 -->
+            <div class="footer_logo">
+                <a href="">
+                    <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/f_logo.png" alt="">
+                </a>
+            </div>
+            <!-- 팀원 이름 정보 -->
+            <div class="Team_members">
+                <p><span>주용현</span><span class="jyh"></span></p>
+                <p><span>이혜나</span><span class="lhn"></span></p>
+                <p><span>김수빈</span><span class="ksb"></span></p>
+                <p><span>김수옥</span><span class="kso"></span></p>
+                <p><span>장근정</span><span class="jgj"></span></p>
+                <p><span>임명건</span><span class="img"></span></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
