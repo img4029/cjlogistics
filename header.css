@@ -1,8 +1,15 @@
 /* nav 높이 72 */
 *{
     margin: 0;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', 'sans-serif';
     box-sizing: border-box;
     list-style: none;
+}
+ul {
+    padding: 0;
+}
+a {
+    text-decoration: none;
 }
 /* 여기부터 header ======================*/
 .header_acide,

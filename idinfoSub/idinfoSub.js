@@ -104,8 +104,7 @@ function birthDateCheck(array) {
 function birthDateOutput(array) {
     for (let i = 0; i < array.length; i++) {
         if (array[i].selected == true) return array[i].value;
-    }
-    
+    }  
 }
 // 아이디 이메일 서버에서 중복체크
 async function idEmailCheck(n1 , n2) {
@@ -150,6 +149,7 @@ async function idDoubleCheckfc() {
         }
         alert(`${idinfoGridValue[1].value} 사용할수 있는 아이디입니다.`);
         idinfoGridValue[1].disabled = true;
+        idinfoGridValue[2].focus();
         idCount = 1;
     }
 }
@@ -215,18 +215,18 @@ function informationCheck() {
                 profile.hname = myName;
                 break;
             case 2:
-                // if (idCount == 0) {
-                //     alert(`아이디 중복확인을 해주세요`);
-                //     idinfoGridValue[1].focus();
-                //     break outer;
-                // }
+                if (idCount == 0) {
+                    alert(`아이디 중복확인을 해주세요`);
+                    idinfoGridValue[1].focus();
+                    break outer;
+                }
                 profile.hid = idinfoGridValue[1].value;
                 break;
             case 3:
                 let regPass = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
                 let regPass2 = /[ "']/;
                 if (!regPass.test(idinfoGridValue[2].value)) {
-                    alert("영문, 숫자, 특수기호 조합으로 8~20자리 입력해주세요")
+                    alert("영문, 숫자, 특수기호 조합으로 8~16자리 입력해주세요")
                     idinfoGridValue[2].focus();
                     break outer;
                 }
@@ -247,8 +247,8 @@ function informationCheck() {
             case 5:
                 let bdcount = 0;
                 birthDateY = document.querySelector(".birthDateY"),
-                    birthDateM = document.querySelector(".birthDateM"),
-                    birthDateD = document.querySelector(".birthDateD");
+                birthDateM = document.querySelector(".birthDateM"),
+                birthDateD = document.querySelector(".birthDateD");
                 bdcount += birthDateCheck(birthDateY.children);
                 bdcount += birthDateCheck(birthDateM.children);
                 bdcount += birthDateCheck(birthDateD.children);
@@ -302,11 +302,11 @@ function informationCheck() {
                 profile.hpn = hpn;
                 break;
             case 10:
-                // if (emailCount == 0) {
-                //     alert(`이메일 중복확인을 해주세요`);
-                //     idinfoGridValue[12].focus();
-                //     break outer;
-                // }
+                if (emailCount == 0) {
+                    alert(`이메일 중복확인을 해주세요`);
+                    idinfoGridValue[12].focus();
+                    break outer;
+                }
                 profile.hem = idinfoGridValue[12].value;
                 break;
             case 11:

@@ -9,6 +9,7 @@ let testing = document.querySelectorAll('.testing'),
     kso = document.querySelector('.kso'),
     jgj = document.querySelector('.jgj'),
     img = document.querySelector('.img'),
+    herfChange,
     loginComplete =
     {
         hname: "",
@@ -27,8 +28,10 @@ let testing = document.querySelectorAll('.testing'),
         cdar: "",
         hsp: "",
         ShoppingBasket: "",
-        Order: "",
+        Order: ""
     };
+var path = window.location.pathname;
+
 function change() {
     let menuList = document.querySelector('.menu_list'),
         menuIcon1 = document.querySelector('.menu_icon1'),
@@ -67,52 +70,61 @@ async function getClientData() {
         const response = await axios.get('http://localhost:3000/loginComplete/1');
 
         clientData = response.data;
-        loginCheck();
-    } catch (err) {
-        console.log('데이터를 가져오는 중 오류 발생');
-        console.log(err.message);
-    }
-};
-async function getShoppingBasketData(id) {
-    try {
-        const response = await axios.get(`http://localhost:3000/ShoppingBasket${id}`);
-
-        ShoppingBasketData = response.data;
-        shopping_basket.innerText = ShoppingBasketData.length;
+        loginCheck(clientData);
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
         console.log(err.message);
     }
 };
 
-function loginCheck() {
+function loginCheck(clientData) {
     if (clientData.hname != '') {
         console.log(clientData.hname);
         testing[0].addEventListener('click', () => {
             const response = axios.put('http://localhost:3000/loginComplete/1', loginComplete);
         });
-        testing[0].href = "../main/index.html";
-        testing[0].innerText = "로그아웃"
-        testing[1].href = "";
-        testing[1].innerText = "회원정보"
-        testing[2].href = "";
-        testing[3].href = "../order/order.html";
-        testing_logo.href = "";
-        getShoppingBasketData(clientData.hid);
+        testing[0].href = `${herfChange}main/index.html`;
+        testing[0].innerText = `로그아웃`
+        testing[1].href = ``;
+        testing[1].innerText = `회원정보`
+        testing[2].href = ``;
+        testing[3].href = `${herfChange}order/order.html`;
+        testing_logo.href = ``;
+        shopping_basket.innerText = clientData.ShoppingBasket.length;
+        console.log();
     } else {
-        testing[0].href = "../member/member.html";
-        testing[0].innerText = "로그인"
-        testing[1].href = "../idinfo/idinfo.html";
-        testing[1].innerText = "회원가입"
-        testing[2].href = "../member/member.html";
-        testing[3].href = "../member/member.html";
-        testing_logo.href = "../member/member.html";
+        testing[0].href = `${herfChange}member/member.html`;
+        testing[0].innerText = `로그인`
+        testing[1].href = `${herfChange}idinfo/idinfo.html`;
+        testing[1].innerText = `회원가입`
+        testing[2].href = `${herfChange}member/member.html`;
+        testing[3].href = `${herfChange}member/member.html`;
+        testing_logo.href = `${herfChange}member/member.html`;
         shopping_basket.innerText = 0;
     }
 };
+function addFont() {
+    const head = document.querySelector('head');
+    head.innerHTML += `
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    `;
+}
+
+if (path === '/index.html') {
+    console.log('나는 메인이다');
+    herfChange = './';
+} else {
+    herfChange = '../';
+}
+console.log(path);
 
 getClientData();
-
+addFont();
 jyh.innerText += ":";
 lhn.innerText += ":";
 ksb.innerText += ":";
