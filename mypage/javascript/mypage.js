@@ -2,6 +2,7 @@
 
 
 
+
 // ================== 프로필 개인정보 ==================
 
 let profileData = [
@@ -76,6 +77,8 @@ let profileData = [
     }
 ];
 
+
+
 let profile = document.querySelector('.mypage_profile_inner'),
     privacy = profile.querySelector('.profile_inner_private'),
     reserves = profile.querySelector('.profile_inner_ordered'),
@@ -96,9 +99,9 @@ makeProfile();
 
 
 // id 값 찾아서 데이터넣기
-function insertPriData() {
+function insertPriData(code) {
     for (let i = 0; i < profileData.length; i++) {
-        if (profileData[i].id === 1) {
+        if (profileData[i].id === code) {
             profileImg.src = profileData[i].img
             identity.innerText = profileData[i].name
             for (let j = 0; j < privacy.children.length; j++) {
@@ -129,7 +132,7 @@ function insertPriData() {
     }
 }
 
-insertPriData();
+insertPriData(3);
 
 // if (privacy.children[j].innerText === '전 화') {
 //     privacy.children[j + 1].innerText = profileData[i].phone;
@@ -156,51 +159,6 @@ insertPriData();
 
 let table = document.querySelectorAll('.bottomTb');
 // 테이블이 페이지에 2개라서 한번에 가져왔다.
-
-let OrderData = [
-    {
-        date: '2023.01.12',
-        product: '디퓨저',
-        cost: '53,252',
-        detail: '<a href="">VIEW</a>'
-    },
-    {
-        date: '2023.05.25',
-        product: '향수',
-        cost: '102,252',
-        detail: '<a href="">VIEW</a>'
-    },
-    {
-        date: '2023.11.12',
-        product: '핸드크림',
-        cost: '1,153,252',
-        detail: '<a href="">VIEW</a>'
-    },
-]
-
-
-function latestOrderData() {
-    for (let i = 0; i < OrderData.length; i++) {
-        let newRow = table[0].insertRow(-1);
-        for (let j = 0; j < Object.values(OrderData[0]).length; j++) {
-            if (Object.keys(OrderData[i])[j] == 'cost') {
-                let newCell = newRow.insertCell();
-                newCell.innerText = `${Object.values(OrderData[i])[j]} 원`;
-            } else if (Object.keys(OrderData[i])[j] == 'detail') {
-                let newCell = newRow.insertCell();
-                newCell.innerHTML = Object.values(OrderData[i])[j];
-            } else {
-                let newCell = newRow.insertCell();
-                newCell.innerText = Object.values(OrderData[i])[j];
-            }
-        }
-    }
-}
-
-latestOrderData();
-// ==========================================================
-
-
 
 // =============최근 등록 게시글 ===================
 
@@ -230,7 +188,8 @@ let postData = [{
     board: '<a href="" class="order_detail">1:1게시판</a>',
 }];
 
-
+// 이 방법도 데이터가 내가 원하는 순서로 전달된다는 가정 하에
+// 인덱스를 통한 접근 (table에 입력받기)
 function latestPostData() {
     for (let i = 0; i < postData.length; i++) { // 객체배열의 길이만큼 반복시킨다.(행)
         let newRow = table[1].insertRow(-1);
@@ -250,6 +209,57 @@ function latestPostData() {
 }
 
 latestPostData();
+
+let OrderData = [
+    {
+        date: '2023.01.12',
+        product: '디퓨저',
+        cost: '53,252',
+        detail: '<a href="">VIEW</a>'
+    },
+    {
+        date: '2023.05.25',
+        product: '향수',
+        cost: '102,252',
+        detail: '<a href="">VIEW</a>'
+    },
+    {
+        date: '2023.11.12',
+        product: '핸드크림',
+        cost: '1,153,252',
+        detail: '<a href="">VIEW</a>'
+    },
+]
+
+
+
+//  ============ 최근 주문 내역 =============================
+// 데이터가 내가 입력받고자 하는 순서로 전달된다고 가정하고
+// 인덱스로 들어가서 입력하는 방법
+function latestOrderData() {
+    for (let i = 0; i < OrderData.length; i++) {
+        let newRow = table[0].insertRow(-1);
+        for (let j = 0; j < Object.values(OrderData[0]).length; j++) {
+            if (Object.keys(OrderData[i])[j] == 'cost') {
+                let newCell = newRow.insertCell();
+                newCell.innerText = `${Object.values(OrderData[i])[j]} 원`;
+            } else if (Object.keys(OrderData[i])[j] == 'detail') {
+                let newCell = newRow.insertCell();
+                newCell.innerHTML = Object.values(OrderData[i])[j];
+            } else {
+                let newCell = newRow.insertCell();
+                newCell.innerText = Object.values(OrderData[i])[j];
+            }
+        }
+    }
+}
+
+latestOrderData();
+// ==========================================================
+
+
+
+
 
 
 // let active = new Array(2)
@@ -339,9 +349,73 @@ function wishList() {
 wishList();
 // oooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+let A = [
+    {
+        img: "./image/bg1.jpg",
+        name: '짱구',
+        phone: '010-5764-3321',
+        email: 'gjnsdx123@naver.com',
+        address: '경기도 광주시',
+        totalCost: '123,456 원',
+        reserves: '123,345 원',
+        coupon: 11,
+        id: 1,
+        latestOrder:
+        {
+            orderDate: '2023.11.26',
+            product: '오일 퍼퓸 밤쉘',
+            cost: '561,111',
+        },
+        lastestPost:
+        {
+            postData: '2023.03.11',
+            subject: '매장 위치는 ?',
+            board: '1:1게시판',
+        },
+        wishList:
+        {
+            item: '디퓨저 블라블라',
+            cost: '536,999',
+            option: "폴리데이 선물포장",
+            img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
+        },
+    },
+    {
+        img: "./image/bg2.jpg",
+        name: '짱아',
+        phone: '010-8979-3231',
+        email: 'ffg1@naver.com',
+        address: '서울특별시',
+        totalCost: '19,456 원',
+        reserves: '96,345 원',
+        coupon: 3,
+        id: 2,
+        latestOrder:
+        {
+            orderDate: '2023.07.12',
+            product: '디퓨저 올리브 릿지',
+            cost: '111,111',
+        },
+        lastestPost:
+        {
+            postData: '2023.03.11',
+            subject: '배송 언제?',
+            board: '1:1게시판',
+        },
+        "wishList": [
+            {
+                item: '향수 블라블라',
+                cost: '487,999',
+                option: "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+                img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
+            },
+            {
+                item: '핸드크림 블라블라',
+                cost: '986,999',
+                option: "오일 퍼퓸 밤쉘20ml",
+                img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
+            }]
+    }];
 
-
-
-// 1번 객체배열 나눈 다음에 id 6인 사람을 찾아서 가져온다.
-// 2번 id 6인 사람의 인덱스 1~4번까지는 
+console.log(A[1].wishList);
 

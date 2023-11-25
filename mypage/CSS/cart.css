@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', 'sans-serif';
+    font-size: 14px;
+}
+
+ul {
+    padding: 0;
+}
+
+.cart_outer {
+    max-width: 1300px;
+    min-width: 1100px;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.cart_top>p {
+    text-align: right;
+    color: gray;
+}
+
+.cart_top>p>a {
+    color: gray;
+}
+
+.cart_top>h1 {
+    text-align: left;
+    font-size: 20px;
+}
+
+/* =========================================== */
+/* ============== 장바구니 ==================== */
+
+.cart_body {
+    border-top: 2px solid;
+    display: grid;
+    grid-template: auto / 1fr 1fr 5fr 1.5fr 1fr 1.5fr 1.5fr 1.5fr;
+    width: 100%;
+    text-align: center;
+}
