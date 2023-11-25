@@ -9,13 +9,9 @@ async function getClientData() {
     try {
         const response = await axios.get('http://localhost:3000/loginComplete/1');
         clientData1 = response.data;
-        console.log(clientData1.hname);
-        // const response2 = await axios.get(`http://localhost:3000/Order${clientData1.hid}`);
-        // clientData2 = clientData1.Order;
         
         order_name.innerText = '['+clientData1.hname+']';
         order_name.className = "jsSpan";
-        console.log(clientData1.Order.length);
 
         if (clientData1.Order.length == 0) {
             const createDivEmptied = document.createElement('div')
@@ -37,7 +33,6 @@ async function getClientData() {
 
 function createDivfc(clientData2,count) {
     const createDiv = new Array(6);
-    console.log(clientData2);
     for (let i = 0,j = 0; i < createDiv.length; i++) {
         createDiv[i] = document.createElement('div');
         order_gridbox.appendChild(createDiv[i]);
@@ -61,7 +56,6 @@ function createDivfc(clientData2,count) {
                 createButton.innerText = "VIEW";
                 createButton.style.cursor = "pointer";
                 createButton.addEventListener('click',()=> {
-                    // putClientData(clientData2.ProductList);
                     changeDiv(clientData2.ProductList);
                 });
                 break;

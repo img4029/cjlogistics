@@ -3,26 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>주문조회</title>
-
-    <link rel="stylesheet" href="./test.css">
-    <script defer src="./test.js"></script>
+    <title>MY PAGE</title>
 
     <link rel="stylesheet" href="./header.css">
     <script defer src="./header.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
         rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
         rel="stylesheet">
-
+    <!-- ====================== -->
+    <script src="https://kit.fontawesome.com/647f0863a7.js" crossorigin="anonymous"></script>
+    <!-- ======================== -->
+    <link rel="stylesheet" href="./test.css">
+    <!-- ======================= -->
+    <script defer src="./test.js"></script>
 </head>
 
 <body>
@@ -97,61 +97,131 @@
             <a href="../index.html">Daniel's Truth</a>
         </div>
     </header>
-
     <main>
-        <div>
-            <h2>MY PAGE</h2>
-            <div class="menu_box">
-                <div>
-                    <h3>SHOPPING INFO</h3>
-                    <a href="">주문내역</a>
-                    <div></div>
-                    <a href="">쿠폰내역</a>
-                    <div></div>
-                    <a href="">적립금내역</a>
-                    <div></div>
-                    <a href="">오늘본상품</a>
+        <div class="mypage_outer_3">
+            <div class="mypage_top_3">
+                <h1>
+                    <a href="mypage.html">MY PAGE</a>
+                </h1>
+                <!-- 새로운 info 대비 우측하단 -->
+                <!-- 이모지 -->
+                <div class="mypage_info_outer_3">
+                    <div class="mypage_shop_info_3 info">
+                        <h2><i class="fa-solid fa-circle-info"></i> shopping info</h2>
+                        <div class="mypage_shop_3">
+                            <span><a href="">주문내역</a></span>
+                            <span><a href="mypage_coupon.html">쿠폰내역</a></span>
+                            <span><a href="">적립금내역</a></span>
+                            <span><a href="">오늘본상품</a></span>
+                            <span><a href="">보관함</a></span>
+                            <span><a href="">주소록관리</a></span>
+                            <span><a href="">선물함</a></span>
+                        </div>
+                    </div>
+                    <div class="mypage_QnA_info_3 info">
+                        <h2><i class="fa-solid fa-circle-question"></i> shopping question</h2>
+                        <div class="mypage_QnA_3">
+                            <span><a href="">내 게시물 보기</a></span>
+                            <span><a href="">e-mail문의</a>
+                            </span>
+                            <span><a href="">1:1게시판</a></span>
+                        </div>
+                    </div>
 
-                    <a href="">상품 보관함</a>
-                    <div></div>
-                    <a href="">주소록 관리</a>
-                    <div></div>
-                    <a href="">선물함</a>
-                </div>
-                <div>
-                    <h3>SHOPPING QUESTION</h3>
-                    <a href="">내 게시글 보기</a>
-                    <div></div>
-                    <a href="">E-mail 문의</a>
-                    <div></div>
-                    <a href="">1:1게시판</a>
-                </div>
-                <div>
-                    <h3>CUSTOMER INFO</h3>
-                    <a href="">회원정보변경</a>
-                    <div></div>
-                    <a href="">회원정보탈퇴신청</a>
+                    <div class="mypage_customer_info_3 info">
+                        <h2><i class="fa-solid fa-person-circle-question"></i> customer info</h2>
+                        <div class="mypage_customer_3">
+                            <span><a href="mypage_edit.html">회원정보변경</a></span>
+                            <span><a href="">회원정보탈퇴신청</a></span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="order_box">
-                <h3>주문내역</h3>
-                <p><span class="order_name"></span>님께서 주문하신 내역입니다.</p>
 
-                <div class="order_gridbox">
-                    <div>번호</div>
-                    <div>주문일</div>
-                    <div>상품명</div>
-                    <div>결제금액</div>
-                    <div>주문상세</div>
-                    <div>배송현황</div>
+
+            <!-- 개인정보 저장공간 -->
+            <div class="mypage_profile_outer">
+                <div class="mypage_profile_inner">
+                    <div><img src="" alt="" class="profile_image">
+                    </div>
+                    <div class="profile_privacy">
+                        <div>
+                        </div>
+                        <a href="./mypage_edit.html">EDIT</a>
+
+                        <div class="profile_inner_private">
+
+                        </div>
+                    </div>
+                    <div class="profile_inner_ordered">
+
+                    </div>
                 </div>
             </div>
-            <p>- 상품명 또는 주문상세의 조회 버튼을 클릭하시면, 주문상세 내역을 확인하실 수 있습니다. <br>
-                - 배송현황의 조회 버튼을 클릭하시면, 해당 주문의 배송 현황을 한눈에 확인하실 수 있습니다.
-            </p>
+
+            <!-- ================ mypage_bottom================== -->
+
+
+            <div class="mypage_bottom">
+                <div class="bottom_order position">
+                    <caption>
+                        <h2>최근 주문정보</h2>
+                    </caption>
+                    <a href="">+ MORE</a>
+                    <div>
+                        <table class="lastest_order bottomTb">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>DATE</th>
+                                <th>PRODUCT</th>
+                                <th>COST</th>
+                                <th>DETAIL</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+
+
+
+                <div class="bottom_order position">
+                    <caption>
+                        <h2>최근 등록 게시글</h2>
+                    </caption>
+                    <a href="">+ MORE</a>
+
+                    <div>
+                        <table class="lastest_post bottomTb">
+                            <tr>
+                                <th>DATE</th>
+                                <th>SUBJECT</th>
+                                <th>BOARD</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bottom_wish position">
+                    <caption>
+                        <h2>관심 상품 정보</h2>
+                    </caption>
+                    <a href="">+ MORE</a>
+
+                    <div id="bottom_wish_list">
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
     </main>
-
     <footer>
         <div class="footer_container">
             <div>
@@ -182,6 +252,11 @@
             </div>
         </div>
     </footer>
+
+
+
+
+
 </body>
 
 </html>

@@ -1,213 +1,241 @@
 * {
     margin: 0;
-    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', 'sans-serif';
     box-sizing: border-box;
-    list-style: none;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', 'sans-serif';
+    font-size: 14px;
+    border-collapse: collapse;
 }
 
 ul {
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-}
 
-/* 메인 영역 : MY PAGE */
 
-main>div {
-    padding: 0 100px;
-    min-width: 1100px;
-    max-width: 1300px;
-    padding-top: 200px;
+.mypage_outer_3 {
     margin: auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1300px;
+    min-width: 1100px;
+    padding: 0 100px;
 }
 
-main>div>h2 {
+.mypage_top_3>h1 {
     text-align: center;
-    padding: 20px 0;
+    padding-top: 200px;
+    padding-bottom: 50px;
 }
 
-main>div>p {
-    text-align: left;
-    margin-top: 100px;
-    padding-bottom: 92px;
-    font-size: 13px;
+
+
+.mypage_top_3>h1>a {
+    font-size: 30px;
+    color: black;
+}
+
+/* ======================== */
+
+
+
+
+
+/* =======  INFO =============== */
+
+.info {
+    padding: 50px;
+    width: 33%;
+}
+
+.info h2 {
+    padding-bottom: 15px;
+    text-wrap: nowrap;
+    word-break: keep-all;
+}
+
+.info span a {
+    padding-right: 10px;
     color: gray;
 }
 
-.menu_box {
-    width: 100%;
-    height: 170px;
+.mypage_info_outer_3 {
     border: 1px solid black;
-    margin-top: 10px;
-    margin-bottom: 50px;
     display: flex;
+    justify-content: space-evenly;
+    word-break: keep-all;
+    text-transform: uppercase;
 }
 
-.menu_box>div {
-    width: 100%;
-    text-align: left;
-    margin: 20px 0;
-    padding: 15px 35px;
+
+/* ========================== */
+
+
+
+
+
+
+/* =========PROFILE ========= */
+.mypage_profile_outer {
+    border: 1px solid rgba(128, 128, 128, 0.372);
 }
 
-.menu_box>div>h3 {
-    width: 100%;
-    padding: 0 30px;
-    height: 18px;
-    line-height: 18px;
-    background-image: url("https://image.makeshop.co.kr/makeshop/d3/basic_simple/common/sp_mypage_aside.gif");
-    background-repeat: no-repeat;
-    font-size: 14px;
-    margin-bottom: 20px;
+.profile_privacy>a {
+    color: black;
+    border: 1px solid;
+    font-size: 0.8rem;
+    padding: 2px;
+    margin-left: 5px;
 }
 
-.menu_box>div:nth-child(1),
-.menu_box>div:nth-child(2) {
-    border-right: 1px solid rgba(128, 128, 128, 0.4);
+.profile_privacy>a:hover {
+    background-color: black;
+    color: aliceblue;
 }
 
-.menu_box>div:nth-child(2),
-.menu_box>div:nth-child(3) {
-    padding-bottom: 42px;
+/* .profile_privacy>div:nth-child(1) {
+    display: inline-block;
+} */
+
+.mypage_profile_inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
 }
 
-.menu_box>div:nth-child(n) {
+.mypage_profile_inner>div {
+    padding: 20px;
+}
+
+.profile_image {
+    width: 120px;
+    height: 120px;
+}
+
+.profile_inner_private {
+    padding-top: 15px;
+}
+
+.profile_inner_ordered {
+    display: grid;
+    grid-template: repeat(3, 1fr)/ 1.2fr 2fr;
+}
+
+.profile_privacy_detail {
+    display: grid;
+    grid-template: repeat(3, 1fr)/ 1fr 2fr;
+}
+
+.profile_inner_private {
+    display: grid;
+    grid-template: repeat(3, 1fr)/ 1fr 2fr;
+    gap: 10px;
+}
+
+/* ========= MYPAGE BOTTOM ======= */
+
+.mypage_bottom {
     display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-}
-
-.menu_box>div:nth-child(n) a {
-    color: rgba(128, 128, 128, 0.9);
-    line-height: 12px;
-    font-size: 12px;
-}
-
-.menu_box>div:nth-child(n) div {
-    width: 1px;
-    height: 10px;
-    background-color: rgba(128, 128, 128, 0.5);
-}
-
-.menu_box>div:nth-child(1)>h3 {
-    background-position: top left;
-}
-
-.menu_box>div:nth-child(2)>h3 {
-    background-position: center left;
-}
-
-.menu_box>div:nth-child(3)>h3 {
-    background-position: bottom left;
-}
-
-.order_box {
-    text-align: left;
+    flex-direction: column;
+    gap: 40px;
     position: relative;
 }
 
-.order_box>h3 {
-    border-bottom: 1px solid black;
-    padding-bottom: 10px;
+.mypage_bottom h2 {
     font-size: 18px;
+    padding-bottom: 7px;
 }
 
-.order_box>p {
+.position>a {
     position: absolute;
-    top: 16px;
     right: 0;
+    transform: translateY(-20px);
+    color: rgb(128, 128, 128);
     font-size: 12px;
 }
 
-.order_gridbox {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr) repeat(1, 2fr)repeat(1, 8fr)repeat(3, 1.5fr);
-    /* grid-template-rows: 2px */
+.bottomTb {
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.272);
 }
 
-.order_gridbox>div {
+.bottomTb th {
+    padding: 10px;
+}
+
+.bottomTb>tbody td {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.bottomTb>tbody td a {
+    color: black;
+    font-size: 12px;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.bottomTb>tbody td a:hover {
+    background-color: black;
+    color: aliceblue;
+}
+
+.lastest_order>tbody tr>th:nth-child(1) {
+    width: 15%;
+}
+
+.lastest_order>tbody tr>th:nth-child(2) {
+    width: 50%;
+}
+
+.lastest_order>tbody tr>th:nth-child(3) {
+    width: 20%;
+}
+
+.lastest_order>tbody tr>th:nth-child(4) {
+    width: 15%;
+}
+
+
+
+/* .display_none */
+
+
+/* 테이블 너비 지정하자 */
+
+/* .lastest_post th */
+
+
+
+
+
+#bottom_wish_list {
+    text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-
-    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    gap: 20px;
+    padding-top: 15px;
+    padding-bottom: 60px;
+    border-top: 2px solid black;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.254);
+    flex-wrap: wrap;
 }
 
-.order_gridbox>div:nth-child(-n+6) {
-    font-size: 14px;
-    font-weight: bold;
+/* 중앙 정렬 도와주세요... */
+
+.wishImg {
+    width: 200px;
+    height: 200px;
+    /* margin: auto; */
 }
 
-.order_gridbox>div:nth-child(n+7) {
-    font-size: 13px;
-    /* font-weight: bold; */
-}
+/* 이 이미지는 높이 너비 직접 지정해도 돼? */
 
-.jsSpan {
-    color: blue;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.createButton {
-    height: 25px;
-    width: 50px;
-    font-size: 10px;
-    font-weight: bold;
-    background-color: white;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ================================================== */
-.orderSub_box {
-    display: flex;
-    height: 50px;
-    align-items: center;
-    background-color: rgba(128, 128, 128, 0.1);
-    gap: 10px;
-    margin-bottom: 50px;
-}
-
-.orderSub_box>div:nth-child(2) {
-    width: 1px;
-    height: 15px;
-    background-color: rgba(128, 128, 128, 0.5);
-}
-
-.orderSub_box>div>span {
-    padding: 0 15px;
-}
-
-.orderSub_box>div>span:nth-child(1) {
-    font-weight: bold;
-}
-
-.orderSub_gridbox {
-    display: grid;
-    grid-template-columns: repeat(1, 1.5fr) repeat(1, 7fr) repeat(1, 3fr) repeat(1, 2fr) repeat(1, 1.5fr);
-}
-
-.orderSub_gridbox>div {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-}
-
-.orderSub_gridbox>div:nth-child(1) {
-    grid-area: 1 / 1 / 2 / 6;
-    padding-left: 15px;
-    background-color: rgba(128, 128, 128, 0.1);
-}
-
-.orderSub_gridbox>div:nth-child(n+2) {
-    height: 100px;
-    justify-content: center;
+.wishContainer {
+    /* width: 230px;
+    height: 230px; */
+    width: calc(25% - 15px);
+    /* height: 230px; */
+    /* text-align: center; */
 }
