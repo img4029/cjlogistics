@@ -20,6 +20,7 @@
       "Order": [
         {
           "orderDate": "2023.11.16",
+          "orderNumber" : "20231106110121-8178227352",
           "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
           "amountPayment": "201,000원",
           "ProductList": [
@@ -27,15 +28,15 @@
               "Gifts": "",
               "productName": "디퓨저 올리브 릿지",
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-              "quantity": "1",
-              "amountPayment": "201,000",
+              "quantity": 1,
+              "amountPayment": 201000,
               "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
             },
             {
               "Gifts": "(사은품)",
               "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
               "options": "",
-              "quantity": "1",
+              "quantity": 1,
               "amountPayment": "",
               "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
             }
@@ -44,22 +45,23 @@
         },
         {
           "orderDate": "2023.11.16",
+          "orderNumber" : "20231106110121-8178227353",
           "productName": "디퓨저 올리브 릿지 외 1건",
-          "amountPayment": "198,000원",
+          "amountPayment": 198000,
           "ProductList": [
             {
               "Gifts": "",
               "productName": "디퓨저 올리브 릿지",
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-              "quantity": "1",
-              "amountPayment": "100,000",
+              "quantity": 1,
+              "amountPayment": 100000,
               "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
             },
             {
               "Gifts": "(사은품)",
               "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
               "options": "",
-              "quantity": "1",
+              "quantity": 1,
               "amountPayment": "",
               "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
             }
@@ -111,22 +113,23 @@
       "Order": [
         {
           "orderDate": "2023.11.16",
+          "orderNumber" : "20231106110121-8178227352",
           "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
-          "amountPayment": "201,000원",
+          "amountPayment": 201000,
           "ProductList": [
             {
               "Gifts": "",
               "productName": "디퓨저 올리브 릿지",
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-              "quantity": "1",
-              "amountPayment": "201,000",
+              "quantity": 1,
+              "amountPayment": 201000,
               "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
             },
             {
               "Gifts": "(사은품)",
               "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
               "options": "",
-              "quantity": "1",
+              "quantity": 1,
               "amountPayment": "",
               "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
             }
@@ -135,22 +138,23 @@
         },
         {
           "orderDate": "2023.11.16",
+          "orderNumber" : "20231106110121-8178227353",
           "productName": "디퓨저 올리브 릿지 외 1건",
-          "amountPayment": "198,000원",
+          "amountPayment": 198000,
           "ProductList": [
             {
               "Gifts": "",
               "productName": "디퓨저 올리브 릿지",
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-              "quantity": "1",
-              "amountPayment": "100,000",
+              "quantity": 1,
+              "amountPayment": 100000,
               "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
             },
             {
               "Gifts": "(사은품)",
               "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
               "options": "",
-              "quantity": "1",
+              "quantity": 1,
               "amountPayment": "",
               "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
             }
@@ -161,5 +165,19 @@
       "id": 1
     }
   ],
-  "ProductList": []
+  "ProductList": [
+    {
+        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
+        "productName": "돔 캔들 유칼립투스 라벤더",
+        "character": "유칼립투스 ∙ 라벤더 ∙  우디 ∙ 포근함",
+        "price": 67000,
+        "scentSelection1" : [],
+        "scentSelection2" : [],
+        "id": 1
+    }
+  ]
+
+  
 }
+
+

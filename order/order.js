@@ -34,7 +34,7 @@ async function getClientData() {
 function createDivfc(clientData2,count) {
     const createDiv = new Array(6);
     for (let i = 0,j = 0; i < createDiv.length; i++) {
-        createDiv[i] = document.createElement('div');
+        createDiv[i] = document.createElement('div');alert
         order_gridbox.appendChild(createDiv[i]);
         switch (i) {
             case 0:
@@ -56,7 +56,7 @@ function createDivfc(clientData2,count) {
                 createButton.innerText = "VIEW";
                 createButton.style.cursor = "pointer";
                 createButton.addEventListener('click',()=> {
-                    changeDiv(clientData2.ProductList);
+                    changeDiv(clientData2.ProductList, clientData2.orderNumber);
                 });
                 break;
             default:
@@ -68,7 +68,7 @@ function createDivfc(clientData2,count) {
         }
     }
 }
-function changeDiv(ProductList) {
+function changeDiv(ProductList,orderNumber) {
     console.log(ProductList);
     order_box.innerHTML = `
                 <h3>주문 정보</h3>
@@ -80,13 +80,16 @@ function changeDiv(ProductList) {
                     <div></div>
                     <div>
                         <span>주문번호</span>
-                        <span>20231106110121-8178227352</span>
+                        <span class="order_number"></span>
                     </div>
                 </div>
                 <h3>상품 정보</h3>
                 <div class="orderSub_gridbox">
                     <div>배송번호</div>
                 </div>`
+    const order_number = document.querySelector('.order_number');
+    order_number.innerText = orderNumber
+
     for (let i = 0; i < ProductList.length; i++) {
         createDivfc2(ProductList[i]);
     }
@@ -95,7 +98,7 @@ function createDivfc2(ProductList) {
     let create1, create2;
     const createDiv = new Array(5),
         orderSub_gridbox = document.querySelector('.orderSub_gridbox');
-    
+        
     console.log(ProductList);
     for (let i = 0; i < createDiv.length; i++) {
         createDiv[i] = document.createElement('div');
