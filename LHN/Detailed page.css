@@ -311,7 +311,7 @@ h4 {
     padding: 20px;
     margin-top: -15px;
     font-weight: bold;
-    margin-right: -24px;
+    margin-right: -128px;
 }
 
 .select_3 a {
@@ -496,7 +496,8 @@ h4 {
     color: white;
     height: 250px;
     width: 250px;
-    padding: 30px;
+    padding: 50px;
+    margin-right: 50px;
 }
 
 .ster a {
@@ -554,7 +555,7 @@ h4 {
     width: 450px;
     display: flex;
     line-height: 32px;
-    margin-right: -20px;
+    margin-right: -50px;
 }
 
 
@@ -584,7 +585,7 @@ h4 {
 
 .ulbox1_3 ul:nth-child(1) li {
     float: left;
-    margin-left: -18px;
+    margin-left: 24px;
     color: rgb(139, 135, 135);
     font-size: 19px;
 }
