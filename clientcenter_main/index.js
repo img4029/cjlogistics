@@ -10,10 +10,10 @@ table.appendChild(thead);
 table.appendChild(tbody);
 document.getElementById('faq_table').appendChild(table);
 
-/*==================== 테이블 헤더 분류 ====================*/
+/*==================== thead 분류 ====================*/
 function createTableHeader(columns) {
     let thead_tr = document.createElement('tr');
-    columns.forEach( function(column){
+    columns.forEach(function (column) {
         let thead_th = document.createElement('th');
         thead_th.textContent = column;
         thead_tr.appendChild(thead_th);
@@ -22,9 +22,10 @@ function createTableHeader(columns) {
 }
 
 
-/*==================== 테이블 분류 ====================*/
+/*==================== tbody 분류 ====================*/
 function createTableRow(rowNumber, type, title, question, faqAnswer) {
     let tbody_tr = document.createElement('tr');
+
     /*===== 각각 번호, 분류, 제목 =====*/
     let numberCell = document.createElement('td');
     numberCell.textContent = rowNumber;
@@ -52,67 +53,63 @@ function createTableRow(rowNumber, type, title, question, faqAnswer) {
 
 /*==================== Q,A행  ====================*/
 function QArow(type, content) {
-    let QA_tr= document.createElement('tr');
-    QA_tr.classList.add('faqcell');
+    let QA_tr = document.createElement('tr');
+    QA_tr.classList.add('QAcell');
 
-    let numberCell = document.createElement('td');
-    numberCell.textContent = type;
-    QA_tr.appendChild(numberCell);
+    let QAheader = document.createElement('td');
+    QAheader.textContent = type;
+    QA_tr.appendChild(QAheader);
 
-    if (type == 'Q' || type == 'A') {
-        let contentCell = document.createElement('td');
-        contentCell.textContent = content;
-        contentCell.colSpan = 2;
-        QA_tr.appendChild(contentCell);
-    }
+    let QAcontent = document.createElement('td');
+    QAcontent.textContent = content;
+    QAcontent.colSpan = 2;
+    QA_tr.appendChild(QAcontent);
+
     tbody.appendChild(QA_tr);
     QA_tr.style.display = 'none';
 }
-
 
 /*==================== 클릭이벤트(Q,A 디스플레이) ====================*/
 
 function FAQ_display(faqRow) {
     let Q_next_A;
-    if (faqRow && faqRow.classList && faqRow.classList.contains('faqcell')) {
+    if (faqRow &&faqRow.classList && faqRow.classList.contains('QAcell')) {
         if (faqRow.style.display === 'table-row') {
             faqRow.style.display = 'none';
 
             Q_next_A = faqRow.nextElementSibling;
-            if (Q_next_A.classList.contains('faqcell')) {
+            if (Q_next_A.classList.contains('QAcell')) {
                 Q_next_A.style.display = 'none';
             }
             return;
         }
     }
 
-    document.querySelectorAll('.faqcell').forEach(function(QA_flat) {
-        if (QA_flat.classList && QA_flat.classList.contains('faqcell')) {
+    document.querySelectorAll('.QAcell').forEach(function (QA_flat) {
+        if (QA_flat.classList && QA_flat.classList.contains('QAcell')) {
             QA_flat.style.display = 'none';
         }
     });
 
-    while (faqRow && faqRow.classList && faqRow.classList.contains('faqcell')) {
+    while (faqRow && faqRow.classList && faqRow.classList.contains('QAcell')) {
         if (faqRow.style.display == 'table-row') {
             faqRow.style.display = 'none';
             let Q_next_A = faqRow.nextElementSibling;
 
-            if (Q_next_A.classList.contains('faqcell')) {
+            if (Q_next_A.classList.contains('QAcell')) {
                 Q_next_A.style.display = 'none';
             }
         } else {
             faqRow.style.display = 'table-row';
             let Q_next_A = faqRow.nextElementSibling;
 
-            if (Q_next_A.classList.contains('faqcell')) {
+            if (Q_next_A.classList.contains('QAcell')) {
                 Q_next_A.style.display = 'table-row';
             }
         }
         faqRow = Q_next_A;
     }
 }
-
-
 
 /*==================== 여기서부터는 쭉 테이블에 들어갈 내용 ====================*/
 

@@ -10,7 +10,7 @@ function search() {
     for (let i = search_row.length - 1; i >= 0; i--) {
         let row = search_row[i];
 
-        if (row.classList.contains('faqcell') && row.style.display == 'none') {
+        if (row.classList.contains('QAcell') && row.style.display == 'none') {
             continue;
         }
 
@@ -28,6 +28,23 @@ function search() {
             alert('검색어는 2자 이상 입력해주세요.');
             break;  // 검색어가 2자 미만일시 alert, 검색 취소
         }
+    }
+    let search_result = document.querySelectorAll('#faq_table tbody tr[style="display: table-row;"]').length;
+
+    let page_number = document.getElementById("client_paging");
+    if (search_result < 15) {
+        let numbering_control = page_number.querySelectorAll('a:nth-child(odd)');
+            numbering_control.forEach(function (numbering_control) {
+
+                numbering_control.style.display = 'none';
+            });
+            window.scrollTo({
+                top: 0
+            });
+            let rest_num = page_number.querySelectorAll('a:nth-child(even)');
+            rest_num.forEach(function (rest_num) {
+                rest_num.style.color = 'black';
+            });
     }
 }
 
@@ -49,7 +66,7 @@ function search_clicker(keyword) {
     for (let i = search_row.length - 1; i >= 0; i--) {
         let row = search_row[i];
 
-        if (row.classList.contains('faqcell') && row.style.display == 'none') {
+        if (row.classList.contains('QAcell') && row.style.display == 'none') {
             continue;
         }
 
@@ -77,13 +94,13 @@ document.querySelectorAll('.faq_category_5 a li').forEach(function (li) {
         li.style.fontWeight = 'bold';
         search_clicker(search_keyword);
 
-        
+
         let page_number = document.getElementById("client_paging");
         if (search_keyword.length < 10) {
 
             let numbering_control = page_number.querySelectorAll('a:nth-child(odd)');
             numbering_control.forEach(function (numbering_control) {
-                
+
                 numbering_control.style.display = 'none';
             });
             window.scrollTo({
@@ -92,7 +109,7 @@ document.querySelectorAll('.faq_category_5 a li').forEach(function (li) {
             let rest_num = page_number.querySelectorAll('a:nth-child(even)');
             rest_num.forEach(function (rest_num) {
                 rest_num.style.color = 'black';
-        });
-    }
+            });
+        }
     });
 });
