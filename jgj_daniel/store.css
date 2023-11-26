@@ -74,6 +74,7 @@ main{
 .mainbox {
     display: flex;
     margin-bottom: 50px;
+    justify-content: space-around;
 }
 /* =====메인===== */
 .store_list{
@@ -149,10 +150,16 @@ main{
 
 /* =====오른쪽===== */
 #map{
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
     width: 500px;
     height: 600px;
-    /* white-space: none; */
-    /* src: url(./image/main_logo_black.png); */
+    /* margin-left: 50px; */
+}
+.mapInnerBox{
+    width: 300px;
+    height: fit-content;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 }

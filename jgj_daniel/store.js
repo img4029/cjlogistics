@@ -193,23 +193,6 @@ var mapContainer = document.getElementById('map'),
 
 var map = new kakao.maps.Map(mapContainer, mapOption); 
 // 지도를 생성
- 
-// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열 
-// var positions = [
-//     {
-//         content: "이거 대전이다 여기다가 자료 어케넣냐", 
-//         // content: `${storelist[0]}`, 
-//         latlng: new kakao.maps.LatLng(36.3773616, 127.3843146)
-//     },
-//     {
-//         content: "신세계 의정부점", 
-//         latlng: new kakao.maps.LatLng(127.046004, 37.7379087)
-//     },
-//     {
-//         content: "신세계 본점", 
-//         latlng: new kakao.maps.LatLng(37.5611062, 126.9811552)
-//     },
-// ];
 
 // var imageSrc = "./image/main_logo_black.png";
 var imageSrc = "./image/main_logo_black.png";
@@ -218,82 +201,89 @@ var imageSize = new kakao.maps.Size(50, 50);
 //이미지 크기
 var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 
+//창 닫는거 기본값.
+var openInfowindow = null;
 
 // =========================
 // =========================
 // =========================
 for (var i = 0; i < storelist.length; i ++) {
-    var marker = new kakao.maps.Marker({
-        map: map, // 마커를 표시할 지도
-        position: storelist[i].latlng, // 마커의 위치
-        image : markerImage // 마커 이미지 
-        
-    });
-    for (let j = 0; j < storelist.length; j++) {
+    (function (index) {
+        // 클로저 이용.
+        var marker = new kakao.maps.Marker({
+            map: map, // 마커를 표시할 지도
+            position: storelist[i].latlng, // 마커의 위치
+            image : markerImage, // 마커 이미지 
+            clickable: true
+            
+        });
+    
+        var iwRemoveable = true; 
+    
         var infowindow = new kakao.maps.InfoWindow({
-            content: storelist[i].type
+            content: 
+            `<div class ="mapInnerBox">
+                <p>${storelist[i].type}</p>
+                <p>${storelist[i].location}</p>
+                <p>${storelist[i].number}</p>
+                <p>${storelist[i].time}</p>
+            </div>
+            `,
+            removable : iwRemoveable
             // content: {storelist[i]}
             // 인포윈도우에 표시할 내용
+    
         });
+        ///////////////////////////////////////////////////////////////////
+    
+        // 마커에 표시할 인포윈도우를 생성합니다 
+        ///////////////////////////////////////////////////////////////////
+    
+    
+        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록
+        // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+        // kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+        // kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    //  mousehover 하면 위에거 하셈
+    
+        // kakao.maps.event.addListener((storeee), 'click', function() {
+        //     if (openInfowindow) {
+        //         openInfowindow.close();
+        //     }
+
+        //     // 마커 위에 인포윈도우를 표시
+        //     infowindow.open(map, marker);   
+        //     openInfowindow = infowindow;
+        // });
+        kakao.maps.event.addListener((marker), 'click', function() {
+            if (openInfowindow) {
+                openInfowindow.close();
+            }
+
+            // 마커 위에 인포윈도우를 표시
+            infowindow.open(map, marker);   
+            openInfowindow = infowindow;
+        });
+
         
-    }
-
-    // 마커에 표시할 인포윈도우를 생성합니다 
-
-    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록
-    // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-    kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
-    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    })(i);
+    
+    
 }
 
 // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
-function makeOverListener(map, marker, infowindow) {
-    return function() {
-        infowindow.open(map, marker);
-    };
-}
-
-// 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-function makeOutListener(infowindow) {
-    return function() {
-        infowindow.close();
-    };
-}
-
-
-
-// =========================
-// =========================
-// =========================
-
-// for (var i = 0; i < positions.length; i++) {
-//     // 마커를 생성합니다
-//     var marker = new kakao.maps.Marker({
-//         map: map, // 마커를 표시할 지도
-//         position: positions[i].latlng // 마커의 위치
-//     });
-
-//     // 마커에 표시할 인포윈도우를 생성합니다 
-//     var infowindow = new kakao.maps.InfoWindow({
-//         content: "hey" // 인포윈도우에 표시할 내용
-//         // content: positions[i].content // 인포윈도우에 표시할 내용
-//     });
-
-//     // 마커에 이벤트를 등록하는 함수 만들고 즉시 호출하여 클로저를 만듭니다
-//     // 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-//     (function(marker, infowindow) {
-//         // 마커에 mouseover 이벤트를 등록하고 마우스 오버 시 인포윈도우를 표시합니다 
-//         kakao.maps.event.addListener(marker, 'mouseover', function() {
-//             infowindow.open(map, marker);
-//         });
-
-//         // 마커에 mouseout 이벤트를 등록하고 마우스 아웃 시 인포윈도우를 닫습니다
-//         kakao.maps.event.addListener(marker, 'mouseout', function() {
-//             infowindow.close();
-//         });
-//     })(marker, infowindow);
+// 되돌리려면 이거 켜라.
+// function makeOverListener(map, marker, infowindow) {
+//     return function() {
+//         infowindow.open(map, marker);
+//     };
 // }
 
-
+// // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+// function makeOutListener(infowindow) {
+//     return function() {
+//         infowindow.close();
+//     };
+// }
 
