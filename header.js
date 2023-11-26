@@ -47,6 +47,7 @@ function change() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(menu_icon_box.id);
 =======
 >>>>>>> JGJ
@@ -58,6 +59,8 @@ function change() {
 >>>>>>> KSO
 =======
 >>>>>>> LHN
+=======
+>>>>>>> IMG
     if (menu_icon_box.id == "menuBtn1") {
 
         menuList.style.animation = "slidein 0.7s";
@@ -94,6 +97,7 @@ async function getClientData() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> KSB
 =======
@@ -115,12 +119,16 @@ async function getShoppingBasketData(id) {
 =======
         loginCheck(clientData);
 >>>>>>> JYH
+=======
+        loginCheck(clientData);
+>>>>>>> IMG
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
         console.log(err.message);
     }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function loginCheck() {
 <<<<<<< HEAD
@@ -135,11 +143,15 @@ function loginCheck(clientData) {
 >>>>>>> KSO
 =======
 >>>>>>> LHN
+=======
+function loginCheck(clientData) {
+>>>>>>> IMG
     if (clientData.hname != '') {
         console.log(clientData.hname);
         testing[0].addEventListener('click', () => {
             const response = axios.put('http://localhost:3000/loginComplete/1', loginComplete);
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +192,18 @@ function loginCheck(clientData) {
         shopping_basket.innerText = clientData.ShoppingBasket.length;
         console.log();
     } else {
+=======
+        testing[0].href = `${herfChange}main/index.html`;
+        testing[0].innerText = `로그아웃`
+        testing[1].href = ``;
+        testing[1].innerText = `회원정보`
+        testing[2].href = ``;
+        testing[3].href = `${herfChange}order/order.html`;
+        testing_logo.href = ``;
+        shopping_basket.innerText = clientData.ShoppingBasket.length;
+        console.log();
+    } else {
+>>>>>>> IMG
         testing[0].href = `${herfChange}member/member.html`;
         testing[0].innerText = `로그인`
         testing[1].href = `${herfChange}idinfo/idinfo.html`;
@@ -187,6 +211,7 @@ function loginCheck(clientData) {
         testing[2].href = `${herfChange}member/member.html`;
         testing[3].href = `${herfChange}member/member.html`;
         testing_logo.href = `${herfChange}member/member.html`;
+<<<<<<< HEAD
 >>>>>>> JYH
 =======
 >>>>>>> KSB
@@ -194,6 +219,8 @@ function loginCheck(clientData) {
 >>>>>>> KSO
 =======
 >>>>>>> LHN
+=======
+>>>>>>> IMG
         shopping_basket.innerText = 0;
     }
 };

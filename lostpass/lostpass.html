@@ -6,92 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아이디/패스워드 찾기</title>
     <link rel="stylesheet" href="./lostpass.css">
-    <link rel="stylesheet" href="../CSS/shopHdFt.css">
-    
-    <script defer src="../../JS/index.js"></script>
     <script defer src="./lostpass.js"></script>
 
+    <link rel="stylesheet" href="../header.css">
+    <script defer src="../header.js"></script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="header_acide">
-            <div class="header_back"></div>
-            <input type="checkbox" id="menuBtn" value="A">
-            <label for="menuBtn" class="menu_icon_box" onclick="change()">
-                <div class="menu_icon1"></div>
-                <div class="menu_icon2"></div>
-                <div class="menu_icon3"></div>
-            </label>
-            <div class="menu_list">
-                <div class="menu_list_main">
-                    <ul>
-                        <li><a href="">Perfume</a></li>
-                        <li><a href="">Diffuser</a></li>
-                        <li><a href="">Candle</a></li>
-                        <li><a href="">Hand Care</a></li>
-                        <li><a href="">Home Care</a></li>
-                        <li><a href="">Gift</a></li>
-                    </ul>
-                </div>
-                <div class="menu_list_sub">
-                    <ul>
-                        <li><a href="">로그인</a></li>
-                        <li><a href="">회원가입</a></li>
-                        <li><a href="">마이페이지</a></li>
-                        <li><a href="">고객색터</a></li>
-                        <li><a href="">주문조회</a></li>
-                        <li><a href="">스토어</a></li>
-                        <li><a href="">이벤트</a></li>
-                        <li><a href="">브랜드스토리</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="logo_box">
-                <a href="" class="logo_link">
-                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
-                        alt="LOGO">
-                </a>
-            </div>
-            <div class="hearder_icon">
+<header>
+    <div class="header_acide">
+        <div class="header_back"></div>
+
+        <div id="menuBtn1" class="menu_icon_box" onclick="change()">
+            <div class="menu_icon1"></div>
+            <div class="menu_icon2"></div>
+            <div class="menu_icon3"></div>
+        </div>
+        <div class="menu_list">
+            <div class="menu_list_main">
                 <ul>
-                    <li>
-                        <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
-                                alt="장바구니">
-                            <span>0</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
-                                alt="마이페이지">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
-                                alt="검색">
-                        </a>
-                    </li>
+                    <li><a href="">Perfume</a></li>
+                    <li><a href="">Diffuser</a></li>
+                    <li><a href="">Candle</a></li>
+                    <li><a href="">Hand Care</a></li>
+                    <li><a href="">Home Care</a></li>
+                    <li><a href="">Gift</a></li>
+                </ul>
+            </div>
+            <div class="menu_list_sub">
+                <ul>
+                    <li><a class="testing" href="">로그인</a></li>
+                    <li><a class="testing" href="">회원가입</a></li>
+                    <li><a class="testing" href="">마이페이지</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a class="testing" href="">주문조회</a></li>
+                    <li><a href="">스토어</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">브랜드스토리</a></li>
                 </ul>
             </div>
         </div>
-        <div class="header_top">
-            <div>
-                <div></div>
-                <div></div>
-            </div>
-            <a href="">11월의 증정품</a>
+        <div class="logo_box">
+            <a href="../index.html" class="logo_link">
+                <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                    alt="LOGO">
+            </a>
         </div>
-    </header>
+        <div class="hearder_icon">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
+                        <span class="shopping_basket"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="testing_logo" href="">
+                        <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                            alt="마이페이지">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_top">
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        <a href="../index.html">Daniel's Truth</a>
+    </div>
+</header>
     <main>
         <div class="main_container" style="display: block;">
             <!-- 로그인 3글자 -->
@@ -119,8 +121,8 @@
                 <div>
                     <h3>임시 비밀번호 발급</h3>
                     <p> 가입하신 아이디+이메일 또는 휴대폰번호를 입력, 본인인증을 통해 이메일<br>
-                    또는 휴대폰번호로 임시 비밀번호를 보내드립니다. <br>
-                    확인 후 로그인하셔서 반드시 비밀번호를 변경하시기 바랍니다.</p>
+                        또는 휴대폰번호로 임시 비밀번호를 보내드립니다. <br>
+                        확인 후 로그인하셔서 반드시 비밀번호를 변경하시기 바랍니다.</p>
                     <div class="find_box">
                         <input type="radio" name="findPw" id="findPw_email" value="" checked>
                         <label for="findPw_email">이메일로 찾기</label>
@@ -133,7 +135,7 @@
                     <input class="textFont" type="text" id="idInput2" name="idInput2">
                     <label class="pwLabel" for="pwInput2"></label>
                     <input class="textFont" type="text" id="pwInput2" name="pwInput2">
-                    
+
                     <button class="tpPw_btn" style="margin-top: 10px; font-size: 16px;">임시 비밀번호 발급</button>
                     <button class="login_btn" style="margin-top: 5px; font-size: 16px;">로그인</button>
                 </div>
@@ -145,7 +147,7 @@
                 <h3 class="getData"></h3>
                 <p>전체 아이디는 고객센터로 문의해 주세요.</p>
                 <p>회원가십 시,입력하신 이름 + 이메일 또는 휴대폰 번호로 아이디를 확인하실 수 있습니다. <br>
-                정보 보호를 위해 아이디 일부는 숨김 처리되고, 임시 비밀번호는 가입하신 이메일로 발송됩니다.</p>
+                    정보 보호를 위해 아이디 일부는 숨김 처리되고, 임시 비밀번호는 가입하신 이메일로 발송됩니다.</p>
                 <a href="../member/member.html">로그인</a>
             </div>
         </div>
@@ -171,18 +173,13 @@
             </div>
             <!-- 팀원 이름 정보 -->
             <div class="Team_members">
-                <p><span>주용현</span><span>작업 페이지: </span></p>
-                <p><span>이혜나</span><span>작업 페이지: </span></p>
-                <p><span>김수빈</span><span>작업 페이지: </span></p>
-                <p><span>김수옥</span><span>작업 페이지: </span></p>
-                <p><span>임명건</span><span>작업 페이지: </span></p>
-                <p><span>장근정</span><span>작업 페이지: </span></p>
+                <p><span>주용현</span><span class="jyh"></span></p>
+                <p><span>이혜나</span><span class="lhn"></span></p>
+                <p><span>김수빈</span><span class="ksb"></span></p>
+                <p><span>김수옥</span><span class="kso"></span></p>
+                <p><span>장근정</span><span class="jgj"></span></p>
+                <p><span>임명건</span><span class="img"></span></p>
             </div>
-            
-            <!-- <hr style="margin: 50px 0;">
-            <div>
-
-            </div> -->
         </div>
     </footer>
 </body>

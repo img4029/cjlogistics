@@ -22,8 +22,10 @@ a:visited {
 /* =============================== */
 .complete_box{
     margin: auto;
-    padding-top: 200px;
-    width: 1100px;
+    min-width: 1100px;
+    max-width: 1300px;
+    padding: 280px 100px;
+
     text-align: center;
 }
 .complete_box>img{

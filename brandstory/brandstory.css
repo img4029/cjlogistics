@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', 'sans-serif';
+    box-sizing: border-box;
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+/* ============================ */
+main>div {
+    text-align: center;
+}
+main>div:nth-child(1) {
+    padding-top: 80px;
+    
+}
+main>div:nth-child(1)>h1 {
+    font-size: 50px;
+}
+main>div:nth-child(1)>p {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    font-weight: bold;
+}
+main>div:nth-child(2)>img {
+    width: 99%;
+}

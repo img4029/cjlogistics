@@ -3,31 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인/기업 선택화면</title>
-    <link rel="stylesheet" href="./idinfo.css">
-    <link rel="stylesheet" href="../CSS/shopHdFt.css">
-    
-    <script defer src="../../JS/index.js"></script>
-    <script defer src="./idinfo.js"></script>
+    <title>주문 정보</title>
+
+    <link rel="stylesheet" href="./order.css">
+    <script defer src="./orderSub.js"></script>
+
+    <link rel="stylesheet" href="../header.css">
+    <script defer src="../header.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
     <header>
         <div class="header_acide">
             <div class="header_back"></div>
-            <input type="checkbox" id="menuBtn" value="A">
-            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+
+            <div id="menuBtn1" class="menu_icon_box" onclick="change()">
                 <div class="menu_icon1"></div>
                 <div class="menu_icon2"></div>
                 <div class="menu_icon3"></div>
-            </label>
+            </div>
             <div class="menu_list">
                 <div class="menu_list_main">
                     <ul>
@@ -41,11 +49,11 @@
                 </div>
                 <div class="menu_list_sub">
                     <ul>
-                        <li><a href="">로그인</a></li>
-                        <li><a href="">회원가입</a></li>
-                        <li><a href="">마이페이지</a></li>
-                        <li><a href="">고객색터</a></li>
-                        <li><a href="">주문조회</a></li>
+                        <li><a class="testing" href="">로그인</a></li>
+                        <li><a class="testing" href="">회원가입</a></li>
+                        <li><a class="testing" href="">마이페이지</a></li>
+                        <li><a href="">고객센터</a></li>
+                        <li><a class="testing" href="">주문조회</a></li>
                         <li><a href="">스토어</a></li>
                         <li><a href="">이벤트</a></li>
                         <li><a href="">브랜드스토리</a></li>
@@ -53,7 +61,7 @@
                 </div>
             </div>
             <div class="logo_box">
-                <a href="" class="logo_link">
+                <a href="../index.html" class="logo_link">
                     <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
                         alt="LOGO">
                 </a>
@@ -64,11 +72,11 @@
                         <a href="">
                             <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
                                 alt="장바구니">
-                            <span>0</span>
+                            <span class="shopping_basket"></span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="testing_logo" href="">
                             <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
                                 alt="마이페이지">
                         </a>
@@ -87,40 +95,70 @@
                 <div></div>
                 <div></div>
             </div>
-            <a href="">11월의 증정품</a>
+            <a href="../index.html">Daniel's Truth</a>
         </div>
     </header>
+
     <main>
-        <div class="idinfoContainer">
-            <div>
-                <h2>회원 가입 유형</h2>
-                <p>목적에 맞는 유형을 선택해서 가입을 진행해주시기를 바랍니다. <br>
-                    유형에 따라 가입 절차 및 항목에 차이가 있을 수 있습니다.</p>
+        <div>
+            <h2>MY PAGE</h2>
+            <div class="menu_box">
+                <div>
+                    <h3>SHOPPING INFO</h3>
+                    <a href="">주문내역</a>
+                    <div></div>
+                    <a href="">쿠폰내역</a>
+                    <div></div>
+                    <a href="">적립금내역</a>
+                    <div></div>
+                    <a href="">오늘본상품</a>
+
+                    <a href="">상품 보관함</a>
+                    <div></div>
+                    <a href="">주소록 관리</a>
+                    <div></div>
+                    <a href="">선물함</a>
+                </div>
+                <div>
+                    <h3>SHOPPING QUESTION</h3>
+                    <a href="">내 게시글 보기</a>
+                    <div></div>
+                    <a href="">E-mail 문의</a>
+                    <div></div>
+                    <a href="">1:1게시판</a>
+                </div>
+                <div>
+                    <h3>CUSTOMER INFO</h3>
+                    <a href="">회원정보변경</a>
+                    <div></div>
+                    <a href="">회원정보탈퇴신청</a>
+                </div>
             </div>
-            <div>
-                <div class="idinfo_top">
-                    <a class="idinfo_top_btn" href="../idinfoSub/idinfoSub.html">
-                        <img src="https://danielstruth.com/images/d3/modern_simple/btn/btn_join_person_w186.gif" alt="">
-                    </a>
-                </div>
-                <div class="idinfo_center">
-                    <img src="https://danielstruth.com/images/d3/modern_simple/sns_join_title.gif" alt="">
-                </div>
-                <div class="idinfo_bottom">
+            <div class="order_box">
+                <h3>주문 정보</h3>
+                <div class="orderSub_box">
                     <div>
-                        <a href="">
-                            <img src="https://danielstruth.com/images/d3/modern_simple/btn/btn_simple_join_nv.gif" alt="네이버로 회원가입">
-                        </a>
+                        <span>주문일자</span>
+                        <span>2023.11.16</span>
                     </div>
+                    <div></div>
                     <div>
-                        <a href="">
-                            <img src=https://danielstruth.com/images/d3/modern_simple/btn/btn_simple_join_kakao.gif alt="카카오로 회원가입">
-                        </a>
+                        <span>주문번호</span>
+                        <span>20231106110121-8178227352</span>
                     </div>
+                </div>
+                <h3>상품 정보</h3>
+                <div class="orderSub_gridbox">
+                    <div>배송번호</div>
+
                 </div>
             </div>
+            <p>- 상품명 또는 주문상세의 조회 버튼을 클릭하시면, 주문상세 내역을 확인하실 수 있습니다. <br>
+                - 배송현황의 조회 버튼을 클릭하시면, 해당 주문의 배송 현황을 한눈에 확인하실 수 있습니다.
+            </p>
         </div>
     </main>
+
     <footer>
         <div class="footer_container">
             <div>
@@ -142,18 +180,13 @@
             </div>
             <!-- 팀원 이름 정보 -->
             <div class="Team_members">
-                <p><span>주용현</span><span>작업 페이지: </span></p>
-                <p><span>이혜나</span><span>작업 페이지: </span></p>
-                <p><span>김수빈</span><span>작업 페이지: </span></p>
-                <p><span>김수옥</span><span>작업 페이지: </span></p>
-                <p><span>임명건</span><span>작업 페이지: </span></p>
-                <p><span>장근정</span><span>작업 페이지: </span></p>
+                <p><span>주용현</span><span class="jyh"></span></p>
+                <p><span>이혜나</span><span class="lhn"></span></p>
+                <p><span>김수빈</span><span class="ksb"></span></p>
+                <p><span>김수옥</span><span class="kso"></span></p>
+                <p><span>장근정</span><span class="jgj"></span></p>
+                <p><span>임명건</span><span class="img"></span></p>
             </div>
-
-            <!-- <hr style="margin: 50px 0;">
-            <div>
-
-            </div> -->
         </div>
     </footer>
 </body>

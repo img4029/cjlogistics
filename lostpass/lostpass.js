@@ -13,8 +13,8 @@ let login_btn = document.querySelectorAll(".login_btn"),
     findId_btn = document.querySelector(".findId_btn"),
     tpPw_btn = document.querySelector(".tpPw_btn"),
     sub_container = document.querySelector(".sub_container"),
-    getData = document.querySelector(".getData");
-let clientData;
+    getData = document.querySelector(".getData"),
+    clientData1;
 // Input 태그 클릭시 글씨 사라지고 다시 나타나기 바꾸기
 function InputChange(Input, find) {
     if (find.checked == true) {
@@ -79,15 +79,15 @@ async function idGetClientData() {
 // async function ClientData() {
     try {
         const response = await axios.get('http://localhost:3000/profile/');
-        clientData = response.data;
-        for (let i = 0; i < clientData.length; i++) {
+        clientData1 = response.data;
+        for (let i = 0; i < clientData1.length; i++) {
             if (pwInput1.placeholder == "E-MAIL") {
-                if ((clientData[i].hname == idInput1.value) && (clientData[i].hem == pwInput1.value)) {
-                    getData.innerText = clientData[i].hid.slice(0, clientData[i].hid.length - 2)+'**';
+                if ((clientData1[i].hname == idInput1.value) && (clientData1[i].hem == pwInput1.value)) {
+                    getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2)+'**';
                 }
             } else {
-                if ((clientData[i].hname == idInput1.value) && (clientData[i].hpn == pwInput1.value)) {
-                    getData.innerText = clientData[i].hid.slice(0, clientData[i].hid.length - 2) + '**';
+                if ((clientData1[i].hname == idInput1.value) && (clientData1[i].hpn == pwInput1.value)) {
+                    getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2) + '**';
                 }
             }
         }
@@ -101,15 +101,15 @@ async function idGetClientData() {
 async function pwGetClientData() {
     try {
         const response = await axios.get('http://localhost:3000/profile/');
-        clientData = response.data;
-        for (let i = 0; i < clientData.length; i++) {
+        clientData1 = response.data;
+        for (let i = 0; i < clientData1.length; i++) {
             if (pwInput2.placeholder == "E-MAIL") {
-                if ((clientData[i].hid == idInput2.value) && (clientData[i].hem == pwInput2.value)) {
-                    getData.innerText = clientData[i].hid.slice(0, clientData[i].hid.length - 2) + '**';
+                if ((clientData1[i].hid == idInput2.value) && (clientData1[i].hem == pwInput2.value)) {
+                    getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2) + '**';
                 }
             } else {
-                if ((clientData[i].hid == idInput2.value) && (clientData[i].hpn == pwInput2.value)) {
-                    getData.innerText = clientData[i].hid.slice(0, clientData[i].hid.length - 2) + '**';
+                if ((clientData1[i].hid == idInput2.value) && (clientData1[i].hpn == pwInput2.value)) {
+                    getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2) + '**';
                 }
             }
         }

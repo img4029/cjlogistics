@@ -28,7 +28,21 @@ let profile = {
     cpn: '', //회사전화
     car: '', //회사 우편번호
     cdar: '', //회사 주소
-    hsp: '' //휴대폰
+    hsp: '', //휴대폰
+    img: "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif", //프로필이미지
+    totalAmountPayment: "", //총 결제금액
+    reserve: "", //적립금
+    coupon: [
+        {
+            "couponNumber": "H57HESOZ",
+            "couponType": "장바구니쿠폰",
+            "couponName": "신규가입 쿠폰",
+            "discountAmount": "10",
+            "expirationPeriod": "2023.11.21 ~ 2023.12.21"
+        }
+    ], //쿠폰 
+    ShoppingBasket: [], //장바구니
+    Order: [] //주문내역
 }
 
 for (let i = 1920; i < 2024; i++) {
@@ -43,26 +57,15 @@ for (let i = 1; i < 32; i++) {
     birthDateD.innerHTML += `<option value="${i}">${i}</option>`
 }
 // ==========================================
-
 //우편번호랑 주소 불러오는 함수
-function execDaumPostcode() {
+function execDaumPostcode(id1,id2,id3) {
     new daum.Postcode({
         oncomplete: function (data) {
-            document.getElementById('har').value = data.address;
-            document.getElementById('zip').value = data.zonecode;
+            document.getElementById(id1).value = data.address;
+            document.getElementById(id2).value = data.zonecode;
         }
     }).open();
-    document.getElementById('dar').focus();
-}
-//우편번호랑 주소 불러오는 함수2
-function execDaumPostcode1() {
-    new daum.Postcode({
-        oncomplete: function (data) {
-            document.getElementById('cdar').value = data.address;
-            document.getElementById('car').value = data.zonecode;
-        }
-    }).open();
-    document.getElementById('cdar').focus();
+    document.getElementById(id3).focus();
 }
 //메인 CheckBox가 체크되면 서브가 모두 체크됨
 function mainCheckBox(main) {
@@ -113,8 +116,7 @@ function birthDateCheck(array) {
 function birthDateOutput(array) {
     for (let i = 0; i < array.length; i++) {
         if (array[i].selected == true) return array[i].value;
-    }
-    
+    }  
 }
 // 아이디 이메일 서버에서 중복체크
 async function idEmailCheck(n1 , n2) {
@@ -158,8 +160,8 @@ async function idDoubleCheckfc() {
             return;
         }
         alert(`${idinfoGridValue[1].value} 사용할수 있는 아이디입니다.`);
-        idinfoGridValue[1].readOnly = true;
-        idinfoGridValue[1].style.backgroundColor = "rgba(128, 128, 128, 0.2)"
+        idinfoGridValue[1].disabled = true;
+        idinfoGridValue[2].focus();
         idCount = 1;
     }
 }
@@ -174,8 +176,7 @@ async function emailDoubleCheckfc() {
             if (i && j) {
                 if ((j > i) && (i != 0) && (j != (count.length - 1))) {
                     alert(`${idinfoGridValue[12].value} 사용할수 있는 이메일입니다.`);
-                    idinfoGridValue[12].readOnly = true;
-                    idinfoGridValue[12].style.backgroundColor = "rgba(128, 128, 128, 0.2)"
+                    idinfoGridValue[12].disabled = true;
                     emailCount = 1;
                     break;
                 }
@@ -237,7 +238,7 @@ function informationCheck() {
                 let regPass = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
                 let regPass2 = /[ "']/;
                 if (!regPass.test(idinfoGridValue[2].value)) {
-                    alert("영문, 숫자, 특수기호 조합으로 8~20자리 입력해주세요")
+                    alert("영문, 숫자, 특수기호 조합으로 8~16자리 입력해주세요")
                     idinfoGridValue[2].focus();
                     break outer;
                 }
@@ -258,8 +259,8 @@ function informationCheck() {
             case 5:
                 let bdcount = 0;
                 birthDateY = document.querySelector(".birthDateY"),
-                    birthDateM = document.querySelector(".birthDateM"),
-                    birthDateD = document.querySelector(".birthDateD");
+                birthDateM = document.querySelector(".birthDateM"),
+                birthDateD = document.querySelector(".birthDateD");
                 bdcount += birthDateCheck(birthDateY.children);
                 bdcount += birthDateCheck(birthDateM.children);
                 bdcount += birthDateCheck(birthDateD.children);
