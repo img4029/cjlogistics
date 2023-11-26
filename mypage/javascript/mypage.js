@@ -1,83 +1,34 @@
 'use strict'
 
+import  axios  from "axios";
 
+const jsonUrl = 'http://localhost:3000/';
+
+// fetch 함수를 사용하여 JSON 데이터 가져오기
+fetch(jsonUrl)
+    .then(response => response.json())
+    .then(data => {
+        // 가져온 데이터를 처리하거나 표시하는 부분
+        displayData(data);
+    })
+    .catch(error => {
+        console.error('데이터를 가져오는 중 오류 발생:', error);
+    });
+
+// JSON 데이터를 화면에 표시하는 함수
+function displayData(data) {
+    const resultElement = document.getElementById('result');
+
+    // 가져온 데이터를 문자열로 변환하여 화면에 출력
+    resultElement.innerHTML = `
+    <p>Name: ${data.hname}</p>
+    <p>Age: ${data.zip}</p>
+    <p>City: ${data.har}</p>
+  `;
+}
 
 
 // ================== 프로필 개인정보 ==================
-
-let profileData = [
-    {
-        img: "./image/bg1.jpg",
-        name: '김수빈 [임의 생성 이메일]',
-        phone: '010-5764-3321',
-        email: 'gjnsdx123@naver.com',
-        address: '경기도~~~~~~~~~~~~~~',
-        totalCost: '1,000,000 원',
-        reserves: ',345 원',
-        coupon: '3 개',
-        id: 1,
-    },
-    {
-        img: "./image/bg2.jpg",
-        name: '이해나 [임의 생성 이메일]',
-        phone: '010-2345-2176',
-        email: 'fhddf2@naver.com',
-        address: '서울특별시~~~~~~~~~~~~~~',
-        totalCost: '2,000,000 원',
-        reserves: '3,345 원',
-        coupon: '3 개',
-        id: 2,
-    },
-    {
-        img: "./image/bg3.jpg",
-        name: '주용현 [임의 생성 이메일]',
-        phone: '010-8779-8768',
-        email: 'hf665@naver.com',
-        address: '경기도~~~~~~~~~~~~~~',
-        totalCost: '3,000,000 원',
-        reserves: '23,345 원',
-        coupon: '3 개',
-        id: 3,
-    },
-    {
-        img: "./image/bg4.jpg",
-        name: '장근정 [임의 생성 이메일]',
-        phone: '010-9054-1245',
-        email: 'jhtr34@naver.com',
-        address: '서울특별시 ~~~~~~~~~~~~~~',
-        totalCost: '4,000,000 원',
-        reserves: '9,123,345 원',
-        coupon: '3 개',
-        id: 4,
-    },
-    {
-        img: "./image/bg5.jpg",
-        name: '임명건 [임의 생성 이메일]',
-        phone: '010-1255-6475',
-        email: 'mjjy4@naver.com',
-        address: '경기도~~~~~~~~~~~~~~',
-        totalCost: '5,000,000 원',
-        reserves: '1,123,345 원',
-        coupon: '3 개',
-        id: 5,
-    },
-    {
-        img: "./image/bg6.jpg",
-        // 인덱스 1 ~ 4번까지 privacy innerHTML
-        name: '김수옥 [임의 생성 이메일]',
-        phone: '010-4666-2135',
-        email: 'rythj2@naver.com',
-        address: '서울특별시~~~~~~~~~~~~~~',
-        // 인덱스 5 ~ 7까지 reserves innerText
-        totalCost: '6,000,000 원',
-        reserves: '123,345 원',
-        coupon: '3 개',
-        // 
-        id: 6,
-    }
-];
-
-
 
 let profile = document.querySelector('.mypage_profile_inner'),
     privacy = profile.querySelector('.profile_inner_private'),
@@ -95,7 +46,6 @@ function makeProfile() {
     reserves.innerHTML = reservesFrame_2;
 }
 
-makeProfile();
 
 
 // id 값 찾아서 데이터넣기
@@ -132,7 +82,6 @@ function insertPriData(code) {
     }
 }
 
-insertPriData(3);
 
 // if (privacy.children[j].innerText === '전 화') {
 //     privacy.children[j + 1].innerText = profileData[i].phone;
@@ -162,31 +111,7 @@ let table = document.querySelectorAll('.bottomTb');
 
 // =============최근 등록 게시글 ===================
 
-let postData = [{
-    date: '2023.01.11',
-    subject: '배송 언제 ?',
-    board: '<a href="" class="order_detail">배송 관련</a>',
-},
-{
-    date: '2023.03.25',
-    subject: '재입고 는 ?',
-    board: '<a href="" class="order_detail">상품 관련</a>',
-},
-{
-    date: '2023.09.01',
-    subject: '재입고 는 ?',
-    board: '<a href="" class="order_detail">매장</a>',
-},
-{
-    date: '2023.05.30',
-    subject: '매장 위치는 ?',
-    board: '<a href="" class="order_detail">1:1게시판</a>',
-},
-{
-    date: '2023.07.02',
-    subject: '찾아가는 방법은 ?',
-    board: '<a href="" class="order_detail">1:1게시판</a>',
-}];
+
 
 // 이 방법도 데이터가 내가 원하는 순서로 전달된다는 가정 하에
 // 인덱스를 통한 접근 (table에 입력받기)
@@ -208,28 +133,6 @@ function latestPostData() {
     }
 }
 
-latestPostData();
-
-let OrderData = [
-    {
-        date: '2023.01.12',
-        product: '디퓨저',
-        cost: '53,252',
-        detail: '<a href="">VIEW</a>'
-    },
-    {
-        date: '2023.05.25',
-        product: '향수',
-        cost: '102,252',
-        detail: '<a href="">VIEW</a>'
-    },
-    {
-        date: '2023.11.12',
-        product: '핸드크림',
-        cost: '1,153,252',
-        detail: '<a href="">VIEW</a>'
-    },
-]
 
 
 
@@ -254,24 +157,10 @@ function latestOrderData() {
     }
 }
 
-latestOrderData();
 // ==========================================================
 
 
 
-
-
-
-// let active = new Array(2)
-// for문(객체배열 길이만큼) {
-//     let newRow = 테이블요소.insertRow(i);
-
-//     for문(객체 프로퍼티 길이만큼) {
-//         let newCell = newRow.insertCell();
-//         newCell.innerText =
-//             Object.values(data[i])[j]
-//     }
-// }
 
 
 // =====================================================
@@ -346,76 +235,6 @@ function wishList() {
     }
 }
 
-wishList();
 // oooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-let A = [
-    {
-        img: "./image/bg1.jpg",
-        name: '짱구',
-        phone: '010-5764-3321',
-        email: 'gjnsdx123@naver.com',
-        address: '경기도 광주시',
-        totalCost: '123,456 원',
-        reserves: '123,345 원',
-        coupon: 11,
-        id: 1,
-        latestOrder:
-        {
-            orderDate: '2023.11.26',
-            product: '오일 퍼퓸 밤쉘',
-            cost: '561,111',
-        },
-        lastestPost:
-        {
-            postData: '2023.03.11',
-            subject: '매장 위치는 ?',
-            board: '1:1게시판',
-        },
-        wishList:
-        {
-            item: '디퓨저 블라블라',
-            cost: '536,999',
-            option: "폴리데이 선물포장",
-            img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-        },
-    },
-    {
-        img: "./image/bg2.jpg",
-        name: '짱아',
-        phone: '010-8979-3231',
-        email: 'ffg1@naver.com',
-        address: '서울특별시',
-        totalCost: '19,456 원',
-        reserves: '96,345 원',
-        coupon: 3,
-        id: 2,
-        latestOrder:
-        {
-            orderDate: '2023.07.12',
-            product: '디퓨저 올리브 릿지',
-            cost: '111,111',
-        },
-        lastestPost:
-        {
-            postData: '2023.03.11',
-            subject: '배송 언제?',
-            board: '1:1게시판',
-        },
-        "wishList": [
-            {
-                item: '향수 블라블라',
-                cost: '487,999',
-                option: "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-                img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-            },
-            {
-                item: '핸드크림 블라블라',
-                cost: '986,999',
-                option: "오일 퍼퓸 밤쉘20ml",
-                img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-            }]
-    }];
-
-console.log(A[1].wishList);
 

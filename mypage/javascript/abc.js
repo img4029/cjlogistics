@@ -1,205 +1,55 @@
 
-'use strict';
-
-let myData;
-
-async function getMydata() {
-    try {
-        
-        const response = await axios.get('http://localhost:3000/profile');
-        // 숫자를 지우면 전부 가져오는거고?
-        // 가지고와서
-        // 네
-        myData = response.data;
-        // 지금 내 콘솔에 찍혀있는 오류는 뭐야?
-        
-        // console.log(myData);
-    } catch (err) {
-        // console.log('데이터를 가져오는 중 오류 발생');
-        // console.log(err.message);
-    }
-}
-
-// getMydata();  
-// 근데 호출을 하지도 않았는데 콘솔에 이미 오류가 있는건 뭐야?
-
-
-//
-// 네 테스트하려고 만들어둔거에요
-// 내 컴퓨터에 문제가 있는건가?
-// 그 방법은 이제 알았으니까 컴퓨터 껐다 켜서 다시 시도해보고
-// 안되면 내일 애들 
-
-
-
-
-
-
-
-
-
-
-//  지금 호출했는데 안돼...
-// 왜 안될까
-// console.log(clientData[0]);
-// getClientData();
-// 선생님이 강의 때 입력하라던 명령어 전부 입력했어
-// 아!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// console.log(clientData.hname);
-// let client = [
-//     {
-//         "hname": "임명건",
-//         "hid": "img4029",
-//         "hpw": "zxc123!@#",
-//         "birthDate": "1993.4.18",
-//         "sx": "sxman",
-//         "zip": "17324",
-//         "har": "경기 이천시 부발읍 대산로 759",
-//         "dar": "블레싱타운",
-//         "darCb": false,
-//         "hpn": "01049199822",
-//         "hem": "img4029@naver.com",
-//         "cpn": "",
-//         "car": "",
-//         "cdar": "",
-//         "hsp": "",
-//         "ShoppingBasket": [],
-//         "Order": [
-//             {
-//                 "orderDate": "2023.11.16",
-//                 "orderNumber": "20231106110121-8178227352",
-//                 "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
-//                 "amountPayment": "201,000원",
-//                 "ProductList": [
-//                     {
-//                         "Gifts": "",
-//                         "productName": "디퓨저 올리브 릿지",
-//                         "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-//                         "quantity": 1,
-//                         "amountPayment": 201000,
-//                         "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
-//                     },
-//                     {
-//                         "Gifts": "(사은품)",
-//                         "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
-//                         "options": "",
-//                         "quantity": 1,
-//                         "amountPayment": "",
-//                         "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-//                     }
-//                 ],
-//                 "deliveryStatus": ""
-//             },
-//             {
-//                 "orderDate": "2023.11.16",
-//                 "orderNumber": "20231106110121-8178227353",
-//                 "productName": "디퓨저 올리브 릿지 외 1건",
-//                 "amountPayment": 198000,
-//                 "ProductList": [
-//                     {
-//                         "Gifts": "",
-//                         "productName": "디퓨저 올리브 릿지",
-//                         "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-//                         "quantity": 1,
-//                         "amountPayment": 100000,
-//                         "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
-//                     },
-//                     {
-//                         "Gifts": "(사은품)",
-//                         "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
-//                         "options": "",
-//                         "quantity": 1,
-//                         "amountPayment": "",
-//                         "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-//                     }
-//                 ],
-//                 "deliveryStatus": ""
-//             }
-//         ],
-//         "id": 1
-//     },
-//     {
-//         "hname": "헤르",
-//         "hid": "gmrcjs45",
-//         "hpw": "zxc123!@#",
-//         "birthDate": "1999.6.11",
-//         "sx": "sxman",
-//         "zip": "63503",
-//         "har": "제주특별자치도 서귀포시 대정읍 대한로 632",
-//         "dar": "헤르아파트",
-//         "darCb": false,
-//         "hpn": "01049199822",
-//         "hem": "gmrcjs45@naver.com",
-//         "cpn": "",
-//         "car": "",
-//         "cdar": "",
-//         "hsp": "",
-//         "ShoppingBasket": [],
-//         "Order": [],
-//         "id": 2
-//     }
-// ];
-
-
+'use strict'
 
 
 
 // ================== 프로필 개인정보 ==================
 
-// let profile = document.querySelector('.mypage_profile_inner'),
-//     privacy = profile.querySelector('.profile_inner_private'),
-//     reserves = profile.querySelector('.profile_inner_ordered'),
-//     identity = profile.querySelector('.profile_identity'),
-//     profileImg = profile.querySelector('.profile_image');
+let profile = document.querySelector('.mypage_profile_inner'),
+    privacy = profile.querySelector('.profile_inner_private'),
+    reserves = profile.querySelector('.profile_inner_ordered'),
+    identity = profile.querySelector('.profile_identity'),
+    profileImg = profile.querySelector('.profile_image');
 
 
-// let ProfileFrame_1 = '<div>전 화</div><div></div><div>이메일</div><div></div><div>주 소</div><div></div>',
-//     reservesFrame_2 = '<div>총 주문 금액</div><div></div><div>적 립 금</div><div></div><div>쿠 폰</div><div></div>';
+let ProfileFrame_1 = '<div>전 화</div><div></div><div>이메일</div><div></div><div>주 소</div><div></div>',
+    reservesFrame_2 = '<div>총 주문 금액</div><div></div><div>적 립 금</div><div></div><div>쿠 폰</div><div></div>';
 
-// function makeProfile() {
-//     privacy.innerHTML = ProfileFrame_1;
-//     reserves.innerHTML = reservesFrame_2;
-// }
+function makeProfile() {
+    privacy.innerHTML = ProfileFrame_1;
+    reserves.innerHTML = reservesFrame_2;
+}
 
-// makeProfile();
-// // 프로필 틀 만들기
+makeProfile();
+// 프로필 틀 만들기
 
+// profileImg.src = client[0].pimg;
+// identity.innerText = client[0].hname;
+// privacy.children[1].innerText = client[0].hpn;
+// privacy.children[3].innerText = client[0].hem;
+// privacy.children[5].innerText = client[0].hname;
+// reserves.children[1].innerText = client[0].Order;
 
+function findId(wantToFind) {
+    for (let a = 0; client.length; a++) {
+        if (client[a].id === wantToFind) {
 
-
-// console.log(profile[0].Order[0]);
-// console.log(client[0].length);
-// console.log(privacy.children[0].innerText === '');
-// console.log(privacy.childElementCount);
-
-// // profileImg.src = client[0].pimg;
-// // identity.innerText = client[0].hname;
-// // privacy.children[1].innerText = client[0].hpn;
-// // privacy.children[3].innerText = client[0].hem;
-// // privacy.children[5].innerText = client[0].hname;
-// // reserves.children[1].innerText = client[0].Order;
-
-// function findId(wantToFind) {
-//     for (let a = 0; client.length; a++) {
-//         if (client[a].id === wantToFind) {
-
-//             identity.innerText = client[a].hname;
-//             privacy.children[1].innerText = client[a].hpn;
-//             privacy.children[3].innerText = client[a].hem;
-//             privacy.children[5].innerText = client[a].har;
-//             // ====================================================================
-//             reserves.children[1].innerText = client[a].Order;
-//             reserves.children[3].innerText = client[a].Order;
-//             reserves.children[5].innerText = client[a].cpn;
+            identity.innerText = client[a].hname;
+            privacy.children[1].innerText = client[a].hpn;
+            privacy.children[3].innerText = client[a].hem;
+            privacy.children[5].innerText = client[a].har;
+            // ====================================================================
+            reserves.children[1].innerText = client[a].Order;
+            reserves.children[3].innerText = client[a].Order;
+            reserves.children[5].innerText = client[a].cpn;
 
 
 
 
-//         }
-//     }
-// }
+        }
+    }
+}
 
-// findId(2);
 
 
 
@@ -404,74 +254,3 @@ async function getMydata() {
 
 // // wishList();
 // // oooooooooooooooooooooooooooooooooooooooooooooooooooooo
-
-// // let A = [
-// //     {
-// //         img: "./image/bg1.jpg",
-// //         name: '짱구',
-// //         phone: '010-5764-3321',
-// //         email: 'gjnsdx123@naver.com',
-// //         address: '경기도 광주시',
-// //         totalCost: '123,456 원',
-// //         reserves: '123,345 원',
-// //         coupon: 11,
-// //         id: 1,
-// //         latestOrder:
-// //         {
-// //             orderDate: '2023.11.26',
-// //             product: '오일 퍼퓸 밤쉘',
-// //             cost: '561,111',
-// //         },
-// //         lastestPost:
-// //         {
-// //             postData: '2023.03.11',
-// //             subject: '매장 위치는 ?',
-// //             board: '1:1게시판',
-// //         },
-// //         wishList:
-// //         {
-// //             item: '디퓨저 블라블라',
-// //             cost: '536,999',
-// //             option: "폴리데이 선물포장",
-// //             img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-// //         },
-// //     },
-// //     {
-// //         img: "./image/bg2.jpg",
-// //         name: '짱아',
-// //         phone: '010-8979-3231',
-// //         email: 'ffg1@naver.com',
-// //         address: '서울특별시',
-// //         totalCost: '19,456 원',
-// //         reserves: '96,345 원',
-// //         coupon: 3,
-// //         id: 2,
-// //         latestOrder:
-// //         {
-// //             orderDate: '2023.07.12',
-// //             product: '디퓨저 올리브 릿지',
-// //             cost: '111,111',
-// //         },
-// //         lastestPost:
-// //         {
-// //             postData: '2023.03.11',
-// //             subject: '배송 언제?',
-// //             board: '1:1게시판',
-// //         },
-// //         "wishList": [
-// //             {
-// //                 item: '향수 블라블라',
-// //                 cost: '487,999',
-// //                 option: "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-// //                 img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-// //             },
-// //             {
-// //                 item: '핸드크림 블라블라',
-// //                 cost: '986,999',
-// //                 option: "오일 퍼퓸 밤쉘20ml",
-// //                 img: "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-// //             }]
-// //     }];
-
-// // console.log(A[1].wishList);
-
