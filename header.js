@@ -44,11 +44,14 @@ function change() {
         menu_icon_box = document.querySelector('.menu_icon_box');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(menu_icon_box.id);
 =======
 >>>>>>> JGJ
 =======
 >>>>>>> JYH
+=======
+>>>>>>> KSB
     if (menu_icon_box.id == "menuBtn1") {
 
         menuList.style.animation = "slidein 0.7s";
@@ -82,6 +85,9 @@ async function getClientData() {
 
         clientData = response.data;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> KSB
         loginCheck();
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
@@ -105,15 +111,21 @@ async function getShoppingBasketData(id) {
 
 <<<<<<< HEAD
 function loginCheck() {
+<<<<<<< HEAD
 =======
 function loginCheck(clientData) {
 >>>>>>> JYH
+=======
+>>>>>>> KSB
     if (clientData.hname != '') {
         console.log(clientData.hname);
         testing[0].addEventListener('click', () => {
             const response = axios.put('http://localhost:3000/loginComplete/1', loginComplete);
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> KSB
         testing[0].href = "../main/index.html";
         testing[0].innerText = "로그아웃"
         testing[1].href = "";
@@ -130,6 +142,7 @@ function loginCheck(clientData) {
         testing[2].href = "../member/member.html";
         testing[3].href = "../member/member.html";
         testing_logo.href = "../member/member.html";
+<<<<<<< HEAD
 =======
         testing[0].href = `${herfChange}main/index.html`;
         testing[0].innerText = `로그아웃`
@@ -149,6 +162,8 @@ function loginCheck(clientData) {
         testing[3].href = `${herfChange}member/member.html`;
         testing_logo.href = `${herfChange}member/member.html`;
 >>>>>>> JYH
+=======
+>>>>>>> KSB
         shopping_basket.innerText = 0;
     }
 };

@@ -5,11 +5,6 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
-    box-sizing: border-box;
-}
-
-a {
-    color: black;
 }
 
 .client_container {
@@ -34,7 +29,6 @@ a {
     font-size: 18px;
 }
 
-
 .client_search fieldset {
     padding-top: 30px;
     padding-bottom: 50px;
@@ -49,10 +43,6 @@ a {
     font-size: 14px;
     border: 1px solid silver;
     color: silver;
-}
-
-.client_search input {
-    border: 1px solid silver;
 }
 
 .client_search fieldset button {
@@ -75,11 +65,11 @@ a {
 
 .client_search fieldset input {
     width: 483px;
-    height: 28px;
+    height: 33px;
     font-size: 14px;
     padding-left: 28px;
+    border: 1px solid silver;
 }
-
 
 .faq_category_5 {
     padding-left: 0px;
@@ -88,17 +78,19 @@ a {
     padding-bottom: 10px;
     font-size: 13px;
 }
-.faq_category_5 a:nth-child(1) {
+.faq_category_5 a:nth-child(5) {
     font-weight: bold;
 }
 
 .faq_category_5 a {
-    padding-left: 20px;
     padding-right: 20px;
+    color: black;
 }
+
 
 .faq_category_5 a:nth-child(n+2) {
     border-left: 1px solid silver;
+    padding-left: 20px;
 }
 
 .client_paging a {

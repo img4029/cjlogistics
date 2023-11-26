@@ -8,9 +8,7 @@ table.appendChild(thead);
 table.appendChild(tbody);
 document.getElementById('faq_table').appendChild(table);
 
-let row_clicker;
-
-function tablecell(column1, column2, column3) {
+function tablecell(column1, column2, column3) {   //tablecell함수 = 1~14 게시물 리스트
     let row = document.createElement('tr');
 
     let heading1 = document.createElement('td');
@@ -22,57 +20,40 @@ function tablecell(column1, column2, column3) {
     let heading3 = document.createElement('td');
     heading3.innerHTML = column3;
 
-    heading1.classList.add('clicker');
-    heading2.classList.add('clicker');
-    heading3.classList.add('clicker');
-
     row.appendChild(heading1);
     row.appendChild(heading2);
     row.appendChild(heading3);
 
     tbody.appendChild(row);
 
-    row.addEventListener('click', function() {
-        if (row_clicker) {
-            row_clicker.style.display = 'table-row';
-
-            // 현재 행의 다음 행과 다음 다음 행 모두 감추기
-            let next_Row = row_clicker.nextElementSibling;
-            while (next_Row && next_Row.classList.contains('faq-cell')) {
-                next_Row.style.display = 'none';
-                next_Row = next_Row.nextElementSibling;
-            }
-        }
-
-        // 현재 클릭한 행의 다음 행에 있는 faqcell을 보여주기
-        row_clicker = row.nextElementSibling;
-        while (row_clicker && row_clicker.classList.contains('faq-cell')) {
-            row_clicker.style.display = row_clicker.style.display === 'table-row' ? 'none' : 'table-row';
-            row_clicker = row_clicker.nextElementSibling;
-
-        }
+    row.addEventListener('click', function () {
+        let faq_clicker;
+        faq_clicker = row.nextElementSibling;   //faq_clicker는 각 tablecell들 다음에 오는 Q
+        while (faq_clicker.classList.contains('faq_cell')) {  //faq_cell에 faq_clicker가 포함될시 true
+            faq_clicker.style.display = faq_clicker.style.display == 'table-row' ? 'none' : 'table-row';
+            //클릭했을때 faq_clicker가 보이면 display:none, 반대로 none일때도 누르면 보이게 변경
+            faq_clicker = faq_clicker.nextElementSibling;
+        }        //faq_clicker는 다음에 오는 faq_clicker( Q 다음에 오는 A)
     });
 }
 
-function faqcell(column4, column5) {
-    let row = document.createElement('tr');
-    row.classList.add('faq-cell');
+function faqcell(column4, column5) { //faqcell은 tablecell 다음에 오는 Q,A 리스트
+    let row_2 = document.createElement('tr');
+    row_2.classList.add('faq_cell');
 
-    let faction1 = document.createElement('td');
-    faction1.innerHTML = column4;
+    let factor1 = document.createElement('td');
+    factor1.innerHTML = column4;
 
-    let faction2 = document.createElement('td');
-    faction2.innerHTML = column5;
-    faction2.colSpan = 2;
+    let factor2 = document.createElement('td');
+    factor2.innerHTML = column5;
+    factor2.colSpan = 2;
 
-    row.appendChild(faction1);
-    row.appendChild(faction2);
+    row_2.appendChild(factor1);
+    row_2.appendChild(factor2);
 
-    tbody.appendChild(row);
-    row.style.display = 'none';
-    return row;
+    tbody.appendChild(row_2);
+    row_2.style.display = 'none'; //faqcell(Q,A)는 기본적으로 display: none 상태
 }
-
 tablecell('번호', '분류', '제목');
 tablecell(6, '결제/배송', '택배박스 안에서 향이 나는데 제품이 샌건가요?');
 faqcell('Q', '택배박스 안에서 향이 나는데 제품이 샌건가요?');
@@ -102,28 +83,27 @@ function search() {
     let category = document.querySelector('#category').value.toLowerCase();
     let keyword = document.querySelector('#search_box').value.toLowerCase();
 
-    // tbody 요소에 접근하여 자식 요소들을 가져옵니다.
     let search_row = document.querySelectorAll('#faq_table tbody tr');
 
-    // 모든 행을 순회하면서 필터링합니다.
     for (let row of search_row) {
-        // 행이 faq-cell 클래스를 가지고 있으면서 style.display가 'none'이면 넘어갑니다.
-        if (row.classList.contains('faq-cell') && row.style.display === 'none') {
+
+        if (row.classList.contains('faq_cell') && row.style.display === 'none') {
             continue;
         }
 
-        let categoryCell = row.children[1].innerHTML.toLowerCase().trim(); // 카테고리 열
-        let titleCell = row.children[2].innerHTML.toLowerCase().trim(); // 제목 열
+        let categoryCell = row.children[1].innerHTML.toLowerCase();
+        let titleCell = row.children[2].innerHTML.toLowerCase();  
 
-        // 선택한 카테고리가 "전체검색"이거나 현재 행의 카테고리와 일치하는 경우
-        // 그리고 키워드가 제목에 완전히 포함되어 있는 경우에만 해당 행을 보여줍니다.
         if ((category === '' || categoryCell.includes(category)) &&
             (titleCell.includes(keyword))) {
             row.style.display = 'table-row';
         } else {
             row.style.display = 'none';
+
         }
     }
 }
+
+
 
 
