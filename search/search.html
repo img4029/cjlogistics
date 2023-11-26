@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 검색 페이지</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="./search.css/search.css">
+    <script defer src="../header.js"></script>
+    <script defer src="./search.js/search.js"></script>
+    <script src="https://kit.fontawesome.com/ea93a092cc.js" crossorigin="anonymous"></script>
+
+    <!-- 왜이럼 컴퓨터 너 정신안차려 -->
+</head>
+
+<body>
+
+    <!-- 헤더 메뉴바(건들지X) -->
+    <header>
+        <div class="header_acide">
+            <div class="header_back"></div>
+
+            <div id="menuBtn1" class="menu_icon_box" onclick="change()">
+                <div class="menu_icon1"></div>
+                <div class="menu_icon2"></div>
+                <div class="menu_icon3"></div>
+            </div>
+            <div class="menu_list">
+                <div class="menu_list_main">
+                    <ul>
+                        <li><a href="">Perfume</a></li>
+                        <li><a href="">Diffuser</a></li>
+                        <li><a href="">Candle</a></li>
+                        <li><a href="">Hand Care</a></li>
+                        <li><a href="">Home Care</a></li>
+                        <li><a href="">Gift</a></li>
+                    </ul>
+                </div>
+                <div class="menu_list_sub">
+                    <ul>
+                        <li><a class="testing" href="">로그인</a></li>
+                        <li><a class="testing" href="">회원가입</a></li>
+                        <li><a class="testing" href="">마이페이지</a></li>
+                        <li><a href="">고객센터</a></li>
+                        <li><a class="testing" href="">주문조회</a></li>
+                        <li><a href="">스토어</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">브랜드스토리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo_box">
+                <a href="../index.html" class="logo_link">
+                    <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
+                        alt="LOGO">
+                </a>
+            </div>
+            <div class="hearder_icon">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
+                            <span class="shopping_basket"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="testing_logo" href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"alt="마이페이지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_top">
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="../index.html">Daniel's Truth</a>
+        </div>
+    </header>   
+
+    <main>
+        <div class="searchInput">
+            <div class="searchBlock0">
+                <div class="searchInputTop"><a href="../main/index.html">HOME</a><pre> > 상품검색</pre></div>
+                <div class="Search" font-size: 18px; font-weight: bold;>상품검색</div>
+                <div class="searchBlock">
+                    <div class="searchText">검색한 단어 : 키워드 들어옴</div>
+                    <div>
+                        <div>
+                            <div class="searchBlock1">
+                                <div class="costSearchBox">
+                                    <span>가격대</span>
+                                    <input type="text" name="costSearchBox1" id="costSearchBox1" size="10px">
+                                    <span>-</span>
+                                    <input type="text" name="costSearchBox2" id="costSearchBox2" size="10px">
+                                </div>
+
+                                <div class="searchBox">
+                                    <span>제품명 키워드</span>
+                                    <input type="text" name="searchBox1" id="searchBox1" placeholder="검색하세여">
+                                    <div><a href="#" style="color: aliceblue;">SEARCH</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="searchInfo">
+            <div>n 개의 상품이 있습니다</div>
+            <div class="itemSort">
+                <button class="highPrice">높은가격순</button>
+                <button class="lowPrice">낮은가격순</button>
+            </div>
+        </div>
+
+        <div class="item_container"></div>
+
+    </main>
+</body>
+
+</html>

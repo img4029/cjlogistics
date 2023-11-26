@@ -1,0 +1,177 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap'); */
+
+* {
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
+}
+
+.client_container {
+    width: 1100px;
+    position: relative;
+    margin: 0 auto;
+    margin: auto;
+    padding-top: 110px;
+}
+
+.client_header_5 a,
+.client_header_5 {
+    float: right;
+    font-size: 12px;
+    color: gray;
+}
+
+.client_body h3 {
+    padding-bottom: 5px;
+    padding-top: 30px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.client_search fieldset {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    border: 1px silver solid;
+}
+
+.client_search fieldset select {
+    width: 183px;
+    height: 33px;
+    font-size: 14px;
+    border: 1px solid silver;
+    color: silver;
+}
+
+.client_search fieldset button {
+    width: 118px;
+    height: 33px;
+    background-color: black;
+    color: white;
+    border: 0;
+}
+
+.client_search fieldset h4 {
+    height: 17px;
+    width: 495px;
+    font-size: 14px;
+    padding-top: 5px;
+    position: absolute;
+    left: 136px;
+    font-weight: 400;
+}
+
+.client_search fieldset input {
+    width: 483px;
+    height: 33px;
+    font-size: 14px;
+    padding-left: 28px;
+    border: 1px solid silver;
+}
+
+.faq_category_5 {
+    padding-left: 0px;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+.faq_category_5 a:nth-child(4) {
+    font-weight: bold;
+}
+
+.faq_category_5 a {
+    padding-right: 20px;
+    color: black;
+}
+
+
+.faq_category_5 a:nth-child(n+2) {
+    border-left: 1px solid silver;
+    padding-left: 20px;
+}
+
+.client_paging a {
+    font-size: 13px;
+    padding: 10px;
+    height: 16px;
+    color: silver;
+}
+
+.client_paging {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: auto;
+    font-size: 12px;
+    width: 1100px;
+    cursor: pointer;
+}
+
+
+td{
+    padding: 15px;
+}
+
+
+tr:nth-child(1) {
+    border-top: 1px solid;
+    border-bottom: 1px solid rgb(150, 150, 150, 0.3);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr td:nth-child(1) {
+    width: 75px;
+    text-align: center;
+}
+tr td:nth-child(2) {
+    width: 110px;
+    text-align: center;
+    padding: 0 10px;
+}
+tr td:nth-child(3) {
+    width: 920px;
+    
+}
+
+tr:nth-child(n+2) {
+    border-bottom: 1px solid rgb(150, 150, 150, 0.3);
+}
+
+tr:nth-child(3n), tr:nth-child(3n+4) {
+
+    background-color: #fafafa ;
+    text-align: left;
+}
+
+tr:nth-child(3n) {
+    border-bottom: 1px dashed silver;
+}
+
+tr:nth-child(3n) td:nth-child(1) {
+    font-size: 18px;
+    font-weight: bold;
+}
+tr:nth-child(3n+4) td:nth-child(1) {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b17efe;
+}
+
+tr:nth-child(3n) td:nth-child(2), tr:nth-child(3n+4) td:nth-child(2) {
+    text-align: left;
+}
+
+tr:nth-child(3n) td:nth-child(2) {
+    color: gray;
+}
+
