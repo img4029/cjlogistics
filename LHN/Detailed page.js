@@ -33,6 +33,43 @@ booktitle5.addEventListener ('click',function() {
   heading5.classList.toggle("hidden5");
 });
 
+// 메뉴 이벤트(수정중.....어렵구만.....문제 해결이 불가능.... 최상단만 적용됨,....)
+
+const sectionIds = ['#reviewmeun', '#detailmeun', '#recommendedmeun'];
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => document.querySelector(`[href="${id}"]`));
+
+const observer = new IntersectionObserver(anny);
+sections.forEach(section => observer.observe(section));
+
+function anny(entries) {
+    const lastEntry = entries[entries.length - 1];
+    const isLastEntryVisible = lastEntry.isIntersecting && lastEntry.intersectionRatio >= 0.25;
+    const navIndex = isLastEntryVisible ? entries.length - 1 : entries.findIndex(entry => entry.isIntersecting);
+    selectNavItem(navIndex);
+}
+
+function selectNavItem(index) {
+    const navItem = navItems[index];
+    if (!navItem) return;
+
+    if (activeNavItem) {
+        activeNavItem.classList.remove('active');
+    }
+
+    activeNavItem = navItem;
+    activeNavItem.classList.add('active');
+}
+
+navItems.forEach((item, index) => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        sections[index].scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+
+
 
 
 

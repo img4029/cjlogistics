@@ -17,7 +17,6 @@
     <header>
         <div class="header_acide">
             <div class="header_back"></div>
-
             <div id="menuBtn1" class="menu_icon_box" onclick="change()">
                 <div class="menu_icon1"></div>
                 <div class="menu_icon2"></div>
@@ -88,7 +87,7 @@
                 <div class="product_topmenu">
                     <a href="">HOME > </a>
                     <a href="">Perfume ></a>
-                    <a href="./h2.html">오일퍼품 ></a>
+                    <a href="./Perfumepage.html">오일퍼품 ></a>
                     <a href="">오일퍼퓸 밤쉘 30ml</a>
                 </div>
                 <div class="product_outer">
@@ -279,15 +278,16 @@
                     </div>
                 </div>
             </div>
+            <section id="reviewmeun">
             <div class="semllouter">
                 <div class="review1_3">
-                    <a href="">REVIEW</a>
+                    <a class="activeNavitem"  href="#reviewmeun">REVIEW</a>
                 </div>
                 <div class="review2_3">
-                    <a href="">DETAIL</a>
+                    <a class="activeNavitem" href="#detailmeun">DETAIL</a>
                 </div>
                 <div class="review3_3">
-                    <a href="">RECOMMENDED</a>
+                    <a class="activeNavitem" href="#recommendedmeun">RECOMMENDED</a>
                 </div>
             </div>
             <div class="smoll">
@@ -295,6 +295,7 @@
                 <a href="">전체리뷰</a>
                 <textarea name="" rows="10" cols="220"></textarea>
             </div>
+             </section>
             <div class="select_3">
                 <div class="so1_3">
                     <ul>
@@ -343,6 +344,7 @@
     
                 </div>
             </div>
+        
             <div class="reviewlist_3">
                 <b>프리미엄 상품평</b>
                 <div class="reviewlistbox_3">
@@ -434,6 +436,7 @@
                                 src="https://danielstruth.com/images/d3/modern_simple/bg_reply_cnt.gif" alt=""></a><b>이 리뷰가
                             도움이 되셨나요?</b></p>
                 </div>
+                <section id="detailmeun">
                 <div class="ulbox2_3">
                     <a href=""><img src="https://danielstruth.com/images/d3/modern_simple/btn/btn_h15_review_pprev.gif"></a>
                     <a href=""><span>1</span></a>
@@ -442,36 +445,41 @@
                     <a href=""><span>4</span></a>
                     <a href=""><img src="https://danielstruth.com/images/d3/modern_simple/btn/btn_h15_review_nnext.gif"></a>
                 </div>
+                <section id="detailmeun">
                 <div class="semllouter">
                     <div class="review1_3">
-                        <a href="">REVIEW</a>
+                        <a class="activeNavitem" href="#reviewmeun">REVIEW</a>
                     </div>
                     <div class="review2_3">
-                        <a href="">DETAIL</a>
+                        <a class="activeNavitem" href="#detailmeun">DETAIL</a>
                     </div>
                     <div class="review3_3">
-                        <a href="">RECOMMENDED</a>
+                        <a class="activeNavitem" href="#recommendedmeun">RECOMMENDED</a>
                     </div>
                 </div>
                 <div class="video_3">
                     <video type="video/mp4"
                         src="https://player.vimeo.com/external/588219613.hd.mp4?s=47f5e29438a386c657f9c764480377054274a3be&profile_id=175"
-                        loop muted autoplay></video>
+                        loop muted autoplay>
+                    </video>
                     <img src="https://dmcosmetic.img8.kr/MS_product/11925283/1692248002_636745.jpg" alt="">
                 </div>
+             </section>
+             <section id="recommendedmeun">
                 <div class="semllouter">
                     <div class="review1_3">
-                        <a href="">REVIEW</a>
+                        <a class="activeNavitem" class="reviewmeun_section"  href="#reviewmeun">REVIEW</a>
                     </div>
                     <div class="review2_3">
-                        <a href="">DETAIL</a>
+                        <a class="activeNavitem" href="#detailmeun">DETAIL</a>
                     </div>
                     <div class="review3_3">
-                        <a href="">RECOMMENDED</a>
+                        <a class="activeNavitem" href="#recommendedmeun">RECOMMENDED</a>
                     </div>
                 </div>
+            </section>
             </div>
-        </div>
+            </div>
         
     </main>
     <footer>
@@ -487,6 +495,7 @@
                     <li><a href="">교환/환불 정책</a></li>
                 </ul>
             </div>
+       
             <!-- 로고 -->
             <div class="footer_logo">
                 <a href="">
@@ -504,6 +513,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
