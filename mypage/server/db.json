@@ -127,8 +127,8 @@
       "cdar": "",
       "hsp": "",
       "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
-      "totalAmountPayment": "",
-      "reserve": "",
+      "totalAmountPayment": 987654,
+      "reserve": 123456,
       "coupon": [
         {
           "couponNumber": "H57HESOZ",
@@ -138,7 +138,38 @@
           "expirationPeriod": "2023.11.21 ~ 2023.12.21"
         }
       ],
-      "ShoppingBasket": [],
+      "ShoppingBasket": [
+        {
+          "num": "1",
+          "img":"https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "너도밤나무 목화솜 필터",
+          "howMany": "",
+          "reserve": "",
+          "amountPayment": "",
+          "deliveryFee": "",
+          "cancel": ""
+        },
+        {
+          "num": "2",
+          "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0170000000012.jpg?1695727097",
+          "productName":"돔 캔들 밤쉘",
+          "howMany": "",
+          "reserve": "",
+          "amountPayment": "",
+          "deliveryFee": "",
+          "cancel": ""
+        },
+        {
+          "num": "3",
+          "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0170000000062.jpg?1695727584",
+          "productName":"카 디퓨저 조슈아",
+          "howMany": "",
+          "reserve": "",
+          "amountPayment": "",
+          "deliveryFee": "",
+          "cancel": ""
+        }
+      ],
       "Order": [
         {
           "orderDate": "2023.11.16",
@@ -213,21 +244,24 @@
           "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
           "character": "회원전용상품",
           "price": 1900000,
-          "discount": 0
+          "discount": 0,
+          "link": "https://www.danielstruth.com/shop/shopdetail.html?branduid=11925315&search=%BF%C0%C0%CF%C6%DB%C7%BE20&sort=order&xcode=001&mcode=000&scode=&GfDT=bG13UQ%3D%3D"
         },
         {
           "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
           "productName": "오일 퍼퓸 매그놀리아 힐 20ml",
           "character": "NEW ∙ 백목련 ∙ 플로럴 ∙ 우디 ∙ 성숙함",
           "price": 92000,
-          "discount": 0
+          "discount": 0,
+          "link": "https://www.danielstruth.com/shop/shopdetail.html?branduid=11925308&search=%BF%C0%C0%CF%C6%DB%C7%BE+%B8%C5%B1%D7%B3%EE%B8%AE%BE%C6&sort=order&xcode=001&mcode=000&scode=&GfDT=aWl3Uw%3D%3D"
         },
         {
           "img": "https://danielstruth.com/shopimages/dmcosmetic/0170000000012.jpg?1695727097",
           "productName": "코냑 디퓨저 블렌디크 1.",
           "character": "작약 ∙ 블루세이지 ∙ 부드러움 ∙ 달콤함",
           "price": 88000,
-          "discount": 0
+          "discount": 0,
+          "link": "https://www.danielstruth.com/shop/shopdetail.html?branduid=11925275&search=%C4%DA%B3%C5&sort=order&xcode=017&mcode=000&scode=&GfDT=aW53Vg%3D%3D"
         }
       ],
       "id": 1

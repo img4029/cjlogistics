@@ -14,13 +14,15 @@ async function getClientData() {
         latestOrderData();
         latestPostData();
         addWish();
+        // addWish2();
+        // aaaa();
 
         // console.log(Object.keys(myData[0].wishList[0])[0]);
         // console.log(Object.entries(m0yData[0].lastestPosted));
 
 
         // console.log(myData[0].wishList[0].img);
-        console.log(myData[0].wishList);
+        // console.log(myData[0].wishList);
 
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
@@ -74,10 +76,10 @@ function insertPriData() {
                 }
                 switch (reserves.children[j].innerText) {
                     case '총 주문 금액':
-                        reserves.children[j + 1].innerText = myData[i].totalAmountPayment;
+                        reserves.children[j + 1].innerText = `${myData[i].totalAmountPayment.toLocaleString()}`;
                         break;
                     case '적 립 금':
-                        reserves.children[j + 1].innerText = myData[i].reserve;
+                        reserves.children[j + 1].innerText = `${myData[i].reserve.toLocaleString()}`;
                         break;
                     case '쿠 폰':
                         reserves.children[j + 1].innerText = myData[i].coupon.length;
@@ -89,60 +91,30 @@ function insertPriData() {
 }
 
 
-// if (privacy.children[j].innerText === '전 화') {
-//     privacy.children[j + 1].innerText = myData[i].phone;
-// } else if (privacy.children[j].innerText === '이메일') {
-//     privacy.children[j + 1].innerText = myData[i].email;
-// } else if (privacy.children[j].innerText === '주 소') {
-//     privacy.children[j + 1].innerText = myData[i].address;
-// }
-
-// if (reserves.children[j].innerText === '총 주문 금액') {
-//     reserves.children[j + 1].innerText = myData[i].totalCost;
-// } else if (reserves.children[j].innerText === '적 립 금') {
-//     reserves.children[j + 1].innerText = myData[i].reserves;
-// } else if (reserves.children[j].innerText === '쿠 폰') {
-//     reserves.children[j + 1].innerText = myData[i].coupon;
-// }
-
-
-
-
-
-
-
-
 
 //  ============ 최근 주문 내역 =============================
 let table = document.querySelectorAll('.bottomTb');
 let tableTb_1 = table[0].getElementsByTagName('td');
 let tableTb_2 = table[1].getElementsByTagName('td');
 
-// console.log(tableTb_1);
-// console.log(tableTb_2);
-
-
 function latestOrderData() {
     for (let i = 0; i < myData[0].lastestOrder.length; i++) {
         let makeBox = new Array(myData[0].lastestOrder.length);
         makeBox[i] = [];
         for (let customer of myData) {
-
-            // console.log(customer.Order[i].orderDate);
-
             makeBox[i].push(`<tr>`);
             makeBox[i].push(`<td>${customer.lastestOrder[i].orderDate}</td>`);
             makeBox[i].push(`<td>${customer.lastestOrder[i].productName}</td>`);
-            makeBox[i].push(`<td>${customer.lastestOrder[i].amountPayment}</td>`);
+            makeBox[i].push(`<td>${customer.lastestOrder[i].amountPayment.toLocaleString()}</td>`);
             makeBox[i].push(`<td>${customer.lastestOrder[i].detail}</td>`);
             makeBox[i].push(`</td>`);
         }
-        // console.log(table[0].innerHTML)
         table[0].innerHTML += makeBox[i].join("")
 
-        // if(table[0])
     }
 }
+
+
 
 // ==========================================================
 
@@ -161,8 +133,6 @@ function latestPostData() {
             makeBox[i].push(`</td>`);
         }
         table[1].innerHTML += makeBox[i].join("")
-
-
     }
 }
 
@@ -183,68 +153,98 @@ let makeOuter = document.createElement('div');
 let nameList = ['wantImg', 'wantItem'];
 
 
-let ar = new Array(2);
-ar[0] = document.createElement('img');
-ar[1] = document.createElement('div');
-ar[2] = document.createElement('div');
-
 function addWish() {
-
     let makeBox = new Array(myData[0].wishList.length);
 
     for (let i = 0; i < myData[0].wishList.length; i++) {
+
+        let ar = new Array(2);
+        ar[0] = document.createElement('button');
+        ar[1] = document.createElement('div');
+        ar[2] = document.createElement('div');
+
         makeBox[i] = document.createElement('div');
         wantList.appendChild(makeBox[i]);
         makeBox[i].setAttribute('class', 'wantContainer');
-        // 큰박스 만들고 그 박스안에 img,div2개 넣으려고하는데
-        // 3번 반복하면 앞에 만들어진 2개의 박스에는 img,div가 들어가지 않는다..
-        // 문제가 뭐지?
+
         for (let j = 0; j < ar.length; j++) {
             makeBox[i].appendChild(ar[j]);
             if (j == 0) {
-                ar[j].src = myData[0].wishList[j].img
+                ar[j].style.background = `url(${myData[0].wishList[i].img}) center/cover`
+                ar[j].addEventListener('click', () => {
+                    window.location.href = `${myData[0].wishList[i].link}`
+                })
+                // ar[j].addEventListener('click', movePage)
+                // 위에처럼 익명함수형태로 전달하지않고,
+                // 만들어둔 함수로 이동하고 싶다면 어떻게 해야하나?
+                // 바로 아래 만들어둔 movePage 함수를 사용하고 싶다.
+
                 ar[j].setAttribute('class', 'wantImg');
             } else if (j == 1) {
-                ar[j].innerText = `${myData[0].wishList[j].productName}`
+                ar[j].innerText = `${myData[0].wishList[i].productName} `
                 ar[j].setAttribute('class', 'wantItem');
             } else {
-                ar[j].innerText = `${myData[0].wishList[j].price.toLocaleString()}`
+                ar[j].innerText = `${myData[0].wishList[i].price.toLocaleString()} `
                 ar[j].setAttribute('class', 'wantCost');
             }
         }
-
     }
 }
-function add() {
+function movePage() {
+    window.location.href = `${myData[0].wishList[i].link}`
+}
 
+function addWish2() {
     let makeBox = new Array(myData[0].wishList.length);
 
     for (let i = 0; i < myData[0].wishList.length; i++) {
+
+        let ar = new Array(2);
+        ar[0] = document.createElement('a');
+        ar[1] = document.createElement('div');
+        ar[2] = document.createElement('div');
+
         makeBox[i] = document.createElement('div');
         wantList.appendChild(makeBox[i]);
         makeBox[i].setAttribute('class', 'wantContainer');
-        makeBox[i]
+
+        for (let j = 0; j < ar.length; j++) {
+            makeBox[i].appendChild(ar[j]);
+            if (j == 0) {
+                ar[j].setAttribute('class', 'wantImg');
+                ar[j].style.background = `url(${myData[0].wishList[i].img} center/cover`
+            } else if (j == 1) {
+                ar[j].innerText = `${myData[0].wishList[i].productName} `
+                ar[j].setAttribute('class', 'wantItem');
+            } else {
+                ar[j].innerText = `${myData[0].wishList[i].price.toLocaleString()} `
+                ar[j].setAttribute('class', 'wantCost');
+            }
+        }
+        // ar[0].style.background = `url(${myData[0].wishList[i].img}) center/cover`
 
     }
 }
 
-// for (let i = 0; i < Object.keys(myData[0].wishList).length; i++) {
-//     let makeOuter = document.createElement('div');
-//     makeOuter.setAttribute('class', 'wantContainer');
-//     for (let j = 0; i < ar.length; j++) {
-//         makeOuter.appendChild(ar[j])
-//         ar[j].setAttribute('class', nameList[j])
 
-//         if (Object.keys(myData[0].wishList[0])[0] === 'img') {
-//             ar[j].src = myData[0].wishList[i].img;
-//             ar[j].setAttribute('class', nameList[j])
-//         } else {
-//             ar[j].setAttribute('class', nameList[j])
-//             ar[j].innerText = `${myData[0].wishList[i].productName}
-//                             ${myData[0].wishList[i].price.toLocaleString()}`;
-//             // 백틱안에서 줄바꿈은 된다고 알고 있는데
-//             // tab키도 되나 혹시?
+
+
+
+
+
+// function aaaa() {
+//     for (let i = 0; i < myData[0].wishList.length; i++) {
+//         let makeBox = new Array(myData[0].wishList.length);
+//         makeBox[i] = [];
+//         for (let customer of myData) {
+//             makeBox[i].push(`<div div class="wantContainer>`);
+//             makeBox[i].push(`<img src="${myData[0].wishList[i].img}" alt="" class="wantImg">`);
+//             makeBox[i].push(`<div class="wantItem>${customer.wishList[i].productName}</div>`);
+//             makeBox[i].push(`<div class="wantCost>${customer.wishList[i].price.toLocaleString()}</div>`);
+//             makeBox[i].push(`</div>`);
+//             console.log(makeBox[i]);
 //         }
+//         wantList.innerHTML += makeBox[i].join("")
 //     }
 // }
 

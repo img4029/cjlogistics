@@ -5,6 +5,7 @@
     font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', 'sans-serif';
     font-size: 14px;
     border-collapse: collapse;
+    text-decoration: none;
 }
 
 ul {
@@ -22,7 +23,6 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 90px;
-    /* padding-left: 100px; */
 }
 
 .mypage_top_3>h1 {
@@ -88,17 +88,12 @@ ul {
     border: 1px solid;
     font-size: 0.8rem;
     padding: 2px;
-    margin-left: 5px;
 }
 
 .profile_privacy>a:hover {
     background-color: black;
     color: aliceblue;
 }
-
-/* .profile_privacy>div:nth-child(1) {
-    display: inline-block;
-} */
 
 .mypage_profile_inner {
     display: grid;
@@ -107,6 +102,10 @@ ul {
 
 .mypage_profile_inner>div {
     padding: 20px;
+}
+
+.profile_identity {
+    padding-right: 10px;
 }
 
 .mypage_profile_inner a {
