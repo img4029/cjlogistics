@@ -7,9 +7,14 @@
     height: 60%;
 }
 
-.outer>.product_topmenu>a {
+
+
+.product_topmenu > a {
     color: rgb(161, 159, 159);
+    margin-right: 10px;    
 }
+
+
 
 * {
     margin: 0;
@@ -24,16 +29,13 @@ main {
     margin: auto;
 }
 
-.outer>.product_topmenu {
+.product_topmenu {
     border: 1px solid rgb(200, 200, 200);
     width: 1490px;
-
-    margin: auto;
     font-size: 15px;
     display: flex;
     align-items: center;
     padding: 30px;
-    margin-bottom: 1%;
     height: 75px;
 }
 
@@ -310,7 +312,6 @@ h4 {
     position: relative;
     flex-wrap: wrap;
     font-weight: bold;
-    width: 1550px;
 }
 
 
@@ -678,14 +679,23 @@ h4 {
     cursor: pointer;
 }
 
-.hidden .service_body {
-    display: none;
+.topandbottombuttons {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    visibility: visible;
+    opacity: 1;
+    flex-direction:column-reverse;
+}
+
+.topbuttons_3 {
+    margin-bottom: 30%;
 }
 
 .hidden .service_body {
     display: none;
 }
-    
+  
 .hidden,
 .hidden2,
 .hidden3,
@@ -715,6 +725,7 @@ h4 {
     margin-bottom: 17px;
     line-height: 50px;
 }
+
 .booktitle5 ul{
     border-bottom: solid 1px black;
     color: rgb(92, 91, 91);
@@ -723,4 +734,6 @@ h4 {
 html {
     scroll-behavior: smooth;
 }
+
+
 
