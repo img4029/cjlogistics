@@ -1,6 +1,8 @@
 let testing = document.querySelectorAll('.testing'),
     testing_logo = document.querySelector('.testing_logo'),
     shopping_basket = document.querySelector('.shopping_basket'),
+    menu_list_main = document.querySelectorAll('.menu_list_main>ul>li>a'),
+    menu_list_sub = document.querySelectorAll('.menu_list_sub>ul>li>a'),
     clientData,
     ShoppingBasketData,
     jyh = document.querySelector('.jyh'),
@@ -9,7 +11,6 @@ let testing = document.querySelectorAll('.testing'),
     kso = document.querySelector('.kso'),
     jgj = document.querySelector('.jgj'),
     img = document.querySelector('.img'),
-    herfChange,
     loginComplete =
     {
         hname: "",
@@ -34,7 +35,8 @@ let testing = document.querySelectorAll('.testing'),
         ShoppingBasket: "",
         Order: ""
     };
-var path = window.location.pathname;
+var path = window.location.pathname,
+    herfChange;
 
 function change() {
     let menuList = document.querySelector('.menu_list'),
@@ -81,28 +83,66 @@ async function getClientData() {
     }
 };
 
+if (path === '/index.html') {
+    console.log('나는 메인이다');
+    herfChange = './';
+} else {
+    herfChange = '../';
+}
+const
+    mainLink = [
+        "", "", "", "", "", ""
+    ],
+    loginLink = [ //로그인 후
+        `${herfChange}main/index.html`,
+        "",
+        `${herfChange}mypage/mypage.html`,
+        "",
+        `${herfChange}order/order.html`,
+        `${herfChange}jgj_daniel/store.html`,
+        `${herfChange}event/event.html`,
+        `${herfChange}brandstory/brandstory.html`
+    ],
+    logioutLink = [ //로그인 전
+        `${herfChange}member/member.html`,
+        `${herfChange}idinfo/idinfo.html`,
+        `${herfChange}member/member.html`,
+        "",
+        `${herfChange}member/member.html`,
+        `${herfChange}jgj_daniel/store.html`,
+        `${herfChange}event/event.html`,
+        `${herfChange}brandstory/brandstory.html`
+    ];
+
+
 function loginCheck(clientData) {
+    console.log(menu_list_main);
+    console.log(menu_list_sub);
+    console.log(loginLink);
+    console.log(logioutLink);
+    for (let i = 0; i < menu_list_main.length; i++) {
+        menu_list_main[i].href = mainLink[i]
+    }
+    
     if (clientData.hname != '') {
-        console.log(clientData.hname);
         testing[0].addEventListener('click', () => {
             const response = axios.put('http://localhost:3000/loginComplete/1', loginComplete);
         });
-        testing[0].href = `${herfChange}main/index.html`;
+        for (let i = 0; i < menu_list_sub.length; i++) {
+            menu_list_sub[i].href = loginLink[i]
+        }
+
         testing[0].innerText = `로그아웃`
-        testing[1].href = ``;
         testing[1].innerText = `회원정보`
-        testing[2].href = ``;
-        testing[3].href = `${herfChange}order/order.html`;
         testing_logo.href = ``;
         shopping_basket.innerText = clientData.ShoppingBasket.length;
-        console.log();
     } else {
-        testing[0].href = `${herfChange}member/member.html`;
+        for (let i = 0; i < menu_list_sub.length; i++) {
+            menu_list_sub[i].href = logioutLink[i]
+        }
+
         testing[0].innerText = `로그인`
-        testing[1].href = `${herfChange}idinfo/idinfo.html`;
         testing[1].innerText = `회원가입`
-        testing[2].href = `${herfChange}member/member.html`;
-        testing[3].href = `${herfChange}member/member.html`;
         testing_logo.href = `${herfChange}member/member.html`;
         shopping_basket.innerText = 0;
     }
@@ -119,12 +159,7 @@ function addFont() {
     `;
 }
 
-if (path === '/index.html') {
-    console.log('나는 메인이다');
-    herfChange = './';
-} else {
-    herfChange = '../';
-}
+
 console.log(path);
 
 getClientData();
