@@ -16,11 +16,6 @@
       "car": "",
       "cdar": "",
       "hsp": "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> IMG
       "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
       "totalAmountPayment" : "",
       "reserve": "",
@@ -33,22 +28,11 @@
           "expirationPeriod" : "2023.11.21 ~ 2023.12.21"
         }
       ],
-<<<<<<< HEAD
->>>>>>> JYH
-=======
->>>>>>> IMG
       "ShoppingBasket": [],
       "Order": [
         {
           "orderDate": "2023.11.16",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           "orderNumber" : "20231106110121-8178227352",
->>>>>>> JYH
-=======
-          "orderNumber" : "20231106110121-8178227352",
->>>>>>> IMG
           "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
           "amountPayment": "201,000원",
           "ProductList": [
@@ -56,33 +40,15 @@
               "Gifts": "",
               "productName": "디퓨저 올리브 릿지",
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "quantity": "1",
-              "amountPayment": "201,000",
-=======
               "quantity": 1,
               "amountPayment": 201000,
->>>>>>> JYH
-=======
-              "quantity": 1,
-              "amountPayment": 201000,
->>>>>>> IMG
               "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
             },
             {
               "Gifts": "(사은품)",
               "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
               "options": "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "quantity": "1",
-=======
               "quantity": 1,
->>>>>>> JYH
-=======
-              "quantity": 1,
->>>>>>> IMG
               "amountPayment": "",
               "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
             }
@@ -91,52 +57,23 @@
         },
         {
           "orderDate": "2023.11.16",
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "productName": "디퓨저 올리브 릿지 외 1건",
-          "amountPayment": "198,000원",
-=======
           "orderNumber" : "20231106110121-8178227353",
           "productName": "디퓨저 올리브 릿지 외 1건",
           "amountPayment": 198000,
->>>>>>> JYH
-=======
-          "orderNumber" : "20231106110121-8178227353",
-          "productName": "디퓨저 올리브 릿지 외 1건",
-          "amountPayment": 198000,
->>>>>>> IMG
           "ProductList": [
             {
               "Gifts": "",
               "productName": "디퓨저 올리브 릿지",
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "quantity": "1",
-              "amountPayment": "100,000",
-=======
               "quantity": 1,
               "amountPayment": 100000,
->>>>>>> JYH
-=======
-              "quantity": 1,
-              "amountPayment": 100000,
->>>>>>> IMG
               "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
             },
             {
               "Gifts": "(사은품)",
               "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
               "options": "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "quantity": "1",
-=======
               "quantity": 1,
->>>>>>> JYH
-=======
-              "quantity": 1,
->>>>>>> IMG
               "amountPayment": "",
               "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
             }
@@ -162,19 +99,10 @@
       "car": "",
       "cdar": "",
       "hsp": "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> IMG
       "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
       "totalAmountPayment" : "",
       "reserve": "",
       "coupon": [],
-<<<<<<< HEAD
->>>>>>> JYH
-=======
->>>>>>> IMG
       "ShoppingBasket": [],
       "Order": [],
       "id": 2
@@ -197,69 +125,31 @@
       "car": "",
       "cdar": "",
       "hsp": "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> IMG
       "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
       "totalAmountPayment" : "",
       "reserve": "",
       "coupon": [],
-<<<<<<< HEAD
->>>>>>> JYH
-=======
->>>>>>> IMG
       "ShoppingBasket": [],
       "Order": [
         {
           "orderDate": "2023.11.16",
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
-          "amountPayment": "201,000원",
-=======
           "orderNumber" : "20231106110121-8178227352",
           "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
           "amountPayment": 201000,
->>>>>>> JYH
-=======
-          "orderNumber" : "20231106110121-8178227352",
-          "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
-          "amountPayment": 201000,
->>>>>>> IMG
           "ProductList": [
             {
               "Gifts": "",
               "productName": "디퓨저 올리브 릿지",
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "quantity": "1",
-              "amountPayment": "201,000",
-=======
               "quantity": 1,
               "amountPayment": 201000,
->>>>>>> JYH
-=======
-              "quantity": 1,
-              "amountPayment": 201000,
->>>>>>> IMG
               "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
             },
             {
               "Gifts": "(사은품)",
               "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
               "options": "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "quantity": "1",
-=======
               "quantity": 1,
->>>>>>> JYH
-=======
-              "quantity": 1,
->>>>>>> IMG
               "amountPayment": "",
               "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
             }
@@ -267,54 +157,24 @@
           "deliveryStatus": ""
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "orderDate": "2023.11.16",
-          "productName": "디퓨저 올리브 릿지 외 1건",
-          "amountPayment": "198,000원",
-=======
-=======
->>>>>>> IMG
           "orderDate": "2023.11.17",
           "orderNumber" : "20231106110121-8178227353",
           "productName": "디퓨저 올리브 릿지 외 1건",
           "amountPayment": 198000,
-<<<<<<< HEAD
->>>>>>> JYH
-=======
->>>>>>> IMG
           "ProductList": [
             {
               "Gifts": "",
               "productName": "디퓨저 올리브 릿지",
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "quantity": "1",
-              "amountPayment": "100,000",
-=======
               "quantity": 1,
               "amountPayment": 100000,
->>>>>>> JYH
-=======
-              "quantity": 1,
-              "amountPayment": 100000,
->>>>>>> IMG
               "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
             },
             {
               "Gifts": "(사은품)",
               "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
               "options": "",
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "quantity": "1",
-=======
               "quantity": 1,
->>>>>>> JYH
-=======
-              "quantity": 1,
->>>>>>> IMG
               "amountPayment": "",
               "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
             }
@@ -325,13 +185,6 @@
       "id": 1
     }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "ProductList": []
-}
-=======
-=======
->>>>>>> IMG
   "ProductList": [
     {
       "perfume":[
@@ -595,7 +448,3 @@
 }
 
 
-<<<<<<< HEAD
->>>>>>> JYH
-=======
->>>>>>> IMG
