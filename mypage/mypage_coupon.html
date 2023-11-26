@@ -7,9 +7,14 @@
     <title>MY PAGE</title>
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="../header.css">
     <script defer src="../header.js"></script>
@@ -17,19 +22,19 @@
     <link rel="stylesheet" href="./CSS/mypage_coupon.css">
 
     <script src="https://kit.fontawesome.com/647f0863a7.js" crossorigin="anonymous"></script>
-    <script src="./javascript/mypage_coupon.js"></script>
+    <script defer src="./javascript/mypage_coupon.js"></script>
 </head>
 
 <body>
     <header>
         <div class="header_acide">
             <div class="header_back"></div>
-            <input type="checkbox" id="menuBtn" value="A">
-            <label for="menuBtn" class="menu_icon_box" onclick="change()">
+
+            <div id="menuBtn1" class="menu_icon_box" onclick="change()">
                 <div class="menu_icon1"></div>
                 <div class="menu_icon2"></div>
                 <div class="menu_icon3"></div>
-            </label>
+            </div>
             <div class="menu_list">
                 <div class="menu_list_main">
                     <ul>
@@ -46,7 +51,7 @@
                         <li><a class="testing" href="">로그인</a></li>
                         <li><a class="testing" href="">회원가입</a></li>
                         <li><a class="testing" href="">마이페이지</a></li>
-                        <li><a href="">고객색터</a></li>
+                        <li><a href="">고객센터</a></li>
                         <li><a class="testing" href="">주문조회</a></li>
                         <li><a href="">스토어</a></li>
                         <li><a href="">이벤트</a></li>
@@ -55,7 +60,7 @@
                 </div>
             </div>
             <div class="logo_box">
-                <a href="./test.html" class="logo_link">
+                <a href="../index.html" class="logo_link">
                     <img class="logo" src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/pclogo.png"
                         alt="LOGO">
                 </a>
@@ -64,7 +69,8 @@
                 <ul>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png" alt="장바구니">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/basketbtn.png"
+                                alt="장바구니">
                             <span class="shopping_basket"></span>
                         </a>
                     </li>
@@ -76,7 +82,8 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png" alt="검색">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/searchbtn.png"
+                                alt="검색">
                         </a>
                     </li>
                 </ul>
@@ -87,7 +94,7 @@
                 <div></div>
                 <div></div>
             </div>
-            <a href="test.html">Daniel's Truth</a>
+            <a href="../index.html">Daniel's Truth</a>
         </div>
     </header>
 
@@ -95,43 +102,32 @@
         <div class="mypage_outer_3">
             <div class="mypage_top_3">
                 <h1>
-                    <a href="mypage.html">my page</a>
+                    <a href="mypage.html">MY PAGE</a>
                 </h1>
-        
-        
+
                 <div class="mypage_info_outer_3">
-                    <div class="mypage_shop_info_3">
+                    <div class="mypage_shop_info_3 info">
                         <h2><i class="fa-solid fa-circle-info"></i> shopping info</h2>
-                        <div class="mypage_shop_3">
-                            <span><a href="">주문내역</a></span>
-                            <span><a href="">쿠폰내역</a></span>
-                            <span><a href="">적립금내역</a></span>
-                            <span><a href="">오늘본상품</a></span>
-                            <span><a href="">보관함</a></span>
-                            <span><a href="">주소록관리</a></span>
-                            <span><a href="">선물함</a></span>
+                        <div class="mypage_shop_3 linkAll">
+                            
                         </div>
                     </div>
-                    <div class="mypage_QnA_info_3">
+                    <div class="mypage_QnA_info_3 info linkAll">
                         <h2><i class="fa-solid fa-circle-question"></i> shopping question</h2>
                         <div class="mypage_QnA_3">
-                            <span><a href="">내 게시물 보기</a></span>
-                            <span><a href="">e-mail문의</a>
-                            </span>
-                            <span><a href="">1:1게시판</a></span>
+                            
                         </div>
                     </div>
-        
-                    <div class="mypage_customer_info_3">
+
+                    <div class="mypage_customer_info_3 info linkAll">
                         <h2><i class="fa-solid fa-person-circle-question"></i> customer info</h2>
                         <div class="mypage_customer_3">
-                            <span><a href="">회원정보변경</a></span>
-                            <span><a href="">회원정보탈퇴신청</a></span>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        
+
             <fieldset class="coupon_enter_outer">
                 <div class="coupon_enter_inner">
                     <form action="#" method="post">
@@ -146,13 +142,13 @@
                     <p>* 오프라인,이메일,모바일을 통해 발급 받으신 쿠폰인증번호를 입력해주시면 발급 가능합니다.</p>
                 </div>
             </fieldset>
-        
+
             <div class="coupon_mycoupon_outer">
                 <div class="mycoupon_head">
-                    <div><a href="">보유쿠폰(1)</a></div>
-                    <div><a href="">다운로드 가능쿠폰(0)</a></div>
+                    <div><a href="">보유 쿠폰()</a></div>
+                    <div><a href="">다운로드 가능쿠폰()</a></div>
                 </div>
-        
+
                 <div class="mycoupon_help">
                     <p>
                         <strong>OOO님</strong>이 보유하고 있는 쿠폰은 총 1장 입니다.
@@ -162,33 +158,13 @@
                         <option value="#">쿠폰발급 순</option>
                     </select>
                 </div>
-        
+
                 <div class="mycoupon_list">
-                    <dl class="coupon_num">
-                        <dt></dt>
-                        <dd></dd>
-                    </dl>
-                    <dl class="coupon_category">
-                        <dt></dt>
-                        <dd></dd>
-                    </dl>
-                    <dl class="coupon_name">
-                        <dt></dt>
-                        <dd></dd>
-                    </dl>
-                    <dl class="coupon_data">
-                        <dt></dt>
-                        <dd></dd>
-                    </dl>
-                    <dl class="coupon_expiration">
-                        <dt></dt>
-                        <dd></dd>
-                    </dl>
+
                 </div>
-        
-        
+
             </div>
-        
+
         </div>
     </main>
 
