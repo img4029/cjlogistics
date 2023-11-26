@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>event page</title>
+    <title>제품 검색 페이지</title>
 
-    <link rel="stylesheet" href="./css/event.css">
-    <script defer src="./JS/event.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="./search.css/search.css">
     <script defer src="../header.js"></script>
+    <script defer src="./search.js/search.js"></script>
+    <script src="https://kit.fontawesome.com/ea93a092cc.js" crossorigin="anonymous"></script>
 
+    <!-- 왜이럼 컴퓨터 너 정신안차려 -->
 </head>
 
 <body>
 
+    <!-- 헤더 메뉴바(건들지X) -->
     <header>
         <div class="header_acide">
             <div class="header_back"></div>
@@ -87,85 +90,48 @@
             </div>
             <a href="../index.html">Daniel's Truth</a>
         </div>
-    </header>
+    </header>   
 
     <main>
-        <div>
-            <div class="headermenu4"></div>
-            <div class="headerevent4"></div>
-        </div>
-        
-        <div class="Event">
-            <h3>EVENT</h3>
-            <h3>이벤트</h3>
-        </div>
-        
-        
-        <div class="event_search">
-        
-            <div class="eventSearch">
-                <div class="eventSerchInput">
-                    <input type="text" name="search4" id="search4" value="">
+        <div class="searchInput">
+            <div class="searchBlock0">
+                <div class="searchInputTop"><a href="../main/index.html">HOME</a><pre> > 상품검색</pre></div>
+                <div class="Search" font-size: 18px; font-weight: bold;>상품검색</div>
+                <div class="searchBlock">
+                    <div class="searchText">검색한 단어 : 키워드 들어옴</div>
+                    <div>
+                        <div>
+                            <div class="searchBlock1">
+                                <div class="costSearchBox">
+                                    <span>가격대</span>
+                                    <input type="text" name="costSearchBox1" id="costSearchBox1" size="10px">
+                                    <span>-</span>
+                                    <input type="text" name="costSearchBox2" id="costSearchBox2" size="10px">
+                                </div>
+
+                                <div class="searchBox">
+                                    <span>제품명 키워드</span>
+                                    <input type="text" name="searchBox1" id="searchBox1" placeholder="검색하세여">
+                                    <div><a href="#" style="color: aliceblue;">SEARCH</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="eventSearchBotton">
-                    <input type="button" name="searchBotton4" id="searchBotton4" value="검색">
-                </div>
             </div>
-        
         </div>
-        <div class="event_container">
 
-            <div id="box1">
-                <div><a href="#"><img src="./eventIMG/썸네1.jpg" alt=""></a></div>
-                <div><a href="#">Daniel's Truth Holiday 2023</a></div>
-                <div>[11.15-12.31]</div>
+        <div class="searchInfo">
+            <div>n 개의 상품이 있습니다</div>
+            <div class="itemSort">
+                <button class="highPrice">높은가격순</button>
+                <button class="lowPrice">낮은가격순</button>
             </div>
+        </div>
 
-            <div id="box2">
-                <div><a href="#"><img src="./eventIMG/이벤트2.jpg" alt=""></a></div>
-                <div><a href="#">NEW 오일퍼퓸 20ml</a></div>
-                <div>NEW</div>
-            </div>
+        <div class="item_container"></div>
 
-            <div id="box3">
-                <div><a href="#"><img src="./eventIMG/PO3.jpg" alt=""></a></div>
-                <div><a href="#">11월 포토리뷰 이벤트</a></div>
-                <div>[11.01-11.30]</div>
-            </div>
-
-            <div id="box4">
-                <div><a href="#"><img src="./eventIMG/no114.jpg" alt=""></a></div>
-                <div><a href="#">11월 증정품</a></div>
-                <div>[11.01-11.30]</div>
-            </div>
-
-            <div id="box5">
-                <div><a href="#"><img src="./eventIMG/110115.jpg" alt=""></a></div>
-                <div><a href="#">기획 상품 10-25% OFF</a></div>
-                <div>[11.01-11.30]</div>
-            </div>
-
-            <div id="box6">
-                <div><a href="#"><img src="./eventIMG/1020event6.jpg" alt=""></a></div>
-                <div><a href="#">NEW 호아킨 & 솔리드 디퓨저</a></div>
-                <div>[11.01-11.30]</div>
-            </div>
-
-            <div id="box7">
-                <div><a href="#"><img src="./eventIMG/43.jpg" alt=""></a></div>
-                <div><a href="#">10월 포토리뷰 이벤트 당첨자 발표</a></div>
-                <div></div>
-            </div>
-
-            <div id="box8">
-                <div><a href="#"><img src="./eventIMG/11013.jpg" alt=""></a></div>
-                <div><a href="#">신규가입 쿠폰</a></div>
-                <div>[11.01-11.30]</div>
-            </div>
     </main>
-
-    <footer></footer>
-    </div>
 </body>
 
 </html>

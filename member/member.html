@@ -3,23 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>주문조회</title>
+    <title>회원 로그인</title>
 
-    <link rel="stylesheet" href="./order.css">
-    <script defer src="./order.js"></script>
+    <link rel="stylesheet" href="./member.css">
+    <script defer src="./member.js"></script>
+
 
     <link rel="stylesheet" href="../header.css">
     <script defer src="../header.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -73,7 +76,8 @@
                     </li>
                     <li>
                         <a class="testing_logo" href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"alt="마이페이지">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
                         </a>
                     </li>
                     <li>
@@ -93,61 +97,57 @@
             <a href="../index.html">Daniel's Truth</a>
         </div>
     </header>
-
     <main>
-        <div>
-            <h2>MY PAGE</h2>
-            <div class="menu_box">
+        <div class="main_container">
+            <!-- 로그인 3글자 -->
+            <h3>로그인</h3>
+            <!-- 메인 로그인 창 -->
+            <div class="login_container">
                 <div>
-                    <h3>SHOPPING INFO</h3>
-                    <a href="">주문내역</a>
-                    <div></div>
-                    <a href="">쿠폰내역</a>
-                    <div></div>
-                    <a href="">적립금내역</a>
-                    <div></div>
-                    <a href="">오늘본상품</a>
+                    <h3>회원 로그인</h3>
+                    <p>가입하신 아이디와 비밀번호를 입력해 주세요<br>
+                        비밀번호는 대소문자를 구분합니다.</p>
+                    <label class="idLabel" for="idInput"></label>
+                    <input class="textFont" type="text" id="idInput" name="idInput" placeholder="MEMBER ID"
+                        onfocus="this.placeholder = ''">
+                    <label class="pwLabel " for="pwInput"></label>
+                    <input class="textFont" type="password" id="pwInput" name="pwInput" placeholder="PASSWORD"
+                        onfocus="this.placeholder = ''">
 
-                    <a href="">상품 보관함</a>
-                    <div></div>
-                    <a href="">주소록 관리</a>
-                    <div></div>
-                    <a href="">선물함</a>
+                    <button class="login_btn">LOG-IN</button>
                 </div>
                 <div>
-                    <h3>SHOPPING QUESTION</h3>
-                    <a href="">내 게시글 보기</a>
-                    <div></div>
-                    <a href="">E-mail 문의</a>
-                    <div></div>
-                    <a href="">1:1게시판</a>
-                </div>
-                <div>
-                    <h3>CUSTOMER INFO</h3>
-                    <a href="">회원정보변경</a>
-                    <div></div>
-                    <a href="">회원정보탈퇴신청</a>
+                    <h3>회원가입</h3>
+                    <p>아직 회원이 아니신가요?<br>
+                        회원가입을 하시면 다양한 혜택을 편리하게 이용하실 수 있습니다.</p>
+                    <button class="member_btn">JOIN-US</button>
+                    <p>아이디 혹은 비밀번호를 잊으셨나요?<br>
+                        간단한 정보를 입력 후 잃어버린 정보를 찾으실 수 있습니다.</p>
+                    <button class="findIdPw_btn ">ID/PASSWORD</button>
+                    <div class="member_img">
+                        <a href="../lostpass/index.html">
+                            <img src="https://danielstruth.com/design/dmcosmetic/img/log_pc.jpg" alt="로그인">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="order_box">
-                <h3>주문내역</h3>
-                <p><span class="order_name"></span>님께서 주문하신 내역입니다.</p>
-
-                <div class="order_gridbox">
-                    <div>번호</div>
-                    <div>주문일</div>
-                    <div>상품명</div>
-                    <div>결제금액</div>
-                    <div>주문상세</div>
-                    <div>배송현황</div>
+            <!-- 카카오 네이버 로그인 -->
+            <div class="reference_login">
+                <div>
+                    <a href="">
+                        <img src="https://image.makeshop.co.kr/makeshop/d3/basic_simple/member/member_sns_login_kakao.jpg"
+                            alt="카카오톡 로그인">
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="https://image.makeshop.co.kr/makeshop/d3/basic_simple/member/member_sns_login_naver.jpg"
+                            alt="네이버 로그인">
+                    </a>
                 </div>
             </div>
-            <p>- 상품명 또는 주문상세의 조회 버튼을 클릭하시면, 주문상세 내역을 확인하실 수 있습니다. <br>
-                - 배송현황의 조회 버튼을 클릭하시면, 해당 주문의 배송 현황을 한눈에 확인하실 수 있습니다.
-            </p>
         </div>
     </main>
-
     <footer>
         <div class="footer_container">
             <div>

@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>주문조회</title>
+    <title>주문 정보</title>
 
     <link rel="stylesheet" href="./order.css">
-    <script defer src="./order.js"></script>
+    <script defer src="./orderSub.js"></script>
 
     <link rel="stylesheet" href="../header.css">
     <script defer src="../header.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -73,7 +77,8 @@
                     </li>
                     <li>
                         <a class="testing_logo" href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"alt="마이페이지">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"
+                                alt="마이페이지">
                         </a>
                     </li>
                     <li>
@@ -130,16 +135,22 @@
                 </div>
             </div>
             <div class="order_box">
-                <h3>주문내역</h3>
-                <p><span class="order_name"></span>님께서 주문하신 내역입니다.</p>
+                <h3>주문 정보</h3>
+                <div class="orderSub_box">
+                    <div>
+                        <span>주문일자</span>
+                        <span>2023.11.16</span>
+                    </div>
+                    <div></div>
+                    <div>
+                        <span>주문번호</span>
+                        <span>20231106110121-8178227352</span>
+                    </div>
+                </div>
+                <h3>상품 정보</h3>
+                <div class="orderSub_gridbox">
+                    <div>배송번호</div>
 
-                <div class="order_gridbox">
-                    <div>번호</div>
-                    <div>주문일</div>
-                    <div>상품명</div>
-                    <div>결제금액</div>
-                    <div>주문상세</div>
-                    <div>배송현황</div>
                 </div>
             </div>
             <p>- 상품명 또는 주문상세의 조회 버튼을 클릭하시면, 주문상세 내역을 확인하실 수 있습니다. <br>
