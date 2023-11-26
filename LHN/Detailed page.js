@@ -33,7 +33,7 @@ booktitle5.addEventListener ('click',function() {
   heading5.classList.toggle("hidden5");
 });
 
-// 메뉴 이벤트(수정중.....어렵구만.....문제 해결이 불가능.... 최상단만 적용됨,....)
+// 메뉴 클릭시 페이지 내 해당 위치로 이동하는 이벤트
 
 const sectionIds = ['#reviewmeun', '#detailmeun', '#recommendedmeun'];
 const sections = sectionIds.map(id => document.querySelector(id));
@@ -67,6 +67,8 @@ navItems.forEach((item, index) => {
         sections[index].scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+
 
 
 

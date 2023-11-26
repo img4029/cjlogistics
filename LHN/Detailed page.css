@@ -306,13 +306,13 @@ h4 {
 
 
 .select_3 {
-    text-align: center;
-    display: flex;
-    padding: 20px;
-    margin-top: -15px;
+    margin: 0 5% 10px 14% ;
+    position: relative;
+    flex-wrap: wrap;
     font-weight: bold;
-    margin-right: -128px;
+    width: 1550px;
 }
+
 
 .select_3 a {
     color: black;
@@ -321,13 +321,8 @@ h4 {
     text-align: center;
     display: block;
     line-height: 45px;
-
 }
 
-.so1_3 {
-    margin: auto;
-    width: 1600px;
-}
 
 .i {
     float: right;
@@ -338,12 +333,13 @@ h4 {
 
 .select_3 ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .select_3 li {
     border: 1px solid silver;
     width: 220px;
-    float: left;
     display: block;
     text-align: center;
     line-height: 20px;
@@ -376,9 +372,7 @@ h4 {
     font-size: 50px;
     display: flex;
     padding: 20px;
-    margin-top: -5px;
     border: 1px silver solid;
-    height: 300px;
 }
 
 .so2_3 {
@@ -639,9 +633,8 @@ h4 {
 }
 
 .ulbox2_3 a {
-    border: solid 1px silver;
     display: inline-block;
-    width: 30px;
+    width: 50px;
     height: 25px;
     text-align: center;
     color: black;
@@ -727,4 +720,7 @@ h4 {
     color: rgb(92, 91, 91);
 }
 
+html {
+    scroll-behavior: smooth;
+}
 

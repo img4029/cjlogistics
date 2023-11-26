@@ -14,9 +14,6 @@ ul {
 a {
     text-decoration: none;
 }
-main {
-    height: 3600px;
-}
 
 .bigproduct {
     padding-top: 100px;
@@ -93,7 +90,7 @@ main {
 }
 
 .oilpage {
-    max-width: 1400px;
+    max-width: 1350px;
     margin: 100px auto 0; 
 }
 
@@ -101,18 +98,19 @@ main {
 .oilpage_3 ul{
     list-style: none;
     text-align: center;
-    float: left;
     margin-bottom: 70px;
 }
 
 .oilpage_3 img {
-    width: 370px;
+    width: 380px;
     margin-bottom: 20px;
+    
 }
 
 .oilpage_3 {
-    min-width: 100px;
-    max-width: 1400px;
+    display: flex;
+    flex-wrap:unset;
+    width: 1400px;
 }
 
 
@@ -122,11 +120,13 @@ main {
 
 .oilpage_3 li{
     line-height: 27px;
+   
 }
 
 .oilpage_3 {
-    padding-left: 100px;
     margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .oilpage_3 li:nth-child(3) a{
@@ -136,18 +136,18 @@ main {
 .ulbox2_3 a {
    
     display: inline-block;
-    width: 30px;
+    width: 50px;
     height: 25px;
     text-align: center;
     color: black;
-   
+
 }
 
 .ulbox2_3 {
     text-align: center;
     padding: 20px;
-    position: relative;
-    left: 36%; 
+    position: rative;
+    margin-bottom: 50px;
 }
 
 .ulbox2_3 img {
@@ -155,9 +155,6 @@ main {
     margin-bottom: 0;
 }
 
-.pagelist_3 img {
-    margin-left: 25px;
-}
 
 
 
