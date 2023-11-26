@@ -102,7 +102,7 @@ ul {
 
 .mypage_profile_inner {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 1.5fr;
 }
 
 .mypage_profile_inner>div {
@@ -228,7 +228,7 @@ ul {
 
 
 
-#bottom_wish_list {
+#bottom_want_item {
     text-align: center;
     display: flex;
     gap: 20px;
@@ -239,13 +239,17 @@ ul {
     flex-wrap: wrap;
 }
 
-.wishImg {
+.wantImg {
     width: 200px;
     height: 200px;
 }
 
+.wantCost {
+    font-size: 12px;
+}
 
-.wishContainer {
+
+.wantContainer {
     width: calc(25% - 15px);
 }
 

@@ -7,7 +7,7 @@
     <title>MY PAGE</title>
 
     <link rel="stylesheet" href="../header.css">
-    <script defer src="../header.js"></script>
+    <!-- <script defer src="../header.js"></script> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
     <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -24,8 +24,7 @@
     <!-- ======================= -->
     <script defer src="./javascript/mypage.js"></script>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -180,12 +179,14 @@
                                 <col>
                                 <col>
                             </colgroup>
-                            <tr>
-                                <th>DATE</th>
-                                <th>PRODUCT</th>
-                                <th>COST</th>
-                                <th>DETAIL</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>DATE</th>
+                                    <th>PRODUCT</th>
+                                    <th>COST</th>
+                                    <th>DETAIL</th>
+                                </tr>
+                            </thead>
 
                         </table>
                     </div>
@@ -202,22 +203,24 @@
 
                     <div>
                         <table class="lastest_post bottomTb">
-                            <tr>
-                                <th>DATE</th>
-                                <th>SUBJECT</th>
-                                <th>BOARD</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>DATE</th>
+                                    <th>SUBJECT</th>
+                                    <th>BOARD</th>
+                                </tr>
+                            </thead>
                         </table>
                     </div>
                 </div>
 
-                <div class="bottom_wish position">
+                <div class="bottom_want position">
                     <caption>
                         <h2>관심 상품 정보</h2>
                     </caption>
                     <a href="">+ MORE</a>
 
-                    <div id="bottom_wish_list">
+                    <div id="bottom_want_item">
                     </div>
                 </div>
 

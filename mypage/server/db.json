@@ -1,7 +1,7 @@
 {
   "profile": [
     {
-      "hname": "임명건",
+      "hname": "주용현",
       "hid": "img4029",
       "hpw": "zxc123!@#",
       "birthDate": "1993.4.18",
@@ -202,17 +202,31 @@
       ],
       "lastestPosted": [
         {
-          "date": "",
-          "subject ": "",
+          "date": "2023.01.01",
+          "subject": "배송 언제?",
           "board": ""
         }
       ],
-      "wishList ": [
+      "wishList": [
         {
           "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
           "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
           "character": "회원전용상품",
-          "price": 200000,
+          "price": 1900000,
+          "discount": 0
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 매그놀리아 힐 20ml",
+          "character": "NEW ∙ 백목련 ∙ 플로럴 ∙ 우디 ∙ 성숙함",
+          "price": 92000,
+          "discount": 0
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0170000000012.jpg?1695727097",
+          "productName": "코냑 디퓨저 블렌디크 1.",
+          "character": "작약 ∙ 블루세이지 ∙ 부드러움 ∙ 달콤함",
+          "price": 88000,
           "discount": 0
         }
       ],
