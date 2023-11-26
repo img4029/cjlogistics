@@ -142,7 +142,7 @@ function createDivfc2(ProductList, count) {
                 }
                 break;
             case 3:
-                createDiv[i].innerText = "취소 시스템(미구현)";
+                createDiv[i].innerText = "주문 취소 시스템";
                 createDiv[i].style.fontSize = '14px'
                 createDiv[i].style.color = 'blue'
                 createDiv[i].style.fontWeight = 'bold'
@@ -166,11 +166,12 @@ function createDivfc2(ProductList, count) {
         }
     }
 }
-
-function orderCancel(count) {
-    console.log(clientData1.Order);
+async function orderCancel(count) {
     clientData1.Order.splice(count, 1)
-    console.log(clientData1.Order);
-    console.log(count);
+    let patchData = {
+        Order: ''
+    };
+    patchData.Order = clientData1.Order;
+    const patchResponse = await axios.patch(`http://localhost:3000/loginComplete/1`, patchData);
 }
 getClientData();

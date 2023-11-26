@@ -11,6 +11,7 @@ let testing = document.querySelectorAll('.testing'),
     kso = document.querySelector('.kso'),
     jgj = document.querySelector('.jgj'),
     img = document.querySelector('.img'),
+    header_acide = document.querySelector('.header_acide');
     loginComplete =
     {
         hname: "",
@@ -33,10 +34,17 @@ let testing = document.querySelectorAll('.testing'),
         reserve: "", //적립금
         coupon: "", //쿠폰 
         ShoppingBasket: "",
-        Order: ""
+        Order: "",
+        lastestOrder: "", //최근 주문정보
+        lastestPosted: "", //최근 등록 게시글
+        wishList: "" //관심 상품 정보
     };
 var path = window.location.pathname,
     herfChange;
+let createBack = document.createElement('div');
+header_acide.appendChild(createBack);
+createBack.className = "create_back";
+createBack.addEventListener('click', change);
 
 function change() {
     let menuList = document.querySelector('.menu_list'),
@@ -44,6 +52,7 @@ function change() {
         menuIcon2 = document.querySelector('.menu_icon2'),
         menuIcon3 = document.querySelector('.menu_icon3'),
         menu_icon_box = document.querySelector('.menu_icon_box');
+    // createBack.style.transition = "background 1s ease-out";
     if (menu_icon_box.id == "menuBtn1") {
 
         menuList.style.animation = "slidein 0.7s";
@@ -59,6 +68,9 @@ function change() {
         menuIcon3.style.animationFillMode = "forwards";
 
         menu_icon_box.id = "menuBtn2";
+
+        createBack.style.animation = "create_back_in 1s"
+        createBack.style.display = "block"
     } else {
         menuList.style.animation = "slideout 0.7s";
 
@@ -69,6 +81,10 @@ function change() {
         menuIcon3.style.animation = "animate-line-6 1s";
 
         menu_icon_box.id = "menuBtn1";
+
+        createBack.style.animation = "create_back_out 1s"
+        setTimeout(() => { createBack.style.display = "none" }, 990);
+        
     }
 }
 async function getClientData() {
@@ -95,9 +111,9 @@ const
     ],
     loginLink = [ //로그인 후
         `${herfChange}main/index.html`,
-        "",
+        `${herfChange}mypage/mypage_Edit.html`,
         `${herfChange}mypage/mypage.html`,
-        "",
+        `${herfChange}clientcenter_main/index.html`,
         `${herfChange}order/order.html`,
         `${herfChange}jgj_daniel/store.html`,
         `${herfChange}event/event.html`,
@@ -107,7 +123,7 @@ const
         `${herfChange}member/member.html`,
         `${herfChange}idinfo/idinfo.html`,
         `${herfChange}member/member.html`,
-        "",
+        `${herfChange}clientcenter_main/index.html`,
         `${herfChange}member/member.html`,
         `${herfChange}jgj_daniel/store.html`,
         `${herfChange}event/event.html`,
@@ -116,10 +132,10 @@ const
 
 
 function loginCheck(clientData) {
-    console.log(menu_list_main);
-    console.log(menu_list_sub);
-    console.log(loginLink);
-    console.log(logioutLink);
+    // console.log(menu_list_main);
+    // console.log(menu_list_sub);
+    // console.log(loginLink);
+    // console.log(logioutLink);
     for (let i = 0; i < menu_list_main.length; i++) {
         menu_list_main[i].href = mainLink[i]
     }

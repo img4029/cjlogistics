@@ -31,3 +31,11 @@ main>div:nth-child(1)>p {
 main>div:nth-child(2)>img {
     width: 99%;
 }
+main>div:nth-child(3)>pre {
+    font-size: 20px;
+    /* padding-top: 100px; */
+}
+
+main>div:nth-child(3)>h1 {
+    padding-top: 100px;
+}

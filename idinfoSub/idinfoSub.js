@@ -42,7 +42,10 @@ let profile = {
         }
     ], //쿠폰 
     ShoppingBasket: [], //장바구니
-    Order: [] //주문내역
+    Order: [], //주문내역
+    lastestOrder: [], //최근 주문정보
+    lastestPosted: [], //최근 등록 게시글
+    wishList: [] //관심 상품 정보
 }
 
 for (let i = 1920; i < 2024; i++) {
