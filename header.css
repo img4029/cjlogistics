@@ -1,11 +1,13 @@
 /* nav 높이 72 */
-*{
+* {
     box-sizing: border-box;
 }
+
 /* 여기부터 header ======================*/
 .header_acide,
 .header_back,
 .header_top,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +18,8 @@
 >>>>>>> JYH
 =======
 >>>>>>> KSB
+=======
+>>>>>>> KSO
 .menu_list {
     position: fixed;
 }
