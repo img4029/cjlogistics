@@ -46,6 +46,7 @@ function change() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(menu_icon_box.id);
 =======
 >>>>>>> JGJ
@@ -55,6 +56,8 @@ function change() {
 >>>>>>> KSB
 =======
 >>>>>>> KSO
+=======
+>>>>>>> LHN
     if (menu_icon_box.id == "menuBtn1") {
 
         menuList.style.animation = "slidein 0.7s";
@@ -90,10 +93,13 @@ async function getClientData() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> KSB
 =======
 >>>>>>> KSO
+=======
+>>>>>>> LHN
         loginCheck();
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
@@ -119,6 +125,7 @@ async function getShoppingBasketData(id) {
 function loginCheck() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function loginCheck(clientData) {
 >>>>>>> JYH
@@ -126,6 +133,8 @@ function loginCheck(clientData) {
 >>>>>>> KSB
 =======
 >>>>>>> KSO
+=======
+>>>>>>> LHN
     if (clientData.hname != '') {
         console.log(clientData.hname);
         testing[0].addEventListener('click', () => {
@@ -134,10 +143,13 @@ function loginCheck(clientData) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> KSB
 =======
 >>>>>>> KSO
+=======
+>>>>>>> LHN
         testing[0].href = "../main/index.html";
         testing[0].innerText = "로그아웃"
         testing[1].href = "";
@@ -154,6 +166,7 @@ function loginCheck(clientData) {
         testing[2].href = "../member/member.html";
         testing[3].href = "../member/member.html";
         testing_logo.href = "../member/member.html";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -179,6 +192,8 @@ function loginCheck(clientData) {
 >>>>>>> KSB
 =======
 >>>>>>> KSO
+=======
+>>>>>>> LHN
         shopping_basket.innerText = 0;
     }
 };

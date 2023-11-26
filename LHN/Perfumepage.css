@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: Libre Baskerville;
     list-style: none;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
 }
 ul {
     padding: 0;
@@ -15,6 +17,7 @@ a {
 main {
     height: 3600px;
 }
+
 .bigproduct {
     padding-top: 100px;
 }
@@ -66,6 +69,7 @@ main {
     object-fit: cover;
     margin-top: -100px;
     vertical-align: middle;
+   
 }
 
 .oilpage ul {
@@ -121,8 +125,7 @@ main {
 }
 
 .oilpage_3 {
-    margin-left: 22%;
-    padding-left: 50px;
+    padding-left: 100px;
     margin: 50px auto;
 }
 
@@ -131,13 +134,13 @@ main {
 }
 
 .ulbox2_3 a {
-   /*  border: solid 1px silver; */
+   
     display: inline-block;
     width: 30px;
     height: 25px;
     text-align: center;
     color: black;
-    margin-bottom: 2%;
+   
 }
 
 .ulbox2_3 {
@@ -150,6 +153,10 @@ main {
 .ulbox2_3 img {
     width: 12px;
     margin-bottom: 0;
+}
+
+.pagelist_3 img {
+    margin-left: 25px;
 }
 
 

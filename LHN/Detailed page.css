@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
 .outer {
     width: 1550px;
     margin: auto;
@@ -13,11 +15,19 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
+    font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
+}
+main {
+    padding: 0 100px;
+
+    margin: auto;
 }
 
 .outer>.product_topmenu {
     border: 1px solid rgb(200, 200, 200);
     width: 1490px;
+
     margin: auto;
     font-size: 15px;
     display: flex;
@@ -29,7 +39,7 @@
 
 
 
-.product_boximg>.img>img {
+.product_boximg>.img1>img {
     width: 250px;
     height: 250px;
     border: 2px solid;
@@ -75,10 +85,12 @@ h4 {
 }
 
 .table_3 p {
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
     line-height: 60px;
+    
+}
 
+.table_3 li {
+    margin-left: -70%;
 }
 
 .table_3 th {
@@ -93,6 +105,7 @@ h4 {
 
 .table_3>table {
     line-height: 50px;
+    
 }
 
 
@@ -293,14 +306,12 @@ h4 {
 
 
 .select_3 {
-    margin: auto;
     text-align: center;
     display: flex;
     padding: 20px;
     margin-top: -15px;
     font-weight: bold;
-    width: 1600px;
-
+    margin-right: -24px;
 }
 
 .select_3 a {
@@ -676,3 +687,43 @@ h4 {
 .hidden .service_body {
     display: none;
 }
+
+.hidden .service_body {
+    display: none;
+}
+    
+.hidden,
+.hidden2,
+.hidden3,
+.hidden4,
+.hidden5 {
+    display: none;
+}
+    
+.product_rightbox li{
+    font-size: 13px; 
+    margin-left: -40%;
+    line-height: 22px;
+    color: rgb(92, 91, 91);
+
+}
+.booktitle,
+.booktitle2,
+.booktitle3,
+.booktitle4 {
+    border-top: solid 1px black;
+    margin-bottom: 17px;
+    line-height: 50px;
+}
+
+.booktitle5 p{
+    border-top: solid 1px black;
+    margin-bottom: 17px;
+    line-height: 50px;
+}
+.booktitle5 ul{
+    border-bottom: solid 1px black;
+    color: rgb(92, 91, 91);
+}
+
+
