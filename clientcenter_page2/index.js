@@ -112,8 +112,6 @@ function FAQ_display(faqRow) {
     }
 }
 
-
-
 /*==================== 여기서부터는 쭉 테이블에 들어갈 내용 ====================*/
 
 createTableHeader(['번호', '분류', '제목']);
@@ -219,17 +217,15 @@ const data = [
 
 ];
 
-
-
+    /*===== 인덱스 역순, 페이지 해당 없는 행 display: none =====*/
 for (let i = 0; i < data.length; i++) {
     createTableRow(data.length - i, data[i].type, data[i].title, data[i].question, data[i].faqAnswer);
 }
 
-
 let clean_tr = document.querySelectorAll('#faq_table tbody tr');
 
 for (let i = 0; i < clean_tr.length; i++) {
-    if (i > 27) {
+    if (i < 30) {
         clean_tr[i].style.display = 'none';
     }
 }

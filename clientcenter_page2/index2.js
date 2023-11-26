@@ -77,21 +77,22 @@ document.querySelectorAll('.faq_category_5 a li').forEach(function (li) {
         li.style.fontWeight = 'bold';
         search_clicker(search_keyword);
 
-
+        
         let page_number = document.getElementById("client_paging");
         if (search_keyword.length < 10) {
 
-            let numbering_control = page_number.querySelectorAll('a:nth-child(n+2)');
-
-
+            let numbering_control = page_number.querySelectorAll('a:nth-child(odd)');
             numbering_control.forEach(function (numbering_control) {
-
-                numbering_control.style.display = 'none';
                 
+                numbering_control.style.display = 'none';
             });
             window.scrollTo({
                 top: 0
             });
-        }
+            let rest_num = page_number.querySelectorAll('a:nth-child(even)');
+            rest_num.forEach(function (rest_num) {
+                rest_num.style.color = 'black';
+        });
+    }
     });
 });

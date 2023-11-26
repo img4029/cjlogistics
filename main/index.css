@@ -6,7 +6,7 @@
     text-decoration: none;
     margin: 0;
     font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
-    
+    overflow-x: hidden;
 }
 
 main .all_container_5 {
@@ -14,16 +14,11 @@ main .all_container_5 {
 }
 
 .header_video_5 {
-    width: 100vh;
+    width: 100%;
     height: 100vh;
     transition: opacity 0.5s ease;
     position: fixed;
     z-index: -1;
-}
-
-.best_plus_5{
-    position: relative;
-    left: 84%;
 }
 .video_padding {
     padding-top: 100vh;
@@ -34,7 +29,7 @@ main .all_container_5 {
     height: 100%;
     display: flex;
     padding-bottom: 100px;
-    gap: 10px;
+    gap: 30px;
     text-align: center;
     justify-content: center;
     background-color: white;
@@ -44,11 +39,13 @@ main .all_container_5 {
 .main_slider_5 {
     background-color: white;
     padding-top: 150px;
+    width: 100%;
 }
-.main_slider_5 h1 {
+.main_slider_5 h1, .main_slider_5 h1 a {
     text-align: center;
     font-weight: 400;
     font-size: 30px;
+    color: black;
 }
 
 .main_product_photo_5 img{
@@ -61,7 +58,7 @@ main .all_container_5 {
     width: 100%;
     height: 10%;
     display: flex;
-    gap: 10px;
+    gap: 30px;
     text-align: center;
     justify-content: center;
     padding-bottom: 200px;
@@ -111,7 +108,7 @@ main .all_container_5 {
     color: #808080;
 }
 
-.event_text_5 h1 {
+.event_text_5 h1, .event_text_5 a {
     font-weight: 400;
     padding: 10px;
     color: black;
@@ -128,10 +125,7 @@ main .all_container_5 {
     padding-bottom: 180px;
 }
 
-.event_plus_5{
-    position: relative;
-    left: 33%; 
-}
+
 .event_container_5 a img {
     width: 313px;
     height: 313px;
