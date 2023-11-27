@@ -69,7 +69,6 @@ function createDivfc(clientData2,count) {
     }
 }
 function changeDiv(ProductList, orderNumber, orderDate, count) {
-    console.log(ProductList);
     order_box.innerHTML = `
                 <h3>주문 정보</h3>
                 <div class="orderSub_box">
@@ -100,7 +99,6 @@ function createDivfc2(ProductList, count) {
     const createDiv = new Array(5),
         orderSub_gridbox = document.querySelector('.orderSub_gridbox');
         
-    console.log(ProductList);
     for (let i = 0; i < createDiv.length; i++) {
         createDiv[i] = document.createElement('div');
         orderSub_gridbox.appendChild(createDiv[i]);
@@ -135,7 +133,6 @@ function createDivfc2(ProductList, count) {
                     createDiv[i].appendChild(create1);
                     createDiv[i].appendChild(create2);
                     create1.innerText = '상품 금액:';
-                    console.log(ProductList.amountPayment);
                     create2.innerText = ProductList.amountPayment.toLocaleString() + ' 원';
                     createDiv[i].style.justifyContent = 'space-between'
                     createDiv[i].style.padding = '0 10px'
@@ -148,7 +145,7 @@ function createDivfc2(ProductList, count) {
                 createDiv[i].style.fontWeight = 'bold'
                 createDiv[i].style.cursor = "pointer"
                 createDiv[i].addEventListener('click', () => {
-                    orderCancel(count);
+                    if (confirm("정말로 주문을 취소하시겠습니까?")) orderCancel(count);
                 });
                 break;
             case 4:
