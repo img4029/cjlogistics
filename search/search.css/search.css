@@ -199,3 +199,8 @@ input {
   font-weight: 600;
   text-decoration: underline;
 }
+
+/* 검색 */
+.searchButton{
+    cursor: pointer;
+}

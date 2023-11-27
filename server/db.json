@@ -167,27 +167,134 @@
   ],
   "loginComplete": [
     {
-      "hname": "",
-      "hid": "",
-      "hpw": "",
-      "birthDate": "",
-      "sx": "",
-      "zip": "",
-      "har": "",
-      "dar": "",
-      "darCb": "",
-      "hpn": "",
-      "hem": "",
+      "hname": "임명건",
+      "hid": "img4029",
+      "hpw": "zxc123!@#",
+      "birthDate": "1993.4.18",
+      "sx": "sxman",
+      "zip": "17324",
+      "har": "경기 이천시 부발읍 대산로 759",
+      "dar": "블레싱타운",
+      "darCb": false,
+      "hpn": "01049199822",
+      "hem": "img4029@naver.com",
       "cpn": "",
       "car": "",
       "cdar": "",
       "hsp": "",
-      "img": "",
+      "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
       "totalAmountPayment": "",
       "reserve": "",
-      "coupon": "",
-      "ShoppingBasket": "",
-      "Order": "",
+      "coupon": [
+        {
+          "couponNumber": "H57HESOZ",
+          "couponType": "장바구니쿠폰",
+          "couponName": "신규가입 쿠폰",
+          "discountAmount": "10",
+          "expirationPeriod": "2023.11.21 ~ 2023.12.21"
+        }
+      ],
+      "ShoppingBasket": [
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
+          "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
+          "character": "회원전용상품",
+          "price": 200000,
+          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개 2개",
+          "quantity": 1,
+          "reserve": 2000
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000082.jpg?1697722698",
+          "productName": "솔리드 디퓨저",
+          "character": "NEW",
+          "price": 25000,
+          "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+          "quantity": 1,
+          "reserve": 250
+        }
+      ],
+      "Order": [
+        {
+          "orderDate": "2023.11.16",
+          "orderNumber": "20231106110121-8178227352",
+          "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
+          "amountPayment": 201000,
+          "ProductList": [
+            {
+              "Gifts": "",
+              "productName": "디퓨저 올리브 릿지",
+              "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+              "quantity": 1,
+              "amountPayment": 201000,
+              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+              "reserve": 2010
+            },
+            {
+              "Gifts": "(사은품)",
+              "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
+              "options": "",
+              "quantity": 1,
+              "amountPayment": "",
+              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852",
+              "reserve": 0
+            }
+          ],
+          "deliveryStatus": ""
+        },
+        {
+          "orderDate": "2023.11.17",
+          "orderNumber": "20231106110121-8178227353",
+          "productName": "디퓨저 올리브 릿지 외 1건",
+          "amountPayment": 198000,
+          "ProductList": [
+            {
+              "Gifts": "",
+              "productName": "디퓨저 올리브 릿지",
+              "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+              "quantity": 1,
+              "amountPayment": 100000,
+              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
+            },
+            {
+              "Gifts": "(사은품)",
+              "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
+              "options": "",
+              "quantity": 1,
+              "amountPayment": "",
+              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
+            }
+          ],
+          "deliveryStatus": ""
+        }
+      ],
+      "lastestOrder": [
+        {
+          "orderDate": "2023.11.16",
+          "orderNumber": "20231106110121-8178227352",
+          "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
+          "amountPayment": 201000,
+          "detail": ""
+        }
+      ],
+      "lastestPosted": [
+        {
+          "date": "",
+          "subject": "",
+          "board": ""
+        }
+      ],
+      "wishList": [
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
+          "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
+          "character": "회원전용상품",
+          "price": 200000,
+          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개 2개",
+          "quantity": 1,
+          "reserve": 2000
+        }
+      ],
       "id": 1
     }
   ],

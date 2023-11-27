@@ -1,86 +1,7 @@
 'use strict'
 
 // 1. 자바스크립트 제품 더미 불러오기
-
-// 제품 데이터별 객체 생성
-// let products = [
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
-//         product: "돔 캔들 유칼립투스 라벤더",
-//         character: "유칼립투스 ∙ 라벤더 ∙  우디 ∙ 포근함",
-//         price: "67,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
-//         product: "오일퍼퓸 20ml + 코냑캔들",
-//         character: "회원전용상품",
-//         price: "166,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
-//         product: "오일퍼퓸20ml +디켄터 리드 디퓨저",
-//         character: "회원전용상품",
-//         price: "200,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0010000000012.jpg?1695620401",
-//         product: "오일 퍼퓸 밤쉘",
-//         character: "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-//         price: "54,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0010000000022.jpg?1695620629",
-//         product: "오일 퍼퓸 불가리안 로즈",
-//         character: "장미 ∙ 플로럴 ∙ 매혹적 ∙ 중후함",
-//         price: "54,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0010000000032.jpg?1695621025",
-//         product: "오일 퍼퓸 블루 세이지 블라썸",
-//         character: "블루세이지 ∙ 허브 ∙ 우디 ∙ 시원함",
-//         price: "54,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0010000000052.jpg?1695624547",
-//         product: "오일 퍼퓸 씨 모스",
-//         character: "오셔닉 ∙ 시원함 ∙ 청량함 ∙ 중후함",
-//         price: "54,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0030000000012.jpg?1671424911",
-//         product: "디퓨저 밤쉘",
-//         character: "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-//         price: "108,000원"
-//     },
-
-//     {
-//         img: "	https://danielstruth.com/shopimages/dmcosmetic/0030000000022.jpg?1671424911",
-//         product: "디퓨저 매그놀리아 힐",
-//         character: "오셔닉 ∙ 시원함 ∙ 청량함 ∙ 중후함",
-//         price: "54,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0010000000142.jpg?1695624640",
-//         product: "오일 퍼퓸 4종 세트",
-//         character: "Pure Oil Perfume SET",
-//         price: "172,000원"
-//     },
-
-//     {
-//         img: "https://danielstruth.com/shopimages/dmcosmetic/0040000000062.jpg?1695732243",
-//         product: "코냑 캔들 밤쉘",
-//         character: "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-//         price: "74,000원"
-//     },
-// ];
+// 제품 데이터별 객체 생성 : 내부 객체는 이전 파일에
 
 // JSON DB : async axios 로 데이터 가져온 후 productData로 받아주기
 let productData;
@@ -93,21 +14,24 @@ async function getClientData1() {
         // N개의 제품 안내 문구
         let searchInfo = document.querySelector(".searchInfo");
 
+        // ... 사용하여 배열의 구조를 전체 분할하여 하나의 배열로 만들어 perfumeData 변수에 담기
         let allData =
             [...productData.perfume,
             ...productData.diffuser,
             ...productData.candle,
             ...productData.homeCare];
 
-        // 전체 데이터 끌고오기
+        // 함수 참조를 통해 전체 데이터 브라우저에 출력
         getItem(allData);
+
         // N개의 제품 안내 문구의 길이 및 문자열 리터럴 활용
         searchInfo.innerText = `${allData.length} 개의 상품이 있습니다`
-        // ... 사용하여 배열의 구조를 전체 분할하여 하나의 배열로 만들어 perfumeData 변수에 담기
 
         // 콘솔로 배열 확인
         console.log(allData);
 
+        // 검색..ㅠ.ㅠ
+        // ======================================================
         // 내림차순 오름차순 함수 호출 및 perfumeData 매개변수 참조
         highPriceBtn.addEventListener('click', () => {
             itemLowSort(allData);
@@ -115,11 +39,17 @@ async function getClientData1() {
         lowPriceBtn.addEventListener('click', () => {
             itemHighSort(allData)
         });
-        searchKey(allData);
+
+        //  이거므ㅓ이;ㅁ 불러오질 못하고계속ㄱ오류나
+        searchButton.addEventListener('click', () => {
+            return searchKey();
+        });
+
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
         console.log(err.message);
     }
+
 };
 getClientData1();
 
@@ -127,8 +57,8 @@ getClientData1();
 // -1 html 클래스 당겨오기
 
 let productItem = document.querySelector('.item_container');
+// 객체의 참조를 받아서 배열로 된 데이터를 html 형태로 구현
 function getItem(products) {
-
     for (let i = 0; i < products.length; i++) {
         let changeImg = products[i].img;
         let product_list = `<div class="products_list">
@@ -303,45 +233,48 @@ function itemLowSort(productData) {
 // 검색하는 키워드의 값을 담아줄 변수
 
 // 위에서 전체 배열에 대한 데이터를 매개변수로 받음
+
+// html 인풋박스 값, 서치 버튼 요소 소환
+let searchKeyword = document.querySelector('#searchBox1');
+const searchButton = document.querySelector('.searchButton');
+
 function searchKey(allData) {
+
     console.log(allData);
+
     // 새로받을 데이터
     let selectData = [];
-    let searchKeyword = document.querySelector('#searchBox1');
-    const searchButton = document.querySelector('.searchButton');
     // 클릭 시 입력받은 키워드 값
     searchButton.addEventListener('click', () => {
-        const keyword = searchKeyword.value;
-        console.log(keyword);
-
-        for (let i = 0; i < allData.length; i++) {
-            if (allData[i].productName.includes(keyword)) {
-                selectData = [...selectData, allData[i]];
-            }
-        }
-        // 키워드 입력시 데이터 찍히는지 확인
-        console.log(selectData);
-
-        // 찍힌 데이터 배열로 출력해서 노출시켜줘야함 하제발
-        // 여기부터 보자
-        // 검색어에 맞는 제품만 표시
-        const filteredProducts = products.filter(product => {
-            return product.product.includes(keyword);
-        });
-
-        // 검색 결과 표시
-        selectData.forEach(selectData => {
-            let product_list = `<div class="products_list">
-            <img src="${selectData.img}" class="itemImg">
-            <a href="#" class="itemName">${selectData.productName}</a>
-            <a class="itemChar">${selectData.character}</a>
-            <a class="itemPrice">${selectData.price}</a>
-            </div>`;
-            productItem.insertAdjacentHTML("beforeend", product_list);
-            console.log(productItem);
-        });
+        const keyword = searchKeyword.value
     });
 
+    console.log(keyword);
+
+    for (let i = 0; i < allData.length; i++) {
+        if (allData[i].productName.includes(keyword)) {
+            selectData = [...selectData, allData[i]];
+        }
+    }
+    // 키워드 입력시 데이터 찍히는지 확인
+    console.log(selectData);
+
+    // 검색 결과 표시..인데안먹어
+    function selectDatafunc(selectData) {
+        for (let i = 0; i < selectData.length; i++) {
+            let changeImg = selectData.img[i]
+            let product_list = `<div class="products_list">
+            <img src="${changeImg}" class="itemImg">
+            <a href="#" class="itemName">${selectData[i].productName}</a>
+            <a class="itemChar">${selectData[i].character}</a>
+            <a class="itemPrice">${selectData[i].price.toLocaleString() + '원'
+                }</a>
+        </div>`;
+
+            productItem.insertAdjacentHTML("beforeend", product_list);
+            console.log(selectDatafunc(selectData));
+        }
+    };
 }
 
 
