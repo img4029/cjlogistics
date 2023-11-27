@@ -91,9 +91,9 @@ imgleftbox2.addEventListener('click', (e) => {
 
 // 옵션 선택 후 제품을 장바구니에 담는 기능(데이터부분)
 
- let josn = ProductScent["20ml"]
 
- 
+
+
 
 
 
