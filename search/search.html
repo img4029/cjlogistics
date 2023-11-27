@@ -16,8 +16,8 @@
     <script defer src="../header.js"></script>
     <script defer src="./search.js/search.js"></script>
     <script src="https://kit.fontawesome.com/ea93a092cc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <!-- 왜이럼 컴퓨터 너 정신안차려 -->
 </head>
 
 <body>
@@ -112,7 +112,7 @@
                                 <div class="searchBox">
                                     <span>제품명 키워드</span>
                                     <input type="text" name="searchBox1" id="searchBox1" placeholder="검색하세여">
-                                    <div><a class="searchButton" href="#" style="color: aliceblue;">SEARCH</a></div>
+                                    <div class="searchButton" style="color: aliceblue;">SEARCH</div>
                                 </div>
                             </div>
                         </div>
@@ -122,16 +122,50 @@
         </div>
 
         <div class="searchInfo">
-            <div>n 개의 상품이 있습니다</div>
-            <div class="itemSort">
-                <button class="highPrice">높은가격순</button>
-                <button class="lowPrice">낮은가격순</button>
-            </div>
+            <div></div>
+        </div>
+        <div class="itemSort">
+            <button class="highPrice">높은가격순</button>
+            <button class="lowPrice">낮은가격순</button>
         </div>
 
         <div class="item_container"></div>
-        <div class="pageButtons">페이지네이션버튼</div>
+        <div class="pageButtons">pageButtons</div>
     </main>
+
+    <footer>
+        <div class="footer_container">
+            <div>
+                <ul>
+                    <li><a href="">홈</a></li>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">서비스</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보 처리방침</a></li>
+                    <li><a href="">기업 구매 안내</a></li>
+                    <li><a href="">교환/환불 정책</a></li>
+                </ul>
+            </div>
+            <!-- 로고 -->
+            <div class="footer_logo">
+                <a href="">
+                    <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/f_logo.png" alt="">
+                </a>
+            </div>
+            <!-- 팀원 이름 정보 -->
+            <div class="Team_members">
+                <p><span>주용현</span><span class="jyh"></span></p>
+                <p><span>이혜나</span><span class="lhn"></span></p>
+                <p><span>김수빈</span><span class="ksb"></span></p>
+                <p><span>김수옥</span><span class="kso"></span></p>
+                <p><span>장근정</span><span class="jgj"></span></p>
+                <p><span>임명건</span><span class="img"></span></p>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
+
 
 </html>
