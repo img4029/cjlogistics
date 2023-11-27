@@ -23,7 +23,10 @@
 
     <script src="https://kit.fontawesome.com/647f0863a7.js" crossorigin="anonymous"></script>
     <script defer src="./javascript/mypage_coupon.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 
 <body>
     <header>
@@ -109,20 +112,20 @@
                     <div class="mypage_shop_info_3 info">
                         <h2><i class="fa-solid fa-circle-info"></i> shopping info</h2>
                         <div class="mypage_shop_3 linkAll">
-                            
+
                         </div>
                     </div>
                     <div class="mypage_QnA_info_3 info linkAll">
                         <h2><i class="fa-solid fa-circle-question"></i> shopping question</h2>
                         <div class="mypage_QnA_3">
-                            
+
                         </div>
                     </div>
 
                     <div class="mypage_customer_info_3 info linkAll">
                         <h2><i class="fa-solid fa-person-circle-question"></i> customer info</h2>
                         <div class="mypage_customer_3">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -145,17 +148,17 @@
 
             <div class="coupon_mycoupon_outer">
                 <div class="mycoupon_head">
-                    <div><a href="">보유 쿠폰()</a></div>
-                    <div><a href="">다운로드 가능쿠폰()</a></div>
+                    <div class="haveCp nation">보유쿠폰</div>
+                    <div class="downloadCp nation">다운로드 가능쿠폰</div>
                 </div>
 
                 <div class="mycoupon_help">
-                    <p>
-                        <strong>OOO님</strong>이 보유하고 있는 쿠폰은 총 1장 입니다.
+                    <p class="count_coupon">
+
                     </p>
-                    <select name="coupon_have" id="coupon_have">
-                        <option value="#">유효기간 순</option>
-                        <option value="#">쿠폰발급 순</option>
+                    <select name="coupon_have" class="coupon_have">
+                        <option class="option expiration">할인율 순</option>
+                        <option class="option issue">유효기간 순</option>
                     </select>
                 </div>
 

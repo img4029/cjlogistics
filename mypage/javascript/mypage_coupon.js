@@ -1,80 +1,281 @@
 'use strict'
 
 
-let profileData = [
-    {
-        img: "./image/bg1.jpg",
-        name: '김수빈 [임의 생성 이메일]',
-        phone: '010-5764-3321',
-        email: 'gjnsdx123@naver.com',
-        address: '경기도~~~~~~~~~~~~~~',
-        totalCost: '1,000,000 원',
-        reserves: ',345 원',
-        coupon: '3 개',
-        id: 1,
-    },
-    {
-        img: "./image/bg2.jpg",
-        name: '이해나 [임의 생성 이메일]',
-        phone: '010-2345-2176',
-        email: 'fhddf2@naver.com',
-        address: '서울특별시~~~~~~~~~~~~~~',
-        totalCost: '2,000,000 원',
-        reserves: '3,345 원',
-        coupon: '3 개',
-        id: 2,
-    }];
+let myData;
+let myData2;
 
-// 1.   내가 만든 더미데이터에서 주소는 address 라고 했고,
-//      형이 만든 db.json 파일에 보면 주소를 
-//      "har": "경기 이천시 부발읍 대산로 759" 라고 하고
+async function getClientData1() {
+    try {
 
-//      총 사용금액을 나는 totalCost 라고 썼고,
-//      
-//      이 부분이 문제 되는가?
-// 2.   
+        const response = await axios.get('http://localhost:3000/loginComplete');
 
+        myData = response.data;
 
+        // console.log(typeof (Object.values(myData[0].coupon[0])[4]));
+        // console.log(typeof (Object.values(myData[0].coupon[0])[4]) === "number");
 
-{/* <span><a href=""></a></span> */ }
-
-let outer = document.querySelector('.mypage_info_outer_3'),
-    linkAll = outer.querySelectorAll('.linkAll');
-
-// console.log(linkAll);
-
-let shoppingCategory = ['쿠폰내역', '적립금내역', '오늘본상품', '보관함', '주소록관리', '선물함'],
-    serviceCategory = ['내 게시물 보기', 'e-mail문의', '1:1게시판'],
-    customerCategory = ['회원정보변경', '회원정보탈퇴신청'];
-
-// 카테고리 배열
-// Shopcategory.push('추가 카테고리');
-// 새로운 카테고리 추가 시
-console.log(serviceCategory[0])
-function makeLink() {
-
-    for (let i = 0; i < shoppingCategory.length; i++) {
-        let shoppingTag = document.createElement('a')
-        linkAll[0].appendChild(shoppingTag);
-        shoppingTag.innerText += shoppingCategory[i];
+        
+        change();
+        console.log(myData[0].coupon);
+        
+        sortDownCoupon();
+        console.log(myData[0].coupon);
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
     }
+}
+getClientData1();
 
-    for (let i = 0; i < serviceCategory.length; i++) {
-        let serviceTag = document.createElement('a')
-        linkAll[1].appendChild(serviceTag);
-        serviceTag.innerText += serviceCategory[i];
+async function getClientData2() {
+    try {
+
+        const response = await axios.get('http://localhost:3000/canDownload');
+
+        myData2 = response.data;
+        // changeDate(String(Object.values(myData2[0])[3]));
+        // console.log(Object.values(myData2[0])[3]);
+
+        // downFrame();
+        change();
+        sortHaveCoupon();
+        
+
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
     }
+}
+getClientData2();
 
-    for (let i = 0; i < customerCategory.length; i++) {
-        let customerTag = document.createElement('a')
-        linkAll[2].appendChild(customerTag);
-        customerTag.innerText += customerCategory[i];
+
+
+// ===================================================
+let couponList = document.querySelector('.mycoupon_list');
+
+
+// ===========================================================
+function haveFrame() {
+    let couponList = document.querySelector('.mycoupon_list');
+    let category = ['쿠폰 번호', '쿠폰 유형', '쿠폰 이름', '쿠폰 안내', '유효 기간'];
+    let outer = document.createElement('div');
+
+    couponList.innerHTML = "";
+    couponList.appendChild(outer);
+    outer.setAttribute('class', 'headC');
+
+    for (let i = 0; i < 5; i++) {
+        let ar = new Array(category.length);
+        ar[i] = document.createElement('div');
+        outer.appendChild(ar[i]);
+        if (category[i] === "쿠폰 안내") {
+            ar[i].setAttribute('class', 'headDetail couponInfo');
+            ar[i].innerText = category[i];
+        } else {
+            ar[i].setAttribute('class', 'headDetail');
+            ar[i].innerText = category[i];
+        }
     }
 }
 
-makeLink();
+
+
+function downFrame() {
+    let couponList = document.querySelector('.mycoupon_list');
+    let category = ['쿠폰 유형', '쿠폰 이름', '쿠폰 안내', '유효 기간', '쿠폰 받기'];
+    let outer = document.createElement('div');
+
+    couponList.innerHTML = "";
+    couponList.appendChild(outer);
+    outer.setAttribute('class', 'headC');
+
+    for (let i = 0; i < 5; i++) {
+        let ar = new Array(category.length);
+        ar[i] = document.createElement('div');
+        outer.appendChild(ar[i]);
+        if (category[i] === "쿠폰 안내") {
+            ar[i].setAttribute('class', 'headDetail couponInfo');
+            ar[i].innerText = category[i];
+        } else {
+            ar[i].setAttribute('class', 'headDetail');
+            ar[i].innerText = category[i];
+        }
+    }
+}
+// ===========================================================
 
 
 
 
 
+// ===========================================================
+function addHaveCoupon() {
+    let link = document.querySelectorAll('.nation');
+    let count_coupon = document.querySelector('.count_coupon');
+
+    link[0].innerText = `보유쿠폰(${(myData[0].coupon).length})`
+
+    count_coupon.innerHTML = `<strong>${myData[0].hname}</strong> 님이 보유하신 쿠폰은 <strong>${(myData[0].coupon).length}</strong>장 입니다.`
+
+    for (let i = 0; i < myData[0].coupon.length; i++) {
+        let arr_1 = new Array(myData[0].coupon.length);
+        arr_1[i] = document.createElement('div');
+        couponList.appendChild(arr_1[i])
+        arr_1[i].setAttribute('class', 'cartCount');
+        for (let j = 0; j < Object.values(myData[0].coupon[i]).length; j++) {
+            let arr_2 = new Array(Object.values(myData[0].coupon[i]).length);
+            arr_2[j] = document.createElement('div');
+            arr_1[i].appendChild(arr_2[j]);
+            if ((Object.keys(myData[0].coupon[i])[j]) === "expirationPeriod") {
+                arr_2[j].innerText = changeDate(String(Object.values(myData[0].coupon[i])[j]));
+            } else {
+                arr_2[j].innerText = Object.values(myData[0].coupon[i])[j]
+            }
+            if (Object.keys(myData[0].coupon[i])[j] === "discountAmount") {
+                arr_2[j].setAttribute('class', 'cartDetail couponInfo');
+            } else {
+                arr_2[j].setAttribute('class', 'cartDetail');
+            }
+        }
+    }
+}
+
+
+function addDownCoupon() {
+    let link = document.querySelectorAll('.nation');
+    let count_coupon = document.querySelector('.count_coupon');
+    link[1].innerText = `다운로드 쿠폰(${myData2.length})`
+    count_coupon.innerHTML = `다운로드 가능한 쿠폰은 <strong>${myData2.length}</strong> 장 입니다.`
+
+    for (let i = 0; i < myData2.length; i++) {
+        let arr_1 = new Array(myData2.length);
+        arr_1[i] = document.createElement('div');
+        couponList.appendChild(arr_1[i])
+        arr_1[i].setAttribute('class', 'cartCount');
+        for (let j = 0; j < Object.values(myData2[i]).length; j++) {
+            let arr_2 = new Array(Object.values(myData2[i]).length);
+            arr_2[j] = document.createElement('div');
+            arr_1[i].appendChild(arr_2[j]);
+            if (Object.keys(myData2[i])[j] === "expirationPeriod") {
+                arr_2[j].innerText = changeDate(String(Object.values(myData2[i])[j]));
+            } else {
+                arr_2[j].innerText = Object.values(myData2[i])[j]
+            }
+            if (Object.keys(myData2[i])[j] === "discountAmount") {
+                arr_2[j].setAttribute('class', 'cartDetail couponInfo');
+            } else if (Object.keys(myData2[i])[j] === "downloadBt") {
+                arr_2[j].setAttribute('class', 'cartDetail');
+                arr_2[j].innerHTML = `<button class="downBt">받기</button>`
+            } else {
+                arr_2[j].setAttribute('class', 'cartDetail');
+            }
+        }
+    }
+}
+
+// ===========================================================
+
+
+
+
+// function pushCoupon() {
+//     let pushBt = document.querySelectorAll('.downBt');
+//     pushBt.addEventListener('click', ({
+
+//     }))
+// }
+
+
+
+// =================================
+// 쿠폰 발급일이 숫자 20231201 인 형태일 때,
+// 년-월-일로 나눠주기 위해
+function changeDate(date) {
+
+    var year = date.substr(2, 2);
+    var month = date.substr(4, 2);
+    var day = date.substr(6, 2);
+
+    let result = year + "-" + month + "-" + day
+    return result
+}
+// ===============================
+
+
+// =====================================================
+function makeHaveCoupon() {
+    haveFrame();  // 틀 만들기
+    addHaveCoupon(); // myData 데이터 받아오기
+}
+function makeDownCoupon() {
+    downFrame();
+    addDownCoupon();
+}
+
+function change() {
+    let havecp = document.querySelector('.haveCp'),
+        downloadCp = document.querySelector('.downloadCp');
+
+    havecp.addEventListener('click', makeHaveCoupon)
+
+    downloadCp.addEventListener('click', makeDownCoupon);
+}
+// ========================================================
+
+function selectOption() {
+    let option = document.querySelectorAll('.option')
+    option[0].addEventListener('click',);
+    option[1].addEventListener('click',);
+}
+
+function sortHaveCoupon() {
+
+    let sortedHd = myData2.sort(letSort("expirationPeriod"));
+    return sortedHd;
+}
+
+
+function sortDownCoupon() {
+
+    let sortedDd = (myData[0].coupon).sort(letSort("expirationPeriod"));
+    return sortedDd;
+}
+
+// function sortDownCoupon() {
+
+// }
+
+
+function letSort(key) {
+    return function (a, b) {
+        if (a[key] > b[key]) {
+            return 1;
+        } else if (a[key] < b[key]) {
+            return -1;
+        }
+
+        return 0;
+    }
+}
+
+let data = [
+    {
+        "name": "가루1",
+        "age": 21,
+        "money": 67000
+    },
+    {
+        "name": "가루2",
+        "age": 59,
+        "money": 21000
+    },
+    {
+        "name": "가루3",
+        "age": 7,
+        "money": 38000
+    }
+];
+// console.log(data);
+// console.log(myData2);
+
+// data.sort(arrOrder("money"));
