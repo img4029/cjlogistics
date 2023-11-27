@@ -211,6 +211,8 @@ a {
     border-top: 2px solid;
     /* padding: 15px; */
     display: flex;
+    /* background-color: rgba(128, 128, 128, 0.359); */
+    gap: 1px;
 }
 
 .cartCount {
@@ -224,6 +226,7 @@ a {
     flex-basis: 20%;
     border-bottom: 1px solid rgba(128, 128, 128, 0.342);
     padding: 15px;
+    background-color: rgba(128, 128, 128, 0.359);;
 
 }
 
@@ -234,4 +237,9 @@ a {
 
 .couponInfo {
     flex-basis: 35%;
+}
+
+.downBt:hover {
+    background-color: black;
+    color: aliceblue;
 }

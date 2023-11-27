@@ -26,12 +26,9 @@ ul {
 }
 
 .mypage_top_3>h1 {
-    text-align: center;
     padding-top: 200px;
     padding-bottom: 50px;
 }
-
-
 
 .mypage_top_3>h1>a {
     font-size: 30px;

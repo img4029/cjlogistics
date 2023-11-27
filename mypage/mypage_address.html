@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY PAGE</title>
 
+    <link rel="stylesheet" href="../header.css">
+    <!-- <script defer src="../header.js"></script> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
     <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -15,18 +17,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
         rel="stylesheet">
-<!-- ================================================= -->
-    <link rel="stylesheet" href="../header.css">
-    <!-- <script defer src="../header.js"></script> -->
-<!-- ================================================ -->
-    <link rel="stylesheet" href="./CSS/mypage_coupon.css">
-<!-- ============================================== -->
+    <!-- ====================== -->
     <script src="https://kit.fontawesome.com/647f0863a7.js" crossorigin="anonymous"></script>
-    <script defer src="./javascript/mypage_coupon.js"></script>
-<!-- ============================================ -->
+    <!-- ======================== -->
+    <link rel="stylesheet" href="./CSS/mypage_address.css">
+    <!-- ======================= -->
+    <script defer src="./javascript/mypage_address.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-
 
 <body>
     <header>
@@ -100,7 +99,6 @@
             <a href="../index.html">Daniel's Truth</a>
         </div>
     </header>
-
     <main>
         <div class="mypage_outer_3">
             <div class="mypage_top_3">
@@ -111,63 +109,49 @@
                 <div class="mypage_info_outer_3">
                     <div class="mypage_shop_info_3 info">
                         <h2><i class="fa-solid fa-circle-info"></i> shopping info</h2>
-                        <div class="mypage_shop_3 linkAll">
-                            
+                        <div class="mypage_shop_3">
+                            <span><a href="">주문내역</a></span>
+                            <span><a href="mypage_coupon.html">쿠폰내역</a></span>
+                            <span><a href="">적립금내역</a></span>
+                            <span><a href="">오늘본상품</a></span>
+                            <span><a href="">보관함</a></span>
+                            <span><a href="">주소록관리</a></span>
+                            <span><a href="">선물함</a></span>
                         </div>
                     </div>
-                    <div class="mypage_QnA_info_3 info linkAll">
+                    <div class="mypage_QnA_info_3 info">
                         <h2><i class="fa-solid fa-circle-question"></i> shopping question</h2>
                         <div class="mypage_QnA_3">
-
+                            <span><a href="">내 게시물 보기</a></span>
+                            <span><a href="">e-mail문의</a>
+                            </span>
+                            <span><a href="">1:1게시판</a></span>
                         </div>
                     </div>
 
-                    <div class="mypage_customer_info_3 info linkAll">
+                    <div class="mypage_customer_info_3 info">
                         <h2><i class="fa-solid fa-person-circle-question"></i> customer info</h2>
                         <div class="mypage_customer_3">
-
+                            <span><a href="mypage_edit.html">회원정보변경</a></span>
+                            <span><a href="">회원정보탈퇴신청</a></span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <fieldset class="coupon_enter_outer">
-                <div class="coupon_enter_inner">
-                    <form action="#" method="post">
-                        <label>
-                            <strong>쿠폰 인증번호 등록하기</strong>
-                            <input type="text" placeholder="시리얼 코드를 입력해주세요.">
-                        </label>
-                        <button>등록</button>
-                        <!-- 등록 하실 시리얼번호를
-                  입력하세요 alert -->
-                    </form>
-                    <p>* 오프라인,이메일,모바일을 통해 발급 받으신 쿠폰인증번호를 입력해주시면 발급 가능합니다.</p>
-                </div>
-            </fieldset>
-
-            <div class="coupon_mycoupon_outer">
-                <div class="mycoupon_head">
-                    <div class="haveCp nation">보유쿠폰</div>
-                    <div class="downloadCp nation">다운로드 가능쿠폰</div>
-                </div>
-
-                <div class="mycoupon_help">
-                    <p class="count_coupon">
-
-                    </p>
-                    
-                </div>
-
-                <div class="mycoupon_list">
-
-                </div>
-
+            <h1>주소록 관리</h1>
+            <div class="address_outer">
+                    <div><input type="checkbox"></div>
+                    <div>배송지명</div>
+                    <div>주소</div>
+                    <div>연락처</div>
+                    <div>주문 메세지</div>
+                    <div>관리</div>
             </div>
 
-        </div>
-    </main>
+            <button>배송지 추가</button><button>선택 삭제</button>
 
+    </main>
     <footer>
         <div class="footer_container">
             <div>
@@ -198,6 +182,11 @@
             </div>
         </div>
     </footer>
+
+
+
+
+
 </body>
 
 </html>
