@@ -21,7 +21,7 @@ async function getClientData() {
         }
         console.log(myData.wishList.length);
         for (let i = 0; i < myData.wishList.length; i++) {
-            makeWishFrame(myData.wishList[i]);
+            makeWishFrame(myData.wishList[i], i, myData.wishList);
         }
         cart.appendChild(endDiv);
         endDiv.style.gridColumn = "span 8";
@@ -55,7 +55,7 @@ function makeCartFrame(ShoppingBasket, count, myData) {
                 break;
             case 2:
                 makeFrame.className = divClass[i];
-                makeFrame.style.alignItems = "flex-start"
+                makeFrame.style.alignItems = "flex-start";
                 let p1 = document.createElement('p');
                 let p2 = document.createElement('p');
                 makeFrame.appendChild(p1);
@@ -96,7 +96,7 @@ function makeCartFrame(ShoppingBasket, count, myData) {
                 <p>배송조건:기본배송(조건)</p>
                 <p>주문금액이 40,000원 미만시</p>
                 <p>배송비 3,000원이 청구됩니다.</p>
-                </div>`
+                </div>`;
                 break;
             case 7:
                 makeFrame.className = divClass[i];
@@ -107,19 +107,21 @@ function makeCartFrame(ShoppingBasket, count, myData) {
                 makeFrame.appendChild(btn2);
                 btn1.innerHTML = "WISH LIST";
                 btn1.addEventListener('click', () => {
-                    wishListMove(ShoppingBasket, count, myData);
-                })
+                    deleteCartList(count, myData);
+                    cartListMove(ShoppingBasket);
+                });
                 btn2.innerHTML = "DELETE";
                 btn2.addEventListener('click', () => {
-
-                })
+                    deleteCartList(count, myData);
+                    cartListMove(ShoppingBasket);
+                });
                 break;
             default:
                 break;
         }
     }
 };
-function makeWishFrame(wishList) { 
+function makeWishFrame(wishList, count, myData) { 
     for (let i = 0; i < 7; i++) {
         let makewish = document.createElement('div');
         wish.appendChild(makewish);
@@ -142,20 +144,9 @@ function makeWishFrame(wishList) {
                 break;
             case 2:
                 makewish.className = divClass2[i];
-                let div1 = document.createElement('div');
                 let input = document.createElement('input');
-                let div2 = document.createElement('div');
-                makewish.appendChild(div1);
                 makewish.appendChild(input);
-                makewish.appendChild(div2);
-                div1.innerText = "-";
-                div2.innerText = "+";
                 input.value = Number(wishList.quantity);
-                div1.addEventListener('click', () => {
-                    if (Number(input.value) > 1) input.value -= 1;
-                    else alert("1개 보다 적은 수는 주문 할 수 없습니다");
-                });
-                div2.addEventListener('click', () => input.value = Number(input.value) + 1);
                 break;
             case 3:
                 makewish.innerHTML = wishList.reserve.toLocaleString();
@@ -172,33 +163,65 @@ function makeWishFrame(wishList) {
                 makewish.className = divClass2[i];
                 let btn1 = document.createElement('div');
                 let btn2 = document.createElement('div');
-                // makeFrame.style.alignItems = "flex-start"
                 makewish.appendChild(btn1);
                 makewish.appendChild(btn2);
                 btn1.innerHTML = "CART";
                 btn2.innerHTML = "DELETE";
+                btn1.addEventListener('click', () => {
+                    deleteWishList(count, myData);
+                    wishListMove(wishList);
+                });
+                btn2.addEventListener('click', () => {
+                    deleteWishList(count, myData);
+                    wishListMove(wishList);
+                });
                 break;
             default:
                 break;
         }
     }
 };
-async function wishListMove(ShoppingBasket, count, myData) {
+async function deleteCartList(count, myData) {
     try {
-        console.log(ShoppingBasket);
         myData.splice(count, 1)
-        console.log(myData);
         let patchData = {
             ShoppingBasket: ''
         };
         patchData.ShoppingBasket = myData;
-        console.log(patchData);
         const patchResponse = await axios.patch(`http://localhost:3000/loginComplete/1`, patchData);
-        /* 
-            delete 메서드는 성공한 경우, 삭제된 값이 아닌 빈 객체{} 를 반환.
-        */
-        // const deleteResponse = await axios.delete(`http://localhost:3000/clientData/${count}`);
-
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
+    }
+}
+async function deleteWishList(count, myData) {
+    try {
+        myData.splice(count, 1)
+        let patchData = {
+            wishList: ''
+        };
+        patchData.wishList = myData;
+        const patchResponse = await axios.patch(`http://localhost:3000/loginComplete/1`, patchData);
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
+    }
+}
+async function cartListMove(ShoppingBasket) {
+    try {
+        let myDataCopy = myData;
+        myDataCopy.wishList = [...myData.wishList, ShoppingBasket];
+        const putResponse = await axios.put(`http://localhost:3000/loginComplete/1`, myDataCopy);
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
+    }
+}
+async function wishListMove(wishList) {
+    try {
+        let myDataCopy = myData;
+        myDataCopy.ShoppingBasket = [...myData.ShoppingBasket, wishList];
+        const putResponse = await axios.put(`http://localhost:3000/loginComplete/1`, myDataCopy);
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
         console.log(err.message);
