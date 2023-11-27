@@ -1,6 +1,5 @@
 'use strict';
 
-
 // 위아래버튼 클릭시 페이지 내 해당 위치로 이동하는 이벤트
 
 const sectionIds = ['#topbuttons_3', '#bottombuttons_3'];    /* ID 식별자 정의 */
@@ -13,7 +12,7 @@ sections.forEach(section => observer.observe(section));
 
 function callback(entries) {
     const lastEntry = entries[entries.length - 1];
-    const isLastEntryVisible = lastEntry.isIntersecting && lastEntry.intersectionRatio >= 0.65;
+    const isLastEntryVisible = lastEntry.isIntersecting && lastEntry.intersectionRatio >= 0.75;
     const navIndex = isLastEntryVisible ? entries.length - 1 : entries.findIndex(entry => entry.isIntersecting);
     selectNavItem(navIndex);
 }   /* ntersectionObserver의 콜백 함수로, 네비게이션아이템을 호출 => [href="${id}"]  */
