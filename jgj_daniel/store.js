@@ -176,14 +176,13 @@ for (let i = 0; i < storelist.length; i++){
         popup_icon[i].src=`./image/popup-icon.png`;
     }
 }
+// const store_list2 = document.querySelectorAll(".storeee");
 
-
-// ============================
 // ============================
 // 지도
 
 var mapContainer = document.getElementById('map'),
-// 지도를 표시할 div 
+// 지도를 표시
     mapOption = { 
         center: new kakao.maps.LatLng(37.5611062, 126.9811552), 
         // 지도의 중심좌표 __서울
@@ -192,22 +191,20 @@ var mapContainer = document.getElementById('map'),
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); 
-// 지도를 생성
+// 지도 생성
 
-// var imageSrc = "./image/main_logo_black.png";
 var imageSrc = "./image/main_logo_black.png";
-// 마커를 생성
+// 마커 이미지 파일
 var imageSize = new kakao.maps.Size(50, 50);
-//이미지 크기
+// 마커 이미지 크기
 var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-//창 닫는거 기본값.
+// 마커@!@!!!
 var openInfowindow = null;
+// 창 닫는거 기본값.
 
 // =========================
-// =========================
-// =========================
 
-
+let dotColor=0;
 for (var i = 0; i < storelist.length; i ++) {
     (function (index) {
         // 클로저 이용.
@@ -215,10 +212,9 @@ for (var i = 0; i < storelist.length; i ++) {
             map: map, // 마커를 표시할 지도
             position: storelist[i].latlng, // 마커의 위치
             image : markerImage, // 마커 이미지 
-            clickable: true
-            
+            // clickable: true
+            // range: 40000,
         });
-    
         var iwRemoveable = true; 
     
         var infowindow = new kakao.maps.InfoWindow({
@@ -236,66 +232,75 @@ for (var i = 0; i < storelist.length; i ++) {
         });
 
         
-
+        
         kakao.maps.event.addListener(marker, 'click', function() {
             if (openInfowindow) {
                 openInfowindow.close();
-            }
-            
+            }    
+            // 원래 열려있던 위도우 닫고
             // 마커 위에 인포윈도우를 표시
             infowindow.open(map, marker);   
             openInfowindow = infowindow;
         });
         
+        const store_list2 = document.querySelectorAll(".storeee");
+        const dot = store_list2[i].querySelector(".dot");
+        // console.log(dot);
+        // console.log(storelist.length);
+        // dot.style.backgroundColor = 'white';
+
+        store_list2[i].addEventListener('click', () => {
+            if (openInfowindow) {
+                openInfowindow.close();
+            }    
+            infowindow.open(map, marker);   
+            openInfowindow = infowindow;
+
+            // ===== dot 클릭 검정 및 null 설정 =====
+            
+            for (let n = 0; n < storelist.length; n++) {
+                const dotterst = store_list2[n].querySelector(".dot");
+                dotterst.style.backgroundColor = null;
+            }
+            dot.style.backgroundColor = 'black';
+        });
+        
+
     })(i);
     
 }
         
         
+// =====================================================================
+// =========검색창=====================
 
+for (let i = 0; i < storelist.length; i++){
+    const loca_search = storelist[i].location;
 
-// ===============================================================================
-// ===============================================================================
-
-        // storeee.forEach(function(){
-        //     storeee.addEventListener('click', function() {
-        //         infowindow.open(map, marker);
-        //     });
-        // });
-
-        // =====================================================================================
-        // =====================================================================================
-
-        // kakao.maps.event.addListener(storeee, 'click', function() {
-        //     console.log(storee);
-        //     if (openInfowindow) {
-        //         openInfowindow.close();
-        //     }
-
-        //     // 마커 위에 인포윈도우를 표시
-        //     infowindow.open(map, marker);   
-        //     openInfowindow = infowindow;
-        // });
-
-        // ==============================================================================================
-        // ==============================================================================================
-
-        // document.querySelectorAll(".storeee")[i].addEventListener("click", function(){
-        //     const selectedLatlng = storelist[i].latlng;
+    const seoul_sel = loca_search.includes("서울");
+    const gyeonggi_sel = loca_search.includes("경기도");
     
-        //     map.setCenter(selectedLatlng);
+    // 지역 포함된거 const 선언 해주고
+    // if문 써가지고 저 콘스트 면 이것저것들 다 나열해라~
+    // 하면됨. 
 
-        //     if (openInfowindow) {
-        //         openInfowindow.close();
-        //     }
-    
-        // //     // 마커 위에 인포윈도우를 표시
-        //     infowindow.open(map, marker);   
-        //     openInfowindow = infowindow;
-    
-        //     });
 
-        
-        ///////////////////////////////////////////////////////////////////
+
+
+    // console.log(seoul_sel);
+
+
+}
+
+
+
+
+
+
+
+// if (selectcity.value="seoul") {
+// }
+
+
 
 

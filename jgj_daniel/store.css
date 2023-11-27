@@ -154,7 +154,8 @@ main{
     width: 500px;
     height: 600px;
     /* margin-left: 50px; */
-    /* position: fixed; */
+    position: sticky;
+    top: 200px;
 }
 .mapInnerBox{
     width: 300px;
@@ -162,5 +163,5 @@ main{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-
+    /* display: flex; */
 }
