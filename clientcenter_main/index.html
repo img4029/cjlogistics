@@ -9,10 +9,12 @@
     <title>FAQ 화면</title>
 
     <link rel="stylesheet" href="../../header.css">
-    <script defer src="../../header.js"></script>
+    <!-- <script defer src="../../header.js"></script> -->
 
     <link rel="stylesheet" href="./index.css">
     <script defer src="./index2.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -120,22 +122,22 @@
                 </div>
 
                 <ul class="faq_category_5">
-                    <a href= "">
+                    <a href="">
                         <li>전체보기 </li>
                     </a>
-                    <a href= "javascript: ">
+                    <a href="javascript: ">
                         <li data-word="회원가입/정보">회원가입/정보</li>
                     </a>
-                    <a href= "javascript: ">
+                    <a href="javascript: ">
                         <li data-word="결제/배송">결제/배송</li>
                     </a>
-                    <a href= "javascript: ">
+                    <a href="javascript: ">
                         <li data-word="교환/반품/환불">교환/반품/환불</li>
                     </a>
-                    <a href= "javascript: ">
+                    <a href="javascript: ">
                         <li data-word="마일리지 적립">마일리지 적립</li>
                     </a>
-                    <a href= "javascript: ">
+                    <a href="javascript: ">
                         <li data-word="기타">기타</li>
                     </a>
                 </ul>
@@ -145,11 +147,11 @@
                 </div>
 
             </div>
-                <div id="client_paging">
-                    <a href="">1</a>
-                    <a href="../clientcenter_page2/index.html">2</a>
-                    <a href="../clientcenter_page2/index.html">>></a>
-                </div>
+            <div id="client_paging">
+                <span class="prev-button">이전</span>
+                <span class="number-button">1</span>
+                <span class="next-button">이후</span>
+            </div>
         </div>
 
     </main>

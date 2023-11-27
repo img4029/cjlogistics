@@ -19,6 +19,7 @@ main .all_container_5 {
     transition: opacity 0.5s ease;
     position: fixed;
     z-index: -1;
+    overflow-y: hidden;
 }
 .video_padding {
     padding-top: 100vh;

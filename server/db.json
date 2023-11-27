@@ -17,22 +17,22 @@
       "cdar": "",
       "hsp": "",
       "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
-      "totalAmountPayment" : "",
+      "totalAmountPayment": "",
       "reserve": "",
       "coupon": [
         {
-          "couponNumber" : "H57HESOZ",
-          "couponType" : "장바구니쿠폰",
-          "couponName" : "신규가입 쿠폰",
-          "discountAmount" :"10",
-          "expirationPeriod" : "2023.11.21 ~ 2023.12.21"
+          "couponNumber": "H57HESOZ",
+          "couponType": "장바구니쿠폰",
+          "couponName": "신규가입 쿠폰",
+          "discountAmount": "10",
+          "expirationPeriod": "2023.11.21 ~ 2023.12.21"
         }
       ],
       "ShoppingBasket": [],
       "Order": [
         {
           "orderDate": "2023.11.16",
-          "orderNumber" : "20231106110121-8178227352",
+          "orderNumber": "20231106110121-8178227352",
           "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
           "amountPayment": "201,000원",
           "ProductList": [
@@ -57,7 +57,7 @@
         },
         {
           "orderDate": "2023.11.16",
-          "orderNumber" : "20231106110121-8178227353",
+          "orderNumber": "20231106110121-8178227353",
           "productName": "디퓨저 올리브 릿지 외 1건",
           "amountPayment": 198000,
           "ProductList": [
@@ -100,7 +100,7 @@
       "cdar": "",
       "hsp": "",
       "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
-      "totalAmountPayment" : "",
+      "totalAmountPayment": "",
       "reserve": "",
       "coupon": [],
       "ShoppingBasket": [],
@@ -126,14 +126,14 @@
       "cdar": "",
       "hsp": "",
       "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
-      "totalAmountPayment" : "",
+      "totalAmountPayment": "",
       "reserve": "",
       "coupon": [],
       "ShoppingBasket": [],
       "Order": [
         {
           "orderDate": "2023.11.16",
-          "orderNumber" : "20231106110121-8178227352",
+          "orderNumber": "20231106110121-8178227352",
           "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
           "amountPayment": 201000,
           "ProductList": [
@@ -158,7 +158,7 @@
         },
         {
           "orderDate": "2023.11.17",
-          "orderNumber" : "20231106110121-8178227353",
+          "orderNumber": "20231106110121-8178227353",
           "productName": "디퓨저 올리브 릿지 외 1건",
           "amountPayment": 198000,
           "ProductList": [
@@ -187,264 +187,354 @@
   ],
   "ProductList": [
     {
-      "perfume":[
+      "perfume": [
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
-        "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
-        "character": "회원전용상품",
-        "price": 200000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
+          "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
+          "character": "회원전용상품",
+          "price": 200000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
-        "productName": "오일퍼퓸20ml + 코냑캔들",
-        "character": "회원전용상품",
-        "price": 166000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
+          "productName": "오일퍼퓸20ml + 코냑캔들",
+          "character": "회원전용상품",
+          "price": 166000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000492.jpg?1698627920",
-        "productName": "오일퍼퓸/핸듶퍼퓸 10% OFF",
-        "character": "회원전용상품",
-        "price": 54000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000492.jpg?1698627920",
+          "productName": "오일퍼퓸/핸듶퍼퓸 10% OFF",
+          "character": "회원전용상품",
+          "price": 54000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
-        "productName": "오일 퍼퓸 밤쉘 20ml",
-        "character": "NEW ∙ 작약 ∙ 플로럴 ∙ 달콤함",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 밤쉘 20ml",
+          "character": "NEW ∙ 작약 ∙ 플로럴 ∙ 달콤함",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
-        "productName": "오일 퍼퓸 매그놀리아 힐 20ml",
-        "character": "NEW ∙ 백목련 ∙ 플로럴 ∙ 우디 ∙ 성숙함",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 매그놀리아 힐 20ml",
+          "character": "NEW ∙ 백목련 ∙ 플로럴 ∙ 우디 ∙ 성숙함",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
-        "productName": "오일 퍼퓸 블루 세이지 블라썸 20ml",
-        "character": "NEW ∙ 블루세이지 ∙ 허브 ∙ 시원함",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 블루 세이지 블라썸 20ml",
+          "character": "NEW ∙ 블루세이지 ∙ 허브 ∙ 시원함",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
-        "productName": "오일 퍼퓸 올리브 릿지 20ml",
-        "character": "NEW ∙ 올리브 ∙ 플로럴 ∙ 청초함",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 올리브 릿지 20ml",
+          "character": "NEW ∙ 올리브 ∙ 플로럴 ∙ 청초함",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
-        "productName": "오일 퍼퓸 씨 모스 20ml",
-        "character": "NEW ∙ 오셔닉 ∙ 시원함 ∙ 중후함",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 씨 모스 20ml",
+          "character": "NEW ∙ 오셔닉 ∙ 시원함 ∙ 중후함",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
-        "productName": "오일 퍼퓸 칼라브리아 버가못 20ml",
-        "character": "NEW ∙ 시트러스 ∙ 버가못 ∙ 중후함",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 칼라브리아 버가못 20ml",
+          "character": "NEW ∙ 시트러스 ∙ 버가못 ∙ 중후함",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
-        "productName": "오일 퍼퓸 불가리안 로즈 20ml",
-        "character": "NEW ∙ 로즈 ∙ 매혹적인 ∙ 중후함",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 불가리안 로즈 20ml",
+          "character": "NEW ∙ 로즈 ∙ 매혹적인 ∙ 중후함",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
-        "productName": "오일 퍼퓸 유칼립투스 라벤더 20ml",
-        "character": "NEW ∙ 유칼립튜스 ∙ 허브 ∙ 우디",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+          "productName": "오일 퍼퓸 유칼립투스 라벤더 20ml",
+          "character": "NEW ∙ 유칼립튜스 ∙ 허브 ∙ 우디",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000392.jpg?1695628551",
-        "productName": "오일 퍼퓸 밤쉘 30ml",
-        "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-        "price": 159000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000392.jpg?1695628551",
+          "productName": "오일 퍼퓸 밤쉘 30ml",
+          "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
+          "price": 159000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000392.jpg?1695628551",
-        "productName": "오일 퍼퓸 매그놀리아 힐 30ml",
-        "character": "백목련 ∙ 플로럴 ∙ 우디 ∙ 성숙함",
-        "price": 159000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000392.jpg?1695628551",
+          "productName": "오일 퍼퓸 매그놀리아 힐 30ml",
+          "character": "백목련 ∙ 플로럴 ∙ 우디 ∙ 성숙함",
+          "price": 159000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000392.jpg?1695628551",
-        "productName": "오일 퍼퓸 블루 세이지 블라썸 30ml",
-        "character": "백목련 ∙ 플로럴 ∙ 우디 ∙ 성숙함",
-        "price": 159000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000392.jpg?1695628551",
+          "productName": "오일 퍼퓸 블루 세이지 블라썸 30ml",
+          "character": "백목련 ∙ 플로럴 ∙ 우디 ∙ 성숙함",
+          "price": 159000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000012.jpg?1695620401",
-        "productName": "오일 퍼퓸 밤쉘",
-        "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-        "price": 54000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000012.jpg?1695620401",
+          "productName": "오일 퍼퓸 밤쉘",
+          "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
+          "price": 54000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000182.jpg?1695624667",
-        "productName": "오일 퍼퓸 공병",
-        "character": "10ml",
-        "price": 13000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000182.jpg?1695624667",
+          "productName": "오일 퍼퓸 공병",
+          "character": "10ml",
+          "price": 13000,
+          "discount": 0
         }
       ],
-      "diffuser":[
+      "diffuser": [
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
-        "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
-        "character": "회원전용상품",
-        "price": 200000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
+          "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
+          "character": "회원전용상품",
+          "price": 200000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0030000000012.jpg?1671424911",
-        "productName": "디퓨저 밤쉘",
-        "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-        "price": 108000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0030000000012.jpg?1671424911",
+          "productName": "디퓨저 밤쉘",
+          "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
+          "price": 108000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0050000000012.jpg?1695787192",
-        "productName": "카 디퓨저 조슈아",
-        "character": "디퓨저 오일 15ml*2EA",
-        "price": 97000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0050000000012.jpg?1695787192",
+          "productName": "카 디퓨저 조슈아",
+          "character": "디퓨저 오일 15ml*2EA",
+          "price": 97000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0050000000022.jpg?1695730220",
-        "productName": "너도밤나무 목화솜 필터",
-        "character": "카 디퓨저 조슈아 전용",
-        "price": 7000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0050000000022.jpg?1695730220",
+          "productName": "너도밤나무 목화솜 필터",
+          "character": "카 디퓨저 조슈아 전용",
+          "price": 7000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0050000000032.jpg?1687334928",
-        "productName": "디퓨저 오일 (15ml)",
-        "character": "카 디퓨저 조슈아 전용",
-        "price": 27000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0050000000032.jpg?1687334928",
+          "productName": "디퓨저 오일 (15ml)",
+          "character": "카 디퓨저 조슈아 전용",
+          "price": 27000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0030000000112.jpg?1695728295",
-        "productName": "디퓨저 리필 밤쉘",
-        "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-        "price": 92000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0030000000112.jpg?1695728295",
+          "productName": "디퓨저 리필 밤쉘",
+          "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
+          "price": 92000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0170000000012.jpg?1695727097",
-        "productName": "코냑 디퓨저 블렌디크 1.",
-        "character": "작약 ∙ 블루세이지 ∙ 부드러움 ∙ 달콤함",
-        "price": 88000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0170000000012.jpg?1695727097",
+          "productName": "코냑 디퓨저 블렌디크 1.",
+          "character": "작약 ∙ 블루세이지 ∙ 부드러움 ∙ 달콤함",
+          "price": 88000,
+          "discount": 0
         }
       ],
-      "candle":[
+      "candle": [
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
-        "productName": "오일퍼퓸 20ml + 코냑캔들",
-        "character": "회원전용상품",
-        "price": 166000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
+          "productName": "오일퍼퓸 20ml + 코냑캔들",
+          "character": "회원전용상품",
+          "price": 166000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0040000000062.jpg?1695732243",
-        "productName": "코냑 캔들 밤쉘",
-        "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-        "price": 74000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0040000000062.jpg?1695732243",
+          "productName": "코냑 캔들 밤쉘",
+          "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
+          "price": 74000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0040000000012.jpg?1695732935",
-        "productName": "돔 캔들 밤쉘",
-        "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-        "price": 67000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0040000000012.jpg?1695732935",
+          "productName": "돔 캔들 밤쉘",
+          "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
+          "price": 67000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0040000000132.jpg?1682553402",
-        "productName": "코냑 캔들 세트",
-        "character": "코냑 캔들 ∙ 3종 캔들케어제품",
-        "price": 126000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0040000000132.jpg?1682553402",
+          "productName": "코냑 캔들 세트",
+          "character": "코냑 캔들 ∙ 3종 캔들케어제품",
+          "price": 126000,
+          "discount": 0
         }
       ],
-      "handCare":[
+      "handCare": [
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000012.jpg?1692267288",
-        "productName": "퍼퓸드 오일 핸드크림 세트",
-        "character": "30ml*3EA",
-        "price": 38000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000012.jpg?1692267288",
+          "productName": "퍼퓸드 오일 핸드크림 세트",
+          "character": "30ml*3EA",
+          "price": 38000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000022.jpg?1692267195",
-        "productName": "퍼퓸드 오일 핸드크림 밤쉘",
-        "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
-        "price": 28000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000022.jpg?1692267195",
+          "productName": "퍼퓸드 오일 핸드크림 밤쉘",
+          "character": "작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함",
+          "price": 28000,
+          "discount": 0
         }
       ],
-      "homeCare":[
+      "homeCare": [
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000092.jpg?1697723492",
-        "productName": "솔리드 디퓨저 세트",
-        "character": "NEW",
-        "price": 52000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000092.jpg?1697723492",
+          "productName": "솔리드 디퓨저 세트",
+          "character": "NEW",
+          "price": 52000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000082.jpg?1697722698",
-        "productName": "솔리드 디퓨저",
-        "character": "NEW",
-        "price": 25000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000082.jpg?1697722698",
+          "productName": "솔리드 디퓨저",
+          "character": "NEW",
+          "price": 25000,
+          "discount": 0
         },
         {
-        "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000072.jpg?1697721326",
-        "productName": "릴렉싱 오일(15ml)",
-        "character": "NEW",
-        "price": 27000,
-        "discount": 0
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000072.jpg?1697721326",
+          "productName": "릴렉싱 오일(15ml)",
+          "character": "NEW",
+          "price": 27000,
+          "discount": 0
         }
       ],
       "id": 1
     }
   ],
-  "ProductScent":[{
-    "perfume":[{
-      "oilPerfume":[{
-        "20ml": [
-          "오일퍼퓸20ml 밤쉘",
-          "오일퍼퓸20ml 매그놀리아 힐",
-          "오일퍼퓸20ml 블루 세이지 블라썸",
-          "오일퍼퓸20ml 올리브 릿지",
-          "오일퍼퓸20ml 씨모스",
-          "오일퍼퓸20ml 칼라브리아 버가못",
-          "오일퍼퓸20ml 불가리안 로즈",
-          "오일퍼퓸20ml 유칼립투스 라벤더"
-        ]
-      }]
-    }],
-    "diffuser":[],
-    "candle":[],
-    "handCare":[],
-    "homeCare":[],
-    "id": 1
-  }]
+  "Faq": [
+    {
+      "type": "결제/배송",
+      "title": "택배박스 안에서 향이 나는데 제품이 샌건가요?",
+      "question": "택배박스 안에서 향이 나는데 제품이 샌건가요?",
+      "faqAnswer": "배송 시 제품을 감싼 습자지에 올리브 릿지 향을 연출하여 보내드리고 있습니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "무통장 계좌번호 알려주세요!",
+      "question": "무통장 계좌번호 알려주세요!",
+      "faqAnswer": "03350589301020 기업은행 예금주 : 주식회사디엠코스메틱스코리아"
+    },
+    {
+      "type": "교환/반품/환불",
+      "title": "배송 누락시 어떻게 해야하나요?",
+      "question": "배송 누락시 어떻게 해야하나요?",
+      "faqAnswer": "배송 온 물품을 사진 촬영하여 1:1 문의 부탁드립니다."
+    },
+    {
+      "type": "교환/반품/환불",
+      "title": "교환/반품 신청은 어떻게 하나요?",
+      "question": "교환/반품 신청은 어떻게 하나요?",
+      "faqAnswer": "수령일 기준 7일 이내에 교환/반품에 대한 청약철회 의사를 밝혀주시면 처리가 가능합니다. - 교환/반품 절차 : 마이페이지 → 주문내역 → 교환/반품 신청 → 수거기사님 방문예정 - 구매하신 쇼핑몰에서 신청해주시거나, 고객센터(02-466-7941)으로 신청 부탁드립니다. - 구매하신 제품의 AS를 원하는 경우에도 고객센터(02-466-7941)으로 연락 부탁드립니다."
+    },
+    {
+      "type": "기타",
+      "title": "고객센터의 상담 시간을 알고 싶어요.",
+      "question": "고객센터의 상담 시간을 알고 싶어요.",
+      "faqAnswer": "고객센터 전화번호 : 02-466-7941 - 상담 시간 : 평일 오전 10시 - 오후 4시 (점심시간 : 오전 11시 30분 ~ 오후 1시 / 주말, 공휴일 휴무) - 전화 연결이 어려운 경우 게시판에 남겨주시면 확인 후 정성껏 답변드리겠습니다. ※ 문의량이 많을 경우 상담 연결 및 답변이 지연될 수 있습니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "배송은 언제 되나요?",
+      "question": "배송은 언제 되나요?",
+      "faqAnswer": "영업일 기준 오후 1시 이전 결제 완료 주문건 : 당일 출고됩니다. (일부 상품 제외) - 공휴일의 경우 다음 영업일에 출고됩니다. (출고된 경우 서울/수도권 지역은 대부분 다음날 수령, 지방은 1~3일 이내에 배송됩니다. 따라서 전체 배송 기간은 (업무일 기준) 3일~7일 정도 소요되며, 일부 택배사 사정에 따라 변동될 수 있습니다.) ※ 주문 상품이 재고 부족일 경우 부득이하게 배송 시간은 달라질 수 있는 점 양해 부탁드립니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "배송 전 취소 하고 싶어요!",
+      "question": "배송 전 취소 하고 싶어요!",
+      "faqAnswer": "주문 당일 취소를 원하시는 고객님께서는 사이트에서 취소 요청을 해주신 뒤, 고객센터(02-466-7941)로 문의하여 취소 접수를 부탁드립니다. - 취소 접수를 하지 않은 건에 대해서는 상품이 출고되어 주문 취소가 불가합니다. 이 경우 부득이하게 반품으로 처리 될 수 있습니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "비회원으로 주문이 가능한가요?",
+      "question": "비회원으로 주문이 가능한가요?",
+      "faqAnswer": "비회원으로도 주문이 가능합니다. 상품 구매 버튼 클릭후 주문자 정보와 배송 정보를 입력하시면 비회원으로도 주문이 가능합니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "배송비는 얼마인가요?",
+      "question": "배송비는 얼마인가요?",
+      "faqAnswer": "배송비 : 3,000원 (4만원 이상 구매 시 무료배송 / 롯데택배) 교환&반품비는 4만원 이상 구매 시 6,000원, 4만원 미만 구매시 3,000원 입니다."
+    },
+    {
+      "type": "회원가입/정보",
+      "title": "회원 탈퇴는 어떻게 하나요?",
+      "question": "회원 탈퇴는 어떻게 하나요?",
+      "faqAnswer": "[마이페이지>회원정보>회원탈퇴]를 통해 탈퇴하실 수 있습니다."
+    },
+    {
+      "type": "회원가입/정보",
+      "title": "회원탈퇴 후 재가입을 할 수 있나요?",
+      "question": "회원탈퇴 후 재가입을 할 수 있나요?",
+      "faqAnswer": "회원탈퇴 후 14일 이후에 재 가입이 가능 합니다."
+    },
+    {
+      "type": "기타",
+      "title": "생일 축하 쿠폰은 어떻게 받을 수 있나요?",
+      "question": "생일 축하 쿠폰은 어떻게 받을 수 있나요?",
+      "faqAnswer": "회원 정보에 입력하신 생일 기준으로 7일 전 [축하 쿠폰 15% OFF] 자동 발급됩니다."
+    },
+    {
+      "type": "마일리지 적립",
+      "title": "마일리지 적립 제도는 어떻게 되나요?",
+      "question": "마일리지 적립 제도는 어떻게 되나요?",
+      "faqAnswer": "마일리지 적립은 구매 금액의 1% 적립이 됩니다."
+    },
+    {
+      "type": "마일리지 적립",
+      "title": "마일리지 적립금은 어떻게 사용하나요?",
+      "question": "마일리지 적립금은 어떻게 사용하나요?",
+      "faqAnswer": "마일리지 적립금 100점은 현금 100원과 같습니다. 사용 시 1,000원 이상 되어야 사용하실 수 있으며, 5,000원 이 넘는 금액의 적립금은 사용하실 수가 없습니다. 구매 시 구매 금액 합계가 40,000원 이상인 경우 결제 시 사용 가능 합니다."
+    }
+  ],
+  "ProductScent": [
+    {
+      "perfume": [
+        {
+          "oilPerfume": [
+            {
+              "20ml": [
+                "오일퍼퓸20ml 밤쉘",
+                "오일퍼퓸20ml 매그놀리아 힐",
+                "오일퍼퓸20ml 블루 세이지 블라썸",
+                "오일퍼퓸20ml 올리브 릿지",
+                "오일퍼퓸20ml 씨모스",
+                "오일퍼퓸20ml 칼라브리아 버가못",
+                "오일퍼퓸20ml 불가리안 로즈",
+                "오일퍼퓸20ml 유칼립투스 라벤더"
+              ]
+            }
+          ]
+        }
+      ],
+      "diffuser": [],
+      "candle": [],
+      "handCare": [],
+      "homeCare": [],
+      "id": 1
+    }
+  ]
 }
-
-

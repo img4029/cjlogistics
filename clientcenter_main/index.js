@@ -1,5 +1,44 @@
 'use strict';
 
+// JSON 데이터가 'faqData' 변수에 저장되어 있다고 가정합니다.
+const faqData = [
+    // ... 여러분의 FAQ 데이터가 여기에 들어갑니다 ...
+];
+let settable;
+
+async function getClientData() {
+    try {
+
+        const response = await axios.get('http://localhost:3000/Faq');
+
+        settable = response.data;
+
+        add();
+        console.log(settable.length);
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
+    }
+}
+getClientData();
+
+
+function add() {
+    let a = document.querySelector('#faq_table')
+    for (let i = 0; i < settable.length;i++)
+        a.innerHTML = `
+        <table>
+            <tr>
+        <th>${settable[0].type}</th>
+        <td>${settable[0].title}<td>
+        <td>${settable[0].question}<td>
+        <td>${settable[0].title}<td>
+            </tr>
+    
+        </table>
+        `;
+
+}
 /*==================== 기본적 테이블 요소 ====================*/
 
 let table = document.createElement('table');
@@ -20,7 +59,6 @@ function createTableHeader(columns) {
     });
     thead.appendChild(thead_tr);
 }
-
 
 /*==================== tbody 분류 ====================*/
 function createTableRow(rowNumber, type, title, question, faqAnswer) {
@@ -73,7 +111,7 @@ function QArow(type, content) {
 
 function FAQ_display(faqRow) {
     let Q_next_A;
-    if (faqRow &&faqRow.classList && faqRow.classList.contains('QAcell')) {
+    if (faqRow && faqRow.classList && faqRow.classList.contains('QAcell')) {
         if (faqRow.style.display === 'table-row') {
             faqRow.style.display = 'none';
 
@@ -217,16 +255,55 @@ const data = [
 ];
 
 
-
 for (let i = 0; i < data.length; i++) {
     createTableRow(data.length - i, data[i].type, data[i].title, data[i].question, data[i].faqAnswer);
 }
 
+const itemsPerPage = 30;
+let currentPage = 1;
 
-let clean_tr = document.querySelectorAll('#faq_table tbody tr');
+function displayRows(startIndex, endIndex) {
+    const rows = document.querySelectorAll('#faq_table tbody tr');
 
-for (let i = 0; i < clean_tr.length; i++) {
-    if (i > 27) {
-        clean_tr[i].style.display = 'none';
-    }
+    rows.forEach((row, index) => {
+        if (index >= startIndex && index < endIndex) {
+            row.style.display = 'table-row';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+
 }
+
+function updatePagination() {
+    const totalRows = document.querySelectorAll('#faq_table tbody tr:nth-child(3n+1)').length;
+    const totalPages = Math.ceil(totalRows / itemsPerPage);
+
+    let numbering_control = document.getElementById("client_paging").querySelectorAll('a:nth-child(n+2)');
+
+    numbering_control.forEach((numbering_control, index) => {
+        if (index < totalPages) {
+            numbering_control.style.display = 'inline-block';
+            numbering_control.textContent = index + 1;
+
+            numbering_control.addEventListener('click', function () {
+                currentPage = index + 1;
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                displayRows(startIndex, endIndex);
+            });
+        } else {
+            numbering_control.style.display = 'none';
+        }
+    });
+
+    // Initial display
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    displayRows(startIndex, endIndex);
+
+
+}
+
+// Call updatePagination after creating table and adding rows
+updatePagination();
