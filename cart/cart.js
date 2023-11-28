@@ -6,6 +6,7 @@ let myData,
     wish = document.querySelector('.wish_body'),
     divClass = ['item_num', 'item_img', 'item_name', 'item_q', 'item_reward', 'item_cost', 'item_del', 'item_cencel'],
     divClass2 = ['item_img', 'item_name', 'item_q', 'item_reward', 'item_cost', '', 'item_cencel'];
+//db 데이터를 가져오고 각 함수들 호출
 async function getClientData() {
     try {
 
@@ -36,8 +37,8 @@ async function getClientData() {
 }
 
 // ====================================
-// let divClass = ['item_num', 'item_img', 'item_name', 'item_q', 'item_reward', 'item_cost', 'item_del', 'item_cencel'];
 
+//데이터를 받아 장바구니에 내용 추가
 function makeCartFrame(ShoppingBasket, count, myData) {
     for (let i = 0; i < 8; i++) {
         let makeFrame = document.createElement('div');
@@ -102,7 +103,6 @@ function makeCartFrame(ShoppingBasket, count, myData) {
                 makeFrame.className = divClass[i];
                 let btn1 = document.createElement('div');
                 let btn2 = document.createElement('div');
-                // makeFrame.style.alignItems = "flex-start"
                 makeFrame.appendChild(btn1);
                 makeFrame.appendChild(btn2);
                 btn1.innerHTML = "WISH LIST";
@@ -121,6 +121,7 @@ function makeCartFrame(ShoppingBasket, count, myData) {
         }
     }
 };
+//데이터를 받아 관심상품에 내용추가
 function makeWishFrame(wishList, count, myData) { 
     for (let i = 0; i < 7; i++) {
         let makewish = document.createElement('div');
@@ -181,6 +182,7 @@ function makeWishFrame(wishList, count, myData) {
         }
     }
 };
+//장바구니에서 선택한 내용 db에서 선택한 내용 삭제
 async function deleteCartList(count, myData) {
     try {
         myData.splice(count, 1)
@@ -194,6 +196,7 @@ async function deleteCartList(count, myData) {
         console.log(err.message);
     }
 }
+//관심상품에서 선택한 내용 db에서 선택한 내용 삭제
 async function deleteWishList(count, myData) {
     try {
         myData.splice(count, 1)
@@ -207,6 +210,7 @@ async function deleteWishList(count, myData) {
         console.log(err.message);
     }
 }
+//장바구니(ShoppingBasket)에서 선택한 내용 db에서 관심상품(WishList)으로 이동
 async function cartListMove(ShoppingBasket) {
     try {
         let myDataCopy = myData;
@@ -217,6 +221,7 @@ async function cartListMove(ShoppingBasket) {
         console.log(err.message);
     }
 }
+//관심상품(WishList)에서 선택한 내용 db에서 장바구니(ShoppingBasket)로 이동
 async function wishListMove(wishList) {
     try {
         let myDataCopy = myData;

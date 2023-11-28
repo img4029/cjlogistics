@@ -216,13 +216,13 @@
           "reserve": 2000
         },
         {
-          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000082.jpg?1697722698",
-          "productName": "솔리드 디퓨저",
-          "character": "NEW",
-          "price": 25000,
-          "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
+          "productName": "오일퍼퓸 20ml + 코냑캔들",
+          "character": "회원전용상품",
+          "price": 166000,
+          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개",
           "quantity": 1,
-          "reserve": 250
+          "reserve": 1660
         }
       ],
       "Order": [
@@ -297,15 +297,6 @@
       ],
       "wishList": [
         {
-          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
-          "productName": "오일퍼퓸 20ml + 코냑캔들",
-          "character": "회원전용상품",
-          "price": 166000,
-          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개",
-          "quantity": 1,
-          "reserve": 1660
-        },
-        {
           "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000012.jpg?1692267288",
           "productName": "퍼퓸드 오일 핸드크림 세트",
           "character": "30ml*3EA",
@@ -313,6 +304,15 @@
           "options": "선물포장 : 홀리데이 선물포장-디퓨저 2개",
           "quantity": 1,
           "reserve": 380
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000082.jpg?1697722698",
+          "productName": "솔리드 디퓨저",
+          "character": "NEW",
+          "price": 25000,
+          "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+          "quantity": 1,
+          "reserve": 250
         }
       ],
       "id": 1
