@@ -11,13 +11,22 @@ table.appendChild(tbody);
 document.getElementById('faq_table').appendChild(table);
 
 /*==================== thead 분류 ====================*/
-function createTableHeader(columns) {
+
+function createTableHeader(num, type, title) {
     let thead_tr = document.createElement('tr');
-    columns.forEach(function (column) {
-        let thead_th = document.createElement('th');
-        thead_th.textContent = column;
-        thead_tr.appendChild(thead_th);
-    });
+
+    let numberCell = document.createElement('th');
+    numberCell.textContent = num;
+    thead_tr.appendChild(numberCell);
+
+    let typeCell = document.createElement('th');
+    typeCell.textContent = type;
+    thead_tr.appendChild(typeCell);
+
+    let titleCell = document.createElement('th');
+    titleCell.textContent = title;
+    thead_tr.appendChild(titleCell);
+
     thead.appendChild(thead_tr);
 }
 
@@ -25,7 +34,6 @@ function createTableHeader(columns) {
 function createTableRow(rowNumber, type, title, question, faqAnswer) {
     let tbody_tr = document.createElement('tr');
 
-    /*===== 각각 번호, 분류, 제목 =====*/
     let numberCell = document.createElement('td');
     numberCell.textContent = rowNumber;
     tbody_tr.appendChild(numberCell);
@@ -73,7 +81,7 @@ function QArow(type, content) {
 function FAQ_display(faqRow) {
     let Q_next_A;
     if (faqRow && faqRow.classList && faqRow.classList.contains('QAcell')) {
-        if (faqRow.style.display === 'table-row') {
+        if (faqRow.style.display == 'table-row') {
             faqRow.style.display = 'none';
 
             Q_next_A = faqRow.nextElementSibling;
@@ -110,43 +118,22 @@ function FAQ_display(faqRow) {
     }
 }
 
-/*==================== 여기서부터는 쭉 테이블에 들어갈 내용 ====================*/
+/*==================== json 내용 ====================*/
 
-createTableHeader(['번호', '분류', '제목']);
 
-/*=====json 데이터 연결=====*/
+
+/*===== json로 테이블 구현 =====*/
 let settable;
 
 async function getClientData() {
-    try {
-        const response = await axios.get('http://localhost:3000/Faq');
-        settable = response.data;
-        jsontable1();
 
-    } catch (err) {
-        console.log('데이터를 가져오는 중 오류 발생');
-        console.log(err.message);
-    }
-}
-/*=====연결한 json 데이터로 테이블 구현=====*/
-getClientData();
-
-function jsontable() {
+    const response = await axios.get('http://localhost:3000/Faq');
+    settable = response.data;
     document.querySelector('#faq_table')
-    for (let i = 0; i < settable.length; i++);
-
-    document.addEventListener('DOMContentLoaded', function () {
-
-        const tableContainer = document.getElementById('table-container');
-        tableContainer.innerHTML = '';
-
-        tableContainer.appendChild(table);
-
-    });
-}
-
-function jsontable1() {
-    for (let i = 0; i < settable.length; i++) {
+    createTableHeader(settable[0].num, settable[0].type, settable[0].title);
+    for (let i = 1; i < settable.length; i++) {
         createTableRow(settable.length - i, settable[i].type, settable[i].title, settable[i].question, settable[i].faqAnswer);
     }
 }
+getClientData();
+

@@ -9,9 +9,11 @@
     <title>FAQ 화면</title>
 
     <link rel="stylesheet" href="../../header.css">
-    <!-- <script defer src="../../header.js"></script> -->
+    <script defer src="../../header.js"></script>
 
     <link rel="stylesheet" href="./index.css">
+
+    <script defer src="./index.js"></script>
     <script defer src="./index2.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -103,45 +105,31 @@
             <div class="client_body">
                 <h3>FAQ</h3>
 
-                <div class="client_search">
+                <div id="client_search">
                     <fieldset>
                         <label>
                             <div class="select_logo"></div>
-                            <input type="text" id="search_box" minlength="2">
+                            <input type="text" id="search_box">
                             <button onclick="search()" id="search_button">SEARCH</button>
                         </label>
                     </fieldset>
                 </div>
 
                 <ul class="faq_category_5">
-                    <a href="">
-                        <li>전체보기 </li>
-                    </a>
-                    <a href="javascript: ">
-                        <li data-word="회원가입/정보">회원가입/정보</li>
-                    </a>
-                    <a href="javascript: ">
-                        <li data-word="결제/배송">결제/배송</li>
-                    </a>
-                    <a href="javascript: ">
-                        <li data-word="교환/반품/환불">교환/반품/환불</li>
-                    </a>
-                    <a href="javascript: ">
-                        <li data-word="마일리지 적립">마일리지 적립</li>
-                    </a>
-                    <a href="javascript: ">
-                        <li data-word="기타">기타</li>
-                    </a>
+                    <li data-word="">전체보기 </li>
+                    <li data-word="회원가입/정보">회원가입/정보</li>
+                    <li data-word="결제/배송">결제/배송</li>
+                    <li data-word="교환/반품/환불">교환/반품/환불</li>
+                    <li data-word="마일리지 적립">마일리지 적립</li>
+                    <li data-word="기타">기타</li>
                 </ul>
 
-                <div id="faq_table">
-                    <script src="./index.js"></script>
-                </div>
+                <div id="faq_table"></div>
 
                 <div id="client_paging">
-                    <a href=""></a>
                 </div>
             </div>
+
 
     </main>
 

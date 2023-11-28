@@ -7,21 +7,24 @@ function search() {
     let search_row = document.querySelectorAll('#faq_table tbody tr');
     let check_tr = 0;
 
-    for (let i = search_row.length - 1; i >= 0; i--) {
-        let row = search_row[i];
+    search_row.forEach(function (tr) {
+        tr.style.display = 'none';
+    });
 
-        if (row.classList.contains('QAcell') && row.style.display == 'none') {
+    for (let i = search_row.length-1; i >= 0; i--) {
+        let search_arr = search_row[i];
+
+        if (search_arr && search_arr.classList.contains('QAcell') && search_arr.style.display == 'none') {
             continue;
         }
-
-        let titleCell = row.children[2].innerHTML;
+        let titleCell = search_arr.children[2].innerHTML;
 
         if (((titleCell.includes(keyword)))) {
             check_tr++;
-            row.style.display = 'table-row';
-            row.children[0].textContent = check_tr;
+            search_arr.style.display = 'table-row';
+            search_arr.children[0].textContent = check_tr;
         } else {
-            row.style.display = 'none';
+            search_arr.style.display = 'none';
         }
 
         if (keyword.length < 2) {
@@ -29,19 +32,9 @@ function search() {
             break;  // 검색어가 2자 미만일시 alert, 검색 취소
         }
     }
-    let search_result = document.querySelectorAll('#faq_table tbody tr[style="display: table-row;"]').length;
-
-    let page_number = document.getElementById("client_paging");
-    if (search_result < 15) {
-        let numbering_control = page_number.querySelectorAll('a:nth-child(n+2)');
-
-        numbering_control.forEach(function (numbering_control) {
-            numbering_control.style.display = 'none';
-        });
-        window.scrollTo({
-            top: 0
-        });
-    }
+    window.scrollTo({
+        top: 0
+    });
 }
 
 // 검색할 때 enter 키 활성화 (굳이 클릭할 필요x)
@@ -53,7 +46,7 @@ pressEnter.addEventListener("keyup", function (event) {
     }
 });
 
-/*==================== 페이지 이동 구현 ====================*/
+/*==================== 카테고리 클릭 검색 기능 ====================*/
 
 function search_clicker(keyword) {
     let search_row = document.querySelectorAll('#faq_table tbody tr');
@@ -77,34 +70,18 @@ function search_clicker(keyword) {
         }
     }
 }
-
-document.querySelectorAll('.faq_category_5 a li').forEach(function (li) {
+/*===== 카테고리 클릭시 글자 스타일 =====*/
+document.querySelectorAll('.faq_category_5 li').forEach(function (li) {
     li.addEventListener('click', function () {
 
-        let search_keyword = li.dataset.word; //li에 지정해준 word
+        let search_keyword = li.dataset.word; //li에 지정한 data-set
 
         document.querySelectorAll('.faq_category_5 li').forEach(function (li_font) {
             li_font.style.fontWeight = 'normal';
         });
 
         li.style.fontWeight = 'bold';
-        search_clicker(search_keyword);
+        search_clicker(search_keyword); //클릭한 카테고리는 볼드체
 
-
-        let page_number = document.getElementById("client_paging");
-        if (search_keyword.length < 10) {
-
-            let numbering_control = page_number.querySelectorAll('a:nth-child(n+2)');
-
-
-            numbering_control.forEach(function (numbering_control) {
-
-                numbering_control.style.display = 'none';
-
-            });
-            window.scrollTo({
-                top: 0
-            });
-        }
     });
 });
