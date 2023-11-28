@@ -1,4 +1,5 @@
 'use strict';
+const idinfo_form = document.getElementById("idinfo_form");
 
 let birthDateY = document.querySelector(".birthDateY"),
     birthDateM = document.querySelector(".birthDateM"),
@@ -340,6 +341,11 @@ function informationCheck() {
     }
 
 }
+function onSubmit(event) {
+    event.preventDefault();
+};
+idinfo_form.addEventListener("submit", onSubmit);
+
 mainExecution(Agreement, mainCheckBox);
 mainExecution(Marketing, mainCheckBox);
 subExecution(Agreement, subCheckBoxAll);
