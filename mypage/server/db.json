@@ -157,21 +157,21 @@
           "couponNumber": "H57HESOZ",
           "couponType": "장바구니쿠폰",
           "couponName": "신규가입 쿠폰",
-          "discountAmount": "10",
+          "discountAmount": "15%",
           "expirationPeriod": 20230914
         },
         {
           "couponNumber": "H355HK21",
           "couponType": "장바구니쿠폰",
           "couponName": "생일 쿠폰",
-          "discountAmount": "할인금액 줄내림 도움받기",
+          "discountAmount": "10%",
           "expirationPeriod": 20230422
         },
         {
           "couponNumber": "TWJK2542Z",
           "couponType": "장바구니쿠폰",
           "couponName": "한글날 쿠폰",
-          "discountAmount": "할인금액 10%",
+          "discountAmount": "30%",
           "expirationPeriod": 20230715
         }
       ],

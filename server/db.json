@@ -4,22 +4,22 @@
       "couponNumber": "DKJGS252JS",
       "couponName": "생일 쿠폰",
       "discountAmount": "40%",
-      "expirationPeriod": 20230901,
-      "downloadBt": ""
+      "expirationPeriod": 20231201,
+      "downloadBt": "장바구니 쿠폰"
     },
     {
       "couponNumber": "AGGS2531S",
-      "couponName": "한글날 기념 쿠폰",
-      "discountAmount": "15%",
-      "expirationPeriod": 20210711,
-      "downloadBt": ""
+      "couponName": "신규가입 쿠폰",
+      "discountAmount": "20%",
+      "expirationPeriod": 20231201,
+      "downloadBt": "장바구니 쿠폰"
     },
     {
       "couponNumber": "AGGS2531S",
-      "couponName": "신규가입 기념 쿠폰",
-      "discountAmount": "25%",
-      "expirationPeriod": 20191201,
-      "downloadBt": ""
+      "couponName": "신규가입 쿠폰",
+      "discountAmount": "30%",
+      "expirationPeriod": 20231201,
+      "downloadBt": "장바구니 쿠폰"
     }
   ],
   "profile": [
@@ -51,7 +51,26 @@
           "expirationPeriod": "2023.11.21 ~ 2023.12.21"
         }
       ],
-      "ShoppingBasket": [],
+      "ShoppingBasket": [
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
+          "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
+          "character": "회원전용상품",
+          "price": 200000,
+          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개",
+          "quantity": 1,
+          "reserve": 2000
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000082.jpg?1697722698",
+          "productName": "솔리드 디퓨저",
+          "character": "NEW",
+          "price": 25000,
+          "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+          "quantity": 1,
+          "reserve": 250
+        }
+      ],
       "Order": [
         {
           "orderDate": "2023.11.16",
@@ -65,7 +84,8 @@
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
               "quantity": 1,
               "amountPayment": 201000,
-              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
+              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+              "reserve": 2010
             },
             {
               "Gifts": "(사은품)",
@@ -73,13 +93,14 @@
               "options": "",
               "quantity": 1,
               "amountPayment": "",
-              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
+              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852",
+              "reserve": 0
             }
           ],
           "deliveryStatus": ""
         },
         {
-          "orderDate": "2023.11.16",
+          "orderDate": "2023.11.17",
           "orderNumber": "20231106110121-8178227353",
           "productName": "디퓨저 올리브 릿지 외 1건",
           "amountPayment": 198000,
@@ -116,20 +137,66 @@
       "lastestPosted": [
         {
           "date": "",
-          "subject ": "",
+          "subject": "",
           "board": ""
         }
       ],
-      "wishList ": [
+      "wishList": [
         {
-          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
-          "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
+          "productName": "오일퍼퓸 20ml + 코냑캔들",
           "character": "회원전용상품",
-          "price": 200000,
-          "discount": 0
+          "price": 166000,
+          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개",
+          "quantity": 1,
+          "reserve": 1660
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000012.jpg?1692267288",
+          "productName": "퍼퓸드 오일 핸드크림 세트",
+          "character": "30ml*3EA",
+          "price": 38000,
+          "options": "선물포장 : 홀리데이 선물포장-디퓨저 2개",
+          "quantity": 1,
+          "reserve": 380
         }
       ],
       "id": 1
+    },
+    {
+      "hname": "헤르",
+      "hid": "gmrcjs45",
+      "hpw": "zxc123!@#",
+      "birthDate": "2010.4.6",
+      "sx": "sxwomen",
+      "zip": "47502",
+      "har": "부산 연제구 미남로 1",
+      "dar": "헤르아파트",
+      "darCb": false,
+      "hpn": "01049199822",
+      "hem": "gmrcjs45@naver.com",
+      "cpn": "",
+      "car": "",
+      "cdar": "",
+      "hsp": "",
+      "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
+      "totalAmountPayment": "",
+      "reserve": "",
+      "coupon": [
+        {
+          "couponNumber": "H57HESOZ",
+          "couponType": "장바구니쿠폰",
+          "couponName": "신규가입 쿠폰",
+          "discountAmount": "10",
+          "expirationPeriod": "2023.11.21 ~ 2023.12.21"
+        }
+      ],
+      "ShoppingBasket": [],
+      "Order": [],
+      "lastestOrder": [],
+      "lastestPosted": [],
+      "wishList": [],
+      "id": 2
     }
   ],
   "loginComplete": [
@@ -154,28 +221,54 @@
       "reserve": "",
       "coupon": [
         {
-          "couponNumber": "H57HESOZ",
-          "couponType": "장바구니쿠폰",
-          "couponName": "신규가입 쿠폰",
-          "discountAmount": "15%",
-          "expirationPeriod": 20230914
-        },
-        {
           "couponNumber": "H355HK21",
           "couponType": "장바구니쿠폰",
-          "couponName": "생일 쿠폰",
           "discountAmount": "10%",
+          "couponName": "생일 쿠폰",
           "expirationPeriod": 20230422
         },
         {
           "couponNumber": "TWJK2542Z",
           "couponType": "장바구니쿠폰",
-          "couponName": "한글날 쿠폰",
           "discountAmount": "30%",
+          "couponName": "한글날 쿠폰",
           "expirationPeriod": 20230715
+        },
+        {
+          "couponNumber": "H57HESOZ",
+          "couponType": "장바구니쿠폰",
+          "discountAmount": "15%",
+          "couponName": "신규가입 쿠폰",
+          "expirationPeriod": 20230914
+        },
+        {
+          "couponNumber": "DKJGS252JS",
+          "couponName": "생일 쿠폰",
+          "discountAmount": "40%",
+          "expirationPeriod": 20231201,
+          "downloadBt": "장바구니 쿠폰"
         }
       ],
-      "ShoppingBasket": [],
+      "ShoppingBasket": [
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
+          "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
+          "character": "회원전용상품",
+          "price": 200000,
+          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개",
+          "quantity": 1,
+          "reserve": 2000
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000082.jpg?1697722698",
+          "productName": "솔리드 디퓨저",
+          "character": "NEW",
+          "price": 25000,
+          "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+          "quantity": 1,
+          "reserve": 250
+        }
+      ],
       "Order": [
         {
           "orderDate": "2023.11.16",
@@ -189,7 +282,8 @@
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
               "quantity": 1,
               "amountPayment": 201000,
-              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
+              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+              "reserve": 2010
             },
             {
               "Gifts": "(사은품)",
@@ -197,13 +291,14 @@
               "options": "",
               "quantity": 1,
               "amountPayment": "",
-              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
+              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852",
+              "reserve": 0
             }
           ],
           "deliveryStatus": ""
         },
         {
-          "orderDate": "2023.11.16",
+          "orderDate": "2023.11.17",
           "orderNumber": "20231106110121-8178227353",
           "productName": "디퓨저 올리브 릿지 외 1건",
           "amountPayment": 198000,

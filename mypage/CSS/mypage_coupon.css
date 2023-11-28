@@ -235,9 +235,9 @@ a {
     padding: 30px;
 }
 
-.couponInfo {
+/* .couponInfo {
     flex-basis: 35%;
-}
+} */
 
 .downBt:hover {
     background-color: black;
