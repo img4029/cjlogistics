@@ -158,10 +158,12 @@ main{
     top: 200px;
 }
 .mapInnerBox{
+    justify-content: center;
     width: 300px;
     height: fit-content;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    /* display: flex; */
+
+
 }
