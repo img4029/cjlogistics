@@ -14,15 +14,6 @@ async function getClientData() {
         latestOrderData();
         latestPostData();
         addWish();
-        // addWish2();
-        // aaaa();
-
-        // console.log(Object.keys(myData[0].wishList[0])[0]);
-        // console.log(Object.entries(m0yData[0].lastestPosted));
-
-
-        // console.log(myData[0].wishList[0].img);
-        // console.log(myData[0].wishList);
 
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
@@ -52,10 +43,6 @@ function makeProfile() {
     privacy.innerHTML = profileFrame_1;
     reserves.innerHTML = reservesFrame_2;
 }
-
-
-
-
 
 function insertPriData() {
     for (let i = 0; i < myData.length; i++) {
@@ -125,20 +112,25 @@ function latestPostData() {
     for (let i = 0; i < myData[0].lastestPosted.length; i++) {
         let makeBox = new Array(myData[0].lastestPosted.length);
         makeBox[i] = [];
+
         for (let customer of myData) {
-            // console.log(customer.lastestPosted[i].date === "");
             makeBox[i].push(`<tr>`);
             makeBox[i].push(`<td>${Object(customer.lastestPosted[i]).date}</td>`);
             makeBox[i].push(`<td>${Object(customer.lastestPosted[i]).subject}</td>`);
             makeBox[i].push(`<td>${Object(customer.lastestPosted[i]).board}</td>`);
             makeBox[i].push(`</td>`);
+            console.log(makeBox);
         }
+
         table[1].innerHTML += makeBox[i].join("")
+
     }
 }
 
 
+
 // =====================================================
+
 
 
 
@@ -156,7 +148,6 @@ function addWish() {
     let makeBox = new Array(myData[0].wishList.length);
 
     for (let i = 0; i < myData[0].wishList.length; i++) {
-
         let ar = new Array(2);
         ar[0] = document.createElement('button');
         ar[1] = document.createElement('div');
@@ -173,15 +164,12 @@ function addWish() {
                 ar[j].addEventListener('click', () => {
                     window.location.href = `${myData[0].wishList[i].link}`
                 })
-                // ar[j].addEventListener('click', movePage)
-                // 위에처럼 익명함수형태로 전달하지않고,
-                // 만들어둔 함수로 이동하고 싶다면 어떻게 해야하나?
-                // 바로 아래 만들어둔 movePage 함수를 사용하고 싶다.
-
                 ar[j].setAttribute('class', 'wantImg');
+
             } else if (j == 1) {
                 ar[j].innerText = `${myData[0].wishList[i].productName} `
                 ar[j].setAttribute('class', 'wantItem');
+
             } else {
                 ar[j].innerText = `${myData[0].wishList[i].price.toLocaleString()} `
                 ar[j].setAttribute('class', 'wantCost');
@@ -214,16 +202,16 @@ function addWish2() {
             if (j == 0) {
                 ar[j].setAttribute('class', 'wantImg');
                 ar[j].style.background = `url(${myData[0].wishList[i].img} center/cover`
+
             } else if (j == 1) {
                 ar[j].innerText = `${myData[0].wishList[i].productName} `
                 ar[j].setAttribute('class', 'wantItem');
+
             } else {
                 ar[j].innerText = `${myData[0].wishList[i].price.toLocaleString()} `
                 ar[j].setAttribute('class', 'wantCost');
             }
         }
-        // ar[0].style.background = `url(${myData[0].wishList[i].img}) center/cover`
-
     }
 }
 

@@ -3,21 +3,14 @@
     {
       "couponNumber": "DKJGS252JS",
       "couponName": "생일 쿠폰",
-      "discountAmount": "40%",
+      "discountAmount": "10%",
       "expirationPeriod": 20231201,
       "downloadBt": "장바구니 쿠폰"
     },
     {
-      "couponNumber": "AGGS2531S",
-      "couponName": "신규가입 쿠폰",
+      "couponNumber": "GKJS222JS",
+      "couponName": "가입 쿠폰",
       "discountAmount": "20%",
-      "expirationPeriod": 20231201,
-      "downloadBt": "장바구니 쿠폰"
-    },
-    {
-      "couponNumber": "AGGS2531S",
-      "couponName": "신규가입 쿠폰",
-      "discountAmount": "30%",
       "expirationPeriod": 20231201,
       "downloadBt": "장바구니 쿠폰"
     }
@@ -228,13 +221,6 @@
           "expirationPeriod": 20230422
         },
         {
-          "couponNumber": "TWJK2542Z",
-          "couponType": "장바구니쿠폰",
-          "discountAmount": "30%",
-          "couponName": "한글날 쿠폰",
-          "expirationPeriod": 20230715
-        },
-        {
           "couponNumber": "H57HESOZ",
           "couponType": "장바구니쿠폰",
           "discountAmount": "15%",
@@ -368,6 +354,195 @@
           "price": 88000,
           "discount": 0,
           "link": "https://www.danielstruth.com/shop/shopdetail.html?branduid=11925275&search=%C4%DA%B3%C5&sort=order&xcode=017&mcode=000&scode=&GfDT=aW53Vg%3D%3D"
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
+          "productName": "오일퍼퓸20ml + 코냑캔들",
+          "character": "회원전용상품",
+          "price": 166000,
+          "discount": 0
+        }
+      ],
+      "article": [
+        {
+          "number": 1,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 2,
+          "date": 20221728,
+          "subject": "배송은 언제 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 3,
+          "date": 20221728,
+          "subject": "영업 시간은 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 4,
+          "date": 20221728,
+          "subject": "정확한 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 5,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 6,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 7,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 8,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 9,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 10,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 11,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 12,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 13,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 14,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 15,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 16,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 17,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 18,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 19,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 20,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 21,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 22,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 23,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 24,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 25,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 26,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 27,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 28,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 29,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
+        },
+        {
+          "number": 30,
+          "date": 20221728,
+          "subject": "매장 위치는 ?",
+          "detail": "강남에 있는 매장 위치 알고 싶습니다."
         }
       ],
       "id": 1
