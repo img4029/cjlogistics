@@ -237,16 +237,16 @@ function itemLowSort(productData) {
 // html 인풋박스 값, 서치 버튼 요소 소환
 
 function searchKey(allData) {
-
-    let searchKeyword = document.querySelector('#searchBox1');
-    const searchButton = document.querySelector('.searchButton');
-    console.log(searchKey(allData));
+    console.log(allData);
     // 새로받을 데이터
     let selectData = [];
+    let searchKeyword = document.querySelector('#searchBox1');
+    const searchButton = document.querySelector('.searchButton');
     // 클릭 시 입력받은 키워드 값
     searchButton.addEventListener('click', () => {
         const keyword = searchKeyword.value
-
+        console.log(keyword);
+        
         for (let i = 0; i < allData.length; i++) {
             if (allData[i].productName.includes(keyword)) {
                 selectData = [...selectData, allData[i]];
