@@ -76,10 +76,18 @@ main {
     width: 550px;
 }
 
-h4 {
+.table_3 div {
     border-top: solid 1px black;
+    display: flex;
+    justify-content: space-between;
 }
-
+.table_3 div>span{
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
 .table_3 {
     font-size: 15px;
 }
@@ -109,8 +117,9 @@ h4 {
 }
 
 
-.table_3>h4 {
+.table_3 h4 {
     line-height: 100px;
+    display: inline;
 }
 
 .table_3 td {
@@ -306,20 +315,33 @@ h4 {
 
 
 .select_3 {
-    margin: 0 5% 10px 18% ;
-    position: relative;
-    flex-wrap: wrap;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:center;
     font-weight: bold;
+    border: none;
 }
 
+.so1_3 button{
+    border: none;
+    background-color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+.so1_3>ul>li:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#likebuttonsub {
+    color: red;
+}
 
 .select_3 a {
     color: black;
     font-weight: bold;
-    font-size: 17px;
-    text-align: center;
-    display: block;
-    line-height: 45px;
+    line-height: 30px;
 }
 
 
@@ -338,26 +360,12 @@ h4 {
 
 .select_3 li {
     border: 1px solid silver;
-    width: 220px;
-    display: block;
     text-align: center;
-    line-height: 20px;
     margin-right: 5px;
+    width: 100px;
 }
 
-.select_3 li:nth-child(1) {
-    width: 570px;
-    margin-left: -5px;
-}
 
-.select_3 li:nth-child(5) {
-    margin-left: 21px;
-}
-
-.select_3 li:nth-child(5) a {
-    color: white;
-    background-color: black;
-}
 
 
 .smoll>textarea {
@@ -548,9 +556,12 @@ h4 {
     width: 450px;
     display: flex;
     line-height: 32px;
-    margin-right: -50px;
+    margin-right: -13%;
 }
 
+.reviewlistbox_3 li {
+    margin-right: 2px;
+}
 
 .reviewlist_3 li {
     float: left;

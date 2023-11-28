@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Detailed page.css">
-    <script defer src="./Detailed page.js"></script>
+    <link rel="stylesheet" href="./DetailedPage.css">
+    <script defer src="./DetailedPage.js"></script>
 
     <link rel="stylesheet" href="../header.css">
-    <!-- <script defer src="../header.js"></script> -->
-
+    <script defer src="../header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -92,7 +92,7 @@
                     <a href="">HOME > </a>
                     <a href="">Perfume > </a>
                     <a href="./Perfumepage.html">오일퍼품 > </a>
-                    <a href="">오일퍼퓸 밤쉘 30ml</a>
+                    <a href=""></a>
                 </div>
                 <div class="product_outer">
                     <div id="product_leftbox">
@@ -104,11 +104,11 @@
                     </div>
                     <div class="product_rightbox">
                         <div class="product_fount">
-                            <h3>오일 퍼퓸 밤쉘 30ml</h3>
-                            <p>159,000원</p>
+                            <h3></h3>
+                            <p></p>
                         </div>
                         <div class="booktitle5">
-                            <p>작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함 +</p>
+                            <p></p>
                             <ul>
                                 <li id="heading5" class="hidden5">
                                     <pre>
@@ -137,7 +137,7 @@
                             <table>
                                 <tr>
                                     <th>세부사항</th>
-                                    <td>작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함</td>
+                                    <td class="table_3_detail">작약 ∙ 플로럴 ∙ 시그니처 ∙ 달콤함</td>
                                 </tr>
                                 <tr>
                                     <th>적립금</th>
@@ -152,12 +152,15 @@
                                     <th>선물포장</th>
                                     <td> <select name="option" id="optionlist">
                                             <option value="">옵션 선택</option>
-                                            <option value="0">홀리데이 선물포장-오일 퍼퓸 밤쉘 30ml</option>
+                                            <option class="optionlist" value="0">홀리데이 선물포장-오일 퍼퓸 밤쉘 30ml</option>
                                         </select>
                                     </td>
                                 </tr>
                             </table>
-                            <h4>총 구매금액</h4>
+                            <div>
+                                <h4>총 구매금액</h4>
+                                <span></span>
+                            </div>
                         </div>
                         <div class="BUY NOW_3">
                             <a href="">BUY NOW</a>
@@ -253,7 +256,7 @@
                             </ul>
                         </div>
                         <div class="booktitle4">
-                            <p>제품 사용 방법 +</p>
+                            <p>배송&반품 +</p>
                             <ul>
                                 <li id="heading4" class="hidden4">
                                     <pre>
@@ -294,10 +297,9 @@
         <div class="select_3">
             <div class="so1_3">
                 <ul>
-                    <li><a href="">
-                            <span class="i">▼</span></a></li>
-                    <li><a href="">좋아요</a></li>
-                    <li><a href="">리뷰혜택</a></li>
+                    <li><button onclick="likeonclick()">좋아요+</button>
+                        <span id="likebuttonsub">0</span>
+                    </li>
                     <li><a href="">사진추가</a></li>
                     <li><a href="">리뷰등록</a></li>
                 </ul>
@@ -312,7 +314,7 @@
                 <ul>
                     <li>아주 만족
                         <div>
-                            <span class="a_3"><span></span></span> 
+                            <span class="a_3"><span></span></span>
                         </div>
                     </li>
                     <li>만족
@@ -342,9 +344,6 @@
         <div class="reviewlist_3">
             <b>프리미엄 상품평</b>
             <div class="reviewlistbox_3">
-                <div class="a_3">
-                    <a href="">포토리뷰 모아보기</a>
-                </div>
                 <ul>
                     <a href="">
                         <li>최신 순</li>
@@ -410,7 +409,7 @@
                     <li>작성자 : 임*건 등록일 : 2023-11-14 조회수:0</li>
                 </ul>
                 <br>
-                <p>포장이.. 뽁뽁이라도 한번 감아주시지 너무 날로 왔아요</p>
+                <p>제품도 너무 만족스럽고 배송도 빨라서 너무 좋아요!</p>
                 <br>
                 <p class="img123_3"><a href=""><img
                             src="https://danielstruth.com/images/d3/modern_simple/bg_reply_cnt.gif" alt=""></a><b>이 리뷰가
@@ -432,12 +431,9 @@
             </div>
             <section id="detailmeun">
                 <div class="ulbox2_3">
-                    <a href=""><img
-                            src="https://danielstruth.com/images/d3/modern_simple/btn/btn_h15_review_pprev.gif"></a>
                     <a href=""><span>1</span></a>
                     <a href=""><span>2</span></a>
                     <a href=""><span>3</span></a>
-                    <a href=""><span>4</span></a>
                     <a href=""><img
                             src="https://danielstruth.com/images/d3/modern_simple/btn/btn_h15_review_nnext.gif"></a>
                 </div>

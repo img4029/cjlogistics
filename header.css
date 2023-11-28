@@ -15,10 +15,17 @@ a {
 .header_acide,
 .header_back,
 .header_top,
+.create_back,
 .menu_list {
     position: fixed;
 }
-
+.create_back {
+    background: rgb(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    /* opacity: 0.3; */
+}
 .header_acide {
     height: 100vh;
     width: 100px;
@@ -347,5 +354,24 @@ footer {
 
     100% {
         transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+@keyframes create_back_in {
+    from {
+        opacity: 0;
+    }
+        
+    to {
+        opacity: 1;
+    }
+}
+@keyframes create_back_out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }

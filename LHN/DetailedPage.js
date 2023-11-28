@@ -1,6 +1,5 @@
 'use strict';
 
-
 // 상세페이지 상품 설명서 (클릭이벤트 구역)
 let booktitle= document.querySelector('.booktitle');
 let booktitle2= document.querySelector('.booktitle2');
@@ -9,6 +8,46 @@ let booktitle4= document.querySelector('.booktitle4');
 let booktitle5= document.querySelector('.booktitle5');
 /* 클래스를 가진 요소들을 선택하여 변수에 할당 */
 
+let ihn;
+
+async function getClientData1() {
+    try {
+
+        let response1 = await axios.get('http://localhost:3000/station');
+        ihn = response1.data;
+        
+        getData(ihn);
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
+    }
+}
+
+
+function getData(ihn) {
+  
+  let product_topmenu = document.querySelector(".product_topmenu"),
+    product_fount = document.querySelector(".product_fount"),
+    booktitle5 = document.querySelector(".booktitle5"),
+    table_3_detail = document.querySelector(".table_3_detail"),
+    optionlist = document.querySelector(".optionlist"),
+    product_leftbox = document.querySelector("#product_leftbox"),
+    product_boximg = document.querySelector(".product_boximg>a>img"),
+    table_3 = document.querySelector('.table_3 > div > span');
+
+
+  product_topmenu.children[3].innerText = ihn[0].productName;
+  product_fount.children[0].innerText = ihn[0].productName;
+  product_fount.children[1].innerText = `${ihn[0].price.toLocaleString()} 원`;
+  booktitle5.children[0].innerText = `${ihn[0].character} +`;
+  table_3_detail.innerText = ihn[0].character;
+  optionlist.innerText = `홀리데이 선물포장-${ihn[0].productName}`;
+  product_leftbox.children[0].src = ihn[0].img;
+  product_boximg.src = ihn[0].img;
+  table_3.innerText = `${ihn[0].price.toLocaleString()} 원`;
+}
+
+// 상세페이지 상품 설명서 (클릭이벤트 구역)
 booktitle.addEventListener ('click',function() {
   let heading = document.getElementById("heading");
   heading.classList.toggle("hidden");
@@ -89,13 +128,36 @@ imgleftbox2.addEventListener('click', (e) => {
   changeImg_nation(e.target);
 });
 
-// 옵션 선택 후 제품을 장바구니에 담는 기능(데이터부분)
+// 좋아요 클릭 이벤트 
+ 
+let likebuttonsub = 0;
+
+function likeonclick() {
+  if(likebuttonsub === 0) {
+    likebuttonsub++;
+    document.getElementById('likebuttonsub').innerText = likebuttonsub;
+  } else {
+    alert('이미 좋아요를 클릭하셨습니다.');
+  }
+}
+
+// 상세페이지 데이터부분
+async function deleteClientData() {
+  try {
+
+    const deleteResponse = await axios.delete('http://localhost:3000/station/1');
+      
+  } catch (err) {
+      console.log('데이터를 가져오는 중 오류 발생');
+      console.log(err.message);
+  }
+}
 
 
 
+//데이터를 불러온것을 뒤로 갔을때 초기화 해주는 기능
+getClientData1();
 
-
-
-
-
-
+window.addEventListener("beforeunload", ()=>{
+    deleteClientData()
+});
