@@ -10,7 +10,7 @@
 a{
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 /* 헤더 속 nav,  메뉴바*/

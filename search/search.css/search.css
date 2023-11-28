@@ -36,6 +36,9 @@ main {
     width: 1100px;
     margin: auto;
     margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+    top: 80px;
 }
 
 .searchInputTop {
@@ -51,7 +54,8 @@ main {
 
 /* 상하 / 좌우 */
 .searchInput {
-    padding: 100px 0;
+    padding-top: 20px;
+    padding-bottom: 80px;
 }
 
 .Search {
@@ -63,6 +67,7 @@ main {
 
 .searchBlock0 :nth-child(1) {
     font-size: 14px;
+    line-height: 30px;
 }
 
 .searchBlock {
@@ -85,14 +90,28 @@ main {
 }
 
 .itemSort {
-    float: right;
+    display: inline-block;
+    text-align: right;
+    width: 1100px;
+    position: relative;
+    top: 40px;
 }
 
 .itemSort button {
     border: none;
-    background-color: white;
+    background-color: black
+    ;
     cursor: pointer;
-    color: rgb(51, 51, 51);
+    color: white;
+    border-radius: 4px;
+    padding: 2px 7px;
+}
+
+.itemSort button:hover{
+    background-color: rgba(172, 172, 172, 0.548);
+    color: black;
+    transition: background 0.8s ease-out;
+
 }
 
 .itemSort span {
@@ -122,10 +141,13 @@ main {
     color: white;
     padding: 0 15px;
     border-radius: 4px;
+    transition: background 0.8s ease-out;
 }
 
 input {
     border: 1px silver solid;
+    width: 200px;
+    height: 30px;
 }
 
 
@@ -141,15 +163,6 @@ input {
     margin: auto;
     margin-top: 50px;
 }
-
-/* .item_container {
-    background-color: beige;
-    padding: 30px;
-    margin: 20px;
-    width: 300px;
-    height: 200px;
-    box-shadow: 1px 1px 4px 1px rgb(194, 194, 159);
-    } */
 
 .item_container div {
     display: grid;
@@ -180,27 +193,27 @@ input {
     margin-top: 100px;
     width: 150px;
     padding: 1em 0;
-    background-color: red;
 }
 
-.pageButton{
-    padding: 0 1em;
-    font-size: 1.2em;
-    color: #333;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-}
-
-.pageButton.active,
-.pageButton:hover {
-  color: #1f975d;
-  font-weight: 600;
-  text-decoration: underline;
+.button_list{
+    font-size: 30px;
 }
 
 /* 검색 */
 .searchButton{
     cursor: pointer;
+    background-color: #112B23;
+    color: silver;
+    line-height: 30px;
+}
+
+.searchButton:hover{
+    background-color: silver;
+    color: #112B23;
+    height: 30px;
+}
+
+.pageButtons{
+    display: flex;
+    gap: 10px;
 }
