@@ -107,14 +107,6 @@
                     <fieldset>
                         <label>
                             <div class="select_logo"></div>
-                            <select id="category">
-                                <option value="0">전체검색</option>
-                                <option value="1">회원가입/정보</option>
-                                <option value="2">결제/배송</option>
-                                <option value="3">교환/반품/환불</option>
-                                <option value="4">마일리지 적립</option>
-                                <option value="5">기타</option>
-                            </select>
                             <input type="text" id="search_box" minlength="2">
                             <button onclick="search()" id="search_button">SEARCH</button>
                         </label>
@@ -143,16 +135,13 @@
                 </ul>
 
                 <div id="faq_table">
-                    <script defer src="./index.js"></script>
+                    <script src="./index.js"></script>
                 </div>
 
+                <div id="client_paging">
+                    <a href=""></a>
+                </div>
             </div>
-            <div id="client_paging">
-                <span class="prev-button">이전</span>
-                <span class="number-button">1</span>
-                <span class="next-button">이후</span>
-            </div>
-        </div>
 
     </main>
 
