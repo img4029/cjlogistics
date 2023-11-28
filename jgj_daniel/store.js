@@ -207,46 +207,74 @@ let storelist = [
 // html에서 자리잡은 store_list 구조 설정
 const store_list = document.querySelector(".store_list");
 const storeee = 
-`<div class="storeee" id="storeee">
-<p class="dot"></p>
-<p class="type"><img class="popup_icon"></p>
-<p class="location"></p>
-<p class="number"></p>
-<p class="time"></p>
-<p class="camera"></p>
-</div>`
+    `<div class="storeee" id="storeee">
+    <p class="dot"></p>
+    <p class="type"><img class="popup_icon"></p>
+    <p class="location"></p>
+    <p class="number"></p>
+    <p class="time"></p>
+    <p class="camera"></p>
+    </div>`
 
-// 함수 select 지정.
+// ==================================================
+
+// 전역변수 선언부터. 순서 중요.
+var Markers = [];
+// 마커들을 저장할 배열
+var mapContainer = document.getElementById('map');
+// 지도를 표시
+var mapOption = { 
+        center: new kakao.maps.LatLng(37.5611062, 126.9811552), 
+        // 지도의 중심좌표 __서울
+        level: 10 
+        // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+// 지도 생성
+
+var imageSrc = "./image/main_logo_black.png";
+// 마커 이미지 파일
+var imageSize = new kakao.maps.Size(50, 50);
+// 마커 이미지 크기
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+// 마커@!@!!!
+var openInfowindow = null;
+// 창 닫는거 기본값.
+
+// ==================================================
+
+
+// 함수 select 생성.
+// select : option 선택 value에 따른 리스트와 마커들.
 function select () {
     const option = document.getElementsByTagName('option');
     let arr= [];
+
     for (let j = 0; j < option.length; j++) {
         if (option[j].selected) {
             // 선택되었을 때, 일단 목록 비우기.
-            store_list.innerHTML='';
+            store_list.innerHTML = '';
             for (let i = 0; i < storelist.length; i++){
                 if ( storelist[i].location.includes(`${option[j].value}`)) {
-                    // 만약에 위치에 option_j의 value값이 들어있다면, (value값 한글로 설정함.)
-                    arr = [...arr, storelist[i]];
+                    // 만약에 위치에 option_j의 value값이 들어있다면, 
+                    // (value값 한글로 설정함.)
+                    // arr = [...arr, storelist[i]];
+                    arr.push(storelist[i]);
                     // 배열 만들기. 
-                    
-                    
                 }
             }
             makelines(arr);
-            
+            clickEvents(arr);
             // 배열 출력.
         }
     }
-    // makelines(arr);
-
 };
 
-// 아래는 리스트 만드는 함수.
+// 함수 makelines 생성.
+// 리스트 만드는 함수.
 function makelines (storelist) {
-
-
-    // store_list.textContent = '';
+    store_list.innerHTML = '';
 
     for (let i = 0; i < storelist.length; i++){
         store_list.insertAdjacentHTML("beforeend", storeee);
@@ -267,70 +295,43 @@ function makelines (storelist) {
         }
 
     }
-    clickEvents(storelist);
+    // clickEvents(storelist);
     // 홤녀이 만들어지고 기능이 만들어지면 기능을 잘 하겠죠  화면을 엎고 다시 만들면 만들어진 화면에는 기능이 안맥여짐. 그래서 그 기능들을 함수로 둘러싸서 다시 호출해서 적용시켜 줌. 
     // 만들어주고 기능 먹여주고 다시 선택 makelines하고 다시 finalList먹어줌.
 }
 
 
-// const store_list2 = document.querySelectorAll(".storeee");
-// 기본 리스트 
-makelines(storelist);
-
-
-// ============================ 
-// 지도
-
-var mapContainer = document.getElementById('map'),
-// 지도를 표시
-    mapOption = { 
-        center: new kakao.maps.LatLng(37.5611062, 126.9811552), 
-        // 지도의 중심좌표 __서울
-        level: 10 
-        // 지도의 확대 레벨
-    };
-
-var map = new kakao.maps.Map(mapContainer, mapOption); 
-// 지도 생성
-
-var imageSrc = "./image/main_logo_black.png";
-// 마커 이미지 파일
-var imageSize = new kakao.maps.Size(50, 50);
-// 마커 이미지 크기
-var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-// 마커@!@!!!
-var openInfowindow = null;
-// 창 닫는거 기본값.
-
-// =========================
-
-// let dotColor=0;
+// 함수 clickEvents 생성.
+// 지도에 마커 생성하고 리스트 클릭시 왼쪽 dot 검게 변하기. (호버시엔 gray_css)
 function clickEvents(storelist) {
-    for (var i = 0; i < storelist.length; i ++) {
+    removeMarkers();
+    // 새로 클릭하면서 기존 마커들 제거.
+
+    for (let i = 0; i < storelist.length; i++) {
+        //마커를 초기화.
         (function (index) {
             // 클로저 이용.
             var marker = new kakao.maps.Marker({
                 map: map, // 마커를 표시할 지도
-                // position: storelist[i].latlng, // 마커의 위치
-                position: new kakao.maps.LatLng(storelist[i].lat, storelist[i].lng), 
-                // 마커의 위치
+                // position: new kakao.maps.LatLng(storelist[i].lat, storelist[i].lng), 
+                position: new kakao.maps.LatLng(storelist[index].lat, storelist[index].lng), 
+                // 마커의 위치 (db에서 위도 경도 연결)
                 image : markerImage, 
                 // 마커 이미지 
             });
-            var iwRemoveable = true; 
+
+            Markers.push(marker);
         
             var infowindow = new kakao.maps.InfoWindow({
                 content: 
-                `<div class ="mapInnerBox">
-                    <p>${storelist[i].type}</p>
-                    <p>${storelist[i].location}</p>
-                    <p>${storelist[i].number}</p>
-                    <p>${storelist[i].time}</p>
-                </div>
-                `,
-                removable : iwRemoveable
+                    `<div class ="mapInnerBox">
+                        <p>${storelist[i].type}</p>
+                        <p>${storelist[i].location}</p>
+                        <p>${storelist[i].number}</p>
+                        <p>${storelist[i].time}</p>
+                    </div>`,
+                removable : true
                 // 인포윈도우에 표시할 내용
-        
             });
     
             
@@ -346,9 +347,6 @@ function clickEvents(storelist) {
             
             const storeAll = document.querySelectorAll(".storeee");
             const dot = storeAll[i].querySelector(".dot");
-            // console.log(dot);
-            // console.log(storelist.length);
-            // dot.style.backgroundColor = 'white';
     
             storeAll[i].addEventListener('click', () => {
                 if (openInfowindow) {
@@ -365,12 +363,29 @@ function clickEvents(storelist) {
                 }
                 dot.style.backgroundColor = 'black';
             });
-    
-    
-            
         })(i);
-        
     }
-
 }
-        
+
+// 함수 removeMarkers 생성.
+// 로드시 지도에서 기존 마커 제거할 함수
+function removeMarkers() {
+    if(Markers){
+        // if문 안에 명사 하나만 있다는건 true값이라는 뜻.
+        for(var i = 0; i < Markers.length; i++){
+            if (Markers[i]){
+                Markers[i].setMap(null);
+            }
+        }
+        Markers = [];
+    }
+}
+
+// 초기 페이지 - 리스트와 마커 생성.
+makelines(storelist);
+clickEvents(storelist);
+
+
+// 231129 용케도 어찌ㅈㅓ찌 검새ㄱ창 빼고 완성함. 
+// 검색창 만들까 생각중임. 찾아보느ㄴ 중.
+// 시간없음 말구.
