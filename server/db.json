@@ -217,7 +217,7 @@
       "cdar": "",
       "hsp": "",
       "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
-      "totalAmountPayment": "",
+      "totalAmountPayment": 1533123,
       "reserve": "",
       "coupon": [
         {
@@ -240,13 +240,6 @@
           "discountAmount": "15%",
           "couponName": "신규가입 쿠폰",
           "expirationPeriod": 20230914
-        },
-        {
-          "couponNumber": "DKJGS252JS",
-          "couponName": "생일 쿠폰",
-          "discountAmount": "40%",
-          "expirationPeriod": 20231201,
-          "downloadBt": "장바구니 쿠폰"
         }
       ],
       "ShoppingBasket": [

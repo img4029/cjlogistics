@@ -76,7 +76,7 @@ function insertPriData() {
                 }
                 switch (reserves.children[j].innerText) {
                     case '총 주문 금액':
-                        reserves.children[j + 1].innerText = `${myData[i].totalAmountPayment.toLocaleString()}`;
+                        reserves.children[j + 1].innerText = `${(myData[i].totalAmountPayment).toLocaleString()}`;
                         break;
                     case '적 립 금':
                         reserves.children[j + 1].innerText = `${myData[i].reserve.toLocaleString()}`;
@@ -93,6 +93,7 @@ function insertPriData() {
 
 
 //  ============ 최근 주문 내역 =============================
+
 let table = document.querySelectorAll('.bottomTb');
 let tableTb_1 = table[0].getElementsByTagName('td');
 let tableTb_2 = table[1].getElementsByTagName('td');
@@ -137,14 +138,12 @@ function latestPostData() {
 }
 
 
-
-
 // =====================================================
 
 
 
 //  ================== 관심 상품 정보 =============================
-// oooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 
 let wantList = document.getElementById('bottom_want_item');
 
@@ -190,6 +189,8 @@ function addWish() {
         }
     }
 }
+
+
 function movePage() {
     window.location.href = `${myData[0].wishList[i].link}`
 }
@@ -225,31 +226,5 @@ function addWish2() {
 
     }
 }
-
-
-
-
-
-
-
-// function aaaa() {
-//     for (let i = 0; i < myData[0].wishList.length; i++) {
-//         let makeBox = new Array(myData[0].wishList.length);
-//         makeBox[i] = [];
-//         for (let customer of myData) {
-//             makeBox[i].push(`<div div class="wantContainer>`);
-//             makeBox[i].push(`<img src="${myData[0].wishList[i].img}" alt="" class="wantImg">`);
-//             makeBox[i].push(`<div class="wantItem>${customer.wishList[i].productName}</div>`);
-//             makeBox[i].push(`<div class="wantCost>${customer.wishList[i].price.toLocaleString()}</div>`);
-//             makeBox[i].push(`</div>`);
-//             console.log(makeBox[i]);
-//         }
-//         wantList.innerHTML += makeBox[i].join("")
-//     }
-// }
-
-
-
-// oooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 
