@@ -22,16 +22,16 @@
       "coupon": [
         {
           "couponNumber": "H57HESOZ",
-          "couponType": "장바구니쿠폰",
           "couponName": "신규가입 쿠폰",
           "discountAmount": "10",
+          "couponType": "장바구니쿠폰",
           "expirationPeriod": 20230914
         },
         {
           "couponNumber": "H355HK21",
-          "couponType": "장바구니쿠폰",
-          "discountAmount": "10",
           "couponName": "생일 쿠폰",
+          "discountAmount": "10",
+          "couponType": "장바구니쿠폰",
           "expirationPeriod": 20230422
         }
       ],
@@ -833,14 +833,14 @@
       "couponName": "생일 쿠폰",
       "discountAmount": "10",
       "expirationPeriod": 20231201,
-      "downloadBt": "장바구니 쿠폰"
+      "couponType": "장바구니 쿠폰"
     },
     {
       "couponNumber": "GKJS222JS",
       "couponName": "가입 쿠폰",
       "discountAmount": "10",
       "expirationPeriod": 20231201,
-      "downloadBt": "장바구니 쿠폰"
+      "couponType": "장바구니 쿠폰"
     }
   ],
   "station": []

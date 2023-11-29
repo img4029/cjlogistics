@@ -137,6 +137,9 @@ const
 
 //정보를 받아서 로그인한 여부를 확인한후에 메뉴바(해더) 정보 변경
 function loginCheck(clientData) {
+    const hearder_icon = document.querySelectorAll(".hearder_icon>ul>li>a");
+    hearder_icon[0].href = `${herfChange}cart/cart.html`; 
+    hearder_icon[2].href = `${herfChange}search/search.html`;
     for (let i = 0; i < menu_list_main.length; i++) {
         menu_list_main[i].href = mainLink[i]
     }
@@ -151,7 +154,7 @@ function loginCheck(clientData) {
         }
         testing[0].innerText = `로그아웃`
         testing[1].innerText = `회원정보`
-        testing_logo.href = ``;
+        testing_logo.href = `${herfChange}mypage/mypage.html`;
         shopping_basket.innerText = clientData.ShoppingBasket.length;
     } else {
         for (let i = 0; i < menu_list_sub.length; i++) {
@@ -200,4 +203,4 @@ lhn.innerText += ":";
 ksb.innerText += ":";
 kso.innerText += ":";
 jgj.innerText += ":";
-img.innerText += ": 메뉴창, 로그인, 회원가입, 아이디 비밀번호 찾기, 서버 연동, footer";
+img.innerText += ": 메뉴창, 로그인, 회원가입, 아이디 비밀번호 찾기, 서버 연동, 주문조회, 장바구니";
