@@ -5,12 +5,9 @@ let complete_name1 = document.querySelector('.complete_name1'),
 
 let clientData1, myname;
 
+// 회원가입후에 생성된 DB(profile 프로퍼티의 가장 마지막 객체)에서 이름을 출력
 async function getClientData() {
     try {
-        /* 
-            json 객체의 id 고유식별자를 이용한 URL 매핑이 가능하며,
-            이와같은 경로 지정을 통해 json 데이터를 식별.
-        */
         const response = await axios.get('http://localhost:3000/profile/');
 
         clientData1 = response.data;

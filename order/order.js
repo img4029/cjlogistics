@@ -12,7 +12,7 @@ async function getClientData() {
         
         order_name.innerText = '['+clientData1.hname+']';
         order_name.className = "jsSpan";
-
+        // 주문정보가 없으면 주문내역이 없다는 열 출력
         if (clientData1.Order.length == 0) {
             const createDivEmptied = document.createElement('div')
             order_gridbox.appendChild(createDivEmptied);
@@ -21,6 +21,7 @@ async function getClientData() {
             order_gridbox.children[6].style.color = 'gray';
             order_gridbox.children[6].innerText = '주문내역이 없습니다.';
         }
+        // 주문정보의 크기만큼 반복
         for (let i = 0; i < clientData1.Order.length; i++) {
             createDivfc(clientData1.Order[i],i);
         }
@@ -69,7 +70,6 @@ function createDivfc(clientData2,count) {
     }
 }
 function changeDiv(ProductList, orderNumber, orderDate, count) {
-    console.log(ProductList);
     order_box.innerHTML = `
                 <h3>주문 정보</h3>
                 <div class="orderSub_box">
@@ -95,12 +95,12 @@ function changeDiv(ProductList, orderNumber, orderDate, count) {
         createDivfc2(ProductList[i], count);
     }
 }
+
 function createDivfc2(ProductList, count) {
     let create1, create2;
     const createDiv = new Array(5),
         orderSub_gridbox = document.querySelector('.orderSub_gridbox');
         
-    console.log(ProductList);
     for (let i = 0; i < createDiv.length; i++) {
         createDiv[i] = document.createElement('div');
         orderSub_gridbox.appendChild(createDiv[i]);
@@ -135,20 +135,19 @@ function createDivfc2(ProductList, count) {
                     createDiv[i].appendChild(create1);
                     createDiv[i].appendChild(create2);
                     create1.innerText = '상품 금액:';
-                    console.log(ProductList.amountPayment);
                     create2.innerText = ProductList.amountPayment.toLocaleString() + ' 원';
                     createDiv[i].style.justifyContent = 'space-between'
                     createDiv[i].style.padding = '0 10px'
                 }
                 break;
             case 3:
-                createDiv[i].innerText = "취소 시스템(미구현)";
+                createDiv[i].innerText = "주문 취소 시스템";
                 createDiv[i].style.fontSize = '14px'
                 createDiv[i].style.color = 'blue'
                 createDiv[i].style.fontWeight = 'bold'
                 createDiv[i].style.cursor = "pointer"
                 createDiv[i].addEventListener('click', () => {
-                    orderCancel(count);
+                    if (confirm("정말로 주문을 취소하시겠습니까?")) orderCancel(count);
                 });
                 break;
             case 4:
@@ -166,11 +165,12 @@ function createDivfc2(ProductList, count) {
         }
     }
 }
-
-function orderCancel(count) {
-    console.log(clientData1.Order);
+async function orderCancel(count) {
     clientData1.Order.splice(count, 1)
-    console.log(clientData1.Order);
-    console.log(count);
+    let patchData = {
+        Order: ''
+    };
+    patchData.Order = clientData1.Order;
+    const patchResponse = await axios.patch(`http://localhost:3000/loginComplete/1`, patchData);
 }
 getClientData();
