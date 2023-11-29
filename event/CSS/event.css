@@ -10,7 +10,7 @@
 a{
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 /* 헤더 속 nav,  메뉴바*/
@@ -46,7 +46,7 @@ a {
 
 h3 {
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     margin: 0;
     margin-top: 20px;
     margin-bottom: 20px;

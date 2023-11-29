@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제품 검색 페이지</title>
 
-
+    <!-- font style, icon -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-
+    <!-- css -->
     <link rel="stylesheet" href="../header.css">
     <link rel="stylesheet" href="./search.css/search.css">
+    <!-- js -->
     <script defer src="../header.js"></script>
     <script defer src="./search.js/search.js"></script>
     <script src="https://kit.fontawesome.com/ea93a092cc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <!-- 왜이럼 컴퓨터 너 정신안차려 -->
 </head>
 
 <body>
 
-    <!-- 헤더 메뉴바(건들지X) -->
     <header>
         <div class="header_acide">
             <div class="header_back"></div>
@@ -98,21 +98,14 @@
                 <div class="searchInputTop"><a href="../main/index.html">HOME</a><pre> > 상품검색</pre></div>
                 <div class="Search" font-size: 18px; font-weight: bold;>상품검색</div>
                 <div class="searchBlock">
-                    <div class="searchText">검색한 단어 : 키워드 들어옴</div>
+                    <div class="searchText">검색한 단어 : <span class="searchText1"></span></div>
                     <div>
                         <div>
                             <div class="searchBlock1">
-                                <div class="costSearchBox">
-                                    <span>가격대</span>
-                                    <input type="text" name="costSearchBox1" id="costSearchBox1" size="10px">
-                                    <span>-</span>
-                                    <input type="text" name="costSearchBox2" id="costSearchBox2" size="10px">
-                                </div>
-
                                 <div class="searchBox">
-                                    <span>제품명 키워드</span>
-                                    <input type="text" name="searchBox1" id="searchBox1" placeholder="검색하세여">
-                                    <div><a href="#" style="color: aliceblue;">SEARCH</a></div>
+                                    <span>제품명 키워드 : </span>
+                                    <input type="text" name="searchBox1" id="searchBox1" placeholder="검색할 키워드를 입력하세요">
+                                    <div class="searchButton">SEARCH</div>
                                 </div>
                             </div>
                         </div>
@@ -122,16 +115,50 @@
         </div>
 
         <div class="searchInfo">
-            <div>n 개의 상품이 있습니다</div>
-            <div class="itemSort">
-                <button class="highPrice">높은가격순</button>
-                <button class="lowPrice">낮은가격순</button>
-            </div>
+            <div></div>
+        </div>
+        <div class="itemSort">
+            <button class="highPrice">높은가격순</button>
+            <button class="lowPrice">낮은가격순</button>
         </div>
 
         <div class="item_container"></div>
-
+        <div class="pageButtons"></div>
     </main>
+
+    <footer>
+        <div class="footer_container">
+            <div>
+                <ul>
+                    <li><a href="">홈</a></li>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">서비스</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보 처리방침</a></li>
+                    <li><a href="">기업 구매 안내</a></li>
+                    <li><a href="">교환/환불 정책</a></li>
+                </ul>
+            </div>
+            <!-- 로고 -->
+            <div class="footer_logo">
+                <a href="">
+                    <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/logo/f_logo.png" alt="">
+                </a>
+            </div>
+            <!-- 팀원 이름 정보 -->
+            <div class="Team_members">
+                <p><span>주용현</span><span class="jyh"></span></p>
+                <p><span>이혜나</span><span class="lhn"></span></p>
+                <p><span>김수빈</span><span class="ksb"></span></p>
+                <p><span>김수옥</span><span class="kso"></span></p>
+                <p><span>장근정</span><span class="jgj"></span></p>
+                <p><span>임명건</span><span class="img"></span></p>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
+
 
 </html>
