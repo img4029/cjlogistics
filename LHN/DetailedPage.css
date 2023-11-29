@@ -744,5 +744,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.so2_3 img {
+    width: 20px;
+    height: 20px;
+    display:flex;
+}
 
 

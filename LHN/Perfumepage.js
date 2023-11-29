@@ -31,7 +31,6 @@ function frame(ihn) {
     for (let i = 0; i < ihn[0].perfume.length; i++) { // 상품갯수만큼  ul
         let makeUl = document.createElement('ul'); // ul 넣는 행위 변수에 넣기
         makeUl.setAttribute('class', 'pagelist_3'); // 클래스 지정하기
-        
         outer.appendChild(makeUl); // 부모속성에 ul 넣기
         for (let j = 0; j < category.length; j++) {
             if (Object.keys(ihn[0].perfume[i])[j] === 'img') {
@@ -68,6 +67,9 @@ function frame(ihn) {
             station(ihn[0].perfume[i])
             console.log(e.target);
             location.href = './DetailedPage.html';
+/* 
+        highprice.addEventListener('click', () => Sort(productData, 'a-b'));
+        rowprice.addEventListener('click', () => Sort(productData, 'b-a')); */
         })
     }
 }
