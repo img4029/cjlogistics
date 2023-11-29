@@ -24,8 +24,7 @@
     <!-- ======================= -->
     <script defer src="./javascript/mypage.js"></script>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -112,22 +111,22 @@
                     <div class="mypage_shop_info_3 info">
                         <h2><i class="fa-solid fa-circle-info"></i> shopping info</h2>
                         <div class="mypage_shop_3">
-                            <span><a href="">주문내역</a></span>
+                            <span><a href="../order/order.html">주문내역</a></span>
                             <span><a href="mypage_coupon.html">쿠폰내역</a></span>
-                            <span><a href="">적립금내역</a></span>
-                            <span><a href="">오늘본상품</a></span>
-                            <span><a href="">보관함</a></span>
-                            <span><a href="">주소록관리</a></span>
-                            <span><a href="">선물함</a></span>
+                            <span><a href="#">적립금내역</a></span>
+                            <span><a href="#">오늘본상품</a></span>
+                            <span><a href="#">보관함</a></span>
+                            <span><a href="#">주소록관리</a></span>
+                            <span><a href="#">선물함</a></span>
                         </div>
                     </div>
                     <div class="mypage_QnA_info_3 info">
                         <h2><i class="fa-solid fa-circle-question"></i> shopping question</h2>
                         <div class="mypage_QnA_3">
-                            <span><a href="">내 게시물 보기</a></span>
-                            <span><a href="">e-mail문의</a>
+                            <span><a href="#">내 게시물 보기</a></span>
+                            <span><a href="#">e-mail문의</a>
                             </span>
-                            <span><a href="">1:1게시판</a></span>
+                            <span><a href="#">1:1게시판</a></span>
                         </div>
                     </div>
 
@@ -135,7 +134,7 @@
                         <h2><i class="fa-solid fa-person-circle-question"></i> customer info</h2>
                         <div class="mypage_customer_3">
                             <span><a href="mypage_edit.html">회원정보변경</a></span>
-                            <span><a href="">회원정보탈퇴신청</a></span>
+                            <span><a href="#">회원정보탈퇴신청</a></span>
                         </div>
                     </div>
                 </div>
@@ -171,7 +170,7 @@
                     <caption>
                         <h2>최근 주문정보</h2>
                     </caption>
-                    <a href="">+ MORE</a>
+                    <a href="../order/order.html">+ MORE</a>
                     <div>
                         <table class="lastest_order bottomTb">
                             <colgroup>
@@ -180,12 +179,14 @@
                                 <col>
                                 <col>
                             </colgroup>
-                            <tr>
-                                <th>DATE</th>
-                                <th>PRODUCT</th>
-                                <th>COST</th>
-                                <th>DETAIL</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>DATE</th>
+                                    <th>PRODUCT</th>
+                                    <th>COST</th>
+                                    <th>DETAIL</th>
+                                </tr>
+                            </thead>
 
                         </table>
                     </div>
@@ -198,29 +199,30 @@
                     <caption>
                         <h2>최근 등록 게시글</h2>
                     </caption>
-                    <a href="">+ MORE</a>
+                    <a href="#">+ MORE</a>
 
                     <div>
                         <table class="lastest_post bottomTb">
-                            <tr>
-                                <th>DATE</th>
-                                <th>SUBJECT</th>
-                                <th>BOARD</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>DATE</th>
+                                    <th>SUBJECT</th>
+                                    <th>BOARD</th>
+                                </tr>
+                            </thead>
                         </table>
                     </div>
                 </div>
 
-                <div class="bottom_wish position">
+                <div class="bottom_want position">
                     <caption>
                         <h2>관심 상품 정보</h2>
                     </caption>
-                    <a href="">+ MORE</a>
+                    <a href=".">+ MORE</a>
 
-                    <div id="bottom_wish_list">
+                    <div id="bottom_want_item">
                     </div>
                 </div>
-
 
 
             </div>

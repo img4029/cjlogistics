@@ -15,15 +15,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap"
         rel="stylesheet">
-
+    <!-- ================================================= -->
     <link rel="stylesheet" href="../header.css">
-    <script defer src="../header.js"></script>
-
+    <!-- <script defer src="../header.js"></script> -->
+    <!-- ================================================ -->
     <link rel="stylesheet" href="./CSS/mypage_coupon.css">
-
+    <!-- ============================================== -->
     <script src="https://kit.fontawesome.com/647f0863a7.js" crossorigin="anonymous"></script>
     <script defer src="./javascript/mypage_coupon.js"></script>
+    <!-- ============================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 
 <body>
     <header>
@@ -109,20 +112,30 @@
                     <div class="mypage_shop_info_3 info">
                         <h2><i class="fa-solid fa-circle-info"></i> shopping info</h2>
                         <div class="mypage_shop_3 linkAll">
-                            
+                            <span><a href="">주문내역</a></span>
+                            <span><a href="mypage_coupon.html">쿠폰내역</a></span>
+                            <span><a href="">적립금내역</a></span>
+                            <span><a href="">오늘본상품</a></span>
+                            <span><a href="">보관함</a></span>
+                            <span><a href="">주소록관리</a></span>
+                            <span><a href="">선물함</a></span>
                         </div>
                     </div>
                     <div class="mypage_QnA_info_3 info linkAll">
                         <h2><i class="fa-solid fa-circle-question"></i> shopping question</h2>
                         <div class="mypage_QnA_3">
-                            
+                            <span><a href="">내 게시물 보기</a></span>
+                            <span><a href="">e-mail문의</a>
+                            </span>
+                            <span><a href="">1:1게시판</a></span>
                         </div>
                     </div>
 
                     <div class="mypage_customer_info_3 info linkAll">
                         <h2><i class="fa-solid fa-person-circle-question"></i> customer info</h2>
                         <div class="mypage_customer_3">
-                            
+                            <span><a href="mypage_edit.html">회원정보변경</a></span>
+                            <span><a href="">회원정보탈퇴신청</a></span>
                         </div>
                     </div>
                 </div>
@@ -130,7 +143,7 @@
 
             <fieldset class="coupon_enter_outer">
                 <div class="coupon_enter_inner">
-                    <form action="#" method="post">
+                    <form action="#" method="get">
                         <label>
                             <strong>쿠폰 인증번호 등록하기</strong>
                             <input type="text" placeholder="시리얼 코드를 입력해주세요.">
@@ -145,18 +158,15 @@
 
             <div class="coupon_mycoupon_outer">
                 <div class="mycoupon_head">
-                    <div><a href="">보유 쿠폰()</a></div>
-                    <div><a href="">다운로드 가능쿠폰()</a></div>
+                    <div class="haveCp nation">보유쿠폰</div>
+                    <div class="downloadCp nation">다운로드 가능쿠폰</div>
                 </div>
 
                 <div class="mycoupon_help">
-                    <p>
-                        <strong>OOO님</strong>이 보유하고 있는 쿠폰은 총 1장 입니다.
+                    <p class="count_coupon">
+
                     </p>
-                    <select name="coupon_have" id="coupon_have">
-                        <option value="#">유효기간 순</option>
-                        <option value="#">쿠폰발급 순</option>
-                    </select>
+
                 </div>
 
                 <div class="mycoupon_list">

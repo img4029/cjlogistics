@@ -5,6 +5,7 @@
     font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', 'sans-serif';
     font-size: 14px;
     border-collapse: collapse;
+    text-decoration: none;
 }
 
 ul {
@@ -22,16 +23,13 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 90px;
-    /* padding-left: 100px; */
 }
 
 .mypage_top_3>h1 {
-    text-align: center;
     padding-top: 200px;
     padding-bottom: 50px;
+    text-align: center;
 }
-
-
 
 .mypage_top_3>h1>a {
     font-size: 30px;
@@ -88,7 +86,6 @@ ul {
     border: 1px solid;
     font-size: 0.8rem;
     padding: 2px;
-    margin-left: 5px;
 }
 
 .profile_privacy>a:hover {
@@ -96,17 +93,17 @@ ul {
     color: aliceblue;
 }
 
-/* .profile_privacy>div:nth-child(1) {
-    display: inline-block;
-} */
-
 .mypage_profile_inner {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 1.5fr;
 }
 
 .mypage_profile_inner>div {
     padding: 20px;
+}
+
+.profile_identity {
+    padding-right: 10px;
 }
 
 .mypage_profile_inner a {
@@ -228,7 +225,7 @@ ul {
 
 
 
-#bottom_wish_list {
+#bottom_want_item {
     text-align: center;
     display: flex;
     gap: 20px;
@@ -239,13 +236,17 @@ ul {
     flex-wrap: wrap;
 }
 
-.wishImg {
+.wantImg {
     width: 200px;
     height: 200px;
 }
 
+.wantCost {
+    font-size: 12px;
+}
 
-.wishContainer {
+
+.wantContainer {
     width: calc(25% - 15px);
 }
 
