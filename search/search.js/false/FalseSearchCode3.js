@@ -1,5 +1,8 @@
 'use strict'
 
+// 자바스크립트 제품 더미 불러오기
+// 제품 데이터별 객체 생성 : 내부 객체는 이전 파일에
+
 // JSON DB : async axios 로 데이터 가져온 후 productData로 받아주기
 let productData;
 let searchInfo;
@@ -9,12 +12,12 @@ async function getClientData1() {
     try {
         const response = await axios.get('http://localhost:3000/ProductList/1');
 
-        // JSON DB 제품을 담아주는 변수
         productData = response.data;
-        // 제품 수량 안내 문구
+        console.log(productData);
+        // N개의 제품 안내 문구
         searchInfo = document.querySelector(".searchInfo");
 
-        // 제품 카테고리별 배열로 담아주는 변수
+        // ... 사용하여 배열의 구조를 전체 분할하여 하나의 배열로 만들어 perfumeData 변수에 담기
         allData =
             [...productData.perfume,
             ...productData.diffuser,
@@ -53,18 +56,6 @@ async function getClientData1() {
 
 };
 getClientData1();
-
-// 선택한 제품페이지 정보를 서버에 저장하는 함수
-async function station(product) {
-    try {
-        console.log(product);
-        let response1 = await axios.post('http://localhost:3000/station',product);
-
-    } catch (err) {
-        console.log('데이터를 가져오는 중 오류 발생');
-        console.log(err.message);
-    }
-}
 
 // html 구현
 
@@ -107,7 +98,6 @@ function itemHighSort(productData) {
         return parseFloat(a.price) - parseFloat(b.price);
     });
     pageNation(NewProducts, currentPage);
-    // 별도로 products_list를 생성하여 반복문을 사용하였으나
     // for (let i = 0; i < NewProducts.length; i++) {
     //     let product_list = `<div class="products_list">
     //         <img src="${NewProducts[i].img}" class="itemImg">
@@ -244,17 +234,11 @@ function pageNation(allData, currentPage) {
 
         productItem.insertAdjacentHTML("beforeend", product_list);
     };
-    let products_list = document.querySelectorAll(".products_list");
-    for (let i = 0; i < products_list.length; i++) {
-        products_list[i].addEventListener('click',(e)=>{
-            station(allData[i])
-            location.href = '../LHN/DetailedPage.html';
-        })
-    }
+
     let buttons = document.querySelector(".pageButtons");
 
     if (count == 0) {
-        for (let j = 1; j <= totalPage; j++) {
+        for (let j = 1; j <= totalPage + 1; j++) {
             let button_list = `<div class="button_list">${j}</div>`
             buttons.insertAdjacentHTML("beforeend", button_list);
             count++;
@@ -264,7 +248,9 @@ function pageNation(allData, currentPage) {
 
     for (let k = 0; k < button_list.length; k++) {
         button_list[k].addEventListener('click', (e) => {
+            console.log("aaa");
             currentPage = e.target.innerText;
+
             pageNation(allData, currentPage)
         })
     }

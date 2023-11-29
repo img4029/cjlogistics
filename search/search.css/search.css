@@ -99,15 +99,14 @@ main {
 
 .itemSort button {
     border: none;
-    background-color: black
-    ;
+    background-color: black;
     cursor: pointer;
     color: white;
     border-radius: 4px;
     padding: 2px 7px;
 }
 
-.itemSort button:hover{
+.itemSort button:hover {
     background-color: rgba(172, 172, 172, 0.548);
     color: black;
     transition: background 0.8s ease-out;
@@ -149,7 +148,6 @@ input {
     width: 200px;
     height: 30px;
 }
-
 
 /* main : item_container */
 .item_container {
@@ -195,25 +193,45 @@ input {
     padding: 1em 0;
 }
 
-.button_list{
+.button_list {
     font-size: 30px;
 }
 
-/* 검색 */
-.searchButton{
+
+/* 검색 버튼 */
+.searchButton {
     cursor: pointer;
     background-color: #112B23;
     color: silver;
     line-height: 30px;
 }
 
-.searchButton:hover{
+.searchButton:hover {
     background-color: silver;
     color: #112B23;
     height: 30px;
 }
 
-.pageButtons{
+.pageButtons {
     display: flex;
     gap: 10px;
+}
+
+.button_list {
+    color: black;
+    font-size: 1em;
+    /* text-decoration: underline; */
+    cursor: pointer;
+}
+
+.button_list:first-child::before {
+    content: '<<';
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.button_list:last-child::after {
+    content: '>>';
+    margin-left: 10px;
+    font-weight: bold;
 }

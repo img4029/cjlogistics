@@ -181,6 +181,7 @@ async function putClientData(clientData) {
 function addFont() {
     const head = document.querySelector('head');
     head.innerHTML += `
+    <link rel="shortcut icon" href="https://danielstruth.com/shopimages/dmcosmetic/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
