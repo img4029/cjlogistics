@@ -12,6 +12,7 @@
 
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3a23a93a007b00a0403622a2cf52eaca
     "></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     
 
@@ -67,7 +68,7 @@
                     </li>
                     <li>
                         <a class="testing_logo" href="">
-                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png"alt="마이페이지">
+                            <img src="https://danielstruth.com/design/dmcosmetic/hologram/pc/icon/mypagebtn.png" alt="마이페이지">
                         </a>
                     </li>
                     <li>
@@ -97,15 +98,14 @@
             <div class="top_search">
                 <div class="search_city">
                     <span>지역</span>
-                    <select name="selectcity" id="selectcity" class="selectcity">
-                        <option value="default">지역선택</option>
-                        <option value="seoul">서울</option>
-                        <option value="gyeonggi">경기도</option>
-                        <option value="incheon">인천</option>
-                        <option value="cheonan">천안</option>
-                        <option value="daejeon">대전</option>
-                        <option value="busan">부산</option>
-                        <option value="gimhae">김해</option>
+                    <select name="selectcity" id="selectcity" class="selectcity" onchange="select()">
+                        <option value="" selected>지역선택</option>
+                        <option value="서울">서울</option>
+                        <option value="경기도">경기도</option>
+                        <option value="인천">인천</option>
+                        <option value="천안">천안</option>
+                        <option value="대전">대전</option>
+                        <option value="부산">부산</option>
                     </select>
                 </div>
                 <div class="search_store">
@@ -128,9 +128,7 @@
                 <!-- map -->
     
             </div>
-
         </div>
-        
     </main>
     <footer>
         <div class="footer_container">
@@ -162,8 +160,6 @@
             </div>
         </div>
     </footer>
-    
-    
     
 </body>
 <script src="./store.js"></script>

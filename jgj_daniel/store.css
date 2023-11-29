@@ -154,12 +154,16 @@ main{
     width: 500px;
     height: 600px;
     /* margin-left: 50px; */
+    position: sticky;
+    top: 200px;
 }
 .mapInnerBox{
+    justify-content: center;
     width: 300px;
     height: fit-content;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+
 
 }
