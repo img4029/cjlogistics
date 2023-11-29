@@ -12,7 +12,7 @@ async function getClientData() {
         
         order_name.innerText = '['+clientData1.hname+']';
         order_name.className = "jsSpan";
-
+        // 주문정보가 없으면 주문내역이 없다는 열 출력
         if (clientData1.Order.length == 0) {
             const createDivEmptied = document.createElement('div')
             order_gridbox.appendChild(createDivEmptied);
@@ -21,6 +21,7 @@ async function getClientData() {
             order_gridbox.children[6].style.color = 'gray';
             order_gridbox.children[6].innerText = '주문내역이 없습니다.';
         }
+        // 주문정보의 크기만큼 반복
         for (let i = 0; i < clientData1.Order.length; i++) {
             createDivfc(clientData1.Order[i],i);
         }
@@ -94,6 +95,7 @@ function changeDiv(ProductList, orderNumber, orderDate, count) {
         createDivfc2(ProductList[i], count);
     }
 }
+
 function createDivfc2(ProductList, count) {
     let create1, create2;
     const createDiv = new Array(5),

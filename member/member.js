@@ -26,6 +26,7 @@ function InputDefault(Input, Input2) {
     }
 }
 
+//DB의 정보와 입력한 정보를 비교 (아이디 비밀번호로 로그인)
 async function ClientData() {
     try {
         // let count = 0;
@@ -65,6 +66,7 @@ login_btn.addEventListener('click', () => {
         ClientData();
     }
 });
+
 InputDefault(idInput, pwInput);
 
 // loginComplete = "test";

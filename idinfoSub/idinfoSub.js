@@ -341,6 +341,7 @@ function informationCheck() {
     }
 
 }
+//클릭시 발생하는 새로고침 방지
 function onSubmit(event) {
     event.preventDefault();
 };

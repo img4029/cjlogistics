@@ -6,21 +6,22 @@ let myData,
     wish = document.querySelector('.wish_body'),
     divClass = ['item_num', 'item_img', 'item_name', 'item_q', 'item_reward', 'item_cost', 'item_del', 'item_cencel'],
     divClass2 = ['item_img', 'item_name', 'item_q', 'item_reward', 'item_cost', '', 'item_cencel'];
+
 //db 데이터를 가져오고 각 함수들 호출
 async function getClientData() {
     try {
 
         const response = await axios.get('http://localhost:3000/loginComplete/1');
         let endDiv = document.createElement('div'),
-            priceSum = 0;
+            priceSum = 0; //장바구니안의 상품들의 총액을 저장할 변수
         myData = response.data;
         
-
+        //장바구니의 크기만큼 반복
         for (let i = 0; i < myData.ShoppingBasket.length; i++) {
             priceSum += myData.ShoppingBasket[i].price;
             makeCartFrame(myData.ShoppingBasket[i], i, myData.ShoppingBasket);
         }
-        console.log(myData.wishList.length);
+        //관심상품의 크기만큼 반복
         for (let i = 0; i < myData.wishList.length; i++) {
             makeWishFrame(myData.wishList[i], i, myData.wishList);
         }
@@ -35,8 +36,6 @@ async function getClientData() {
         console.log(err.message);
     }
 }
-
-// ====================================
 
 //데이터를 받아 장바구니에 내용 추가
 function makeCartFrame(ShoppingBasket, count, myData) {
@@ -121,6 +120,7 @@ function makeCartFrame(ShoppingBasket, count, myData) {
         }
     }
 };
+
 //데이터를 받아 관심상품에 내용추가
 function makeWishFrame(wishList, count, myData) { 
     for (let i = 0; i < 7; i++) {
@@ -232,4 +232,5 @@ async function wishListMove(wishList) {
         console.log(err.message);
     }
 }
+
 getClientData();

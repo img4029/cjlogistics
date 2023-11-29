@@ -41,6 +41,7 @@ let testing = document.querySelectorAll('.testing'),
     };
 var path = window.location.pathname,
     herfChange;
+
 // 메뉴바 활성화시에 뒤 흐린화면 연출
 let createBack = document.createElement('div');
 header_acide.appendChild(createBack);
@@ -88,6 +89,7 @@ function change() {
         
     }
 }
+//로그인 정보 db에서 가져옴
 async function getClientData() {
     try {
         const response = await axios.get('http://localhost:3000/loginComplete/1');
@@ -181,6 +183,7 @@ async function putClientData(clientData) {
 function addFont() {
     const head = document.querySelector('head');
     head.innerHTML += `
+    <link rel="shortcut icon" href="https://danielstruth.com/shopimages/dmcosmetic/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -189,9 +192,6 @@ function addFont() {
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
     `;
 }
-
-
-console.log(path);
 
 getClientData();
 addFont();
