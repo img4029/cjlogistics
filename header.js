@@ -198,9 +198,9 @@ function addFont() {
 
 getClientData();
 addFont();
-jyh.innerText += ":";
-lhn.innerText += ":";
-ksb.innerText += ":";
-kso.innerText += ":";
-jgj.innerText += ":";
-img.innerText += ": 메뉴창, 로그인, 회원가입, 아이디 비밀번호 찾기, 서버 연동, 주문조회, 장바구니";
+jyh.innerText += ": 마이페이지, 쿠폰페이지";
+lhn.innerText += ": 제품페이지, 상세페이지";
+ksb.innerText += ": 메인페이지, 고객센터";
+kso.innerText += ": 검색페이지, 이벤트";
+jgj.innerText += ": 스토어";
+img.innerText += ": 메뉴창, 로그인, 회원가입, 아이디 비밀번호 찾기, 주문조회, 장바구니";
