@@ -1027,6 +1027,14 @@
       "price": 92000,
       "discount": 0,
       "id": 8
+    },
+    {
+      "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+      "productName": "오일 퍼퓸 씨 모스 20ml",
+      "character": "NEW ∙ 오셔닉 ∙ 시원함 ∙ 중후함",
+      "price": 92000,
+      "discount": 0,
+      "id": 9
     }
   ]
 }

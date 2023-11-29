@@ -149,6 +149,20 @@ input {
     height: 30px;
 }
 
+/* 검색 버튼 */
+.searchButton {
+    cursor: pointer;
+    background-color: #112B23;
+    color: silver;
+    line-height: 30px;
+}
+
+.searchButton:hover {
+    background-color: silver;
+    color: #112B23;
+    height: 30px;
+}
+
 /* main : item_container */
 .item_container {
     display: grid;
@@ -181,7 +195,7 @@ input {
     font-weight: bold;
 }
 
-/* 페이지 네이션 11.25 */
+/* 페이지 네이션 */
 
 .pageButtons {
     position: relative;
@@ -197,21 +211,6 @@ input {
     font-size: 30px;
 }
 
-
-/* 검색 버튼 */
-.searchButton {
-    cursor: pointer;
-    background-color: #112B23;
-    color: silver;
-    line-height: 30px;
-}
-
-.searchButton:hover {
-    background-color: silver;
-    color: #112B23;
-    height: 30px;
-}
-
 .pageButtons {
     display: flex;
     gap: 10px;
@@ -220,7 +219,6 @@ input {
 .button_list {
     color: black;
     font-size: 1em;
-    /* text-decoration: underline; */
     cursor: pointer;
 }
 
