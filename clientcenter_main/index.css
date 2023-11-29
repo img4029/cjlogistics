@@ -34,11 +34,11 @@ main>div {
     font-size: 18px;
 }
 
-.client_search {
+#client_search {
     width: 1100px;
 }
 
-.client_search fieldset {
+#client_search fieldset {
     padding-top: 30px;
     padding-bottom: 50px;
     text-align: center;
@@ -47,16 +47,16 @@ main>div {
     height: 110px;
 }
 
-.client_search fieldset select {
+#client_search fieldset select {
     width: 183px;
     height: 33px;
     font-size: 14px;
     border:  1px solid #d8d8d8;
-    color: silver;
+    color: gray;
     outline: none;
     display: none;
 }
-.client_search label {
+#client_search label {
     position: relative;
     left: 110px;
     bottom: 45px;
@@ -72,21 +72,21 @@ main>div {
     top: 50px;   
 }
 
-.client_search fieldset button {
+#client_search fieldset button {
     width: 118px;
     height: 33px;
     background-color: black;
     color: white;
     border: 0;
 }
-.client_search fieldset button:hover {
+#client_search fieldset button:hover {
     color: black;
     background-color: white;
     border: 1px solid black;
     transition: all 0.5s;
 }
 
-.client_search fieldset input {
+#client_search fieldset input {
     width: 483px;
     height: 33px;
     line-height: 34px;
@@ -103,17 +103,18 @@ main>div {
     padding-bottom: 10px;
     font-size: 13px;
 }
-.faq_category_5 a:nth-child(1) {
+.faq_category_5 li:nth-child(1) {
     font-weight: bold;
 }
 
-.faq_category_5 a {
+.faq_category_5 li {
     padding-right: 20px;
     color: black;
+    cursor: pointer;
 }
 
 
-.faq_category_5 a:nth-child(n+2) {
+.faq_category_5 li:nth-child(n+2) {
     border-left: 1px solid #d8d8d8;
     padding-left: 20px;
 }
@@ -147,15 +148,16 @@ table {
     font-size: 12px;
     width: 1100px;
     cursor: pointer;
+    
 }
 
 
 td{
-    padding: 15px;
+    padding: 14px;
 }
 
 
-thead tr td{
+thead tr th{
     border-top: 1px solid;
     border-bottom: 1px solid rgb(150, 150, 150, 0.3);
     font-size: 13px;

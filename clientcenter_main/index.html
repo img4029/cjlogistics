@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="https://danielstruth.com/shopimages/dmcosmetic/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ 화면</title>
 
@@ -12,7 +11,11 @@
     <script defer src="../../header.js"></script>
 
     <link rel="stylesheet" href="./index.css">
+
+    <script defer src="./index.js"></script>
     <script defer src="./index2.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -101,56 +104,31 @@
             <div class="client_body">
                 <h3>FAQ</h3>
 
-                <div class="client_search">
+                <div id="client_search">
                     <fieldset>
                         <label>
-                            <div class="select_logo"></div>
-                            <select id="category">
-                                <option value="" id="all_seen">전체검색</option>
-                                <option value="1" id="info_seen">회원가입/정보</option>
-                                <option value="2" id="exchange_seen">결제/배송</option>
-                                <option value="3" id="exchange_seen">교환/반품/환불</option>
-                                <option value="4" id="mileage_seen">마일리지 적립</option>
-                                <option value="5" id="etc_seen">기타</option>
-                            </select>
-                            <input type="text" id="search_box" minlength="2">
+                           <a href="../main/index.html"><div class="select_logo"></div></a>
+                            <input type="text" id="search_box">
                             <button onclick="search()" id="search_button">SEARCH</button>
                         </label>
                     </fieldset>
                 </div>
 
                 <ul class="faq_category_5">
-                    <a href="" id="all_seen">
-                        <li>전체보기 </li>
-                    </a>
-                    <a href="" id="info_seen">
-                        <li>회원가입/정보</li>
-                    </a>
-                    <a href="" id="delivery_seen">
-                        <li>결제/배송</li>
-                    </a>
-                    <a href="" id="exchange_seen">
-                        <li>교환/반품/환불</li>
-                    </a>
-                    <a href="" id="mileage_seen">
-                        <li>마일리지 적립</li>
-                    </a>
-                    <a href="" id="etc_seen">
-                        <li>기타</li>
-                    </a>
+                    <li data-word="">전체보기 </li>
+                    <li data-word="회원가입/정보">회원가입/정보</li>
+                    <li data-word="결제/배송">결제/배송</li>
+                    <li data-word="교환/반품/환불">교환/반품/환불</li>
+                    <li data-word="마일리지 적립">마일리지 적립</li>
+                    <li data-word="기타">기타</li>
                 </ul>
 
-                <div id="faq_table">
-                    <script defer src="./index.js"></script>
-                </div>
+                <div id="faq_table"></div>
 
-            </div>
                 <div id="client_paging">
-                    <a href="">1</a>
-                    <a href="">2</a>
-                    <a href="">>></a>
                 </div>
-        </div>
+            </div>
+
 
     </main>
 
