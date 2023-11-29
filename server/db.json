@@ -25,111 +25,36 @@
           "couponType": "장바구니쿠폰",
           "couponName": "신규가입 쿠폰",
           "discountAmount": "10",
-          "expirationPeriod": "2023.11.21 ~ 2023.12.21"
-        }
-      ],
-      "ShoppingBasket": [],
-      "Order": [
-        {
-          "orderDate": "2023.11.16",
-          "orderNumber": "20231106110121-8178227352",
-          "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
-          "amountPayment": "201,000원",
-          "ProductList": [
-            {
-              "Gifts": "",
-              "productName": "디퓨저 올리브 릿지",
-              "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-              "quantity": 1,
-              "amountPayment": 201000,
-              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
-            },
-            {
-              "Gifts": "(사은품)",
-              "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
-              "options": "",
-              "quantity": 1,
-              "amountPayment": "",
-              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-            }
-          ],
-          "deliveryStatus": ""
+          "expirationPeriod": 20230914
         },
         {
-          "orderDate": "2023.11.16",
-          "orderNumber": "20231106110121-8178227353",
-          "productName": "디퓨저 올리브 릿지 외 1건",
-          "amountPayment": 198000,
-          "ProductList": [
-            {
-              "Gifts": "",
-              "productName": "디퓨저 올리브 릿지",
-              "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
-              "quantity": 1,
-              "amountPayment": 100000,
-              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
-            },
-            {
-              "Gifts": "(사은품)",
-              "productName": "오일 퍼퓸 샘플 1ml 포레스트 & 소울",
-              "options": "",
-              "quantity": 1,
-              "amountPayment": "",
-              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
-            }
-          ],
-          "deliveryStatus": ""
+          "couponNumber": "H355HK21",
+          "couponType": "장바구니쿠폰",
+          "discountAmount": "10",
+          "couponName": "생일 쿠폰",
+          "expirationPeriod": 20230422
         }
       ],
-      "id": 1
-    },
-    {
-      "hname": "헤르",
-      "hid": "gmrcjs45",
-      "hpw": "zxc123!@#",
-      "birthDate": "1999.6.11",
-      "sx": "sxman",
-      "zip": "63503",
-      "har": "제주특별자치도 서귀포시 대정읍 대한로 632",
-      "dar": "헤르아파트",
-      "darCb": false,
-      "hpn": "01049199822",
-      "hem": "gmrcjs45@naver.com",
-      "cpn": "",
-      "car": "",
-      "cdar": "",
-      "hsp": "",
-      "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
-      "totalAmountPayment": "",
-      "reserve": "",
-      "coupon": [],
-      "ShoppingBasket": [],
-      "Order": [],
-      "id": 2
-    }
-  ],
-  "loginComplete": [
-    {
-      "hname": "임명건",
-      "hid": "img4029",
-      "hpw": "zxc123!@#",
-      "birthDate": "1993.4.18",
-      "sx": "sxman",
-      "zip": "17324",
-      "har": "경기 이천시 부발읍 대산로 759",
-      "dar": "블레싱타운",
-      "darCb": false,
-      "hpn": "01049199822",
-      "hem": "img4029@naver.com",
-      "cpn": "",
-      "car": "",
-      "cdar": "",
-      "hsp": "",
-      "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
-      "totalAmountPayment": "",
-      "reserve": "",
-      "coupon": [],
-      "ShoppingBasket": [],
+      "ShoppingBasket": [
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000012.jpg?1692267288",
+          "productName": "퍼퓸드 오일 핸드크림 세트",
+          "character": "30ml*3EA",
+          "price": 38000,
+          "options": "선물포장 : 홀리데이 선물포장-디퓨저 2개",
+          "quantity": 1,
+          "reserve": 380
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0230010000082.jpg?1697722698",
+          "productName": "솔리드 디퓨저",
+          "character": "NEW",
+          "price": 25000,
+          "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
+          "quantity": 1,
+          "reserve": 250
+        }
+      ],
       "Order": [
         {
           "orderDate": "2023.11.16",
@@ -143,7 +68,8 @@
               "options": "선물포장 : 폴리데이 선물포장 - 오일 퍼퓸 밤쉘20ml",
               "quantity": 1,
               "amountPayment": 201000,
-              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241"
+              "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000522.jpg?1699427241",
+              "reserve": 2010
             },
             {
               "Gifts": "(사은품)",
@@ -151,7 +77,8 @@
               "options": "",
               "quantity": 1,
               "amountPayment": "",
-              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852"
+              "img": "https://www.danielstruth.com/shopimages/dmcosmetic/0010000000202.jpg?1695624852",
+              "reserve": 0
             }
           ],
           "deliveryStatus": ""
@@ -182,6 +109,106 @@
           "deliveryStatus": ""
         }
       ],
+      "lastestOrder": [
+        {
+          "orderDate": "2023.11.16",
+          "orderNumber": "20231106110121-8178227352",
+          "productName": "오일 퍼퓸 밤쉘 20ml 외 1건",
+          "amountPayment": 201000,
+          "detail": ""
+        }
+      ],
+      "lastestPosted": [
+        {
+          "date": "",
+          "subject": "",
+          "board": ""
+        }
+      ],
+      "wishList": [
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000602.jpg?1700530972",
+          "productName": "오일퍼퓸 20ml + 코냑캔들",
+          "character": "회원전용상품",
+          "price": 166000,
+          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개",
+          "quantity": 1,
+          "reserve": 1660
+        },
+        {
+          "img": "https://danielstruth.com/shopimages/dmcosmetic/0010000000612.jpg?1700530955",
+          "productName": "오일퍼퓸20ml + 디켄터 리드 디퓨저",
+          "character": "회원전용상품",
+          "price": 200000,
+          "options": "향선택 : 트와일라잇듀, 선물포장 : 홀리데이 선물포장-디퓨저 2개",
+          "quantity": 1,
+          "reserve": 2000
+        }
+      ],
+      "id": 1
+    },
+    {
+      "hname": "헤르",
+      "hid": "gmrcjs45",
+      "hpw": "zxc123!@#",
+      "birthDate": "2010.4.6",
+      "sx": "sxwomen",
+      "zip": "47502",
+      "har": "부산 연제구 미남로 1",
+      "dar": "헤르아파트",
+      "darCb": false,
+      "hpn": "01049199822",
+      "hem": "gmrcjs45@naver.com",
+      "cpn": "",
+      "car": "",
+      "cdar": "",
+      "hsp": "",
+      "img": "https://image.makeshop.co.kr/makeshop/d3/basic_simple/mypage/bg_mypage_user.gif",
+      "totalAmountPayment": "",
+      "reserve": "",
+      "coupon": [
+        {
+          "couponNumber": "H57HESOZ",
+          "couponType": "장바구니쿠폰",
+          "couponName": "신규가입 쿠폰",
+          "discountAmount": "10",
+          "expirationPeriod": 20230422
+        }
+      ],
+      "ShoppingBasket": [],
+      "Order": [],
+      "lastestOrder": [],
+      "lastestPosted": [],
+      "wishList": [],
+      "id": 2
+    }
+  ],
+  "loginComplete": [
+    {
+      "hname": "",
+      "hid": "",
+      "hpw": "",
+      "birthDate": "",
+      "sx": "",
+      "zip": "",
+      "har": "",
+      "dar": "",
+      "darCb": "",
+      "hpn": "",
+      "hem": "",
+      "cpn": "",
+      "car": "",
+      "cdar": "",
+      "hsp": "",
+      "img": "",
+      "totalAmountPayment": "",
+      "reserve": "",
+      "coupon": "",
+      "ShoppingBasket": "",
+      "Order": "",
+      "lastestOrder": "",
+      "lastestPosted": "",
+      "wishList": "",
       "id": 1
     }
   ],
@@ -449,6 +476,371 @@
       "handCare": [],
       "homeCare": [],
       "id": 1
+    }
+  ],
+  "Faq": [
+    {
+      "num": "번호",
+      "type": "분류",
+      "title": "제목"
+    },
+    {
+      "type": "결제/배송",
+      "title": "택배박스 안에서 향이 나는데 제품이 샌건가요?",
+      "question": "택배박스 안에서 향이 나는데 제품이 샌건가요?",
+      "faqAnswer": "배송 시 제품을 감싼 습자지에 올리브 릿지 향을 연출하여 보내드리고 있습니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "무통장 계좌번호 알려주세요!",
+      "question": "무통장 계좌번호 알려주세요!",
+      "faqAnswer": "03350589301020 기업은행 예금주 : 주식회사디엠코스메틱스코리아"
+    },
+    {
+      "type": "교환/반품/환불",
+      "title": "배송 누락시 어떻게 해야하나요?",
+      "question": "배송 누락시 어떻게 해야하나요?",
+      "faqAnswer": "배송 온 물품을 사진 촬영하여 1:1 문의 부탁드립니다."
+    },
+    {
+      "type": "교환/반품/환불",
+      "title": "교환/반품 신청은 어떻게 하나요?",
+      "question": "교환/반품 신청은 어떻게 하나요?",
+      "faqAnswer": "수령일 기준 7일 이내에 교환/반품에 대한 청약철회 의사를 밝혀주시면 처리가 가능합니다. - 교환/반품 절차 : 마이페이지 → 주문내역 → 교환/반품 신청 → 수거기사님 방문예정 - 구매하신 쇼핑몰에서 신청해주시거나, 고객센터(02-466-7941)으로 신청 부탁드립니다. - 구매하신 제품의 AS를 원하는 경우에도 고객센터(02-466-7941)으로 연락 부탁드립니다."
+    },
+    {
+      "type": "기타",
+      "title": "고객센터의 상담 시간을 알고 싶어요.",
+      "question": "고객센터의 상담 시간을 알고 싶어요.",
+      "faqAnswer": "고객센터 전화번호 : 02-466-7941 - 상담 시간 : 평일 오전 10시 - 오후 4시 (점심시간 : 오전 11시 30분 ~ 오후 1시 / 주말, 공휴일 휴무) - 전화 연결이 어려운 경우 게시판에 남겨주시면 확인 후 정성껏 답변드리겠습니다. ※ 문의량이 많을 경우 상담 연결 및 답변이 지연될 수 있습니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "배송은 언제 되나요?",
+      "question": "배송은 언제 되나요?",
+      "faqAnswer": "영업일 기준 오후 1시 이전 결제 완료 주문건 : 당일 출고됩니다. (일부 상품 제외) - 공휴일의 경우 다음 영업일에 출고됩니다. (출고된 경우 서울/수도권 지역은 대부분 다음날 수령, 지방은 1~3일 이내에 배송됩니다. 따라서 전체 배송 기간은 (업무일 기준) 3일~7일 정도 소요되며, 일부 택배사 사정에 따라 변동될 수 있습니다.) ※ 주문 상품이 재고 부족일 경우 부득이하게 배송 시간은 달라질 수 있는 점 양해 부탁드립니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "배송 전 취소 하고 싶어요!",
+      "question": "배송 전 취소 하고 싶어요!",
+      "faqAnswer": "주문 당일 취소를 원하시는 고객님께서는 사이트에서 취소 요청을 해주신 뒤, 고객센터(02-466-7941)로 문의하여 취소 접수를 부탁드립니다. - 취소 접수를 하지 않은 건에 대해서는 상품이 출고되어 주문 취소가 불가합니다. 이 경우 부득이하게 반품으로 처리 될 수 있습니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "비회원으로 주문이 가능한가요?",
+      "question": "비회원으로 주문이 가능한가요?",
+      "faqAnswer": "비회원으로도 주문이 가능합니다. 상품 구매 버튼 클릭후 주문자 정보와 배송 정보를 입력하시면 비회원으로도 주문이 가능합니다."
+    },
+    {
+      "type": "결제/배송",
+      "title": "배송비는 얼마인가요?",
+      "question": "배송비는 얼마인가요?",
+      "faqAnswer": "배송비 : 3,000원 (4만원 이상 구매 시 무료배송 / 롯데택배) 교환&반품비는 4만원 이상 구매 시 6,000원, 4만원 미만 구매시 3,000원 입니다."
+    },
+    {
+      "type": "회원가입/정보",
+      "title": "회원 탈퇴는 어떻게 하나요?",
+      "question": "회원 탈퇴는 어떻게 하나요?",
+      "faqAnswer": "[마이페이지>회원정보>회원탈퇴]를 통해 탈퇴하실 수 있습니다."
+    },
+    {
+      "type": "회원가입/정보",
+      "title": "회원탈퇴 후 재가입을 할 수 있나요?",
+      "question": "회원탈퇴 후 재가입을 할 수 있나요?",
+      "faqAnswer": "회원탈퇴 후 14일 이후에 재 가입이 가능 합니다."
+    },
+    {
+      "type": "기타",
+      "title": "생일 축하 쿠폰은 어떻게 받을 수 있나요?",
+      "question": "생일 축하 쿠폰은 어떻게 받을 수 있나요?",
+      "faqAnswer": "회원 정보에 입력하신 생일 기준으로 7일 전 [축하 쿠폰 15% OFF] 자동 발급됩니다."
+    },
+    {
+      "type": "마일리지 적립",
+      "title": "마일리지 적립 제도는 어떻게 되나요?",
+      "question": "마일리지 적립 제도는 어떻게 되나요?",
+      "faqAnswer": "마일리지 적립은 구매 금액의 1% 적립이 됩니다."
+    },
+    {
+      "type": "마일리지 적립",
+      "title": "마일리지 적립금은 어떻게 사용하나요?",
+      "question": "마일리지 적립금은 어떻게 사용하나요?",
+      "faqAnswer": "마일리지 적립금 100점은 현금 100원과 같습니다. 사용 시 1,000원 이상 되어야 사용하실 수 있으며, 5,000원 이 넘는 금액의 적립금은 사용하실 수가 없습니다. 구매 시 구매 금액 합계가 40,000원 이상인 경우 결제 시 사용 가능 합니다."
+    }
+  ],
+  "storelist": [
+    {
+      "type": "POP_UP",
+      "location": "서울특별시 영등포구 영중로 9",
+      "number": "신세계 타임스퀘어점 1F",
+      "time": "행사 기간 : 23.12.22(금) - 23.01.04(목)",
+      "lat": "37.51720869306258",
+      "lng": "126.90565595693148"
+    },
+    {
+      "type": "POP_UP",
+      "location": "서울특별시 서초구 신반포로 176",
+      "number": "신세계 강남점 4F",
+      "time": "행사 기간 : 23.12.15(목) - 23.12.28(목)",
+      "lat": "37.504645733314646",
+      "lng": "127.00464544401962"
+    },
+    {
+      "type": "POP_UP",
+      "location": "경기도 화성시 동탄역로 160",
+      "number": "롯데 동탄점 B1F",
+      "time": "행사 기간 : 23.12.08(금) - 23.12.13(수)",
+      "lat": "37.20069759419991",
+      "lng": "127.09769683081083"
+    },
+    {
+      "type": "POP_UP",
+      "location": "서울특별시 동대문구 왕산로 214",
+      "number": "롯데 청량리점 1F",
+      "time": "행사 기간 : 23.12.08(금) - 23.12.13(수)",
+      "lat": "37.58042560021699",
+      "lng": "127.0487345712157"
+    },
+    {
+      "type": "POP_UP",
+      "location": "충청남도 천안시 동남구 만남로 43",
+      "number": "신세계 아산점 1F",
+      "time": "행사 기간 : 23.12.01(금) - 23.12.07(목)",
+      "lat": "36.81959120842328",
+      "lng": "127.15583677769483"
+    },
+    {
+      "type": "POP_UP",
+      "location": "경기도 하남시 미사대로 750",
+      "number": "신세계 스타필드 하남 1F",
+      "time": "행사 기간 : 23.11.17(금) - 23.11.30(목)",
+      "lat": "37.54550098919824",
+      "lng": "127.22403069518288"
+    },
+    {
+      "type": "POP_UP",
+      "location": "대전광역시 유성구 엑스포로 1",
+      "number": "신세계 대전점 Art&Science 1층",
+      "time": "행사 기간 : 23.05.15(월) - 23.02.29(목)",
+      "lat": "36.37532754281779",
+      "lng": "127.38214308289662"
+    },
+    {
+      "type": "POP_UP",
+      "location": "서울 중구 소공로 63",
+      "number": "신세계 본점",
+      "time": "행사 기간 : 23.11.24(금) - 23.11.29(수)",
+      "lat": "37.560851005734555",
+      "lng": "126.98104775256265"
+    },
+    {
+      "type": "스타필드 고양점 1F",
+      "location": "경기도 고양시 덕양구 고양대로 1955",
+      "number": "T. 031-5173-1809",
+      "time": "OPEN. 10:00 ~ 22:00",
+      "lat": "37.64682027785693",
+      "lng": "126.89409592267026"
+    },
+    {
+      "type": "신세계 백화점 │본점 신관 2F",
+      "location": "서울 중구 소공로 63",
+      "number": "T. 02-310-1635",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.560873527017954",
+      "lng": "126.98102511054508"
+    },
+    {
+      "type": "신세계 백화점 │타임스퀘어점 1F",
+      "location": "서울특별시 영등포구 영중로 9",
+      "number": "T. 02-2639-4370",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.517089242466874",
+      "lng": "126.90557127078831"
+    },
+    {
+      "type": "신세계 백화점 │의정부점 3F",
+      "location": "경기도 의정부시 의정부동 평화로 525",
+      "number": "T. 031-8082-1525",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.73705773446688",
+      "lng": "127.0463496890704"
+    },
+    {
+      "type": "신세계 백화점 │경기점 1F",
+      "location": "경기도 용인시 수지구 죽전동 포은대로 536",
+      "number": "T. 031-695-2247",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.32508201011521",
+      "lng": "127.107978205053"
+    },
+    {
+      "type": "신세계 백화점 │스타필드 하남점 2F",
+      "location": "경기 하남시 미사대로 750 스타필드 하남",
+      "number": "T. 031-8072-1658",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.54539624285832",
+      "lng": "127.22343913149483"
+    },
+    {
+      "type": "신세계 백화점 │센텀시티점 1F",
+      "location": "부산광역시 해운대구 센텀남대로 35",
+      "number": "T. 051-745-2460",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "35.16888246794983",
+      "lng": "129.1293429911612"
+    },
+    {
+      "type": "갤러리아 백화점 │명품관 WEST B1F",
+      "location": "서울특별시 강남구 압구정동 압구정로 343",
+      "number": "T. 02-6905-3378",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.52848178318374",
+      "lng": "127.04022146900103"
+    },
+    {
+      "type": "갤러리아 백화점 │광교점 B1F",
+      "location": "경기도 수원시 영통구 하동 광교중앙로 124",
+      "number": "T. 031-5174-7025",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.285298328962405",
+      "lng": "127.05740713181375"
+    },
+    {
+      "type": "갤러리아 백화점 │센터시티점 B1F",
+      "location": "충청남도 천안시 서북구 공원로 227",
+      "number": "T. 041-412-9989",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "36.8003744142021",
+      "lng": "127.10504646435798"
+    },
+    {
+      "type": "갤러리아 백화점 │타임월드점 B2F",
+      "location": "대전광역시 서구 둔산동 대덕대로 211",
+      "number": "T. 042-720-6041",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "36.35181294931939",
+      "lng": "127.37812614608737"
+    },
+    {
+      "type": "롯데백화점 │ 노원점 2F",
+      "location": "서울특별시 노원구 동일로 1414",
+      "number": "T. 02-950-2209",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.65510954585599",
+      "lng": "127.06100821507594"
+    },
+    {
+      "type": "롯데백화점 │ 미아점 1F",
+      "location": "서울특별시 강북구 미아동 도봉로 62",
+      "number": "T. 02-944-2137",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.614516230515235",
+      "lng": "127.03044504550816"
+    },
+    {
+      "type": "롯데백화점 │ 관악점 1F",
+      "location": "서울특별시 관악구 봉천동 729-22",
+      "number": "T. 02-3289-8173",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.490449224264886",
+      "lng": "126.92505940295628"
+    },
+    {
+      "type": "롯데백화점 │ 잠실점 2F",
+      "location": "서울특별시 송파구 잠실동 올림픽로 240",
+      "number": "T. 02-2143-1734",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.511207351800905",
+      "lng": "127.0979191368291"
+    },
+    {
+      "type": "롯데백화점 │ 청량리점 1F",
+      "location": "서울특별시 동대문구 전농1동 왕산로 214",
+      "number": "T. 010-7254-2016",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.58041473459076",
+      "lng": "127.04776377869369"
+    },
+    {
+      "type": "롯데백화점 │ 건대스타시티점 1F",
+      "location": "서울특별시 광진구 능동로 92",
+      "number": "T. 02-2218-3132",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.53893897745698",
+      "lng": "127.07132309144207"
+    },
+    {
+      "type": "롯데백화점 │ 동탄점 3F",
+      "location": "경기도 화성시 동탄역로 160",
+      "number": "T. 031-8036-3783",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.20069758723265",
+      "lng": "127.09770527891575"
+    },
+    {
+      "type": "롯데백화점 │ 일산점 1F",
+      "location": "경기도 고양시 일산동구 장항동 중앙로 1283",
+      "number": "T. 031-909-3159",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.66043257127353",
+      "lng": "126.77203741312458"
+    },
+    {
+      "type": "롯데백화점 │ 중동점 1F",
+      "location": "경기도 부천시 길주로 300",
+      "number": "T. 032-320-7172",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.502517278080624",
+      "lng": "126.77519305438751"
+    },
+    {
+      "type": "롯데백화점 │ 평촌점 2F",
+      "location": "경기도 안양시 동안구 호계동 시민대로 180",
+      "number": "T. 031-8086-9221",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.390274289756576",
+      "lng": "126.95061243272583"
+    },
+    {
+      "type": "롯데백화점 │구리점 1F",
+      "location": "경기도 구리시 인창동 경춘로 261",
+      "number": "T. 031-550-7185",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.60269054740614",
+      "lng": "127.14368507548436"
+    },
+    {
+      "type": "롯데백화점 │인천점 2F",
+      "location": "인천광역시 미추홀구 연남로 35",
+      "number": "T. 032-242-2214",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.442059660047185",
+      "lng": "126.70190011667044"
+    },
+    {
+      "type": "롯데백화점 │안산점 1F",
+      "location": "경기도 안산시 단원구 고잔동 고잔1길 12",
+      "number": "T. 031-412-7786",
+      "time": "OPEN. 10:30 ~ 20:00",
+      "lat": "37.31801435546883",
+      "lng": "126.83438559292878"
+    }
+  ],
+  "canDownload": [
+    {
+      "couponNumber": "DKJGS252JS",
+      "couponName": "생일 쿠폰",
+      "discountAmount": "10",
+      "expirationPeriod": 20231201,
+      "downloadBt": "장바구니 쿠폰"
+    },
+    {
+      "couponNumber": "GKJS222JS",
+      "couponName": "가입 쿠폰",
+      "discountAmount": "10",
+      "expirationPeriod": 20231201,
+      "downloadBt": "장바구니 쿠폰"
     }
   ]
 }

@@ -5,13 +5,14 @@ function search() {
     let keyword = document.querySelector('#search_box').value;
 
     let search_row = document.querySelectorAll('#faq_table tbody tr');
-    let check_tr = 0;
+
+    let check_tr = 1;
 
     search_row.forEach(function (tr) {
         tr.style.display = 'none';
     });
 
-    for (let i = search_row.length-1; i >= 0; i--) {
+    for (let i = search_row.length - 1; i >= 0; i--) {
         let search_arr = search_row[i];
 
         if (search_arr && search_arr.classList.contains('QAcell') && search_arr.style.display == 'none') {
@@ -20,16 +21,11 @@ function search() {
         let titleCell = search_arr.children[2].innerHTML;
 
         if (((titleCell.includes(keyword)))) {
-            check_tr++;
             search_arr.style.display = 'table-row';
             search_arr.children[0].textContent = check_tr;
+            check_tr++;
         } else {
             search_arr.style.display = 'none';
-        }
-
-        if (keyword.length < 2) {
-            alert('검색어는 2자 이상 입력해주세요.');
-            break;  // 검색어가 2자 미만일시 alert, 검색 취소
         }
     }
     window.scrollTo({
@@ -50,7 +46,7 @@ pressEnter.addEventListener("keyup", function (event) {
 
 function search_clicker(keyword) {
     let search_row = document.querySelectorAll('#faq_table tbody tr');
-    let check_tr = 0;
+    let check_tr = 1;
 
     for (let i = search_row.length - 1; i >= 0; i--) {
         let row = search_row[i];
@@ -62,9 +58,9 @@ function search_clicker(keyword) {
         let categoryCell = row.children[1].innerHTML;
 
         if (categoryCell.includes(keyword)) {
-            check_tr++;
             row.style.display = 'table-row';
             row.children[0].textContent = check_tr;
+            check_tr++;
         } else {
             row.style.display = 'none';
         }

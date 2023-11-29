@@ -6,7 +6,6 @@
     text-decoration: none;
     margin: 0;
     font-family: 'Libre Baskerville', 'Noto Sans KR', 'Nunito Sans', sans-serif;
-    overflow-x: hidden;
 }
 
 main .all_container_5 {
@@ -125,7 +124,9 @@ main .all_container_5 {
     text-align: center;
     padding-bottom: 180px;
 }
-
+.event_container_5 a {
+    color: black;
+}
 
 .event_container_5 a img {
     width: 313px;
@@ -191,11 +192,19 @@ main .all_container_5 {
     color: #808080;
  }
 
+ .best_container_upper_5 li:nth-child(2) a {
+     color: black;
+ }
+
 .best_container_lower_5 ul li:nth-child(n+3) a {
     font-size: 16px;
     font-weight: 400;
     color: #808080;
  }
+
+.best_container_lower_5 li:nth-child(2) a {
+    color: black;
+}
 
  .store_info_5 {
     width: 100%;

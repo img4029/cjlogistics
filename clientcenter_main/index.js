@@ -33,6 +33,7 @@ function createTableHeader(num, type, title) {
 /*==================== tbody 분류 ====================*/
 function createTableRow(rowNumber, type, title, question, faqAnswer) {
     let tbody_tr = document.createElement('tr');
+    tbody.appendChild(tbody_tr);
 
     let numberCell = document.createElement('td');
     numberCell.textContent = rowNumber;
@@ -46,16 +47,16 @@ function createTableRow(rowNumber, type, title, question, faqAnswer) {
     titleCell.textContent = title;
     tbody_tr.appendChild(titleCell);
 
-    tbody.appendChild(tbody_tr);
 
     /*===== 클릭이벤트 =====*/
     tbody_tr.addEventListener('click', function () {
-        FAQ_display(tbody_tr.nextElementSibling);
+        FAQ_display(tbody_tr.nextSibling);
     });
 
     /*===== 바로 다음에 Q,A행 2줄 =====*/
     QArow('Q', question);
     QArow('A', faqAnswer);
+
 }
 
 /*==================== Q,A행  ====================*/
@@ -80,35 +81,36 @@ function QArow(type, content) {
 
 function FAQ_display(faqRow) {
     let Q_next_A;
-    if (faqRow && faqRow.classList && faqRow.classList.contains('QAcell')) {
+
+    if ( faqRow.classList.contains('QAcell')) {
         if (faqRow.style.display == 'table-row') {
             faqRow.style.display = 'none';
 
-            Q_next_A = faqRow.nextElementSibling;
+            Q_next_A = faqRow.nextSibling;
             if (Q_next_A.classList.contains('QAcell')) {
                 Q_next_A.style.display = 'none';
             }
             return;
         }
     }
-
+    /*===== 클릭시 다른 QA가 열려있다면 닫기 =====*/
     document.querySelectorAll('.QAcell').forEach(function (QA_flat) {
-        if (QA_flat.classList && QA_flat.classList.contains('QAcell')) {
+        if ( QA_flat.classList.contains('QAcell')) {
             QA_flat.style.display = 'none';
         }
     });
 
-    while (faqRow && faqRow.classList && faqRow.classList.contains('QAcell')) {
+    while ( faqRow.classList.contains('QAcell')) {
         if (faqRow.style.display == 'table-row') {
             faqRow.style.display = 'none';
-            let Q_next_A = faqRow.nextElementSibling;
+            let Q_next_A = faqRow.nextSibling;
 
             if (Q_next_A.classList.contains('QAcell')) {
                 Q_next_A.style.display = 'none';
             }
         } else {
             faqRow.style.display = 'table-row';
-            let Q_next_A = faqRow.nextElementSibling;
+            let Q_next_A = faqRow.nextSibling;
 
             if (Q_next_A.classList.contains('QAcell')) {
                 Q_next_A.style.display = 'table-row';
@@ -120,20 +122,16 @@ function FAQ_display(faqRow) {
 
 /*==================== json 내용 ====================*/
 
-
-
-/*===== json로 테이블 구현 =====*/
-let settable;
+let jstable;
 
 async function getClientData() {
 
     const response = await axios.get('http://localhost:3000/Faq');
-    settable = response.data;
+    jstable = response.data;
     document.querySelector('#faq_table')
-    createTableHeader(settable[0].num, settable[0].type, settable[0].title);
-    for (let i = 1; i < settable.length; i++) {
-        createTableRow(settable.length - i, settable[i].type, settable[i].title, settable[i].question, settable[i].faqAnswer);
+    createTableHeader(jstable[0].num, jstable[0].type, jstable[0].title);
+    for (let i = 1; i < jstable.length; i++) {
+        createTableRow(jstable.length - i, jstable[i].type, jstable[i].title, jstable[i].question, jstable[i].faqAnswer);
     }
 }
 getClientData();
-
