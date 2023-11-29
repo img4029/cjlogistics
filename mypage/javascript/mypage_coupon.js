@@ -157,7 +157,7 @@ function makeDownCoupon(myData2) {
 
 // ========================================================
 
-function change(myData2) {
+function change1(myData2) {
     let havecp = document.querySelector('.haveCp'),
         downloadCp = document.querySelector('.downloadCp');
 
@@ -202,7 +202,7 @@ async function getClientData1() {
 
         haveFrame()
         addHaveCoupon()
-        change(myData2);
+        change1(myData2);
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
         console.log(err.message);

@@ -3,6 +3,7 @@ let testing = document.querySelectorAll('.testing'),
     shopping_basket = document.querySelector('.shopping_basket'),
     menu_list_main = document.querySelectorAll('.menu_list_main>ul>li>a'),
     menu_list_sub = document.querySelectorAll('.menu_list_sub>ul>li>a'),
+    Team_members = document.querySelector(".Team_members"),
     clientData,
     ShoppingBasketData,
     jyh = document.querySelector('.jyh'),
@@ -111,7 +112,7 @@ if (path === '/index.html') {
 }
 const
     mainLink = [
-        "", "", "", "", "", ""
+        `${herfChange}LHN/Perfumepage.html`, "", "", "", "", ""
     ],
     loginLink = [ //로그인 후
         // `${herfChange}main/index.html`,
@@ -120,7 +121,7 @@ const
         `${herfChange}mypage/mypage.html`,
         `${herfChange}clientcenter_main/index.html`,
         `${herfChange}order/order.html`,
-        `${herfChange}jgj_daniel/store.html`,
+        `${herfChange}store/store.html`,
         `${herfChange}event/event.html`,
         `${herfChange}brandstory/brandstory.html`
     ],
@@ -130,7 +131,7 @@ const
         `${herfChange}member/member.html`,
         `${herfChange}clientcenter_main/index.html`,
         `${herfChange}member/member.html`,
-        `${herfChange}jgj_daniel/store.html`,
+        `${herfChange}store/store.html`,
         `${herfChange}event/event.html`,
         `${herfChange}brandstory/brandstory.html`
     ];
@@ -198,9 +199,10 @@ function addFont() {
 
 getClientData();
 addFont();
-jyh.innerText += ":";
-lhn.innerText += ":";
-ksb.innerText += ":";
-kso.innerText += ":";
-jgj.innerText += ":";
-img.innerText += ": 메뉴창, 로그인, 회원가입, 아이디 비밀번호 찾기, 서버 연동, 주문조회, 장바구니";
+Team_members.innerHTML = "";
+// jyh.innerText += ": 마이페이지, 쿠폰페이지";
+// lhn.innerText += ":";
+// ksb.innerText += ": 메인페이지, 고객센터";
+// kso.innerText += ": 검색 페이지, 이벤트";
+// jgj.innerText += ":";
+// img.innerText += ": 메뉴창, 로그인, 회원가입, 아이디 비밀번호 찾기, 주문조회, 장바구니";

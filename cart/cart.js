@@ -112,7 +112,6 @@ function makeCartFrame(ShoppingBasket, count, myData) {
                 btn2.innerHTML = "DELETE";
                 btn2.addEventListener('click', () => {
                     deleteCartList(count, myData);
-                    cartListMove(ShoppingBasket);
                 });
                 break;
             default:
@@ -174,7 +173,6 @@ function makeWishFrame(wishList, count, myData) {
                 });
                 btn2.addEventListener('click', () => {
                     deleteWishList(count, myData);
-                    wishListMove(wishList);
                 });
                 break;
             default:
