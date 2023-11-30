@@ -10,6 +10,7 @@
 
 main .all_container_5 {
     margin: auto;
+    
 }
 
 .header_video_5 {
@@ -19,6 +20,7 @@ main .all_container_5 {
     position: fixed;
     z-index: -1;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .video_padding {
     padding-top: 100vh;
@@ -69,6 +71,7 @@ main .all_container_5 {
     display: flex;
     margin-bottom: 100px;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .player_section_5 {

@@ -48,6 +48,10 @@ function search_clicker(keyword) {
     let search_row = document.querySelectorAll('#faq_table tbody tr');
     let check_tr = 1;
 
+    search_row.forEach(function (tr) {
+        tr.style.display = 'none';
+    });
+
     for (let i = search_row.length - 1; i >= 0; i--) {
         let row = search_row[i];
 
