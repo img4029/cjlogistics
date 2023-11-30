@@ -95,6 +95,7 @@ async function idGetClientData() {
                     count++
                     return;
                 } 
+
             }
         }
         alert("입력하신 정보가 확인되지않습니다");
@@ -109,7 +110,9 @@ async function pwGetClientData() {
     let count = 0;
     try {
         const response = await axios.get('http://localhost:3000/profile/');
+
         clientData1 = response.data;
+
         for (let i = 0; i < clientData1.length; i++) {
             if (pwInput2.placeholder == "E-MAIL") {
                 if ((clientData1[i].hid == idInput2.value) && (clientData1[i].hem == pwInput2.value)) {

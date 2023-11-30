@@ -75,10 +75,18 @@ function makeCartFrame(ShoppingBasket, count, myData) {
                 div2.innerText = "+";
                 input.value = Number(ShoppingBasket.quantity);
                 div1.addEventListener('click', () => {
-                    if (Number(input.value) > 1) input.value -= 1;
+                    if (Number(input.value) > 1) {
+                        input.value -= 1;
+                        myData[count].quantity -= 1;
+                        quantityMove(myData);
+                    }
                     else alert("1개 보다 적은 수는 주문 할 수 없습니다");
                 });
-                div2.addEventListener('click', () => input.value = Number(input.value) + 1);
+                div2.addEventListener('click', () => {
+                    input.value = Number(input.value) + 1
+                    myData[count].quantity += 1;
+                    quantityMove(myData);
+                });
                 break;
             case 4:
                 makeFrame.innerHTML = ShoppingBasket.reserve.toLocaleString();
@@ -230,5 +238,15 @@ async function wishListMove(wishList) {
         console.log(err.message);
     }
 }
-
+async function quantityMove(ShoppingBasket) {
+    try {
+        let myDataCopy = myData;
+        myDataCopy.ShoppingBasket = ShoppingBasket;
+        console.log(myDataCopy);
+        const putResponse = await axios.put(`http://localhost:3000/loginComplete/1`, myDataCopy);
+    } catch (err) {
+        console.log('데이터를 가져오는 중 오류 발생');
+        console.log(err.message);
+    }
+}
 getClientData();

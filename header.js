@@ -200,9 +200,3 @@ function addFont() {
 getClientData();
 addFont();
 Team_members.innerHTML = "";
-// jyh.innerText += ": 마이페이지, 쿠폰페이지";
-// lhn.innerText += ":";
-// ksb.innerText += ": 메인페이지, 고객센터";
-// kso.innerText += ": 검색 페이지, 이벤트";
-// jgj.innerText += ":";
-// img.innerText += ": 메뉴창, 로그인, 회원가입, 아이디 비밀번호 찾기, 주문조회, 장바구니";
