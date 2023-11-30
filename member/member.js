@@ -33,12 +33,7 @@ async function ClientData() {
         const response = await axios.get('http://localhost:3000/profile/');
         clientData1 = response.data;
         for (let i = 0; i < clientData1.length; i++) {
-            console.log(clientData1[i].hid);
-            console.log(idInput.value);
-            console.log(clientData1[i].hpw);
-            console.log(pwInput.value);
             if ((clientData1[i].hid == idInput.value) && (clientData1[i].hpw == pwInput.value)) {
-                console.log('asd');
                 const responsepost = await axios.put('http://localhost:3000/loginComplete/1', clientData1[i]);
                 location.href = "../index.html";
                 count++;

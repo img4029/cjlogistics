@@ -61,6 +61,21 @@ for (let i = 1; i < 32; i++) {
     birthDateD.innerHTML += `<option value="${i}">${i}</option>`
 }
 // ==========================================
+// function presentation() {
+
+//     idinfoGridValue[0].value = "임명건";
+//     idinfoGridValue[1].value = "img4029";
+//     idinfoGridValue[2].value = "zxc123!@#";
+//     idinfoGridValue[3].value = "zxc123!@#";
+//     idinfoGridValue[9].value = "개발 천재조 아파트";
+//     idinfoGridValue[11].value = "01049199822";
+//     idinfoGridValue[12].value = "img4029@naver.com";
+// }
+// presentation();
+
+
+
+
 //우편번호랑 주소 불러오는 함수
 function execDaumPostcode(id1,id2,id3) {
     new daum.Postcode({
@@ -351,3 +366,5 @@ mainExecution(Agreement, mainCheckBox);
 mainExecution(Marketing, mainCheckBox);
 subExecution(Agreement, subCheckBoxAll);
 subExecution(Marketing, subCheckBoxAll);
+
+
