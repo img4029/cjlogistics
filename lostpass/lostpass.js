@@ -76,21 +76,28 @@ function mainContainerChange() {
 //아이디 찾고 가져오기
 //데이터 가져오기
 async function idGetClientData() {
-// async function ClientData() {
+    let count = 0;
     try {
         const response = await axios.get('http://localhost:3000/profile/');
         clientData1 = response.data;
         for (let i = 0; i < clientData1.length; i++) {
             if (pwInput1.placeholder == "E-MAIL") {
                 if ((clientData1[i].hname == idInput1.value) && (clientData1[i].hem == pwInput1.value)) {
-                    getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2)+'**';
-                }
+                    mainContainerChange();
+                    getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2) + '**';
+                    count++
+                    return;
+                } 
             } else {
                 if ((clientData1[i].hname == idInput1.value) && (clientData1[i].hpn == pwInput1.value)) {
+                    mainContainerChange();
                     getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2) + '**';
-                }
+                    count++
+                    return;
+                } 
             }
         }
+        alert("입력하신 정보가 확인되지않습니다");
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
         console.log(err.message);
@@ -99,25 +106,32 @@ async function idGetClientData() {
 //비밀번호 찾기
 //데이터 가져오기
 async function pwGetClientData() {
+    let count = 0;
     try {
         const response = await axios.get('http://localhost:3000/profile/');
         clientData1 = response.data;
         for (let i = 0; i < clientData1.length; i++) {
             if (pwInput2.placeholder == "E-MAIL") {
                 if ((clientData1[i].hid == idInput2.value) && (clientData1[i].hem == pwInput2.value)) {
+                    mainContainerChange();
                     getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2) + '**';
-                }
+                    return;
+                } 
             } else {
                 if ((clientData1[i].hid == idInput2.value) && (clientData1[i].hpn == pwInput2.value)) {
+                    mainContainerChange();
                     getData.innerText = clientData1[i].hid.slice(0, clientData1[i].hid.length - 2) + '**';
-                }
+                    return;
+                } 
             }
         }
+        alert("입력하신 정보가 확인되지않습니다");
     } catch (err) {
         console.log('데이터를 가져오는 중 오류 발생');
         console.log(err.message);
     }
 }
+
 findId_email.addEventListener('click', () => {
     InputChange(pwInput1, findId_email)
 })
@@ -138,14 +152,10 @@ for (let i = 0; i < login_btn.length; i++) {
 }
 
 InputDefault(idInput1, idInput2, pwInput1, pwInput2);
-// InputDefault(idInput2, pwInput2);
 
-// mainContainerChange();
 findId_btn.addEventListener('click', () => {
-    mainContainerChange();
     idGetClientData();
 });
 tpPw_btn.addEventListener('click', () => {
-    mainContainerChange();
     pwGetClientData();
 });
