@@ -115,8 +115,8 @@ const
         `${herfChange}LHN/Perfumepage.html`, "", "", "", "", ""
     ],
     loginLink = [ //로그인 후
-        // `${herfChange}main/index.html`,
-        `javascript:void(0);`,
+        `${herfChange}/index.html`,
+        // `javascript:void(0);`,
         `${herfChange}mypage/mypage_Edit.html`,
         `${herfChange}mypage/mypage.html`,
         `${herfChange}clientcenter_main/index.html`,
